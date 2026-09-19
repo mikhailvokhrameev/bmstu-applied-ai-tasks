@@ -15,3 +15,4 @@
 :- consult(test_conflicts).
 :- consult(test_dialog).
 :- consult(test_acceptance).
+:- consult(test_docs).
