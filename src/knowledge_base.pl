@@ -184,3 +184,64 @@ production_rule(p32, visibility, major,
 production_rule(p33, visibility, critical,
     [eq(mirrors, missing)],
     "Зеркала заднего вида отсутствуют.").
+
+% P34–P39. Экологические показатели. Пределы CO и CH выбирает год выпуска.
+production_rule(p34, ecology, major,
+    [gt_t(co, co_max)],
+    "Содержание CO в отработавших газах выше предельного.").
+production_rule(p35, ecology, major,
+    [gt_t(ch, ch_max)],
+    "Содержание CH в отработавших газах выше предельного.").
+production_rule(p36, ecology, major,
+    [gt_t(smoke, smoke_max)],
+    "Дымность отработавших газов выше предельной.").
+production_rule(p37, ecology, minor,
+    [gt_t(co, co_warn), le_t(co, co_max)],
+    "Содержание CO приближается к предельному (выше 90 % предела).").
+production_rule(p38, ecology, minor,
+    [gt_t(ch, ch_warn), le_t(ch, ch_max)],
+    "Содержание CH приближается к предельному (выше 90 % предела).").
+production_rule(p39, ecology, minor,
+    [gt_t(smoke, smoke_warn), le_t(smoke, smoke_max)],
+    "Дымность приближается к предельной (выше 90 % предела).").
+
+% P40–P52. Прочие элементы конструкции и обязательная комплектация.
+production_rule(p40, other, critical,
+    [eq(seat_belts, missing), ge(year, 1991)],
+    "Ремни безопасности отсутствуют на автомобиле, выпущенном с 1991 года.").
+production_rule(p41, other, minor,
+    [eq(seat_belts, missing), lt(year, 1991)],
+    "Ремни безопасности отсутствуют на автомобиле, выпущенном до 1991 года.").
+production_rule(p42, other, major,
+    [eq(seat_belts, faulty)],
+    "Ремни безопасности неисправны.").
+production_rule(p43, other, minor,
+    [eq(first_aid_kit, no)],
+    "Отсутствует аптечка.").
+production_rule(p44, other, minor,
+    [eq(fire_extinguisher, no), in(category, [m1, n1])],
+    "Отсутствует огнетушитель (для M1 и N1 — незначительное несоответствие).").
+production_rule(p45, other, major,
+    [eq(fire_extinguisher, no), in(category, [m2_m3, n2_n3])],
+    "Отсутствует огнетушитель (для M2–M3 и N2–N3 — существенное несоответствие).").
+production_rule(p46, other, minor,
+    [eq(warning_triangle, no), in(category, [m1, n1])],
+    "Отсутствует знак аварийной остановки (для M1 и N1 — незначительное несоответствие).").
+production_rule(p47, other, major,
+    [eq(warning_triangle, no), in(category, [m2_m3, n2_n3])],
+    "Отсутствует знак аварийной остановки (для M2–M3 и N2–N3 — существенное несоответствие).").
+production_rule(p48, other, minor,
+    [eq(structure, corrosion)],
+    "Коррозия несущих элементов без потери несущей способности.").
+production_rule(p49, other, critical,
+    [eq(structure, destroyed)],
+    "Несущие элементы конструкции разрушены.").
+production_rule(p50, other, minor,
+    [eq(fluid_leaks, traces)],
+    "Следы утечек эксплуатационных жидкостей.").
+production_rule(p51, other, major,
+    [eq(fluid_leaks, dripping)],
+    "Капельные утечки эксплуатационных жидкостей.").
+production_rule(p52, other, critical,
+    [eq(fluid_leaks, fuel)],
+    "Утечка топлива.").

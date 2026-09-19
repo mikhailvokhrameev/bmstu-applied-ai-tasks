@@ -10,3 +10,4 @@
 :- consult(test_rules_brakes).
 :- consult(test_rules_steering_lighting).
 :- consult(test_rules_tires_visibility).
+:- consult(test_rules_ecology_other).
