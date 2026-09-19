@@ -6,3 +6,5 @@
 :- consult(test_domain).
 :- consult(test_thresholds).
 :- consult(test_consistency).
+:- consult(test_inference).
+:- consult(test_rules_brakes).
