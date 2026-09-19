@@ -8,3 +8,4 @@
 :- consult(test_consistency).
 :- consult(test_inference).
 :- consult(test_rules_brakes).
+:- consult(test_rules_steering_lighting).

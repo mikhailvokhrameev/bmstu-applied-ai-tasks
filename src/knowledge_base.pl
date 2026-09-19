@@ -107,3 +107,43 @@ production_rule(p09, brakes, critical,
 production_rule(p10, brakes, major,
     [eq(brake_leak, minor)],
     "Малая утечка из тормозного привода.").
+
+% P11–P15. Рулевое управление.
+production_rule(p11, steering, minor,
+    [gt_t(steering_play, steering_play_warn), le_t(steering_play, steering_play_max)],
+    "Суммарный люфт рулевого управления приближается к предельному (80–100 % предела).").
+production_rule(p12, steering, major,
+    [gt_t(steering_play, steering_play_max), le_t(steering_play, steering_play_crit)],
+    "Суммарный люфт рулевого управления выше предельного.").
+production_rule(p13, steering, critical,
+    [gt_t(steering_play, steering_play_crit)],
+    "Суммарный люфт рулевого управления выше критического.").
+production_rule(p14, steering, major,
+    [eq(steering_joints, worn)],
+    "Шарниры и тяги рулевого привода изношены.").
+production_rule(p15, steering, critical,
+    [eq(steering_joints, broken)],
+    "Шарниры или тяги рулевого привода разрушены.").
+
+% P16–P22. Внешние световые приборы и световозвращатели.
+production_rule(p16, lighting, critical,
+    [eq(headlights, not_working)],
+    "Фары ближнего и дальнего света не работают.").
+production_rule(p17, lighting, major,
+    [eq(headlights, one_faulty)],
+    "Неисправна одна из фар ближнего или дальнего света.").
+production_rule(p18, lighting, major,
+    [eq(headlight_aim, misaligned)],
+    "Регулировка фар нарушена.").
+production_rule(p19, lighting, critical,
+    [eq(signal_lights, not_working)],
+    "Сигнальные фонари не работают.").
+production_rule(p20, lighting, major,
+    [eq(signal_lights, partial)],
+    "Сигнальные фонари работают частично.").
+production_rule(p21, lighting, minor,
+    [eq(reflectors, missing), in(category, [m1, n1])],
+    "Световозвращатели отсутствуют (для M1 и N1 — незначительное несоответствие).").
+production_rule(p22, lighting, major,
+    [eq(reflectors, missing), in(category, [m2_m3, n2_n3])],
+    "Световозвращатели отсутствуют (для M2–M3 и N2–N3 — существенное несоответствие).").
