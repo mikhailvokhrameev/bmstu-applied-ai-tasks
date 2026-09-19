@@ -5,3 +5,4 @@
 :- use_module(library(plunit)).
 :- consult(test_domain).
 :- consult(test_thresholds).
+:- consult(test_consistency).
