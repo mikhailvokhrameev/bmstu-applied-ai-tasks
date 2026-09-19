@@ -147,3 +147,40 @@ production_rule(p21, lighting, minor,
 production_rule(p22, lighting, major,
     [eq(reflectors, missing), in(category, [m2_m3, n2_n3])],
     "Световозвращатели отсутствуют (для M2–M3 и N2–N3 — существенное несоответствие).").
+
+% P23–P27. Шины и колёса.
+production_rule(p23, tires, critical,
+    [lt_t(tread_depth, tread_min)],
+    "Глубина протектора ниже минимально допустимой для категории ТС.").
+production_rule(p24, tires, minor,
+    [ge_t(tread_depth, tread_min), lt_t(tread_depth, tread_warn)],
+    "Малый запас глубины протектора до минимально допустимой.").
+production_rule(p25, tires, critical,
+    [eq(tire_condition, cord_visible)],
+    "На шине виден корд.").
+production_rule(p26, tires, major,
+    [eq(tire_condition, damaged)],
+    "Шины имеют повреждения.").
+production_rule(p27, tires, critical,
+    [eq(wheel_fasteners, missing)],
+    "Отсутствуют крепёжные элементы колёс.").
+
+% P28–P33. Приборы обзора и стеклоочистители.
+production_rule(p28, visibility, critical,
+    [eq(windshield, driver_crack)],
+    "Трещина ветрового стекла в зоне обзора водителя.").
+production_rule(p29, visibility, minor,
+    [eq(windshield, chips)],
+    "Сколы ветрового стекла.").
+production_rule(p30, visibility, critical,
+    [eq(wipers, not_working)],
+    "Стеклоочистители не работают.").
+production_rule(p31, visibility, major,
+    [eq(wipers, worn)],
+    "Стеклоочистители изношены.").
+production_rule(p32, visibility, major,
+    [eq(mirrors, damaged)],
+    "Зеркала заднего вида повреждены.").
+production_rule(p33, visibility, critical,
+    [eq(mirrors, missing)],
+    "Зеркала заднего вида отсутствуют.").
