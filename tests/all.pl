@@ -4,3 +4,4 @@
 % свой блок plunit; run_tests/0 запускает все загруженные блоки.
 :- use_module(library(plunit)).
 :- consult(test_domain).
+:- consult(test_thresholds).
