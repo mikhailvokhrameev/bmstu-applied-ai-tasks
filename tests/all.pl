@@ -14,3 +14,4 @@
 :- consult(test_rules_structure).
 :- consult(test_conflicts).
 :- consult(test_dialog).
+:- consult(test_acceptance).
