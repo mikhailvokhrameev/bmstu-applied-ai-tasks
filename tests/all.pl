@@ -13,3 +13,4 @@
 :- consult(test_rules_ecology_other).
 :- consult(test_rules_structure).
 :- consult(test_conflicts).
+:- consult(test_dialog).
