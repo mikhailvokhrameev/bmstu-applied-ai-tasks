@@ -11,3 +11,5 @@
 :- consult(test_rules_steering_lighting).
 :- consult(test_rules_tires_visibility).
 :- consult(test_rules_ecology_other).
+:- consult(test_rules_structure).
+:- consult(test_conflicts).
