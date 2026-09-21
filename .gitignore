@@ -1,0 +1,12 @@
+# macOS / Word
+.DS_Store
+~$*
+
+# Virtual environments
+.venv/
+
+# Python
+__pycache__/
+
+# Superpowers
+.superpowers/
