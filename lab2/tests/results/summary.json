@@ -9,7 +9,7 @@
   },
   "T03" : {
     "status" : "PASS",
-    "note" : "8 models x 12 columns complete, asserted axioms only"
+    "note" : "8 models x 13 columns complete, asserted axioms only; marker \"учебная модель\" on 8/8"
   },
   "T04" : {
     "status" : "PASS",

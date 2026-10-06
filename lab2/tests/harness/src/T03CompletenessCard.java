@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLLiteral;
@@ -26,8 +27,10 @@ public class T03CompletenessCard implements TestGroup {
     /** The six link columns of the card. */
     static final List<String> LINKS = List.of(
             "usesGPU", "hasMemory", "hasCooling", "hasInterface", "producedByManufacturer", MULTI_LINK);
-    /** Numeric attributes on the model itself. */
-    static final List<String> MODEL_ATTRIBUTES = List.of("powerW", "lengthMM");
+    /** Attributes on the model itself: the name (xsd:string, spec 4.2.5 lists it first) and the numeric ones. */
+    static final List<String> MODEL_ATTRIBUTES = List.of("name", "powerW", "lengthMM");
+    /** Spec 4.2.5: each teaching model is explicitly marked with this phrase in an rdfs:comment. */
+    static final String TEACHING_MARKER = "учебная модель";
     /** Numeric attributes on the linked components: attribute, link through which the component is reached. */
     static final String[][] COMPONENT_ATTRIBUTES = {
         {"volumeGiB", "hasMemory"}, {"busWidthBit", "hasMemory"}, {"frequencyMHz", "usesGPU"}, {"fanCount", "hasCooling"},
@@ -43,7 +46,7 @@ public class T03CompletenessCard implements TestGroup {
 
     /** The card: value counts per model and column, plus the list of problems found. */
     static final class Card {
-        /** model -> column -> count; column order: the 6 links, then powerW, lengthMM, volumeGiB, busWidthBit,
+        /** model -> column -> count; column order: the 6 links, then name, powerW, lengthMM, volumeGiB, busWidthBit,
          * frequencyMHz, fanCount. A component attribute count is -1 when the model has no single linked component. */
         final Map<String, Map<String, Integer>> counts = new TreeMap<>();
         final List<Problem> problems = new ArrayList<>();
@@ -113,13 +116,22 @@ public class T03CompletenessCard implements TestGroup {
         out.println();
         for (Problem p : card.problems) out.println("  [FAIL] " + p);
         out.println("Rule: exactly 1 value for " + String.join(", ", SINGLE_LINKS) + "; >= 1 for " + MULTI_LINK
-                + "; exactly 1 for powerW, lengthMM (model), volumeGiB, busWidthBit (memory), frequencyMHz (GPU), "
+                + "; exactly 1 for name (xsd:string), powerW, lengthMM (model), volumeGiB, busWidthBit (memory), frequencyMHz (GPU), "
                 + "fanCount (cooling).");
         Checks c = new Checks(out);
         c.check("every model U01..U08 is complete (" + card.problems.size() + " problem(s))", card.complete());
-        note = card.complete() ? "8 models x 12 columns complete, asserted axioms only"
-                : card.problems.size() + " problem(s) in the completeness card";
-        return card.complete();
+
+        // Spec 4.2.5: the «учебная модель» marker. Kept out of build() so the mutated copies of T06-T09 are judged
+        // by the card alone; the literal phrase and the model list come from the code/Oracle, not from the ontology.
+        List<String> unmarked = unmarkedModels(ont);
+        out.println();
+        for (String m : unmarked) out.println("  [FAIL] " + m + ": no rdfs:comment containing \"" + TEACHING_MARKER + "\"");
+        c.checkAll("every model U01..U08 has an rdfs:comment containing \"" + TEACHING_MARKER + "\"",
+                Oracle.MODELS.size(), unmarked);
+        boolean ok = card.complete() && unmarked.isEmpty();
+        note = ok ? "8 models x 13 columns complete, asserted axioms only; marker \"" + TEACHING_MARKER + "\" on 8/8"
+                : card.problems.size() + " problem(s) in the completeness card, " + unmarked.size() + " model(s) without the marker";
+        return ok;
     }
 
     /** Builds the card from the asserted axioms of {@code ont}; the VideoCardModel set must be exactly U01..U08. */
@@ -175,6 +187,22 @@ public class T03CompletenessCard implements TestGroup {
         return card;
     }
 
+    /** The models of {@link Oracle#MODELS} that have no asserted rdfs:comment containing {@link #TEACHING_MARKER}. */
+    static List<String> unmarkedModels(OWLOntology ont) {
+        List<String> unmarked = new ArrayList<>();
+        for (String model : Oracle.MODELS) {
+            boolean marked = false;
+            for (OWLAnnotationAssertionAxiom ax : ont.getAnnotationAssertionAxioms(Support.iri(model))) {
+                if (ax.getProperty().isComment() && ax.getValue().asLiteral().isPresent()
+                        && ax.getValue().asLiteral().get().getLiteral().contains(TEACHING_MARKER)) {
+                    marked = true;
+                }
+            }
+            if (!marked) unmarked.add(model);
+        }
+        return unmarked;
+    }
+
     /** Distinct named individuals asserted as values of {@code link} for {@code subject}. */
     private static Set<OWLNamedIndividual> linkValues(OWLOntology ont, OWLNamedIndividual subject, String link) {
         Set<OWLNamedIndividual> values = new TreeSet<>();
@@ -190,7 +218,12 @@ public class T03CompletenessCard implements TestGroup {
     private static int attributeValues(OWLOntology ont, OWLNamedIndividual subject, String attribute) {
         Set<OWLLiteral> values = new TreeSet<>();
         for (OWLDataPropertyAssertionAxiom ax : ont.getDataPropertyAssertionAxioms(subject)) {
-            if (ax.getProperty().equals(Support.dp(attribute))) values.add(ax.getObject());
+            if (!ax.getProperty().equals(Support.dp(attribute))) continue;
+            // name must be an xsd:string (Table 3). An untyped literal without language tag is read by OWL API 4 as
+            // rdf:PlainLiteral, which OWL 2 identifies with xsd:string; any other datatype does not count.
+            OWLLiteral lit = ax.getObject();
+            if (attribute.equals("name") && !(lit.getDatatype().isString() || (lit.isRDFPlainLiteral() && !lit.hasLang()))) continue;
+            values.add(ax.getObject());
         }
         return values.size();
     }

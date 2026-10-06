@@ -16,7 +16,7 @@
 | Испытатель | автоматический прогон `bash tests/run_tests.sh` (Java-оснастка), без участия Protégé |
 | OWL API | 4.5.29 (полная версия сборки: 4.5.29.2024-05-13T12:11:03Z) |
 | HermiT | jar 1.4.3.456; `Reasoner.getReasonerVersion()` самоопределяется как 1.4.1.432 (устаревшая константа внутри jar, не версия запускаемого кода) |
-| Java | 17.0.2 (Eclipse Adoptium) |
+| Java (JDK; `javac` и `java` в `PATH`) | 17.0.2 (Eclipse Adoptium) |
 | ОС | Mac OS X 26.6.2 aarch64 |
 | Генератор онтологии | Python 3.12.4, только стандартная библиотека |
 | Контрольная среда ТЗ (Protégé) | Protégé Desktop 5.6.9 + HermiT — запуск и снимки экрана выполняет пользователь (раздел 4); в этом прогоне Protégé не использовался |
@@ -56,9 +56,9 @@ videocard.owl SHA-256: d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b500
 
 | Тест | Что проверяется | Пункты ТЗ | Статус |
 |---|---|---|---|
-| T01 | Обязательные понятия, свойства; сверка описания, словаря и схем | 4.1.1–4.1.4 | ПРОЙДЕН |
+| T01 | Обязательные понятия, свойства; сверка описания, словаря и схем | 4.1.1–4.1.4 | ПРОЙДЕН (автоматическая часть); ручная сверка — с замечаниями (см. ниже) |
 | T02 | Состав сущностей, domain/range, OWL 2 DL, аннотации | 4.2.1–4.2.4; 4.4.1 | ПРОЙДЕН |
-| T03 | Карточка полноты восьми моделей | 4.2.5; 4.4.4–4.4.5 | ПРОЙДЕН |
+| T03 | Карточка полноты восьми моделей и пометка «учебная модель» | 4.2.5; 4.4.4–4.4.5 | ПРОЙДЕН |
 | T04 | Согласованность и выполнимость классов (HermiT) | 4.4.2; 4.4.6 | ПРОЙДЕН |
 | T05 | Восемь контрольных запросов DL Query, точные наборы | 4.3; 4.4.3 | ПРОЙДЕН |
 | T06 | Отрицательный: индивид в ActiveCooling и PassiveCooling | 4.4.2; 4.4.6 | ПРОЙДЕН |
@@ -88,9 +88,9 @@ Status: AUTOMATIC PART PASS. The manual reconciliation of the description, vocab
 T01: PASS
 ```
 
-**Ручная часть** выполнена по `docs/ontology_description.md`, раздел 12: границы, термины, определения, единицы — готовы; обе диаграммы просмотрены по изображениям, отмечены расхождения типов `int`/`integer` с таблицей 3 и метки «вентиляторы» (подробно — разделы «Критические замечания» и 12.4 описания); неполнота диаграмм относительно таблиц 1–2 объявлена подписями рисунков. Источники для реальных моделей не требуются (данные вымышлены, отступление принято решением заказчика). Статус ниже относится к автоматической части; ручная часть пройдена с перечисленными замечаниями.
+**Ручная часть** выполнена по `docs/ontology_description.md`, раздел 12: границы, термины, определения, единицы — готовы; обе диаграммы просмотрены по изображениям, отмечены расхождения типов `int`/`integer` с таблицей 3 и метки «вентиляторы» (подробно — разделы «Критические замечания» и 12.4 описания); неполнота диаграмм относительно таблиц 1–2 объявлена подписями рисунков. Источники для реальных моделей не требуются (данные вымышлены, отступление принято решением заказчика). Журнал `T01.log` и `summary.json` оценивают только автоматическую часть; ручная часть пройдена с перечисленными замечаниями.
 
-**Статус: ПРОЙДЕН**
+**Статус: ПРОЙДЕН (автоматическая часть); ручная сверка — с замечаниями: источники по п. 4.1.4 не указаны по решению заказчика, расхождения со схемами — см. п. 12.4 описания онтологии**
 
 
 ### T02. Состав сущностей, domain/range, OWL 2 DL, аннотации
@@ -147,27 +147,29 @@ T02: PASS
 
 - **Пункты ТЗ:** 4.2.5; 4.4.4–4.4.5
 - **Исходные условия:** `ontology/videocard.owl` (SHA-256 в README).
-- **Действия:** построить карточку полноты по явно записанным аксиомам U01–U08 (без reasoner).
+- **Действия:** построить карточку полноты по явно записанным аксиомам U01–U08 (без reasoner); отдельной проверкой убедиться, что у каждой из U01–U08 есть `rdfs:comment` с пометкой «учебная модель» (п. 4.2.5; фраза и список моделей заданы в оснастке независимо от онтологии).
 - **Критерий успешности (таблица 6 ТЗ):** в каждой карточке есть обязательные связи; пять единичных связей заданы ровно одним значением; видеовыходов не менее одного.
-- **Ожидаемый результат:** 8 моделей × 12 столбцов полны: по 1 значению в usesGPU, hasMemory, hasCooling, hasInterface, producedByManufacturer, powerW, lengthMM, volumeGiB, busWidthBit, frequencyMHz, fanCount и 2 значения hasVideoOutput.
+- **Ожидаемый результат:** 8 моделей × 13 столбцов полны: по 1 значению в usesGPU, hasMemory, hasCooling, hasInterface, producedByManufacturer, name (xsd:string), powerW, lengthMM, volumeGiB, busWidthBit, frequencyMHz, fanCount и 2 значения hasVideoOutput.
 
 **Фактический результат** (из `tests/results/T03.log`, без изменений):
 
 ```text
 == T03 completeness card of U01..U08 (asserted axioms only) ==
 Completeness card (cell = number of asserted values; '*' marks a violation; '-' = component not reachable through a single link)
-  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
-  U01         1         1          1            1                      1              2      1        1         1           1            1        1
-  U02         1         1          1            1                      1              2      1        1         1           1            1        1
-  U03         1         1          1            1                      1              2      1        1         1           1            1        1
-  U04         1         1          1            1                      1              2      1        1         1           1            1        1
-  U05         1         1          1            1                      1              2      1        1         1           1            1        1
-  U06         1         1          1            1                      1              2      1        1         1           1            1        1
-  U07         1         1          1            1                      1              2      1        1         1           1            1        1
-  U08         1         1          1            1                      1              2      1        1         1           1            1        1
+  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput name powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
+  U01         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U02         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U03         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U04         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U05         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U06         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U07         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U08         1         1          1            1                      1              2    1      1        1         1           1            1        1
 
-Rule: exactly 1 value for usesGPU, hasMemory, hasCooling, hasInterface, producedByManufacturer; >= 1 for hasVideoOutput; exactly 1 for powerW, lengthMM (model), volumeGiB, busWidthBit (memory), frequencyMHz (GPU), fanCount (cooling).
+Rule: exactly 1 value for usesGPU, hasMemory, hasCooling, hasInterface, producedByManufacturer; >= 1 for hasVideoOutput; exactly 1 for name (xsd:string), powerW, lengthMM (model), volumeGiB, busWidthBit (memory), frequencyMHz (GPU), fanCount (cooling).
   [PASS] every model U01..U08 is complete (0 problem(s))
+
+  [PASS] every model U01..U08 has an rdfs:comment containing "учебная модель" (8/8)
 T03: PASS
 ```
 
@@ -497,15 +499,15 @@ defect copy: tests/negative/T09_missing_hasMemory.owl
     HermiT 1.4.3.456 isConsistent = true
   [PASS] HermiT still reports the copy consistent (consistency is not completeness)
 Completeness card (cell = number of asserted values; '*' marks a violation; '-' = component not reachable through a single link)
-  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
-  U01         1         1          1            1                      1              2      1        1         1           1            1        1
-  U02         1         1          1            1                      1              2      1        1         1           1            1        1
-  U03         1         1          1            1                      1              2      1        1         1           1            1        1
-  U04         1         1          1            1                      1              2      1        1         1           1            1        1
-  U05         1        0*          1            1                      1              2      1        1         -           -            1        1
-  U06         1         1          1            1                      1              2      1        1         1           1            1        1
-  U07         1         1          1            1                      1              2      1        1         1           1            1        1
-  U08         1         1          1            1                      1              2      1        1         1           1            1        1
+  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput name powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
+  U01         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U02         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U03         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U04         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U05         1        0*          1            1                      1              2    1      1        1         -           -            1        1
+  U06         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U07         1         1          1            1                      1              2    1      1        1         1           1            1        1
+  U08         1         1          1            1                      1              2    1      1        1         1           1            1        1
   card problem: U05 hasMemory: 0 asserted value(s), expected 1
   [PASS] the card reports exactly one problem
   [PASS] the problem is (U05, hasMemory, actual 0, expected 1)
