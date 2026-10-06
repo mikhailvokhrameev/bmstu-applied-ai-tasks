@@ -1,2 +1,4 @@
 tests/harness/lib/
 tests/harness/out/
+ontology/src/build/
+__pycache__/
