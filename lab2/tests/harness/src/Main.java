@@ -27,7 +27,11 @@ public class Main {
             new T02OntologyStructure(),
             new T03CompletenessCard(),
             new T04Reasoning(),
-            new T05DlQueries());
+            new T05DlQueries(),
+            new T06ActiveAndPassive(),
+            new T07TwoGpus(),
+            new T08NegativeVolume(),
+            new T09MissingHasMemory());
 
     public static void main(String[] args) throws Exception {
         Path root = Paths.get(args.length > 0 ? args[0] : ".").toAbsolutePath().normalize();

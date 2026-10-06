@@ -4,12 +4,17 @@
 Stdlib only, deterministic (fixed ordering, no timestamps). The TBox is written
 out here; the ABox comes from ontology_data.py.
 
-Usage: python3 build_ontology.py [output.fss]     (default: stdout)
+Usage: python3 build_ontology.py [--mutate T06|T07|T08|T09] [output.fss]   (default: stdout)
+
+--mutate emits a negative-test copy of the ontology (Task 5, spec Table 6): the
+final ontology with one minimal, explicit ABox edit listed in MUTATIONS below.
+Without --mutate the output is the final ontology, unchanged.
 
 All Russian rdfs:label / rdfs:comment literals carry the language tag @ru.
 Numeric data values: volumeGiB / busWidthBit -> xsd:positiveInteger,
 fanCount -> xsd:nonNegativeInteger, frequencyMHz / powerW / lengthMM -> xsd:decimal.
 """
+import argparse
 import os
 import sys
 
@@ -116,6 +121,41 @@ EXACTLY_ONE = [("usesGPU", "GPUModel"), ("hasMemory", "MemoryConfiguration"),
                ("hasCooling", "CoolingSystem"), ("hasInterface", "ConnectionInterface"),
                ("producedByManufacturer", "Manufacturer")]
 
+# --- negative-test mutations (Task 5) -----------------------------------------
+# Each mutation is a list of (old_line, new_line) ABox edits applied to the generated
+# FSS lines: (old, None) removes `old`, (None, new) adds `new` before DifferentIndividuals,
+# (old, new) replaces `old` in place. Every `old` line must occur exactly once.
+MUTATIONS = {
+    # T06: an active cooling individual is additionally asserted PassiveCooling
+    # (ActiveCooling and PassiveCooling are disjoint).
+    "T06": [(None, "ClassAssertion(vc:PassiveCooling vc:Cooling_Active_2fan)")],
+    # T07: U01 additionally uses a second, different GPU (violates usesGPU exactly 1;
+    # the GPUs are already pairwise different via DifferentIndividuals).
+    "T07": [(None, "ObjectPropertyAssertion(vc:usesGPU vc:U01 vc:GPU_G2)")],
+    # T08: the volume of Mem_4GiB_GDDR5 is REPLACED (not added) by -8 typed xsd:integer,
+    # outside the range xsd:positiveInteger; volumeGiB stays single-valued (functional).
+    "T08": [('DataPropertyAssertion(vc:volumeGiB vc:Mem_4GiB_GDDR5 "4"^^xsd:positiveInteger)',
+             'DataPropertyAssertion(vc:volumeGiB vc:Mem_4GiB_GDDR5 "-8"^^xsd:integer)')],
+    # T09: U05 loses its hasMemory assertion (open world: still consistent, card must flag it).
+    "T09": [("ObjectPropertyAssertion(vc:hasMemory vc:U05 vc:Mem_6GiB_GDDR6)", None)],
+}
+
+
+def apply_mutation(lines, mutation):
+    for old, new in mutation:
+        if old is None:
+            at = lines.index(next(l for l in lines if l.startswith("DifferentIndividuals(")))
+            lines.insert(at, new)
+            continue
+        hits = [i for i, l in enumerate(lines) if l == old]
+        if len(hits) != 1:
+            raise SystemExit("mutation: expected exactly one line %r, found %d" % (old, len(hits)))
+        if new is None:
+            del lines[hits[0]]
+        else:
+            lines[hits[0]] = new
+
+
 # --- FSS helpers -------------------------------------------------------------
 
 
@@ -147,7 +187,7 @@ def decimal_pos():
     return 'DatatypeRestriction(xsd:decimal xsd:minExclusive %s)' % lit(0, "xsd:decimal")
 
 
-def build():
+def build(mutation=None):
     L = []
     add = L.append
 
@@ -261,14 +301,20 @@ def build():
     add("DifferentIndividuals(%s)" % " ".join(vc(i["iri"]) for i in D.ALL_INDIVIDUALS))
     add("")
     add(")")
+    if mutation:
+        apply_mutation(L, MUTATIONS[mutation])
     return "\n".join(L) + "\n"
 
 
 def main():
-    text = build()
-    if len(sys.argv) > 1:
-        os.makedirs(os.path.dirname(os.path.abspath(sys.argv[1])), exist_ok=True)
-        with open(sys.argv[1], "w", encoding="utf-8", newline="\n") as f:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--mutate", choices=sorted(MUTATIONS), help="emit the negative-test copy for this test id")
+    ap.add_argument("output", nargs="?", help="output .fss file (default: stdout)")
+    args = ap.parse_args()
+    text = build(args.mutate)
+    if args.output:
+        os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
+        with open(args.output, "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
     else:
         sys.stdout.buffer.write(text.encode("utf-8"))
