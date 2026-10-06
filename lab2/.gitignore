@@ -2,3 +2,6 @@ tests/harness/lib/
 tests/harness/out/
 ontology/src/build/
 __pycache__/
+tests/results/T10_resaved.owl
+tests/results/run_tests.log
+.DS_Store

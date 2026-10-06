@@ -1,0 +1,9 @@
+== T04 HermiT consistency and class satisfiability ==
+reasoner: HermiT 1.4.1.432 (self-reported; jar version 1.4.3.456)
+  [PASS] ontology is consistent (isConsistent)
+unsatisfiable classes (equivalent to owl:Nothing): [owl:Nothing]
+  [PASS] the only unsatisfiable class is owl:Nothing
+per-class isSatisfiable: ActiveCooling=sat, CardWith8GBMemory=sat, CardWithActiveCooling=sat, ConnectionInterface=sat, CoolingSystem=sat, GPUArchitecture=sat, GPUModel=sat, Manufacturer=sat, MemoryConfiguration=sat, MemoryType=sat, ModelComponent=sat, PassiveCooling=sat, Purpose=sat, VideoCardModel=sat, VideoOutput=sat, owl:Thing=sat
+  [PASS] every named class is individually satisfiable (16/16)
+  [PASS] reasoner entails disjointness of the required 4.4.2 pairs (32/32)
+T04: PASS

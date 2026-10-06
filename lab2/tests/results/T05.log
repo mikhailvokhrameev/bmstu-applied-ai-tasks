@@ -1,0 +1,133 @@
+== T05 eight DL queries vs tests/expected.json ==
+  [PASS] no ClassAssertion axiom for CardWith8GBMemory (found 0); membership must be inferred
+  [PASS] no ClassAssertion axiom for CardWithActiveCooling (found 0); membership must be inferred
+  [PASS] ontology is consistent (queries are meaningful)
+  [PASS] Q1: expected.json covers exactly the arguments [P1, P2]
+Q1 [P1]
+    query:    VideoCardModel and producedByManufacturer value P1
+    expected: [U01, U02, U05, U08]
+    actual:   [U01, U02, U05, U08]
+  [PASS] Q1 [P1] exact set equality
+Q1 [P2]
+    query:    VideoCardModel and producedByManufacturer value P2
+    expected: [U03, U04, U06, U07]
+    actual:   [U03, U04, U06, U07]
+  [PASS] Q1 [P2] exact set equality
+  [PASS] Models produced by a given manufacturer: representative P1 has positive example U01 (member) and negative example U03 (non-member)
+  [PASS] Q2: expected.json covers exactly the arguments [GPU_G1, GPU_G2, GPU_G3, GPU_G4, GPU_G5]
+Q2 [GPU_G1]
+    query:    VideoCardModel and usesGPU value GPU_G1
+    expected: [U01, U08]
+    actual:   [U01, U08]
+  [PASS] Q2 [GPU_G1] exact set equality
+Q2 [GPU_G2]
+    query:    VideoCardModel and usesGPU value GPU_G2
+    expected: [U02, U05]
+    actual:   [U02, U05]
+  [PASS] Q2 [GPU_G2] exact set equality
+Q2 [GPU_G3]
+    query:    VideoCardModel and usesGPU value GPU_G3
+    expected: [U03, U06]
+    actual:   [U03, U06]
+  [PASS] Q2 [GPU_G3] exact set equality
+Q2 [GPU_G4]
+    query:    VideoCardModel and usesGPU value GPU_G4
+    expected: [U04]
+    actual:   [U04]
+  [PASS] Q2 [GPU_G4] exact set equality
+Q2 [GPU_G5]
+    query:    VideoCardModel and usesGPU value GPU_G5
+    expected: [U07]
+    actual:   [U07]
+  [PASS] Q2 [GPU_G5] exact set equality
+  [PASS] Models using a given GPU: representative GPU_G3 has positive example U03 (member) and negative example U01 (non-member)
+  [PASS] Q4: expected.json covers exactly the arguments [GDDR5, GDDR6, GDDR6X]
+Q4 [GDDR5]
+    query:    VideoCardModel and hasMemory some (hasMemoryType value GDDR5)
+    expected: [U01, U08]
+    actual:   [U01, U08]
+  [PASS] Q4 [GDDR5] exact set equality
+Q4 [GDDR6]
+    query:    VideoCardModel and hasMemory some (hasMemoryType value GDDR6)
+    expected: [U02, U03, U04, U05, U06]
+    actual:   [U02, U03, U04, U05, U06]
+  [PASS] Q4 [GDDR6] exact set equality
+Q4 [GDDR6X]
+    query:    VideoCardModel and hasMemory some (hasMemoryType value GDDR6X)
+    expected: [U07]
+    actual:   [U07]
+  [PASS] Q4 [GDDR6X] exact set equality
+  [PASS] Models with a given memory type: representative GDDR6 has positive example U02 (member) and negative example U01 (non-member)
+  [PASS] Q6: expected.json covers exactly the arguments [DVI, DisplayPort, HDMI, VGA]
+Q6 [DVI]
+    query:    VideoCardModel and hasVideoOutput value DVI
+    expected: [U05, U06, U08]
+    actual:   [U05, U06, U08]
+  [PASS] Q6 [DVI] exact set equality
+Q6 [DisplayPort]
+    query:    VideoCardModel and hasVideoOutput value DisplayPort
+    expected: [U02, U03, U04, U07]
+    actual:   [U02, U03, U04, U07]
+  [PASS] Q6 [DisplayPort] exact set equality
+Q6 [HDMI]
+    query:    VideoCardModel and hasVideoOutput value HDMI
+    expected: [U01, U02, U03, U04, U05, U06, U07]
+    actual:   [U01, U02, U03, U04, U05, U06, U07]
+  [PASS] Q6 [HDMI] exact set equality
+Q6 [VGA]
+    query:    VideoCardModel and hasVideoOutput value VGA
+    expected: [U01, U08]
+    actual:   [U01, U08]
+  [PASS] Q6 [VGA] exact set equality
+  [PASS] Models having a given video output: representative DVI has positive example U05 (member) and negative example U01 (non-member)
+  [PASS] Q7: expected.json covers exactly the arguments [PCIe_3_0_x16, PCIe_4_0_x16, PCIe_5_0_x16]
+Q7 [PCIe_3_0_x16]
+    query:    VideoCardModel and hasInterface value PCIe_3_0_x16
+    expected: [U01, U05, U06, U08]
+    actual:   [U01, U05, U06, U08]
+  [PASS] Q7 [PCIe_3_0_x16] exact set equality
+Q7 [PCIe_4_0_x16]
+    query:    VideoCardModel and hasInterface value PCIe_4_0_x16
+    expected: [U02, U03, U04]
+    actual:   [U02, U03, U04]
+  [PASS] Q7 [PCIe_4_0_x16] exact set equality
+Q7 [PCIe_5_0_x16]
+    query:    VideoCardModel and hasInterface value PCIe_5_0_x16
+    expected: [U07]
+    actual:   [U07]
+  [PASS] Q7 [PCIe_5_0_x16] exact set equality
+  [PASS] Models with a given connection interface: representative PCIe_4_0_x16 has positive example U02 (member) and negative example U01 (non-member)
+  [PASS] Q3: expected.json has a non-empty list
+Q3 (defined classes)
+    query:    CardWith8GBMemory
+    expected: [U02, U03, U04, U06, U07]
+    actual:   [U02, U03, U04, U06, U07]
+  [PASS] Q3 (defined classes) exact set equality
+Q3 (raw cross-check)
+    query:    VideoCardModel and hasMemory some (volumeGiB some xsd:integer[>= 8])
+    expected: [U02, U03, U04, U06, U07]
+    actual:   [U02, U03, U04, U06, U07]
+  [PASS] Q3 (raw cross-check) exact set equality
+  [PASS] Q5: expected.json has a non-empty list
+Q5 (defined classes)
+    query:    CardWithActiveCooling
+    expected: [U02, U03, U04, U05, U07]
+    actual:   [U02, U03, U04, U05, U07]
+  [PASS] Q5 (defined classes) exact set equality
+Q5 (raw cross-check)
+    query:    VideoCardModel and hasCooling some ActiveCooling
+    expected: [U02, U03, U04, U05, U07]
+    actual:   [U02, U03, U04, U05, U07]
+  [PASS] Q5 (raw cross-check) exact set equality
+  [PASS] Q8: expected.json has a non-empty list
+Q8 (defined classes)
+    query:    CardWith8GBMemory and CardWithActiveCooling
+    expected: [U02, U03, U04, U07]
+    actual:   [U02, U03, U04, U07]
+  [PASS] Q8 (defined classes) exact set equality
+Q8 (raw cross-check)
+    query:    VideoCardModel and hasMemory some (volumeGiB some xsd:integer[>= 8]) and hasCooling some ActiveCooling
+    expected: [U02, U03, U04, U07]
+    actual:   [U02, U03, U04, U07]
+  [PASS] Q8 (raw cross-check) exact set equality
+T05: PASS

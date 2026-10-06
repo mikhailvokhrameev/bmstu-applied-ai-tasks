@@ -1,0 +1,34 @@
+== T02 ontology structure, OWL 2 DL profile, annotations ==
+  [PASS] file ontology/videocard.owl parses
+axiom count: 472
+  [PASS] OWL2DLProfile reports no violations (0 found)
+  [PASS] no owl:imports declarations
+  [PASS] ontology IRI
+  [PASS] version IRI
+entity counts: classes=15, object properties=10, data properties=7, individuals=41
+  classes (15): ActiveCooling, CardWith8GBMemory, CardWithActiveCooling, ConnectionInterface, CoolingSystem, GPUArchitecture, GPUModel, Manufacturer, MemoryConfiguration, MemoryType, ModelComponent, PassiveCooling, Purpose, VideoCardModel, VideoOutput
+  object properties (10): gpuProducedBy, hasArchitecture, hasCooling, hasInterface, hasMemory, hasMemoryType, hasPurpose, hasVideoOutput, producedByManufacturer, usesGPU
+  data properties (7): busWidthBit, fanCount, frequencyMHz, lengthMM, name, powerW, volumeGiB
+  individuals (41): Arch_A1, Arch_A2, Arch_A3, Cooling_Active_2fan, Cooling_Active_3fan, Cooling_Passive, DVI, DisplayPort, GDDR5, GDDR6, GDDR6X, GPU_G1, GPU_G2, GPU_G3, GPU_G4, GPU_G5, Gaming, HDMI, Mem_12GiB_GDDR6, Mem_16GiB_GDDR6, Mem_24GiB_GDDR6X, Mem_2GiB_GDDR5, Mem_4GiB_GDDR5, Mem_6GiB_GDDR6, Mem_8GiB_GDDR6, Office, P1, P2, PCIe_3_0_x16, PCIe_4_0_x16, PCIe_5_0_x16, U01, U02, U03, U04, U05, U06, U07, U08, VGA, Workstation
+  [PASS] classes in signature are exactly the 13 + 2 required
+  [PASS] object properties in signature are exactly the 10 required
+  [PASS] data properties in signature are exactly the 7 required
+  [PASS] individuals include U01..U08
+  [PASS] every user entity lives in the single namespace https://example.org/ontologies/videocard#
+  [PASS] asserted class hierarchy (5/5)
+  [PASS] domain and range of the 10 object properties exactly as in Table 2 (20/20)
+  [PASS] no object property is functional
+  [PASS] name has exactly one domain axiom: ObjectUnionOf of the 8 classes
+  [PASS] domain and range of the 7 data properties as in Table 3 (decimal > 0 = minExclusive 0) (13/13)
+  [PASS] functional data properties are exactly the six numeric ones
+  [PASS] every class, property and individual has an rdfs:label@ru and an rdfs:comment@ru (73/73)
+  [PASS] VideoCardModel: 5 ExactCardinality(1) and 5 AllValuesFrom restrictions (10/10)
+  [PASS] VideoCardModel: MinCardinality(1) hasVideoOutput
+  [PASS] VideoCardModel carries exactly 5 exact / 5 only / 1 min restrictions (found 5/5/1)
+  [PASS] asserted DisjointClasses for the required 4.4.2 pairs (8 top-level, 3 component kinds, Active/Passive) (32/32)
+  [PASS] CardWith8GBMemory == VideoCardModel and hasMemory some (volumeGiB some xsd:integer[>= 8])
+  [PASS] CardWithActiveCooling == VideoCardModel and hasCooling some ActiveCooling
+  [PASS] exactly one DifferentIndividuals/AllDifferent axiom
+  [PASS] the DifferentIndividuals axiom covers all 41 named individuals
+  [PASS] no SameIndividual axioms
+T02: PASS

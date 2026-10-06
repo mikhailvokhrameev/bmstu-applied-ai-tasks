@@ -1,0 +1,55 @@
+== T11 delivered folder structure and consistency ==
+  [PASS] path exists: ontology/videocard.owl
+  [PASS] path exists: ontology/src/build_ontology.py
+  [PASS] path exists: ontology/src/ontology_data.py
+  [PASS] path exists: ontology/src/build.sh
+  [PASS] path exists: docs/ontology_description.md
+  [PASS] path exists: docs/test_protocol.md
+  [PASS] path exists: README.md
+  [PASS] path exists: tests/run_tests.sh
+  [PASS] path exists: tests/expected.json
+  [PASS] path exists: tests/harness/fetch_libs.sh
+  [PASS] path exists: tests/harness/src
+  [PASS] path exists: tests/negative/T06_active_and_passive.owl
+  [PASS] path exists: tests/negative/T07_two_gpus.owl
+  [PASS] path exists: tests/negative/T08_negative_volume.owl
+  [PASS] path exists: tests/negative/T09_missing_hasMemory.owl
+  [PASS] path exists: tests/results
+  [PASS] tests/harness/src contains Java sources
+  [PASS] results log T01.log ends with 'T01: PASS'
+  [PASS] results log T02.log ends with 'T02: PASS'
+  [PASS] results log T03.log ends with 'T03: PASS'
+  [PASS] results log T04.log ends with 'T04: PASS'
+  [PASS] results log T05.log ends with 'T05: PASS'
+  [PASS] results log T06.log ends with 'T06: PASS'
+  [PASS] results log T07.log ends with 'T07: PASS'
+  [PASS] results log T08.log ends with 'T08: PASS'
+  [PASS] results log T09.log ends with 'T09: PASS'
+  [PASS] results log T10.log ends with 'T10: PASS'
+  [PASS] no .owl files besides videocard.owl, tests/negative/*.owl and the T10 re-saved copy
+  [PASS] each negative copy exists and differs from videocard.owl (SHA-256) (4/4)
+  [PASS] README.md contains version string 1.0.0
+  [PASS] README.md mentions run_tests.sh
+  [PASS] README.md contains 'SHA-256' followed by a 64-hex digest
+  [PASS] README.md SHA-256 equals the actual SHA-256 of ontology/videocard.owl
+runtime: OWL API 4.5.29, HermiT jar 1.4.3.456, Java 17.0.2
+  [PASS] runtime OWL API is the pinned 4.5.29
+  [PASS] runtime HermiT jar is the pinned 1.4.3.456
+  [PASS] Java version is available (17.0.2)
+  [PASS] T04.log records the HermiT jar version 1.4.3.456
+  [PASS] fetch_libs.sh header pins OWL API 4.5.29
+  [PASS] fetch_libs.sh header pins HermiT 1.4.3.456
+  [PASS] docs/test_protocol.md mentions T01
+  [PASS] docs/test_protocol.md mentions T02
+  [PASS] docs/test_protocol.md mentions T03
+  [PASS] docs/test_protocol.md mentions T04
+  [PASS] docs/test_protocol.md mentions T05
+  [PASS] docs/test_protocol.md mentions T06
+  [PASS] docs/test_protocol.md mentions T07
+  [PASS] docs/test_protocol.md mentions T08
+  [PASS] docs/test_protocol.md mentions T09
+  [PASS] docs/test_protocol.md mentions T10
+  [PASS] docs/test_protocol.md mentions T11
+  [PASS] docs/test_protocol.md records the tool versions (OWL API 4.5.29, HermiT 1.4.3.456, Java)
+  [PASS] docs/ontology_description.md is non-empty
+T11: PASS

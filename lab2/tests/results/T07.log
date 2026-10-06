@@ -1,0 +1,22 @@
+== T07 negative: model linked to two different GPUs (usesGPU exactly 1) ==
+defect copy: tests/negative/T07_two_gpus.owl
+  [PASS] defect copy file exists
+
+-- the copy differs from ontology/videocard.owl only by the intended mutation
+    + ObjectPropertyAssertion(<https://example.org/ontologies/videocard#usesGPU> <https://example.org/ontologies/videocard#U01> <https://example.org/ontologies/videocard#GPU_G2>)
+  [PASS] axioms only in the copy (+1)
+  [PASS] axioms only in the final ontology (-0)
+
+-- defect copy
+  [PASS] U01 usesGPU values in the copy
+  expected: inconsistent=true (usesGPU exactly 1 on VideoCardModel, GPUs pairwise different)
+    HermiT 1.4.3.456 isConsistent = false
+  [PASS] HermiT reports the copy inconsistent
+
+-- rollback: ontology/videocard.owl
+  expected: consistent=true
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] HermiT reports the final ontology consistent
+  [PASS] U01 usesGPU values in the final ontology
+  [PASS] every model has exactly one asserted usesGPU value in the final ontology
+T07: PASS

@@ -1,0 +1,15 @@
+== T03 completeness card of U01..U08 (asserted axioms only) ==
+Completeness card (cell = number of asserted values; '*' marks a violation; '-' = component not reachable through a single link)
+  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
+  U01         1         1          1            1                      1              2      1        1         1           1            1        1
+  U02         1         1          1            1                      1              2      1        1         1           1            1        1
+  U03         1         1          1            1                      1              2      1        1         1           1            1        1
+  U04         1         1          1            1                      1              2      1        1         1           1            1        1
+  U05         1         1          1            1                      1              2      1        1         1           1            1        1
+  U06         1         1          1            1                      1              2      1        1         1           1            1        1
+  U07         1         1          1            1                      1              2      1        1         1           1            1        1
+  U08         1         1          1            1                      1              2      1        1         1           1            1        1
+
+Rule: exactly 1 value for usesGPU, hasMemory, hasCooling, hasInterface, producedByManufacturer; >= 1 for hasVideoOutput; exactly 1 for powerW, lengthMM (model), volumeGiB, busWidthBit (memory), frequencyMHz (GPU), fanCount (cooling).
+  [PASS] every model U01..U08 is complete (0 problem(s))
+T03: PASS

@@ -1,0 +1,46 @@
+{
+  "T01" : {
+    "status" : "PASS",
+    "note" : "3/3 checks passed; manual reconciliation recorded in docs/ontology_description.md"
+  },
+  "T02" : {
+    "status" : "PASS",
+    "note" : "26/26 checks passed; 472 axioms"
+  },
+  "T03" : {
+    "status" : "PASS",
+    "note" : "8 models x 12 columns complete, asserted axioms only"
+  },
+  "T04" : {
+    "status" : "PASS",
+    "note" : "4/4 checks passed; HermiT 1.4.3.456"
+  },
+  "T05" : {
+    "status" : "PASS",
+    "note" : "39/39 checks passed; exact set equality with expected.json"
+  },
+  "T06" : {
+    "status" : "PASS",
+    "note" : "9/9 checks passed; copy inconsistent (HermiT negative control), final consistent and clean"
+  },
+  "T07" : {
+    "status" : "PASS",
+    "note" : "8/8 checks passed; copy inconsistent (usesGPU exactly 1), final consistent with one GPU per model"
+  },
+  "T08" : {
+    "status" : "PASS",
+    "note" : "10/10 checks passed; copy inconsistent by range positiveInteger (not functionality), final holds the original positive value"
+  },
+  "T09" : {
+    "status" : "PASS",
+    "note" : "9/9 checks passed; copy consistent (open world) but card flags U05 hasMemory 0 vs 1; final card clean"
+  },
+  "T10" : {
+    "status" : "PASS",
+    "note" : "59/59 checks passed; 472 axioms identical after RDF/XML round trip"
+  },
+  "T11" : {
+    "status" : "PASS",
+    "note" : "52/52 checks passed"
+  }
+}

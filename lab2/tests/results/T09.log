@@ -1,0 +1,34 @@
+== T09 negative: model without hasMemory (open world vs completeness card) ==
+defect copy: tests/negative/T09_missing_hasMemory.owl
+  [PASS] defect copy file exists
+
+-- the copy differs from ontology/videocard.owl only by the intended mutation
+    - ObjectPropertyAssertion(<https://example.org/ontologies/videocard#hasMemory> <https://example.org/ontologies/videocard#U05> <https://example.org/ontologies/videocard#Mem_6GiB_GDDR6>)
+  [PASS] axioms only in the copy (+0)
+  [PASS] axioms only in the final ontology (-1)
+
+-- defect copy
+  expected: consistent=true (open world: U05 has some unknown memory configuration)
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] HermiT still reports the copy consistent (consistency is not completeness)
+Completeness card (cell = number of asserted values; '*' marks a violation; '-' = component not reachable through a single link)
+  model usesGPU hasMemory hasCooling hasInterface producedByManufacturer hasVideoOutput powerW lengthMM volumeGiB busWidthBit frequencyMHz fanCount
+  U01         1         1          1            1                      1              2      1        1         1           1            1        1
+  U02         1         1          1            1                      1              2      1        1         1           1            1        1
+  U03         1         1          1            1                      1              2      1        1         1           1            1        1
+  U04         1         1          1            1                      1              2      1        1         1           1            1        1
+  U05         1        0*          1            1                      1              2      1        1         -           -            1        1
+  U06         1         1          1            1                      1              2      1        1         1           1            1        1
+  U07         1         1          1            1                      1              2      1        1         1           1            1        1
+  U08         1         1          1            1                      1              2      1        1         1           1            1        1
+  card problem: U05 hasMemory: 0 asserted value(s), expected 1
+  [PASS] the card reports exactly one problem
+  [PASS] the problem is (U05, hasMemory, actual 0, expected 1)
+
+-- rollback: ontology/videocard.owl
+  expected: consistent=true, completeness card without problems
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] HermiT reports the final ontology consistent
+  [PASS] U05 hasMemory Mem_6GiB_GDDR6 is asserted in the final ontology
+  [PASS] the card of the final ontology has zero problems
+T09: PASS
