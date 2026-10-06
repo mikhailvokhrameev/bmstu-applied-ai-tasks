@@ -24,7 +24,7 @@ SHA-256 (ontology/videocard.owl): d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1
 ## Структура комплекта
 
 ```text
-VideoCardOntology_v1.0.0/
+lab2/
 ├── README.md                      этот файл
 ├── ontology/
 │   ├── videocard.owl              финальная онтология (RDF/XML, UTF-8)
