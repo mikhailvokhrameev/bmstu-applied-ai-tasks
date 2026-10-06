@@ -1,12 +1,28 @@
-# macOS / Word
+# macOS / Windows
 .DS_Store
+Thumbs.db
+
+# Word / Office (lock files)
 ~$*
 
-# Virtual environments
-.venv/
+# IDE
+.idea/
+.vscode/
+*.iml
 
 # Python
+.venv/
 __pycache__/
+*.pyc
+.pytest_cache/
 
-# Superpowers
+# Java
+*.class
+hs_err_pid*
+
+# Local agent settings
+.claude/
 .superpowers/
+
+# Delivery archives (rebuilt from sources)
+lab2/*.zip
