@@ -1,12 +1,14 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
+import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Properties;
+import java.util.Map;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -14,61 +16,70 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.util.VersionInfo;
 
 /**
- * Test runner entry point. Prints an environment header, then runs every
- * registered {@link TestGroup} and exits non-zero if any group fails.
+ * Test runner entry point. Prints an environment header, then runs every registered {@link TestGroup},
+ * writing tests/results/&lt;id&gt;.log per group and tests/results/summary.json; exits non-zero if any group fails.
  * Usage: java Main [project-root]
  */
 public class Main {
     /** Add new test groups here. */
-    static final List<TestGroup> GROUPS = List.of(new Smoke());
+    static final List<TestGroup> GROUPS = List.of(
+            new T01RequiredEntities(),
+            new T02OntologyStructure(),
+            new T03CompletenessCard(),
+            new T04Reasoning(),
+            new T05DlQueries());
 
     public static void main(String[] args) throws Exception {
         Path root = Paths.get(args.length > 0 ? args[0] : ".").toAbsolutePath().normalize();
+        Support.setRoot(root);
         PrintStream out = System.out;
 
         printHeader(out, root);
 
         int failed = 0;
+        Map<String, Map<String, String>> summary = new LinkedHashMap<>();
         for (TestGroup group : GROUPS) {
             out.println();
-            out.println("== " + group.name() + " ==");
             boolean ok;
-            try {
-                ok = group.run(out);
-            } catch (Throwable t) {
-                t.printStackTrace(out);
-                ok = false;
+            // Per-group log: relative paths and no timestamps, so reruns diff cleanly.
+            try (PrintStream log = Support.tee(out, Support.resultsDir().resolve(group.id() + ".log"))) {
+                log.println("== " + group.name() + " ==");
+                try {
+                    ok = group.run(log);
+                } catch (Throwable t) {
+                    t.printStackTrace(log);
+                    ok = false;
+                }
+                log.println(group.id() + ": " + (ok ? "PASS" : "FAIL"));
             }
-            out.println(group.name() + ": " + (ok ? "PASS" : "FAIL"));
+            Map<String, String> entry = new LinkedHashMap<>();
+            entry.put("status", ok ? "PASS" : "FAIL");
+            entry.put("note", group.note());
+            summary.put(group.id(), entry);
             if (!ok) failed++;
         }
+        writeSummary(Support.resultsDir().resolve("summary.json"), summary);
 
         out.println();
         out.println("SUMMARY: " + (GROUPS.size() - failed) + "/" + GROUPS.size() + " groups passed");
         System.exit(failed == 0 ? 0 : 1);
     }
 
+    private static void writeSummary(Path file, Map<String, Map<String, String>> summary) throws IOException {
+        String json = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(summary);
+        Files.writeString(file, json + "\n", StandardCharsets.UTF_8);
+    }
+
     private static void printHeader(PrintStream out, Path root) throws Exception {
         out.println("VideoCardOntology v1.0.0 test run");
         out.println("OWL API:  " + VersionInfo.getVersionInfo().getVersion());
-        out.println("HermiT:   " + hermitJarVersion() + " (Reasoner.getReasonerVersion() self-reports "
+        out.println("HermiT:   " + Support.hermitJarVersion() + " (Reasoner.getReasonerVersion() self-reports "
                 + hermitSelfReportedVersion() + ")");
         out.println("Java:     " + System.getProperty("java.version") + " (" + System.getProperty("java.vendor") + ")");
         out.println("OS:       " + System.getProperty("os.name") + " " + System.getProperty("os.version")
                 + " " + System.getProperty("os.arch"));
         Path owl = root.resolve("ontology").resolve("videocard.owl");
         out.println("videocard.owl SHA-256: " + (Files.isRegularFile(owl) ? sha256(owl) : "(file not present)"));
-    }
-
-    /** The 1.4.3.456 jar still self-reports an older version, so read the real one from its Maven metadata. */
-    private static String hermitJarVersion() throws IOException {
-        String res = "/META-INF/maven/net.sourceforge.owlapi/org.semanticweb.hermit/pom.properties";
-        try (InputStream in = ReasonerFactory.class.getResourceAsStream(res)) {
-            if (in == null) return "unknown";
-            Properties p = new Properties();
-            p.load(in);
-            return p.getProperty("version", "unknown");
-        }
     }
 
     private static String hermitSelfReportedVersion() throws Exception {

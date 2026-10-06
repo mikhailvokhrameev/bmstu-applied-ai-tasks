@@ -1,0 +1,119 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Properties;
+import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+
+/** Shared helpers: project paths, entity construction by local name, ontology loading, log tee. */
+final class Support {
+    static final String NS = "https://example.org/ontologies/videocard#";
+    static final OWLDataFactory DF = OWLManager.getOWLDataFactory();
+
+    private static Path root = Path.of(".").toAbsolutePath().normalize();
+
+    private Support() {}
+
+    /** Called once by {@link Main}; groups resolve files relative to this root. */
+    static void setRoot(Path projectRoot) {
+        root = projectRoot;
+    }
+
+    static Path ontologyFile() {
+        return root.resolve("ontology").resolve("videocard.owl");
+    }
+
+    static Path expectedFile() {
+        return root.resolve("tests").resolve("expected.json");
+    }
+
+    static Path resultsDir() {
+        return root.resolve("tests").resolve("results");
+    }
+
+    static IRI iri(String local) {
+        return IRI.create(NS + local);
+    }
+
+    static OWLClass cls(String local) {
+        return DF.getOWLClass(iri(local));
+    }
+
+    static OWLObjectProperty op(String local) {
+        return DF.getOWLObjectProperty(iri(local));
+    }
+
+    static OWLDataProperty dp(String local) {
+        return DF.getOWLDataProperty(iri(local));
+    }
+
+    static OWLNamedIndividual ind(String local) {
+        return DF.getOWLNamedIndividual(iri(local));
+    }
+
+    /** Local name of an IRI in the project namespace; the full IRI string for anything else. */
+    static String local(IRI iri) {
+        String s = iri.toString();
+        return s.startsWith(NS) ? s.substring(NS.length()) : s;
+    }
+
+    /** Loads a document into a fresh manager (no catalog, no imports are expected). */
+    static OWLOntology load(File file) throws OWLOntologyCreationException {
+        return OWLManager.createOWLOntologyManager().loadOntologyFromOntologyDocument(file);
+    }
+
+    /** A stream that prints to {@code console} and, as UTF-8, to {@code logFile}. Close it to flush the file. */
+    static PrintStream tee(PrintStream console, Path logFile) throws IOException {
+        Files.createDirectories(logFile.getParent());
+        OutputStream file = Files.newOutputStream(logFile);
+        OutputStream both = new OutputStream() {
+            @Override
+            public void write(int b) throws IOException {
+                console.write(b);
+                file.write(b);
+            }
+
+            @Override
+            public void write(byte[] b, int off, int len) throws IOException {
+                console.write(b, off, len);
+                file.write(b, off, len);
+            }
+
+            @Override
+            public void flush() throws IOException {
+                console.flush();
+                file.flush();
+            }
+
+            @Override
+            public void close() throws IOException {
+                file.close();
+            }
+        };
+        return new PrintStream(both, true, StandardCharsets.UTF_8);
+    }
+
+    /** The 1.4.3.456 jar still self-reports an older version, so read the real one from its Maven metadata. */
+    static String hermitJarVersion() throws IOException {
+        String res = "/META-INF/maven/net.sourceforge.owlapi/org.semanticweb.hermit/pom.properties";
+        try (InputStream in = ReasonerFactory.class.getResourceAsStream(res)) {
+            if (in == null) return "unknown";
+            Properties p = new Properties();
+            p.load(in);
+            return p.getProperty("version", "unknown");
+        }
+    }
+}
