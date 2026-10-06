@@ -32,6 +32,11 @@ final class Support {
         root = projectRoot;
     }
 
+    /** Project root passed to {@link Main}. */
+    static Path root() {
+        return root;
+    }
+
     static Path ontologyFile() {
         return root.resolve("ontology").resolve("videocard.owl");
     }

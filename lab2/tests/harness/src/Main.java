@@ -31,7 +31,10 @@ public class Main {
             new T06ActiveAndPassive(),
             new T07TwoGpus(),
             new T08NegativeVolume(),
-            new T09MissingHasMemory());
+            new T09MissingHasMemory(),
+            new T10RoundTrip(),
+            // Keep T11 last: it inspects the logs written by T01-T10 in this same invocation.
+            new T11DeliveryCheck());
 
     public static void main(String[] args) throws Exception {
         Path root = Paths.get(args.length > 0 ? args[0] : ".").toAbsolutePath().normalize();
