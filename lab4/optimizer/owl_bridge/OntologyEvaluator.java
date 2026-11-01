@@ -18,7 +18,7 @@ public final class OntologyEvaluator {
         public boolean core_preserved;
     }
 
-    private static Set<OWLAxiom> parse(List<String> text) throws Exception {
+    static Set<OWLAxiom> parse(List<String> text) throws Exception {
         Set<OWLAxiom> result = new HashSet<>();
         for (String item : text) {
             OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
