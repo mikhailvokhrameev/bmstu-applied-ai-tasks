@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import platform
 import random
+import re
 import sys
 import subprocess
 import uuid
@@ -38,6 +39,8 @@ def _metadata(root):
         if meta['schema']!=SCHEMA or meta['core_sha256']!=CORE_SHA256:raise ValueError('incompatible schema/core')
         if digest(CORE.read_bytes())!=meta['core_sha256']:raise ValueError('core changed')
         if digest((root/'config.yaml').read_bytes())!=meta['config_sha256']:raise ValueError('configuration changed')
+        libraries={p.name:digest(p.read_bytes()) for p in sorted(LIB.glob('*.jar'))}
+        if libraries!=meta['environment']['libraries']:raise ValueError('incompatible libraries: OWL API/HermiT JAR inventory or SHA-256 changed')
         return meta
     except (OSError,ValueError,KeyError,TypeError) as e:raise JournalError('Invalid run metadata: '+str(e)) from e
 
@@ -115,8 +118,25 @@ def resume(run_dir,runtime=None):
 
 def replay(run_dir,candidate,inspect=None,score=None):
     root=Path(run_dir);_metadata(root)
-    rows=[json.loads(s) for s in (root/'evaluations.jsonl').read_text().splitlines()]
-    matches=[r for r in rows if r['id']==candidate]
+    # Numeric selectors retain the original active-journal interface. Audit
+    # selectors include the immutable archive stem to disambiguate reused IDs.
+    selector=str(candidate)
+    if re.fullmatch(r'[0-9]+',selector):
+        source=root/'evaluations.jsonl';identifier=int(selector);audit=False
+    else:
+        match=re.fullmatch(r'(audit-[0-9a-f]{32}):([0-9]+)',selector)
+        if match is None:raise JournalError('Invalid candidate selector; use ID or audit-<32 hex>:ID')
+        source=root/(match[1]+'.jsonl');identifier=int(match[2]);audit=True
+    try:
+        lines=source.read_bytes().splitlines(keepends=True)
+        rows=[]
+        for index,line in enumerate(lines):
+            try:rows.append(json.loads(line))
+            except (ValueError,UnicodeDecodeError):
+                if audit and index==len(lines)-1 and not line.endswith(b'\n'):continue
+                raise JournalError('Corrupt candidate journal: '+source.name)
+    except OSError as error:raise JournalError('Candidate journal unavailable: '+source.name) from error
+    matches=[r for r in rows if r['id']==identifier]
     if len(matches)!=1:raise JournalError('Candidate not found or duplicated')
     row=matches[0];delta=row['delta']
     try:result=(inspect or (lambda d:evaluate(CORE,d['add'],d['remove'])))(delta)

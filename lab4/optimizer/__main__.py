@@ -11,7 +11,7 @@ def main(argv=None):
     commands=parser.add_subparsers(dest='command',required=True)
     run=commands.add_parser('run');run.add_argument('--config',required=True);run.add_argument('--mode',choices=['model','control'],required=True);run.add_argument('--seed',type=int,required=True);run.add_argument('--run-dir')
     resume=commands.add_parser('resume');resume.add_argument('--run-dir',required=True)
-    replay=commands.add_parser('replay');replay.add_argument('--run-dir',required=True);replay.add_argument('--candidate',type=int,required=True)
+    replay=commands.add_parser('replay');replay.add_argument('--run-dir',required=True);replay.add_argument('--candidate',required=True,help='Active ID or audit-<32 hex>:ID')
     args=parser.parse_args(argv)
     try:
         if args.command=='replay':

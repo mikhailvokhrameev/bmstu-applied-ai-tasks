@@ -157,3 +157,16 @@ is copied to a unique `audit-*.jsonl` before truncating the active journal.
 IDs from that suffix can be reused only in the active, restored generation;
 audit records never enter its 170-evaluation count. Runs are single-writer;
 concurrent processes must use different directories.
+
+Audit candidates remain replayable after resume: use
+`replay --run-dir PATH --candidate audit-<32 hex>:ID`, where `audit-<32 hex>`
+is the archive filename without `.jsonl`. Numeric `--candidate ID` continues
+to select the active journal. Archive identity distinguishes discarded evaluations
+from evaluations that reuse the same numeric ID. Complete archived JSON records
+remain readable even when the final append is a torn fragment.
+
+Resume/replay reject a changed JAR inventory or SHA-256 relative to the saved
+OWL API/HermiT environment. Model mutations cancel a parent's introduced axiom
+when the proposal removes it; crossover retains its conflict-preserving union.
+Incomplete HTTP model responses are retained in full (text and raw JSON) in
+attempts/interruption logs before the completion error propagates.

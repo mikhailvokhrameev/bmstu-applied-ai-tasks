@@ -77,3 +77,55 @@ class JournalTests(unittest.TestCase):
             self.assertTrue(replay['matches'])
             replay=journal.replay(run,3,inspect=lambda d:dict(axioms=[]),score=lambda d:0)
             self.assertFalse(replay['matches'])
+
+    def test_resume_rejects_changed_added_or_removed_jars(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);lib=root/'lib';lib.mkdir();jar=lib/'owl.jar';jar.write_bytes(b'original')
+            config=root/'c';config.write_text('{}');run=root/'run'
+            with patch.object(journal,'LIB',lib):
+                journal.start(config,'control',5,run,self.runtime())
+                for change in ('changed','removed','added'):
+                    jar.write_bytes(b'original')
+                    extra=lib/'hermit.jar'
+                    if extra.exists():extra.unlink()
+                    if change=='changed':jar.write_bytes(b'new version')
+                    elif change=='removed':jar.unlink()
+                    else:extra.write_bytes(b'extra')
+                    with self.assertRaisesRegex(journal.JournalError,'incompatible libraries'):
+                        journal.resume(run,self.runtime())
+
+    def test_audit_replay_has_unambiguous_address_with_reused_active_id(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);config=root/'c';config.write_text('{}');run=root/'run'
+            with self.assertRaises(RuntimeError):journal.start(config,'control',5,run,self.runtime(14))
+            partial=[json.loads(s) for s in (run/'evaluations.jsonl').read_text().splitlines()][-1]
+            resumed=self.runtime()
+            resumed['control_generator']=lambda d,r:dict(add=d['add']+['resumed-'+str(r.randrange(100000))],remove=[])
+            journal.resume(run,resumed)
+            active=[json.loads(s) for s in (run/'evaluations.jsonl').read_text().splitlines()][partial['id']]
+            self.assertNotEqual(active['delta'],partial['delta'])
+            audit=next(run.glob('audit-*.jsonl'))
+            # Simulate a torn final append; full preceding audit records stay readable.
+            with audit.open('ab') as file:file.write(b'{torn')
+            address=audit.stem+':'+str(partial['id'])
+            seen=[]
+            result=journal.replay(run,address,inspect=lambda d:(seen.append(d) or dict(axioms=sorted(d['add']))),score=lambda d:1+len(d['add'])/100)
+            self.assertTrue(result['matches']);self.assertEqual(seen,[partial['delta']])
+            self.assertTrue(journal.replay(run,str(partial['id']),inspect=lambda d:dict(axioms=sorted(d['add'])),score=lambda d:1+len(d['add'])/100)['matches'])
+            with self.assertRaises(journal.JournalError):journal.replay(run,'../audit:12')
+
+    def test_incomplete_http_response_retained_in_interruption_log(self):
+        from unittest.mock import patch
+        from lab4.optimizer.proposals import OllamaModels
+        from lab4.optimizer.runtime import ModelGenerator
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);config=root/'c';config.write_text('{}');run=root/'run'
+            raw=dict(done=False,response='partial',model='pinned',extra='full raw')
+            client=OllamaModels('pinned','embed')
+            context=lambda d:dict(ontology_manchester='parent',metrics={f'M{i}':1 for i in range(1,7)},relative=[1]*6)
+            runtime=self.runtime();runtime['model_generator']=ModelGenerator(client.propose,context)
+            with patch.object(client,'_post',return_value=raw):
+                with self.assertRaises(RuntimeError):journal.start(config,'model',5,run,runtime)
+            interruption=json.loads((run/'interruptions.jsonl').read_text())
+            self.assertEqual(interruption['attempts'][0]['response']['raw'],raw)

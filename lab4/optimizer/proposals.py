@@ -26,6 +26,12 @@ class ModelResponse:
     model: str
     raw: dict
 
+class IncompleteModelResponse(RuntimeError):
+    """An HTTP response arrived but is incomplete; retain it for durable audit."""
+    def __init__(self,response):
+        super().__init__('Incomplete model response')
+        self.response=response
+
 def _unique_object(pairs):
     result = {}
     for key,value in pairs:
@@ -88,8 +94,9 @@ class OllamaModels:
         with urlopen(request,timeout=180) as response: return json.load(response)
     def propose(self,context,previous_error=None):
         raw=self._post('/api/generate',dict(model=self.model,prompt=render_prompt(context,previous_error),stream=False,format='json',options=dict(temperature=.7,top_p=.95,num_predict=2000,num_ctx=32768,seed=self.seed)))
-        if raw.get('done') is not True or raw.get('done_reason')=='length': raise RuntimeError('Incomplete model response')
-        return ModelResponse(raw['response'],raw['model'],raw)
+        response=ModelResponse(raw.get('response',''),raw.get('model',self.model),raw)
+        if raw.get('done') is not True or raw.get('done_reason')=='length': raise IncompleteModelResponse(response)
+        return response
     def embed(self,texts):
         raw=self._post('/api/embed',dict(model=self.embedding_model,input=texts,truncate=False))
         vectors=raw['embeddings']

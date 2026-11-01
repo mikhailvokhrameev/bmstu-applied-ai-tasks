@@ -1,7 +1,7 @@
 """Explicit model wiring; no default model or acceptance attestation."""
 from dataclasses import asdict
 from .proposals import OllamaModels, SemanticDeduplicator, ModelResponse, ProposalError, parse_proposal, render_prompt
-from .search import ControlGenerator, merge
+from .search import ControlGenerator
 from .bridge import evaluate, CORE
 from .metrics import compute_metrics, fitness, BASELINE
 
@@ -19,10 +19,16 @@ class ModelGenerator:
                 response=self.propose(context,error)
                 attempt['response']=asdict(response) if isinstance(response,ModelResponse) else response
             except Exception as exc:
+                if isinstance(getattr(exc,'response',None),ModelResponse):
+                    attempt['response']=asdict(exc.response)
                 attempt['service_error']=str(exc);raise
             try:
                 p=parse_proposal(response.text if isinstance(response,ModelResponse) else response)
-                return merge(parent,dict(add=p.add,remove=p.remove))
+                # Mutation operates on the parent, unlike crossover's set union.
+                # Removing a previously introduced axiom cancels that addition.
+                added=set(parent['add']);removed=set(parent['remove'])
+                return dict(add=sorted((added-set(p.remove)) | set(p.add)),
+                            remove=sorted((removed-set(p.add)) | (set(p.remove)-added)))
             except ValueError as exc:
                 error=str(exc);attempt['parse_error']=error
         raise ProposalError('Three unsuccessful attempts: '+error)
