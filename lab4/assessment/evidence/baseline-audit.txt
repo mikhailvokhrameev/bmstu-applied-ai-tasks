@@ -1,0 +1,11 @@
+A=472 Al=253 C=15 H=5 Po=10 Pd=7 E=2 Individuals=41
+P13 <https://example.org/ontologies/videocard#gpuProducedBy>
+P13 <https://example.org/ontologies/videocard#hasArchitecture>
+P13 <https://example.org/ontologies/videocard#hasCooling>
+P13 <https://example.org/ontologies/videocard#hasInterface>
+P13 <https://example.org/ontologies/videocard#hasMemory>
+P13 <https://example.org/ontologies/videocard#hasMemoryType>
+P13 <https://example.org/ontologies/videocard#hasPurpose>
+P13 <https://example.org/ontologies/videocard#hasVideoOutput>
+P13 <https://example.org/ontologies/videocard#producedByManufacturer>
+P13 <https://example.org/ontologies/videocard#usesGPU>
