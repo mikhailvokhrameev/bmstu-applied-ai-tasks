@@ -10,6 +10,8 @@ import re
 import sys
 import subprocess
 import uuid
+import time
+from datetime import datetime, timezone
 from . import search
 from .bridge import CORE, CORE_SHA256, LIB, evaluate
 from .metrics import compute_metrics, fitness, BASELINE
@@ -45,15 +47,72 @@ def _metadata(root):
     except (OSError,ValueError,KeyError,TypeError) as e:raise JournalError('Invalid run metadata: '+str(e)) from e
 
 def start(config,mode,seed,run_dir,runtime=None):
+    started_at=time.time()
     raw=Path(config).read_bytes(); spec=search.load_config(config)
     root=Path(run_dir);root.mkdir(parents=True,exist_ok=False)
     manifest=spec.pop('services',{})
     meta=dict(schema=SCHEMA,mode=mode,seed=seed,config_sha256=digest(raw),core_sha256=CORE_SHA256,
               environment=dict(python=sys.version,platform=platform.platform(),java=subprocess.run(['java','-version'],capture_output=True,text=True,timeout=10).stderr.strip(),libraries={p.name:digest(p.read_bytes()) for p in sorted(LIB.glob('*.jar'))}),models=manifest)
     atomic(root/'config.yaml',raw);atomic(root/'metadata.json',encoded(meta));atomic(root/'metadata.sha256',digest(encoded(meta)).encode())
+    _timing_write(root,dict(schema=1,complete_origin=True,started_at=started_at,
+                            started_utc=datetime.fromtimestamp(started_at,timezone.utc).isoformat(),sessions=[]))
     return _run(root,meta,spec,runtime,None)
 
+def _timing_write(root, data):
+    data = dict(data)
+    data['payload_sha256'] = digest(encoded(data))
+    atomic(root/'timing.json', encoded(data))
+
+
+def read_timing(root):
+    path = Path(root)/'timing.json'
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text())
+        seal = data.pop('payload_sha256')
+        if seal != digest(encoded(data)) or data['schema'] != 1:
+            raise ValueError('checksum/schema')
+        return data
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        raise JournalError('Invalid timing journal: '+str(error)) from error
+
+
 def _run(root,meta,spec,runtime,snapshot):
+    # UTC spans include offline gaps after interruptions. Monotonic durations
+    # separately measure active process time, never candidate evaluation sums.
+    now = time.time()
+    timing = read_timing(root)
+    if timing is None:
+        timing = dict(schema=1, complete_origin=not (root/'evaluations.jsonl').exists(),
+                      started_at=now, started_utc=datetime.fromtimestamp(now,timezone.utc).isoformat(),
+                      sessions=[])
+    if timing.get('completed_at') is not None:
+        # A completed resume validates/reconstructs state but is not a new run.
+        return _run_search(root,meta,spec,runtime,snapshot)
+    if timing['sessions'] and timing['sessions'][-1].get('ended_at') is None:
+        timing['sessions'][-1]['outcome']='unclean interruption; active duration unknown'
+    session = dict(started_at=now, started_utc=datetime.fromtimestamp(now,timezone.utc).isoformat())
+    timing['sessions'].append(session)
+    _timing_write(root,timing)
+    monotonic_start = time.monotonic()
+    try:
+        result = _run_search(root,meta,spec,runtime,snapshot)
+    except BaseException:
+        session['outcome']='interrupted'
+        raise
+    else:
+        session['outcome']='completed'
+        timing['completed_at']=time.time()
+        timing['completed_utc']=datetime.fromtimestamp(timing['completed_at'],timezone.utc).isoformat()
+        return result
+    finally:
+        session['ended_at']=time.time()
+        session['active_seconds']=time.monotonic()-monotonic_start
+        _timing_write(root,timing)
+
+
+def _run_search(root,meta,spec,runtime,snapshot):
     if runtime is None:
         from .runtime import build_runtime
         runtime=build_runtime(meta['models'],meta['seed'])

@@ -29,6 +29,26 @@ def mann_whitney(model, control):
                 conclusion='Evidence of higher model fitness' if p < .05 else 'Insufficient evidence at alpha=0.05; this alone does not fail T09')
 
 
+def timing_summary(root):
+    timing=journal.read_timing(root)
+    if timing is None:
+        return dict(wall_clock_seconds=None, duration_acceptance='UNVERIFIED: legacy journal lacks timestamps')
+    sessions=timing['sessions']
+    end=timing.get('completed_at')
+    valid=(timing.get('complete_origin') is True and end is not None and end>=timing['started_at'])
+    previous=timing['started_at']
+    for session in sessions:
+        start=session['started_at'];finish=session.get('ended_at')
+        if start < previous or (finish is not None and finish < start):valid=False
+        previous=finish if finish is not None else start
+    if not valid:
+        return dict(wall_clock_seconds=None,duration_acceptance='UNVERIFIED: incomplete origin/completion or clock regression')
+    return dict(wall_clock_seconds=end-timing['started_at'],
+                started_at=timing['started_at'],completed_at=end,
+                active_seconds=sum(s.get('active_seconds',0) for s in sessions) if all('active_seconds' in s for s in sessions) else None,
+                duration_acceptance='Run wall-clock span recorded; series span checked separately')
+
+
 def analyze_run(directory, replay=False):
     root = Path(directory)
     meta = journal._metadata(root)
@@ -80,7 +100,7 @@ def analyze_run(directory, replay=False):
     return dict(path=str(root),mode=meta['mode'],seed=meta['seed'],config_sha256=meta['config_sha256'],
                 best_F=best['F'],best_generation=best['generation'],best_id=best['id'],generations=generations,
                 evaluation_seconds=sum(r['elapsed_seconds'] for r in rows),
-                wall_clock_seconds=None,duration_acceptance='UNVERIFIED: schema 1 has no run/series wall-clock timestamps',
+                **timing_summary(root),
                 replay=journal.replay(root,best['id']) if replay else None)
 
 
@@ -105,6 +125,14 @@ def export_run(result, output):
     axes[1].set(xlabel='Generation',ylabel='Fraction of evaluations',ylim=(0,1));axes[1].legend();fig.tight_layout();fig.savefig(output/(stem+'.png'));plt.close(fig)
 
 
+def series_timing(group):
+    if any(r.get('wall_clock_seconds') is None for r in group):
+        return dict(seconds=None,within_eight_hours=None,status='UNVERIFIED: missing trustworthy timestamps')
+    seconds=max(r['completed_at'] for r in group)-min(r['started_at'] for r in group)
+    return dict(seconds=seconds,within_eight_hours=seconds<=8*3600,
+                status='Includes all gaps between first start and final completion; UTC system clock must be stable')
+
+
 def summarize(results):
     for mode,seeds in [('model',set(range(101,106))),('control',set(range(201,206)))]:
         group=[r for r in results if r['mode']==mode]
@@ -117,7 +145,7 @@ def summarize(results):
     model=[r['best_F'] for r in results if r['mode']=='model'];control=[r['best_F'] for r in results if r['mode']=='control']
     return dict(model_best=model,control_best=control,model_max=max(model),model_median=median(model),control_median=median(control),
                 targets=dict(maximum=max(model)>=1.25,median=median(model)>=1.15,each_above_one=all(v>1 for v in model),median_above_control=median(model)>median(control)),
-                mann_whitney=mann_whitney(model,control),duration_acceptance='UNVERIFIED: independently recorded series wall-clock timing required')
+                mann_whitney=mann_whitney(model,control),series_timing={mode: series_timing([r for r in results if r['mode']==mode]) for mode in ('model','control')})
 
 
 def main():

@@ -30,6 +30,37 @@ def seal_checkpoint(root,cp):
 
 
 class AnalysisTests(unittest.TestCase):
+    def test_real_journal_callbacks_and_resumed_timing(self):
+        from lab4.tests.test_journal import JournalTests
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);config=root/'config';config.write_text('{}');run=root/'TEST-ONLY'
+            runtime=JournalTests().runtime
+            with self.assertRaisesRegex(RuntimeError,'interrupted'):
+                journal.start(config,'control',999,run,runtime(14))
+            first=journal.read_timing(run)
+            self.assertEqual(first['sessions'][0]['outcome'],'interrupted')
+            journal.resume(run,runtime())
+            result=analysis.analyze_run(run)
+            self.assertGreaterEqual(result['wall_clock_seconds'],0)
+            self.assertEqual(len(journal.read_timing(run)['sessions']),2)
+            rows=[json.loads(line) for line in (run/'evaluations.jsonl').read_text().splitlines()]
+            checkpoint=json.loads((run/'checkpoint.json').read_text())
+            self.assertGreater(set(rows[0]),set(checkpoint['evaluations'][0]))
+            self.assertEqual(result['best_id'],checkpoint['best']['id'])
+            timing=(run/'timing.json').read_bytes()
+            journal.resume(run,runtime())
+            self.assertEqual((run/'timing.json').read_bytes(),timing)
+            summary=analysis.series_timing([result])
+            self.assertTrue(summary['within_eight_hours'])
+            (run/'timing.json').unlink()
+            self.assertIsNone(analysis.analyze_run(run)['wall_clock_seconds'])
+
+    def test_series_wall_clock_includes_gaps(self):
+        result=analysis.series_timing([dict(wall_clock_seconds=1,started_at=0,completed_at=1),dict(wall_clock_seconds=1,started_at=30000,completed_at=30001)])
+        self.assertEqual(result['seconds'],30001)
+        self.assertFalse(result['within_eight_hours'])
+        self.assertIsNone(analysis.series_timing([{}])['within_eight_hours'])
+
     def test_exact_and_ties(self):
         self.assertAlmostEqual(analysis.mann_whitney([2]*5,[1]*5)['p'],1/252)
         self.assertEqual(analysis.mann_whitney([1]*5,[1]*5)['p'],1)
