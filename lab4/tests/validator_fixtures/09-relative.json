@@ -1,0 +1,22 @@
+{
+  "expected_code": "RELATIVE_METRIC",
+  "reason": "Three new subclasses reduce relative relationship richness below .85",
+  "candidate": {
+    "add": [
+      "Declaration(Class(:Fresh0))",
+      "SubClassOf(:Fresh0 :VideoCardModel)",
+      "AnnotationAssertion(rdfs:label :Fresh0 \"Тестовый класс\"@ru)",
+      "AnnotationAssertion(rdfs:comment :Fresh0 \"Определение тестового класса\"@ru)",
+      "Declaration(Class(:Fresh1))",
+      "SubClassOf(:Fresh1 :VideoCardModel)",
+      "AnnotationAssertion(rdfs:label :Fresh1 \"Тестовый класс\"@ru)",
+      "AnnotationAssertion(rdfs:comment :Fresh1 \"Определение тестового класса\"@ru)",
+      "Declaration(Class(:Fresh2))",
+      "SubClassOf(:Fresh2 :VideoCardModel)",
+      "AnnotationAssertion(rdfs:label :Fresh2 \"Тестовый класс\"@ru)",
+      "AnnotationAssertion(rdfs:comment :Fresh2 \"Определение тестового класса\"@ru)"
+    ],
+    "remove": []
+  },
+  "duplicate": false
+}

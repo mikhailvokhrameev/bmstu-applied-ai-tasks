@@ -1,0 +1,12 @@
+{
+  "expected_code": "ANNOTATIONS",
+  "reason": "New class has no Russian annotations",
+  "candidate": {
+    "add": [
+      "Declaration(Class(:Fresh))",
+      "SubClassOf(:Fresh :VideoCardModel)"
+    ],
+    "remove": []
+  },
+  "duplicate": false
+}

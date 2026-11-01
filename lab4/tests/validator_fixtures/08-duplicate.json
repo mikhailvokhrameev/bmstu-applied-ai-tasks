@@ -1,0 +1,14 @@
+{
+  "expected_code": "DUPLICATE",
+  "reason": "Injected duplicate checker finds semantic duplicate",
+  "candidate": {
+    "add": [
+      "Declaration(Class(:Fresh))",
+      "SubClassOf(:Fresh :VideoCardModel)",
+      "AnnotationAssertion(rdfs:label :Fresh \"Тестовый класс\"@ru)",
+      "AnnotationAssertion(rdfs:comment :Fresh \"Определение тестового класса\"@ru)"
+    ],
+    "remove": []
+  },
+  "duplicate": true
+}

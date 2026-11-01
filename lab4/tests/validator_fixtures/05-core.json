@@ -1,0 +1,11 @@
+{
+  "expected_code": "CORE",
+  "reason": "An original annotation is removed",
+  "candidate": {
+    "add": [],
+    "remove": [
+      "AnnotationAssertion(rdfs:label :VideoCardModel \"Модель видеокарты\"@ru)"
+    ]
+  },
+  "duplicate": false
+}
