@@ -37,8 +37,13 @@ services со следующими обязательными ключами (т
 model, embedding_model, model_sha256, embedding_sha256, server_version,
 acceptance_approved, inventory, entities. endpoint необязателен.
 inventory — объект с массивами classes, object_properties, data_properties,
-содержащими полные IRI. entities — полная таблица существующих сущностей с iri,
-category (Class/ObjectProperty/DataProperty), label, comment. Неполная таблица
+содержащими OWL Functional Syntax ссылки: например,
+`<https://example.org/ontologies/videocard#GPUModel>` либо `:GPUModel`.
+ControlGenerator вставляет эти строки в аксиомы напрямую, поэтому полный IRI
+без угловых скобок здесь недопустим. entities — полная таблица существующих
+сущностей с iri, category (Class/ObjectProperty/DataProperty), label, comment;
+entities.iri содержит обычный полный IRI без угловых скобок, например
+`https://example.org/ontologies/videocard#GPUModel`. Неполная таблица
 делает семантическую проверку неполной. acceptance_approved=true устанавливается
 оператором только после фактического согласования; код не подтверждает Т04 автоматически.
 Пустые или вымышленные хеши использовать нельзя. Оба режима требуют manifest:
