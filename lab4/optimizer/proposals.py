@@ -57,8 +57,19 @@ def parse_proposal(text):
     # Infrastructure errors propagate; malformed OWL is returned by the parser process.
     import subprocess
     proc=subprocess.run(['java','-Dfile.encoding=UTF-8','-cp',str(build)+':'+str(LIB/'*'),'ProposalSyntax'],input=json.dumps(p),text=True,capture_output=True,timeout=120)
-    if proc.returncode: raise ProposalError('OWL syntax: '+proc.stderr[-2000:])
-    if not 1<=int(proc.stdout.strip())<=5: raise ProposalError('Expected 1..5 logical axioms')
+    if proc.returncode: raise RuntimeError('OWL checker process failed: '+proc.stderr[-2000:])
+    try:
+        result=json.loads(proc.stdout)
+        if not isinstance(result,dict): raise ValueError('Expected object')
+        if result.get('status')=='invalid' and isinstance(result.get('detail'),str):
+            raise ProposalError('OWL syntax: '+result['detail'])
+        if result.get('status')!='ok' or type(result.get('logical_count')) is not int:
+            raise ValueError('Invalid checker schema')
+    except ProposalError:
+        raise
+    except (ValueError,TypeError) as error:
+        raise RuntimeError('Invalid OWL checker response') from error
+    if not 1<=result['logical_count']<=5: raise ProposalError('Expected 1..5 logical axioms')
     return Proposal(**p)
 
 def render_prompt(context,previous_error=None):
@@ -77,7 +88,7 @@ class OllamaModels:
         with urlopen(request,timeout=180) as response: return json.load(response)
     def propose(self,context,previous_error=None):
         raw=self._post('/api/generate',dict(model=self.model,prompt=render_prompt(context,previous_error),stream=False,format='json',options=dict(temperature=.7,top_p=.95,num_predict=2000,num_ctx=32768,seed=self.seed)))
-        if raw.get('done') is not True: raise RuntimeError('Incomplete model response')
+        if raw.get('done') is not True or raw.get('done_reason')=='length': raise RuntimeError('Incomplete model response')
         return ModelResponse(raw['response'],raw['model'],raw)
     def embed(self,texts):
         raw=self._post('/api/embed',dict(model=self.embedding_model,input=texts,truncate=False))

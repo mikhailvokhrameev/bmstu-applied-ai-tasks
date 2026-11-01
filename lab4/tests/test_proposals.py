@@ -44,3 +44,25 @@ class TransportTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             client.propose(dict(ontology_manchester='Class: GPU',metrics={f'M{i}':1 for i in range(1,7)},relative=[1]*6))
         self.assertEqual(observed[0]['options'],dict(temperature=.7,top_p=.95,num_predict=2000,num_ctx=32768,seed=100))
+
+class ReviewRegressionTests(unittest.TestCase):
+    def test_semantically_equal_axioms_rejected(self):
+        for add,remove in [(['SubClassOf(:A :B)','SubClassOf( :A :B )'],[]),(['SubClassOf(:A :B)'],['SubClassOf( :A :B )'])]:
+            with self.subTest(add=add,remove=remove), self.assertRaises(ProposalError):
+                parse_proposal(json.dumps(dict(rationale='x',add=add,remove=remove)))
+    def test_length_limit_is_not_complete(self):
+        from lab4.optimizer.proposals import OllamaModels
+        client=OllamaModels('pinned','embed')
+        client._post=lambda *args:dict(response='{}',model='pinned',done=True,done_reason='length')
+        with self.assertRaises(RuntimeError):
+            client.propose(dict(ontology_manchester='Class: GPU',metrics={f'M{i}':1 for i in range(1,7)},relative=[1]*6))
+    def test_process_failure_does_not_retry_model(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        calls=[]
+        def model(context,error):
+            calls.append(error)
+            return json.dumps(dict(rationale='x',add=['SubClassOf(:A :B)'],remove=[]))
+        with patch('subprocess.run',return_value=SimpleNamespace(returncode=-9,stdout='',stderr='killed')):
+            with self.assertRaises(RuntimeError): propose_with_retries(model,{})
+        self.assertEqual(len(calls),1)
