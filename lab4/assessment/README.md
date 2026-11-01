@@ -6,6 +6,7 @@
 
 ```sh
 /opt/homebrew/bin/python3.11 lab4/assessment/verify_reference.py
+/opt/homebrew/bin/python3.11 lab4/assessment/test_verify_reference.py
 ```
 
 Нужны JAR существующего lab2 harness; при их отсутствии сначала `bash lab2/tests/harness/fetch_libs.sh`.

@@ -28,4 +28,4 @@ P13 <https://example.org/ontologies/videocard#p>
 P11 <https://example.org/ontologies/videocard#value> range
 P10 [https://example.org/ontologies/videocard#A, https://example.org/ontologies/videocard#C]
 
-PASS: source SHA-256; baseline and 3 hand-counted fixtures; six checks; exact M1–M6, capped ratios and F
+PASS: source SHA-256; baseline and 3 hand-counted fixtures; six checks; exact M1–M6, capped ratios and F; CSV/JSON agreement
