@@ -84,7 +84,7 @@ def _run(root,meta,spec,runtime,snapshot):
     now = time.time()
     timing = read_timing(root)
     if timing is None:
-        timing = dict(schema=1, complete_origin=not (root/'evaluations.jsonl').exists(),
+        timing = dict(schema=1, complete_origin=False,
                       started_at=now, started_utc=datetime.fromtimestamp(now,timezone.utc).isoformat(),
                       sessions=[])
     if timing.get('completed_at') is not None:
@@ -103,12 +103,13 @@ def _run(root,meta,spec,runtime,snapshot):
         raise
     else:
         session['outcome']='completed'
-        timing['completed_at']=time.time()
-        timing['completed_utc']=datetime.fromtimestamp(timing['completed_at'],timezone.utc).isoformat()
         return result
     finally:
         session['ended_at']=time.time()
         session['active_seconds']=time.monotonic()-monotonic_start
+        if session['outcome']=='completed':
+            timing['completed_at']=session['ended_at']
+            timing['completed_utc']=datetime.fromtimestamp(timing['completed_at'],timezone.utc).isoformat()
         _timing_write(root,timing)
 
 

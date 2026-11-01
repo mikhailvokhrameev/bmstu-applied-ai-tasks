@@ -55,6 +55,29 @@ class AnalysisTests(unittest.TestCase):
             (run/'timing.json').unlink()
             self.assertIsNone(analysis.analyze_run(run)['wall_clock_seconds'])
 
+    def test_timing_rejects_empty_and_inconsistent_sessions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            base=dict(schema=1,complete_origin=True,started_at=100,completed_at=101)
+            cases=[[],[dict(started_at=100,ended_at=200,outcome='completed')],
+                   [dict(started_at=100,outcome='completed')],
+                   [dict(started_at=100,ended_at=101,outcome='interrupted')],
+                   [dict(started_at=100,ended_at=100.5,outcome='completed')]]
+            for sessions in cases:
+                with self.subTest(sessions=sessions):
+                    journal._timing_write(root,dict(base,sessions=sessions))
+                    self.assertIsNone(analysis.timing_summary(root)['wall_clock_seconds'])
+            journal._timing_write(root,dict(base,sessions=[dict(started_at=100,ended_at=101,outcome='completed')]))
+            self.assertEqual(analysis.timing_summary(root)['wall_clock_seconds'],1)
+
+    def test_legacy_resume_before_first_evaluation_has_unknown_origin(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            with patch.object(journal,'_run_search',return_value=None):
+                journal._run(root,{}, {}, {},None)
+            self.assertFalse(journal.read_timing(root)['complete_origin'])
+            self.assertIsNone(analysis.timing_summary(root)['wall_clock_seconds'])
+
     def test_series_wall_clock_includes_gaps(self):
         result=analysis.series_timing([dict(wall_clock_seconds=1,started_at=0,completed_at=1),dict(wall_clock_seconds=1,started_at=30000,completed_at=30001)])
         self.assertEqual(result['seconds'],30001)

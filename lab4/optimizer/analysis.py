@@ -33,14 +33,25 @@ def timing_summary(root):
     timing=journal.read_timing(root)
     if timing is None:
         return dict(wall_clock_seconds=None, duration_acceptance='UNVERIFIED: legacy journal lacks timestamps')
-    sessions=timing['sessions']
+    sessions=timing.get('sessions',[])
     end=timing.get('completed_at')
-    valid=(timing.get('complete_origin') is True and end is not None and end>=timing['started_at'])
-    previous=timing['started_at']
-    for session in sessions:
-        start=session['started_at'];finish=session.get('ended_at')
-        if start < previous or (finish is not None and finish < start):valid=False
+    origin=timing.get('started_at')
+    finite=lambda value: isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value)
+    valid=(timing.get('complete_origin') is True and finite(origin) and finite(end)
+           and end>=origin and bool(sessions))
+    previous=origin
+    for index,session in enumerate(sessions):
+        start=session.get('started_at');finish=session.get('ended_at')
+        if not finite(start) or not finite(previous) or start < previous:
+            valid=False
+        if finish is None:
+            # Unclean earlier sessions have an unknown end, bounded by resume.
+            if index==len(sessions)-1 or session.get('outcome')!='unclean interruption; active duration unknown':valid=False
+        elif not finite(finish) or not finite(start) or finish < start or not finite(end) or finish>end:
+            valid=False
         previous=finish if finish is not None else start
+    if sessions and (sessions[-1].get('outcome')!='completed' or sessions[-1].get('ended_at')!=end):
+        valid=False
     if not valid:
         return dict(wall_clock_seconds=None,duration_acceptance='UNVERIFIED: incomplete origin/completion or clock regression')
     return dict(wall_clock_seconds=end-timing['started_at'],
