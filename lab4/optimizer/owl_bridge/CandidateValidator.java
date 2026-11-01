@@ -40,7 +40,7 @@ public class CandidateValidator {
   OWLReasoner r=new ReasonerFactory().createReasoner(o);
   try{
    if(!r.isConsistent())return fail("CONSISTENCY");
-   for(OWLClass c:o.getClassesInSignature())if(c.getIRI().toString().startsWith(NS)&&!r.isSatisfiable(c))return fail("CONSISTENCY");
+   for(OWLClass c:o.getClassesInSignature())if(!c.isBuiltIn()&&!r.isSatisfiable(c))return fail("CONSISTENCY");
   }finally{r.dispose();}
   Checks queries=new Checks(QUIET); CandidateQueries.verify(o,new ReasonerFactory(),Path.of(q.get("expected").asText()),queries,QUIET);
   if(!queries.ok())return fail("QUERIES");
@@ -88,7 +88,10 @@ public class CandidateValidator {
      if(pd.isEmpty()||pr.isEmpty()||!pd.equals(sr)||!pr.equals(sd))return "inverse domain/range must mirror direct property";
     }else if(a instanceof OWLDataPropertyAssertionAxiom){OWLDataPropertyAssertionAxiom x=(OWLDataPropertyAssertionAxiom)a;if(!fresh.contains(x.getProperty())||!b.getIndividualsInSignature().contains(x.getSubject())||!text(o,x.getSubject().asOWLNamedIndividual(),"comment").toLowerCase(Locale.ROOT).contains("условн"))return "new teaching values need conditional-data comment";}
     else if(a instanceof OWLDisjointClassesAxiom){if(((OWLDisjointClassesAxiom)a).getClassExpressions().stream().anyMatch(c->!fresh.contains(c)))return "disjointness only for new classes";}
-    else if(a instanceof OWLObjectPropertyDomainAxiom||a instanceof OWLObjectPropertyRangeAxiom||a instanceof OWLDataPropertyDomainAxiom||a instanceof OWLDataPropertyRangeAxiom){if(a.getSignature().stream().noneMatch(fresh::contains))return "domain/range only for new properties";}
+    else if(a instanceof OWLObjectPropertyDomainAxiom){if(!fresh.contains(((OWLObjectPropertyDomainAxiom)a).getProperty().getNamedProperty()))return "domain/range only for new properties";}
+    else if(a instanceof OWLObjectPropertyRangeAxiom){if(!fresh.contains(((OWLObjectPropertyRangeAxiom)a).getProperty().getNamedProperty()))return "domain/range only for new properties";}
+    else if(a instanceof OWLDataPropertyDomainAxiom){if(!fresh.contains(((OWLDataPropertyDomainAxiom)a).getProperty().asOWLDataProperty()))return "domain/range only for new properties";}
+    else if(a instanceof OWLDataPropertyRangeAxiom){if(!fresh.contains(((OWLDataPropertyRangeAxiom)a).getProperty().asOWLDataProperty()))return "domain/range only for new properties";}
     else if(!(a instanceof OWLFunctionalObjectPropertyAxiom||a instanceof OWLInverseFunctionalObjectPropertyAxiom||a instanceof OWLAsymmetricObjectPropertyAxiom||a instanceof OWLIrreflexiveObjectPropertyAxiom||a instanceof OWLSubObjectPropertyOfAxiom||a instanceof OWLSubDataPropertyOfAxiom))return "axiom kind is not allowed: "+a.getAxiomType();
    }
   }finally{r.dispose();}return "";

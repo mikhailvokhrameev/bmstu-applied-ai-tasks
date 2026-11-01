@@ -68,3 +68,19 @@ class TemplateTests(unittest.TestCase):
             self.assertEqual((r.status,r.code),('invalid','FORBIDDEN'),r.detail)
     def test_conditional_teaching_value(self):
         self.check(self.annotated('DataProperty','extraW')+['DataPropertyDomain(:extraW :VideoCardModel)','DataPropertyRange(:extraW xsd:integer)','DataPropertyAssertion(:extraW :U01 "1"^^xsd:integer)','AnnotationAssertion(rdfs:comment :U01 "Условные учебные данные для extraW"@ru)'],None)
+
+class ReviewRegressionTests(unittest.TestCase):
+    annotated = staticmethod(TemplateTests.annotated)
+    check = TemplateTests.check
+    def test_foreign_unsatisfiable_class_precedes_namespace_violation(self):
+        self.check(['Declaration(Class(<https://foreign.example/Impossible>))','SubClassOf(<https://foreign.example/Impossible> <http://www.w3.org/2002/07/owl#Nothing>)'],'CONSISTENCY')
+    def test_existing_property_domain_and_range_reject_new_class(self):
+        for axiom,parent in [
+            ('ObjectPropertyDomain(:usesGPU :Fresh)','VideoCardModel'),
+            ('ObjectPropertyRange(:hasVideoOutput :Fresh)','VideoOutput'),
+            ('DataPropertyDomain(:powerW :Fresh)','VideoCardModel'),
+        ]:
+            with self.subTest(axiom=axiom):
+                self.check(self.annotated('Class','Fresh')+[f'SubClassOf(:Fresh :{parent})',axiom],'CHANGE_KIND')
+    def test_existing_data_property_range_is_rejected(self):
+        self.check(['DataPropertyRange(:powerW xsd:decimal)'],'CHANGE_KIND')
