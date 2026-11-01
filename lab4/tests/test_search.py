@@ -1,7 +1,7 @@
 import random
 import unittest
 from lab4.optimizer import search
-from lab4.optimizer.validator import ValidationResult
+from lab4.optimizer.validator import ValidationResult, validate
 
 class SearchTests(unittest.TestCase):
     def config(self):
@@ -54,6 +54,29 @@ class SearchTests(unittest.TestCase):
         conflicts=[x for x in r.evaluations if x.code=='CONFLICT']
         self.assertTrue(conflicts)
         self.assertTrue(all(x.delta in self.calls and x.F==0 for x in conflicts))
+
+    def test_new_entity_templates_pass_real_validator(self):
+        # Use an inhabited defined core class without direct class assertions;
+        # this satisfies both the instance rule and the FORBIDDEN check.
+        generator=search.ControlGenerator({'classes':[':CardWith8GBMemory']})
+        templates={}
+        for seed in range(100):
+            delta=generator({'add':[],'remove':[]},random.Random(seed))
+            text=' '.join(delta['add'])
+            for kind,axiom in (('subclass','SubClassOf('),('defined','EquivalentClasses('),('data_property','DataPropertyDomain(')):
+                if axiom in text and kind not in templates:templates[kind]=delta
+            if len(templates)==3:break
+        self.assertEqual(set(templates),{'subclass','defined','data_property'})
+        for kind,delta in templates.items():
+            with self.subTest(template=kind):
+                inspected=[]
+                def no_semantic_duplicate(entities):
+                    inspected.extend(entities)
+                    return False # Isolate the external embedding service only.
+                result=validate(delta,duplicate_checker=no_semantic_duplicate)
+                self.assertEqual((result.status,result.code),('valid',None),result.detail)
+                self.assertEqual(len(inspected),1)
+                self.assertGreater(result.F,0)
 
     def test_control_templates_and_conflict_kept(self):
         g=search.ControlGenerator({'classes':[':A',':B'],'object_properties':[':p',':q'],'data_properties':[':x',':y']})

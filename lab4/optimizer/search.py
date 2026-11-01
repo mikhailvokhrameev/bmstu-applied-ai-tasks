@@ -155,6 +155,8 @@ class ControlGenerator:
         cls=rng.choice(c)
         if kind in ('subclass','defined','data_property'):
             if kind=='data_property':name+='Count'
+            entity_type='DataProperty' if kind=='data_property' else 'Class'
+            add += [f'Declaration({entity_type}({name}))']
             label='Учебный показатель' if kind=='data_property' else 'Учебный класс'
             add += [f'AnnotationAssertion(rdfs:label {name} "{label}"@ru)',f'AnnotationAssertion(rdfs:comment {name} "Условное учебное определение для класса {cls.replace(chr(34), chr(39))}"@ru)']
         if kind=='subclass':add += [f'SubClassOf({name} {cls})']
