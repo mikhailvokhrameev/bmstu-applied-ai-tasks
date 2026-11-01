@@ -1,0 +1,31 @@
+baseline
+A=472 Al=253 C=15 H=5 Po=10 Pd=7 E=2 Individuals=41
+P13 <https://example.org/ontologies/videocard#gpuProducedBy>
+P13 <https://example.org/ontologies/videocard#hasArchitecture>
+P13 <https://example.org/ontologies/videocard#hasCooling>
+P13 <https://example.org/ontologies/videocard#hasInterface>
+P13 <https://example.org/ontologies/videocard#hasMemory>
+P13 <https://example.org/ontologies/videocard#hasMemoryType>
+P13 <https://example.org/ontologies/videocard#hasPurpose>
+P13 <https://example.org/ontologies/videocard#hasVideoOutput>
+P13 <https://example.org/ontologies/videocard#producedByManufacturer>
+P13 <https://example.org/ontologies/videocard#usesGPU>
+
+01-balanced
+A=18 Al=6 C=2 H=1 Po=1 Pd=1 E=1 Individuals=0
+P13 <https://example.org/ontologies/videocard#p>
+
+02-zero
+A=8 Al=2 C=1 H=0 Po=1 Pd=0 E=0 Individuals=0
+P13 <https://example.org/ontologies/videocard#p>
+
+03-pitfalls
+A=23 Al=6 C=4 H=2 Po=1 Pd=1 E=1 Individuals=0
+P04 https://example.org/ontologies/videocard#bad_class
+P08 https://example.org/ontologies/videocard#bad_class comment
+P22 https://example.org/ontologies/videocard#bad_class
+P13 <https://example.org/ontologies/videocard#p>
+P11 <https://example.org/ontologies/videocard#value> range
+P10 [https://example.org/ontologies/videocard#A, https://example.org/ontologies/videocard#C]
+
+PASS: source SHA-256; baseline and 3 hand-counted fixtures; six checks; exact M1–M6, capped ratios and F; CSV/JSON agreement

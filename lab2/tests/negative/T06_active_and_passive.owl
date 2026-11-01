@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://example.org/ontologies/videocard#"
+     xml:base="https://example.org/ontologies/videocard"
+     xmlns:vc="https://example.org/ontologies/videocard#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://example.org/ontologies/videocard">
+        <owl:versionIRI rdf:resource="https://example.org/ontologies/videocard/1.0.0"/>
+        <rdfs:comment xml:lang="ru">Учебная онтология предметной области «Дискретные видеокарты», версия 1.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Онтология дискретных видеокарт</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/ontologies/videocard#gpuProducedBy -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#gpuProducedBy">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#Manufacturer"/>
+        <rdfs:comment xml:lang="ru">Связывает модель GPU с производителем.</rdfs:comment>
+        <rdfs:label xml:lang="ru">GPU выпущен производителем</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasArchitecture -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasArchitecture">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#GPUArchitecture"/>
+        <rdfs:comment xml:lang="ru">Связывает модель GPU с архитектурой GPU.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет архитектуру</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasCooling -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasCooling">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#CoolingSystem"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с системой охлаждения.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет охлаждение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasInterface">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#ConnectionInterface"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с интерфейсом подключения.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет интерфейс</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasMemory -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasMemory">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с конфигурацией видеопамяти.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет память</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasMemoryType -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasMemoryType">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#MemoryType"/>
+        <rdfs:comment xml:lang="ru">Связывает конфигурацию видеопамяти с типом памяти.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет тип памяти</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasPurpose">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#Purpose"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с назначением.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет назначение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#hasVideoOutput -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#hasVideoOutput">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#VideoOutput"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с поддерживаемым видеовыходом.</rdfs:comment>
+        <rdfs:label xml:lang="ru">имеет видеовыход</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#producedByManufacturer -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#producedByManufacturer">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#Manufacturer"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с производителем.</rdfs:comment>
+        <rdfs:label xml:lang="ru">выпущена производителем</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#usesGPU -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/ontologies/videocard#usesGPU">
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <rdfs:comment xml:lang="ru">Связывает модель видеокарты с используемой моделью GPU.</rdfs:comment>
+        <rdfs:label xml:lang="ru">использует GPU</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/ontologies/videocard#busWidthBit -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#busWidthBit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="ru">Ширина шины памяти в битах.</rdfs:comment>
+        <rdfs:label xml:lang="ru">ширина шины, бит</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#fanCount -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#fanCount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#CoolingSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="ru">Число вентиляторов системы охлаждения, шт.</rdfs:comment>
+        <rdfs:label xml:lang="ru">число вентиляторов</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#frequencyMHz -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#frequencyMHz">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="ru">Частота модели GPU в МГц (десятичное число больше 0).</rdfs:comment>
+        <rdfs:label xml:lang="ru">частота, МГц</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#lengthMM -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#lengthMM">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="ru">Длина платы в мм (десятичное число больше 0).</rdfs:comment>
+        <rdfs:label xml:lang="ru">длина, мм</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#name -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#ConnectionInterface"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPUArchitecture"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPUModel"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#Manufacturer"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#MemoryType"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#Purpose"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoCardModel"/>
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoOutput"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Название сущности (строка, единица отсутствует).</rdfs:comment>
+        <rdfs:label xml:lang="ru">название</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#powerW -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#powerW">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="ru">Заявленная мощность модели платы в Вт (не рекомендуемая мощность блока питания); десятичное число больше 0.</rdfs:comment>
+        <rdfs:label xml:lang="ru">мощность, Вт</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#volumeGiB -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/ontologies/videocard#volumeGiB">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="ru">Объём видеопамяти в ГиБ.</rdfs:comment>
+        <rdfs:label xml:lang="ru">объём, ГиБ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/ontologies/videocard#ActiveCooling -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#ActiveCooling">
+        <rdfs:subClassOf rdf:resource="https://example.org/ontologies/videocard#CoolingSystem"/>
+        <owl:disjointWith rdf:resource="https://example.org/ontologies/videocard#PassiveCooling"/>
+        <rdfs:comment xml:lang="ru">Подкласс «Система охлаждения»; охлаждение с вентилятором.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Активное охлаждение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#CardWith8GBMemory -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#CardWith8GBMemory">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoCardModel"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasMemory"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#volumeGiB"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="ru">Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Карта с памятью от 8 ГиБ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#CardWithActiveCooling -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#CardWithActiveCooling">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoCardModel"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasCooling"/>
+                        <owl:someValuesFrom rdf:resource="https://example.org/ontologies/videocard#ActiveCooling"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="ru">Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Карта с активным охлаждением</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#ConnectionInterface -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#ConnectionInterface">
+        <rdfs:comment xml:lang="ru">Стандарт подключения видеокарты к компьютеру.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Интерфейс подключения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#CoolingSystem -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#CoolingSystem">
+        <rdfs:subClassOf rdf:resource="https://example.org/ontologies/videocard#ModelComponent"/>
+        <rdfs:comment xml:lang="ru">Вариант охлаждения модели карты; подкласс «Компонент модели».</rdfs:comment>
+        <rdfs:label xml:lang="ru">Система охлаждения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPUArchitecture -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#GPUArchitecture">
+        <rdfs:comment xml:lang="ru">Архитектура графического процессора.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Архитектура GPU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPUModel -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#GPUModel">
+        <rdfs:subClassOf rdf:resource="https://example.org/ontologies/videocard#ModelComponent"/>
+        <rdfs:comment xml:lang="ru">Модель графического процессора; подкласс «Компонент модели».</rdfs:comment>
+        <rdfs:label xml:lang="ru">Модель GPU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Manufacturer -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#Manufacturer">
+        <rdfs:comment xml:lang="ru">Организация, выпускающая модель видеокарты или модель GPU.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Производитель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#MemoryConfiguration -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#MemoryConfiguration">
+        <rdfs:subClassOf rdf:resource="https://example.org/ontologies/videocard#ModelComponent"/>
+        <rdfs:comment xml:lang="ru">Тип, объём и организация памяти; подкласс «Компонент модели».</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация видеопамяти</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#MemoryType -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#MemoryType">
+        <rdfs:comment xml:lang="ru">Технология видеопамяти, например GDDR6.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Тип памяти</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#ModelComponent -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#ModelComponent">
+        <rdfs:comment xml:lang="ru">Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Компонент модели</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#PassiveCooling -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#PassiveCooling">
+        <rdfs:subClassOf rdf:resource="https://example.org/ontologies/videocard#CoolingSystem"/>
+        <rdfs:comment xml:lang="ru">Подкласс «Система охлаждения»; охлаждение без вентилятора.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Пассивное охлаждение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Purpose -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#Purpose">
+        <rdfs:comment xml:lang="ru">Заявленная область использования модели видеокарты.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Назначение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#VideoCardModel -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#VideoCardModel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasCooling"/>
+                <owl:allValuesFrom rdf:resource="https://example.org/ontologies/videocard#CoolingSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasInterface"/>
+                <owl:allValuesFrom rdf:resource="https://example.org/ontologies/videocard#ConnectionInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasMemory"/>
+                <owl:allValuesFrom rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#producedByManufacturer"/>
+                <owl:allValuesFrom rdf:resource="https://example.org/ontologies/videocard#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#usesGPU"/>
+                <owl:allValuesFrom rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasVideoOutput"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasCooling"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasInterface"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#hasMemory"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#producedByManufacturer"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/ontologies/videocard#usesGPU"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="ru">Модель дискретной видеокарты; основной объект описания.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Модель видеокарты</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#VideoOutput -->
+
+    <owl:Class rdf:about="https://example.org/ontologies/videocard#VideoOutput">
+        <rdfs:comment xml:lang="ru">Поддерживаемый моделью тип интерфейса вывода изображения.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеовыход</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Arch_A1 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Arch_A1">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUArchitecture"/>
+        <name>A1</name>
+        <rdfs:comment xml:lang="ru">Условная архитектура графического процессора A1.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Архитектура A1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Arch_A2 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Arch_A2">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUArchitecture"/>
+        <name>A2</name>
+        <rdfs:comment xml:lang="ru">Условная архитектура графического процессора A2.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Архитектура A2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Arch_A3 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Arch_A3">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUArchitecture"/>
+        <name>A3</name>
+        <rdfs:comment xml:lang="ru">Условная архитектура графического процессора A3.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Архитектура A3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Cooling_Active_2fan -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Cooling_Active_2fan">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#ActiveCooling"/>
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#PassiveCooling"/>
+        <fanCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</fanCount>
+        <rdfs:comment xml:lang="ru">Активная система охлаждения с двумя вентиляторами.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Активное охлаждение, 2 вентилятора</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Cooling_Active_3fan -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Cooling_Active_3fan">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#ActiveCooling"/>
+        <fanCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</fanCount>
+        <rdfs:comment xml:lang="ru">Активная система охлаждения с тремя вентиляторами.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Активное охлаждение, 3 вентилятора</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Cooling_Passive -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Cooling_Passive">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#PassiveCooling"/>
+        <fanCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</fanCount>
+        <rdfs:comment xml:lang="ru">Пассивная система охлаждения без вентиляторов.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Пассивное охлаждение</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#DVI -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#DVI">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoOutput"/>
+        <name>DVI</name>
+        <rdfs:comment xml:lang="ru">Видеовыход DVI.</rdfs:comment>
+        <rdfs:label xml:lang="ru">DVI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#DisplayPort -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#DisplayPort">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoOutput"/>
+        <name>DisplayPort</name>
+        <rdfs:comment xml:lang="ru">Видеовыход DisplayPort.</rdfs:comment>
+        <rdfs:label xml:lang="ru">DisplayPort</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GDDR5 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GDDR5">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryType"/>
+        <name>GDDR5</name>
+        <rdfs:comment xml:lang="ru">Тип видеопамяти GDDR5.</rdfs:comment>
+        <rdfs:label xml:lang="ru">GDDR5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GDDR6 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GDDR6">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryType"/>
+        <name>GDDR6</name>
+        <rdfs:comment xml:lang="ru">Тип видеопамяти GDDR6.</rdfs:comment>
+        <rdfs:label xml:lang="ru">GDDR6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GDDR6X -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GDDR6X">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryType"/>
+        <name>GDDR6X</name>
+        <rdfs:comment xml:lang="ru">Тип видеопамяти GDDR6X.</rdfs:comment>
+        <rdfs:label xml:lang="ru">GDDR6X</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPU_G1 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GPU_G1">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <gpuProducedBy rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <hasArchitecture rdf:resource="https://example.org/ontologies/videocard#Arch_A1"/>
+        <frequencyMHz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900</frequencyMHz>
+        <name>G1</name>
+        <rdfs:comment xml:lang="ru">Условный графический процессор G1 (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Графический процессор G1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPU_G2 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GPU_G2">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <gpuProducedBy rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <hasArchitecture rdf:resource="https://example.org/ontologies/videocard#Arch_A1"/>
+        <frequencyMHz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200</frequencyMHz>
+        <name>G2</name>
+        <rdfs:comment xml:lang="ru">Условный графический процессор G2 (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Графический процессор G2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPU_G3 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GPU_G3">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <gpuProducedBy rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <hasArchitecture rdf:resource="https://example.org/ontologies/videocard#Arch_A2"/>
+        <frequencyMHz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500</frequencyMHz>
+        <name>G3</name>
+        <rdfs:comment xml:lang="ru">Условный графический процессор G3 (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Графический процессор G3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPU_G4 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GPU_G4">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <gpuProducedBy rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <hasArchitecture rdf:resource="https://example.org/ontologies/videocard#Arch_A2"/>
+        <frequencyMHz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1800</frequencyMHz>
+        <name>G4</name>
+        <rdfs:comment xml:lang="ru">Условный графический процессор G4 (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Графический процессор G4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#GPU_G5 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#GPU_G5">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#GPUModel"/>
+        <gpuProducedBy rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <hasArchitecture rdf:resource="https://example.org/ontologies/videocard#Arch_A3"/>
+        <frequencyMHz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2200</frequencyMHz>
+        <name>G5</name>
+        <rdfs:comment xml:lang="ru">Условный графический процессор G5 (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Графический процессор G5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Gaming -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Gaming">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#Purpose"/>
+        <name>Gaming</name>
+        <rdfs:comment xml:lang="ru">Назначение: игры.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Игровое назначение</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#HDMI -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#HDMI">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoOutput"/>
+        <name>HDMI</name>
+        <rdfs:comment xml:lang="ru">Видеовыход HDMI.</rdfs:comment>
+        <rdfs:label xml:lang="ru">HDMI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_12GiB_GDDR6 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_12GiB_GDDR6">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR6"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">192</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">12</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 12 ГиБ, тип GDDR6, шина 192 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 12 ГиБ GDDR6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_16GiB_GDDR6 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_16GiB_GDDR6">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR6"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">256</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">16</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 16 ГиБ, тип GDDR6, шина 256 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 16 ГиБ GDDR6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_24GiB_GDDR6X -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_24GiB_GDDR6X">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR6X"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">384</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">24</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 24 ГиБ, тип GDDR6X, шина 384 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 24 ГиБ GDDR6X</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_2GiB_GDDR5 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_2GiB_GDDR5">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR5"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">64</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 2 ГиБ, тип GDDR5, шина 64 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 2 ГиБ GDDR5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_4GiB_GDDR5 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_4GiB_GDDR5">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR5"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">128</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 4 ГиБ, тип GDDR5, шина 128 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 4 ГиБ GDDR5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_6GiB_GDDR6 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_6GiB_GDDR6">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR6"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">192</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 6 ГиБ, тип GDDR6, шина 192 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 6 ГиБ GDDR6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Mem_8GiB_GDDR6 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Mem_8GiB_GDDR6">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        <hasMemoryType rdf:resource="https://example.org/ontologies/videocard#GDDR6"/>
+        <busWidthBit rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">256</busWidthBit>
+        <volumeGiB rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</volumeGiB>
+        <rdfs:comment xml:lang="ru">Конфигурация видеопамяти: 8 ГиБ, тип GDDR6, шина 256 бит (учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Конфигурация памяти 8 ГиБ GDDR6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Office -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Office">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#Purpose"/>
+        <name>Office</name>
+        <rdfs:comment xml:lang="ru">Назначение: офисная работа.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Офисное назначение</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#P1 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#P1">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#Manufacturer"/>
+        <name>P1</name>
+        <rdfs:comment xml:lang="ru">Условный производитель P1 (вымышленные учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Производитель P1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#P2 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#P2">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#Manufacturer"/>
+        <name>P2</name>
+        <rdfs:comment xml:lang="ru">Условный производитель P2 (вымышленные учебные данные).</rdfs:comment>
+        <rdfs:label xml:lang="ru">Производитель P2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#PCIe_3_0_x16 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#PCIe_3_0_x16">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#ConnectionInterface"/>
+        <name>PCIe 3.0 x16</name>
+        <rdfs:comment xml:lang="ru">Интерфейс подключения PCI Express 3.0 x16.</rdfs:comment>
+        <rdfs:label xml:lang="ru">PCIe 3.0 x16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#PCIe_4_0_x16 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#PCIe_4_0_x16">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#ConnectionInterface"/>
+        <name>PCIe 4.0 x16</name>
+        <rdfs:comment xml:lang="ru">Интерфейс подключения PCI Express 4.0 x16.</rdfs:comment>
+        <rdfs:label xml:lang="ru">PCIe 4.0 x16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#PCIe_5_0_x16 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#PCIe_5_0_x16">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#ConnectionInterface"/>
+        <name>PCIe 5.0 x16</name>
+        <rdfs:comment xml:lang="ru">Интерфейс подключения PCI Express 5.0 x16.</rdfs:comment>
+        <rdfs:label xml:lang="ru">PCIe 5.0 x16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U01 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U01">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Passive"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_3_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_4GiB_GDDR5"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Office"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#VGA"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G1"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</lengthMM>
+        <name>U01</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U01 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U02 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U02">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Active_2fan"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_4_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_8GiB_GDDR6"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Gaming"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DisplayPort"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G2"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240</lengthMM>
+        <name>U02</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U02 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U03 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U03">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Active_2fan"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_4_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_12GiB_GDDR6"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Gaming"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DisplayPort"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G3"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">265</lengthMM>
+        <name>U03</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">185</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U03 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U04 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U04">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Active_3fan"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_4_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_16GiB_GDDR6"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Workstation"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DisplayPort"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G4"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">310</lengthMM>
+        <name>U04</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">260</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U04 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U05 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U05">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Active_2fan"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_3_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_6GiB_GDDR6"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Office"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DVI"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G2"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220</lengthMM>
+        <name>U05</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U05 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U05</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U06 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U06">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Passive"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_3_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_8GiB_GDDR6"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Office"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DVI"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G3"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</lengthMM>
+        <name>U06</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U06 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U06</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U07 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U07">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Active_3fan"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_5_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_24GiB_GDDR6X"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Workstation"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DisplayPort"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#HDMI"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P2"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G5"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">336</lengthMM>
+        <name>U07</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U07 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U07</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#U08 -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#U08">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoCardModel"/>
+        <hasCooling rdf:resource="https://example.org/ontologies/videocard#Cooling_Passive"/>
+        <hasInterface rdf:resource="https://example.org/ontologies/videocard#PCIe_3_0_x16"/>
+        <hasMemory rdf:resource="https://example.org/ontologies/videocard#Mem_2GiB_GDDR5"/>
+        <hasPurpose rdf:resource="https://example.org/ontologies/videocard#Office"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#DVI"/>
+        <hasVideoOutput rdf:resource="https://example.org/ontologies/videocard#VGA"/>
+        <producedByManufacturer rdf:resource="https://example.org/ontologies/videocard#P1"/>
+        <usesGPU rdf:resource="https://example.org/ontologies/videocard#GPU_G1"/>
+        <lengthMM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145</lengthMM>
+        <name>U08</name>
+        <powerW rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</powerW>
+        <rdfs:comment xml:lang="ru">Видеокарта U08 — учебная модель.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Видеокарта U08</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#VGA -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#VGA">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#VideoOutput"/>
+        <name>VGA</name>
+        <rdfs:comment xml:lang="ru">Видеовыход VGA.</rdfs:comment>
+        <rdfs:label xml:lang="ru">VGA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/ontologies/videocard#Workstation -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/ontologies/videocard#Workstation">
+        <rdf:type rdf:resource="https://example.org/ontologies/videocard#Purpose"/>
+        <name>Workstation</name>
+        <rdfs:comment xml:lang="ru">Назначение: профессиональная рабочая станция.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Рабочая станция</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#ConnectionInterface"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPUArchitecture"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Manufacturer"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#MemoryType"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#ModelComponent"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Purpose"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoCardModel"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#VideoOutput"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#CoolingSystem"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPUModel"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#MemoryConfiguration"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Arch_A1"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Arch_A2"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Arch_A3"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Cooling_Active_2fan"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Cooling_Active_3fan"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Cooling_Passive"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#DVI"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#DisplayPort"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GDDR5"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GDDR6"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GDDR6X"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPU_G1"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPU_G2"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPU_G3"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPU_G4"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#GPU_G5"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Gaming"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#HDMI"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_12GiB_GDDR6"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_16GiB_GDDR6"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_24GiB_GDDR6X"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_2GiB_GDDR5"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_4GiB_GDDR5"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_6GiB_GDDR6"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Mem_8GiB_GDDR6"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Office"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#P1"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#P2"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#PCIe_3_0_x16"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#PCIe_4_0_x16"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#PCIe_5_0_x16"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U01"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U02"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U03"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U04"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U05"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U06"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U07"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#U08"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#VGA"/>
+            <rdf:Description rdf:about="https://example.org/ontologies/videocard#Workstation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

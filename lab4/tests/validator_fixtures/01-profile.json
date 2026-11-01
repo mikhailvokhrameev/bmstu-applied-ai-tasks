@@ -1,0 +1,11 @@
+{
+  "expected_code": "OWL2_DL",
+  "reason": "Transitive property is used in cardinality restriction",
+  "candidate": {
+    "add": [
+      "TransitiveObjectProperty(:usesGPU)"
+    ],
+    "remove": []
+  },
+  "duplicate": false
+}

@@ -1,0 +1,23 @@
+== T06 negative: individual in ActiveCooling and PassiveCooling ==
+defect copy: tests/negative/T06_active_and_passive.owl
+  [PASS] defect copy file exists
+
+-- the copy differs from ontology/videocard.owl only by the intended mutation
+    + ClassAssertion(<https://example.org/ontologies/videocard#PassiveCooling> <https://example.org/ontologies/videocard#Cooling_Active_2fan>)
+  [PASS] axioms only in the copy (+1)
+  [PASS] axioms only in the final ontology (-0)
+
+-- defect copy
+  [PASS] Cooling_Active_2fan is asserted ActiveCooling and PassiveCooling in the copy
+  expected: inconsistent=true (ActiveCooling and PassiveCooling are disjoint)
+    HermiT 1.4.3.456 isConsistent = false
+  [PASS] HermiT reports the copy inconsistent (negative control: the reasoner detects inconsistency)
+
+-- rollback: ontology/videocard.owl
+  expected: consistent=true
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] HermiT reports the final ontology consistent
+  [PASS] Cooling_Active_2fan is not asserted PassiveCooling in the final ontology
+  [PASS] Cooling_Active_2fan is still asserted ActiveCooling in the final ontology
+  [PASS] no individual is asserted both ActiveCooling and PassiveCooling in the final ontology
+T06: PASS

@@ -1,0 +1,15 @@
+{
+  "expected_code": "CONSISTENCY",
+  "reason": "New named class is unsatisfiable",
+  "candidate": {
+    "add": [
+      "Declaration(Class(:Impossible))",
+      "SubClassOf(:Impossible :ActiveCooling)",
+      "SubClassOf(:Impossible :PassiveCooling)",
+      "AnnotationAssertion(rdfs:label :Impossible \"Тестовый класс\"@ru)",
+      "AnnotationAssertion(rdfs:comment :Impossible \"Определение тестового класса\"@ru)"
+    ],
+    "remove": []
+  },
+  "duplicate": false
+}

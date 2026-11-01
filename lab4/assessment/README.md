@@ -1,0 +1,20 @@
+# Эталоны этапа 1
+
+Начать с [методики](METHODOLOGY.md) и [среды](ENVIRONMENT.md).
+
+Проверка из корня репозитория:
+
+```sh
+/opt/homebrew/bin/python3.11 lab4/assessment/verify_reference.py
+/opt/homebrew/bin/python3.11 lab4/assessment/test_verify_reference.py
+```
+
+Нужны JAR существующего lab2 harness; при их отсутствии сначала `bash lab2/tests/harness/fetch_libs.sh`.
+
+| Онтология | A | Al | C | H | Po | Pd | E | Q | F формулы |
+|---|---|---|---|---|---|---|---|---|---|
+|01-balanced|18|6|2|1|1|1|1|1|1.437923490|
+|02-zero|8|2|1|0|1|0|0|1|0.894960474|
+|03-pitfalls|23|6|4|2|1|1|1|6|1.179252234|
+
+Это модульные примеры расчёта, не валидные кандидаты относительно неизменяемого ядра. Полный валидатор отвергнет их. Точные дроби приведены в fixtures/expected.json и CSV. Разметка concept_pairs.csv ожидает системного аналитика; выбранные модели и результаты OOPS! пока отсутствуют.

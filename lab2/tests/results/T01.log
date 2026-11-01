@@ -1,0 +1,7 @@
+== T01 required classes and properties (automatic part) ==
+  [PASS] required classes declared: VideoCardModel, ModelComponent, GPUModel, MemoryConfiguration, CoolingSystem, ActiveCooling, PassiveCooling, Manufacturer, ConnectionInterface, VideoOutput, MemoryType, GPUArchitecture, Purpose, CardWith8GBMemory, CardWithActiveCooling (15/15)
+  [PASS] required object properties declared: usesGPU, hasMemory, hasCooling, hasInterface, hasVideoOutput, producedByManufacturer, gpuProducedBy, hasArchitecture, hasMemoryType, hasPurpose (10/10)
+  [PASS] required data properties declared: name, volumeGiB, busWidthBit, frequencyMHz, powerW, lengthMM, fanCount (7/7)
+
+Status: AUTOMATIC PART PASS. The manual reconciliation of the description, vocabulary and both diagrams (4.1.1-4.1.4) is recorded in docs/ontology_description.md (written in Task 7) and is not evaluated here.
+T01: PASS

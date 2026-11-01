@@ -1,0 +1,601 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vc: <https://example.org/ontologies/videocard#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/ontologies/videocard> a owl:Ontology ;
+    rdfs:label "Онтология дискретных видеокарт"@ru ;
+    rdfs:comment "Учебная онтология предметной области «Дискретные видеокарты», версия 1.0.0."@ru ;
+    owl:versionIRI <https://example.org/ontologies/videocard/1.0.0> .
+
+vc:CardWith8GBMemory a owl:Class ;
+    rdfs:label "Карта с памятью от 8 ГиБ"@ru ;
+    rdfs:comment "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner."@ru ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vc:VideoCardModel [ a owl:Restriction ;
+                        owl:onProperty vc:hasMemory ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty vc:volumeGiB ;
+                                owl:someValuesFrom [ a rdfs:Datatype ;
+                                        owl:onDatatype xsd:integer ;
+                                        owl:withRestrictions ( [ xsd:minInclusive 8 ] ) ] ] ] ) ] .
+
+vc:CardWithActiveCooling a owl:Class ;
+    rdfs:label "Карта с активным охлаждением"@ru ;
+    rdfs:comment "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner."@ru ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vc:VideoCardModel [ a owl:Restriction ;
+                        owl:onProperty vc:hasCooling ;
+                        owl:someValuesFrom vc:ActiveCooling ] ) ] .
+
+vc:busWidthBit a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ширина шины, бит"@ru ;
+    rdfs:comment "Ширина шины памяти в битах."@ru ;
+    rdfs:domain vc:MemoryConfiguration ;
+    rdfs:range xsd:positiveInteger .
+
+vc:fanCount a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "число вентиляторов"@ru ;
+    rdfs:comment "Число вентиляторов системы охлаждения, шт."@ru ;
+    rdfs:domain vc:CoolingSystem ;
+    rdfs:range xsd:nonNegativeInteger .
+
+vc:frequencyMHz a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "частота, МГц"@ru ;
+    rdfs:comment "Частота модели GPU в МГц (десятичное число больше 0)."@ru ;
+    rdfs:domain vc:GPUModel ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:onDatatype xsd:decimal ;
+            owl:withRestrictions ( [ xsd:minExclusive 0.0 ] ) ] .
+
+vc:gpuProducedBy a owl:ObjectProperty ;
+    rdfs:label "GPU выпущен производителем"@ru ;
+    rdfs:comment "Связывает модель GPU с производителем."@ru ;
+    rdfs:domain vc:GPUModel ;
+    rdfs:range vc:Manufacturer .
+
+vc:hasArchitecture a owl:ObjectProperty ;
+    rdfs:label "имеет архитектуру"@ru ;
+    rdfs:comment "Связывает модель GPU с архитектурой GPU."@ru ;
+    rdfs:domain vc:GPUModel ;
+    rdfs:range vc:GPUArchitecture .
+
+vc:hasMemoryType a owl:ObjectProperty ;
+    rdfs:label "имеет тип памяти"@ru ;
+    rdfs:comment "Связывает конфигурацию видеопамяти с типом памяти."@ru ;
+    rdfs:domain vc:MemoryConfiguration ;
+    rdfs:range vc:MemoryType .
+
+vc:hasPurpose a owl:ObjectProperty ;
+    rdfs:label "имеет назначение"@ru ;
+    rdfs:comment "Связывает модель видеокарты с назначением."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:Purpose .
+
+vc:lengthMM a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "длина, мм"@ru ;
+    rdfs:comment "Длина платы в мм (десятичное число больше 0)."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:onDatatype xsd:decimal ;
+            owl:withRestrictions ( [ xsd:minExclusive 0.0 ] ) ] .
+
+vc:name a owl:DatatypeProperty ;
+    rdfs:label "название"@ru ;
+    rdfs:comment "Название сущности (строка, единица отсутствует)."@ru ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( vc:ConnectionInterface vc:GPUArchitecture vc:GPUModel vc:Manufacturer vc:MemoryType vc:Purpose vc:VideoCardModel vc:VideoOutput ) ] ;
+    rdfs:range xsd:string .
+
+vc:powerW a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "мощность, Вт"@ru ;
+    rdfs:comment "Заявленная мощность модели платы в Вт (не рекомендуемая мощность блока питания); десятичное число больше 0."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:onDatatype xsd:decimal ;
+            owl:withRestrictions ( [ xsd:minExclusive 0.0 ] ) ] .
+
+vc:U01 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U01"@ru ;
+    rdfs:comment "Видеокарта U01 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Passive ;
+    vc:hasInterface vc:PCIe_3_0_x16 ;
+    vc:hasMemory vc:Mem_4GiB_GDDR5 ;
+    vc:hasPurpose vc:Office ;
+    vc:hasVideoOutput vc:HDMI,
+        vc:VGA ;
+    vc:lengthMM 160.0 ;
+    vc:name "U01" ;
+    vc:powerW 40.0 ;
+    vc:producedByManufacturer vc:P1 ;
+    vc:usesGPU vc:GPU_G1 .
+
+vc:U02 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U02"@ru ;
+    rdfs:comment "Видеокарта U02 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Active_2fan ;
+    vc:hasInterface vc:PCIe_4_0_x16 ;
+    vc:hasMemory vc:Mem_8GiB_GDDR6 ;
+    vc:hasPurpose vc:Gaming ;
+    vc:hasVideoOutput vc:DisplayPort,
+        vc:HDMI ;
+    vc:lengthMM 240.0 ;
+    vc:name "U02" ;
+    vc:powerW 150.0 ;
+    vc:producedByManufacturer vc:P1 ;
+    vc:usesGPU vc:GPU_G2 .
+
+vc:U03 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U03"@ru ;
+    rdfs:comment "Видеокарта U03 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Active_2fan ;
+    vc:hasInterface vc:PCIe_4_0_x16 ;
+    vc:hasMemory vc:Mem_12GiB_GDDR6 ;
+    vc:hasPurpose vc:Gaming ;
+    vc:hasVideoOutput vc:DisplayPort,
+        vc:HDMI ;
+    vc:lengthMM 265.0 ;
+    vc:name "U03" ;
+    vc:powerW 185.0 ;
+    vc:producedByManufacturer vc:P2 ;
+    vc:usesGPU vc:GPU_G3 .
+
+vc:U04 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U04"@ru ;
+    rdfs:comment "Видеокарта U04 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Active_3fan ;
+    vc:hasInterface vc:PCIe_4_0_x16 ;
+    vc:hasMemory vc:Mem_16GiB_GDDR6 ;
+    vc:hasPurpose vc:Workstation ;
+    vc:hasVideoOutput vc:DisplayPort,
+        vc:HDMI ;
+    vc:lengthMM 310.0 ;
+    vc:name "U04" ;
+    vc:powerW 260.0 ;
+    vc:producedByManufacturer vc:P2 ;
+    vc:usesGPU vc:GPU_G4 .
+
+vc:U05 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U05"@ru ;
+    rdfs:comment "Видеокарта U05 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Active_2fan ;
+    vc:hasInterface vc:PCIe_3_0_x16 ;
+    vc:hasMemory vc:Mem_6GiB_GDDR6 ;
+    vc:hasPurpose vc:Office ;
+    vc:hasVideoOutput vc:DVI,
+        vc:HDMI ;
+    vc:lengthMM 220.0 ;
+    vc:name "U05" ;
+    vc:powerW 120.0 ;
+    vc:producedByManufacturer vc:P1 ;
+    vc:usesGPU vc:GPU_G2 .
+
+vc:U06 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U06"@ru ;
+    rdfs:comment "Видеокарта U06 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Passive ;
+    vc:hasInterface vc:PCIe_3_0_x16 ;
+    vc:hasMemory vc:Mem_8GiB_GDDR6 ;
+    vc:hasPurpose vc:Office ;
+    vc:hasVideoOutput vc:DVI,
+        vc:HDMI ;
+    vc:lengthMM 200.0 ;
+    vc:name "U06" ;
+    vc:powerW 75.0 ;
+    vc:producedByManufacturer vc:P2 ;
+    vc:usesGPU vc:GPU_G3 .
+
+vc:U07 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U07"@ru ;
+    rdfs:comment "Видеокарта U07 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Active_3fan ;
+    vc:hasInterface vc:PCIe_5_0_x16 ;
+    vc:hasMemory vc:Mem_24GiB_GDDR6X ;
+    vc:hasPurpose vc:Workstation ;
+    vc:hasVideoOutput vc:DisplayPort,
+        vc:HDMI ;
+    vc:lengthMM 336.0 ;
+    vc:name "U07" ;
+    vc:powerW 350.0 ;
+    vc:producedByManufacturer vc:P2 ;
+    vc:usesGPU vc:GPU_G5 .
+
+vc:U08 a owl:NamedIndividual,
+        vc:VideoCardModel ;
+    rdfs:label "Видеокарта U08"@ru ;
+    rdfs:comment "Видеокарта U08 — учебная модель."@ru ;
+    vc:hasCooling vc:Cooling_Passive ;
+    vc:hasInterface vc:PCIe_3_0_x16 ;
+    vc:hasMemory vc:Mem_2GiB_GDDR5 ;
+    vc:hasPurpose vc:Office ;
+    vc:hasVideoOutput vc:DVI,
+        vc:VGA ;
+    vc:lengthMM 145.0 ;
+    vc:name "U08" ;
+    vc:powerW 30.0 ;
+    vc:producedByManufacturer vc:P1 ;
+    vc:usesGPU vc:GPU_G1 .
+
+vc:hasVideoOutput a owl:ObjectProperty ;
+    rdfs:label "имеет видеовыход"@ru ;
+    rdfs:comment "Связывает модель видеокарты с поддерживаемым видеовыходом."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:VideoOutput .
+
+vc:volumeGiB a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "объём, ГиБ"@ru ;
+    rdfs:comment "Объём видеопамяти в ГиБ."@ru ;
+    rdfs:domain vc:MemoryConfiguration ;
+    rdfs:range xsd:positiveInteger .
+
+vc:Arch_A3 a owl:NamedIndividual,
+        vc:GPUArchitecture ;
+    rdfs:label "Архитектура A3"@ru ;
+    rdfs:comment "Условная архитектура графического процессора A3."@ru ;
+    vc:name "A3" .
+
+vc:GDDR6X a owl:NamedIndividual,
+        vc:MemoryType ;
+    rdfs:label "GDDR6X"@ru ;
+    rdfs:comment "Тип видеопамяти GDDR6X."@ru ;
+    vc:name "GDDR6X" .
+
+vc:GPU_G4 a owl:NamedIndividual,
+        vc:GPUModel ;
+    rdfs:label "Графический процессор G4"@ru ;
+    rdfs:comment "Условный графический процессор G4 (учебные данные)."@ru ;
+    vc:frequencyMHz 1800.0 ;
+    vc:gpuProducedBy vc:P2 ;
+    vc:hasArchitecture vc:Arch_A2 ;
+    vc:name "G4" .
+
+vc:GPU_G5 a owl:NamedIndividual,
+        vc:GPUModel ;
+    rdfs:label "Графический процессор G5"@ru ;
+    rdfs:comment "Условный графический процессор G5 (учебные данные)."@ru ;
+    vc:frequencyMHz 2200.0 ;
+    vc:gpuProducedBy vc:P2 ;
+    vc:hasArchitecture vc:Arch_A3 ;
+    vc:name "G5" .
+
+vc:Mem_12GiB_GDDR6 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 12 ГиБ GDDR6"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 12 ГиБ, тип GDDR6, шина 192 бит (учебные данные)."@ru ;
+    vc:busWidthBit "192"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR6 ;
+    vc:volumeGiB "12"^^xsd:positiveInteger .
+
+vc:Mem_16GiB_GDDR6 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 16 ГиБ GDDR6"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 16 ГиБ, тип GDDR6, шина 256 бит (учебные данные)."@ru ;
+    vc:busWidthBit "256"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR6 ;
+    vc:volumeGiB "16"^^xsd:positiveInteger .
+
+vc:Mem_24GiB_GDDR6X a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 24 ГиБ GDDR6X"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 24 ГиБ, тип GDDR6X, шина 384 бит (учебные данные)."@ru ;
+    vc:busWidthBit "384"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR6X ;
+    vc:volumeGiB "24"^^xsd:positiveInteger .
+
+vc:Mem_2GiB_GDDR5 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 2 ГиБ GDDR5"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 2 ГиБ, тип GDDR5, шина 64 бит (учебные данные)."@ru ;
+    vc:busWidthBit "64"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR5 ;
+    vc:volumeGiB "2"^^xsd:positiveInteger .
+
+vc:Mem_4GiB_GDDR5 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 4 ГиБ GDDR5"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 4 ГиБ, тип GDDR5, шина 128 бит (учебные данные)."@ru ;
+    vc:busWidthBit "128"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR5 ;
+    vc:volumeGiB "4"^^xsd:positiveInteger .
+
+vc:Mem_6GiB_GDDR6 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 6 ГиБ GDDR6"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 6 ГиБ, тип GDDR6, шина 192 бит (учебные данные)."@ru ;
+    vc:busWidthBit "192"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR6 ;
+    vc:volumeGiB "6"^^xsd:positiveInteger .
+
+vc:PCIe_5_0_x16 a owl:NamedIndividual,
+        vc:ConnectionInterface ;
+    rdfs:label "PCIe 5.0 x16"@ru ;
+    rdfs:comment "Интерфейс подключения PCI Express 5.0 x16."@ru ;
+    vc:name "PCIe 5.0 x16" .
+
+vc:PassiveCooling a owl:Class ;
+    rdfs:label "Пассивное охлаждение"@ru ;
+    rdfs:comment "Подкласс «Система охлаждения»; охлаждение без вентилятора."@ru ;
+    rdfs:subClassOf vc:CoolingSystem .
+
+vc:hasInterface a owl:ObjectProperty ;
+    rdfs:label "имеет интерфейс"@ru ;
+    rdfs:comment "Связывает модель видеокарты с интерфейсом подключения."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:ConnectionInterface .
+
+vc:producedByManufacturer a owl:ObjectProperty ;
+    rdfs:label "выпущена производителем"@ru ;
+    rdfs:comment "Связывает модель видеокарты с производителем."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:Manufacturer .
+
+vc:usesGPU a owl:ObjectProperty ;
+    rdfs:label "использует GPU"@ru ;
+    rdfs:comment "Связывает модель видеокарты с используемой моделью GPU."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:GPUModel .
+
+vc:ActiveCooling a owl:Class ;
+    rdfs:label "Активное охлаждение"@ru ;
+    rdfs:comment "Подкласс «Система охлаждения»; охлаждение с вентилятором."@ru ;
+    rdfs:subClassOf vc:CoolingSystem ;
+    owl:disjointWith vc:PassiveCooling .
+
+vc:Arch_A1 a owl:NamedIndividual,
+        vc:GPUArchitecture ;
+    rdfs:label "Архитектура A1"@ru ;
+    rdfs:comment "Условная архитектура графического процессора A1."@ru ;
+    vc:name "A1" .
+
+vc:Arch_A2 a owl:NamedIndividual,
+        vc:GPUArchitecture ;
+    rdfs:label "Архитектура A2"@ru ;
+    rdfs:comment "Условная архитектура графического процессора A2."@ru ;
+    vc:name "A2" .
+
+vc:Cooling_Active_3fan a owl:NamedIndividual,
+        vc:ActiveCooling ;
+    rdfs:label "Активное охлаждение, 3 вентилятора"@ru ;
+    rdfs:comment "Активная система охлаждения с тремя вентиляторами."@ru ;
+    vc:fanCount "3"^^xsd:nonNegativeInteger .
+
+vc:GDDR5 a owl:NamedIndividual,
+        vc:MemoryType ;
+    rdfs:label "GDDR5"@ru ;
+    rdfs:comment "Тип видеопамяти GDDR5."@ru ;
+    vc:name "GDDR5" .
+
+vc:GPU_G1 a owl:NamedIndividual,
+        vc:GPUModel ;
+    rdfs:label "Графический процессор G1"@ru ;
+    rdfs:comment "Условный графический процессор G1 (учебные данные)."@ru ;
+    vc:frequencyMHz 900.0 ;
+    vc:gpuProducedBy vc:P1 ;
+    vc:hasArchitecture vc:Arch_A1 ;
+    vc:name "G1" .
+
+vc:GPU_G2 a owl:NamedIndividual,
+        vc:GPUModel ;
+    rdfs:label "Графический процессор G2"@ru ;
+    rdfs:comment "Условный графический процессор G2 (учебные данные)."@ru ;
+    vc:frequencyMHz 1200.0 ;
+    vc:gpuProducedBy vc:P1 ;
+    vc:hasArchitecture vc:Arch_A1 ;
+    vc:name "G2" .
+
+vc:GPU_G3 a owl:NamedIndividual,
+        vc:GPUModel ;
+    rdfs:label "Графический процессор G3"@ru ;
+    rdfs:comment "Условный графический процессор G3 (учебные данные)."@ru ;
+    vc:frequencyMHz 1500.0 ;
+    vc:gpuProducedBy vc:P2 ;
+    vc:hasArchitecture vc:Arch_A2 ;
+    vc:name "G3" .
+
+vc:Gaming a owl:NamedIndividual,
+        vc:Purpose ;
+    rdfs:label "Игровое назначение"@ru ;
+    rdfs:comment "Назначение: игры."@ru ;
+    vc:name "Gaming" .
+
+vc:Mem_8GiB_GDDR6 a owl:NamedIndividual,
+        vc:MemoryConfiguration ;
+    rdfs:label "Конфигурация памяти 8 ГиБ GDDR6"@ru ;
+    rdfs:comment "Конфигурация видеопамяти: 8 ГиБ, тип GDDR6, шина 256 бит (учебные данные)."@ru ;
+    vc:busWidthBit "256"^^xsd:positiveInteger ;
+    vc:hasMemoryType vc:GDDR6 ;
+    vc:volumeGiB "8"^^xsd:positiveInteger .
+
+vc:VGA a owl:NamedIndividual,
+        vc:VideoOutput ;
+    rdfs:label "VGA"@ru ;
+    rdfs:comment "Видеовыход VGA."@ru ;
+    vc:name "VGA" .
+
+vc:Workstation a owl:NamedIndividual,
+        vc:Purpose ;
+    rdfs:label "Рабочая станция"@ru ;
+    rdfs:comment "Назначение: профессиональная рабочая станция."@ru ;
+    vc:name "Workstation" .
+
+vc:hasCooling a owl:ObjectProperty ;
+    rdfs:label "имеет охлаждение"@ru ;
+    rdfs:comment "Связывает модель видеокарты с системой охлаждения."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:CoolingSystem .
+
+vc:hasMemory a owl:ObjectProperty ;
+    rdfs:label "имеет память"@ru ;
+    rdfs:comment "Связывает модель видеокарты с конфигурацией видеопамяти."@ru ;
+    rdfs:domain vc:VideoCardModel ;
+    rdfs:range vc:MemoryConfiguration .
+
+vc:Cooling_Active_2fan a owl:NamedIndividual,
+        vc:ActiveCooling ;
+    rdfs:label "Активное охлаждение, 2 вентилятора"@ru ;
+    rdfs:comment "Активная система охлаждения с двумя вентиляторами."@ru ;
+    vc:fanCount "2"^^xsd:nonNegativeInteger .
+
+vc:Cooling_Passive a owl:NamedIndividual,
+        vc:PassiveCooling ;
+    rdfs:label "Пассивное охлаждение"@ru ;
+    rdfs:comment "Пассивная система охлаждения без вентиляторов."@ru ;
+    vc:fanCount "0"^^xsd:nonNegativeInteger .
+
+vc:DVI a owl:NamedIndividual,
+        vc:VideoOutput ;
+    rdfs:label "DVI"@ru ;
+    rdfs:comment "Видеовыход DVI."@ru ;
+    vc:name "DVI" .
+
+vc:ModelComponent a owl:Class ;
+    rdfs:label "Компонент модели"@ru ;
+    rdfs:comment "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения."@ru .
+
+vc:PCIe_4_0_x16 a owl:NamedIndividual,
+        vc:ConnectionInterface ;
+    rdfs:label "PCIe 4.0 x16"@ru ;
+    rdfs:comment "Интерфейс подключения PCI Express 4.0 x16."@ru ;
+    vc:name "PCIe 4.0 x16" .
+
+vc:DisplayPort a owl:NamedIndividual,
+        vc:VideoOutput ;
+    rdfs:label "DisplayPort"@ru ;
+    rdfs:comment "Видеовыход DisplayPort."@ru ;
+    vc:name "DisplayPort" .
+
+vc:GDDR6 a owl:NamedIndividual,
+        vc:MemoryType ;
+    rdfs:label "GDDR6"@ru ;
+    rdfs:comment "Тип видеопамяти GDDR6."@ru ;
+    vc:name "GDDR6" .
+
+vc:Office a owl:NamedIndividual,
+        vc:Purpose ;
+    rdfs:label "Офисное назначение"@ru ;
+    rdfs:comment "Назначение: офисная работа."@ru ;
+    vc:name "Office" .
+
+vc:PCIe_3_0_x16 a owl:NamedIndividual,
+        vc:ConnectionInterface ;
+    rdfs:label "PCIe 3.0 x16"@ru ;
+    rdfs:comment "Интерфейс подключения PCI Express 3.0 x16."@ru ;
+    vc:name "PCIe 3.0 x16" .
+
+vc:CoolingSystem a owl:Class ;
+    rdfs:label "Система охлаждения"@ru ;
+    rdfs:comment "Вариант охлаждения модели карты; подкласс «Компонент модели»."@ru ;
+    rdfs:subClassOf vc:ModelComponent .
+
+vc:GPUArchitecture a owl:Class ;
+    rdfs:label "Архитектура GPU"@ru ;
+    rdfs:comment "Архитектура графического процессора."@ru .
+
+vc:MemoryType a owl:Class ;
+    rdfs:label "Тип памяти"@ru ;
+    rdfs:comment "Технология видеопамяти, например GDDR6."@ru .
+
+vc:Purpose a owl:Class ;
+    rdfs:label "Назначение"@ru ;
+    rdfs:comment "Заявленная область использования модели видеокарты."@ru .
+
+vc:ConnectionInterface a owl:Class ;
+    rdfs:label "Интерфейс подключения"@ru ;
+    rdfs:comment "Стандарт подключения видеокарты к компьютеру."@ru .
+
+vc:Manufacturer a owl:Class ;
+    rdfs:label "Производитель"@ru ;
+    rdfs:comment "Организация, выпускающая модель видеокарты или модель GPU."@ru .
+
+vc:P1 a owl:NamedIndividual,
+        vc:Manufacturer ;
+    rdfs:label "Производитель P1"@ru ;
+    rdfs:comment "Условный производитель P1 (вымышленные учебные данные)."@ru ;
+    vc:name "P1" .
+
+vc:VideoOutput a owl:Class ;
+    rdfs:label "Видеовыход"@ru ;
+    rdfs:comment "Поддерживаемый моделью тип интерфейса вывода изображения."@ru .
+
+vc:HDMI a owl:NamedIndividual,
+        vc:VideoOutput ;
+    rdfs:label "HDMI"@ru ;
+    rdfs:comment "Видеовыход HDMI."@ru ;
+    vc:name "HDMI" .
+
+vc:P2 a owl:NamedIndividual,
+        vc:Manufacturer ;
+    rdfs:label "Производитель P2"@ru ;
+    rdfs:comment "Условный производитель P2 (вымышленные учебные данные)."@ru ;
+    vc:name "P2" .
+
+vc:GPUModel a owl:Class ;
+    rdfs:label "Модель GPU"@ru ;
+    rdfs:comment "Модель графического процессора; подкласс «Компонент модели»."@ru ;
+    rdfs:subClassOf vc:ModelComponent .
+
+vc:MemoryConfiguration a owl:Class ;
+    rdfs:label "Конфигурация видеопамяти"@ru ;
+    rdfs:comment "Тип, объём и организация памяти; подкласс «Компонент модели»."@ru ;
+    rdfs:subClassOf vc:ModelComponent .
+
+vc:VideoCardModel a owl:Class ;
+    rdfs:label "Модель видеокарты"@ru ;
+    rdfs:comment "Модель дискретной видеокарты; основной объект описания."@ru ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:hasInterface ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom vc:Manufacturer ;
+            owl:onProperty vc:producedByManufacturer ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:hasVideoOutput ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom vc:CoolingSystem ;
+            owl:onProperty vc:hasCooling ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:usesGPU ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:hasCooling ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:hasMemory ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom vc:MemoryConfiguration ;
+            owl:onProperty vc:hasMemory ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty vc:producedByManufacturer ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom vc:ConnectionInterface ;
+            owl:onProperty vc:hasInterface ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom vc:GPUModel ;
+            owl:onProperty vc:usesGPU ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vc:CoolingSystem vc:GPUModel vc:MemoryConfiguration ) .
+
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( vc:Arch_A1 vc:Arch_A2 vc:Arch_A3 vc:Cooling_Active_2fan vc:Cooling_Active_3fan vc:Cooling_Passive vc:DVI vc:DisplayPort vc:GDDR5 vc:GDDR6 vc:GDDR6X vc:GPU_G1 vc:GPU_G2 vc:GPU_G3 vc:GPU_G4 vc:GPU_G5 vc:Gaming vc:HDMI vc:Mem_12GiB_GDDR6 vc:Mem_16GiB_GDDR6 vc:Mem_24GiB_GDDR6X vc:Mem_2GiB_GDDR5 vc:Mem_4GiB_GDDR5 vc:Mem_6GiB_GDDR6 vc:Mem_8GiB_GDDR6 vc:Office vc:P1 vc:P2 vc:PCIe_3_0_x16 vc:PCIe_4_0_x16 vc:PCIe_5_0_x16 vc:U01 vc:U02 vc:U03 vc:U04 vc:U05 vc:U06 vc:U07 vc:U08 vc:VGA vc:Workstation ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vc:ConnectionInterface vc:GPUArchitecture vc:Manufacturer vc:MemoryType vc:ModelComponent vc:Purpose vc:VideoCardModel vc:VideoOutput ) .
+
