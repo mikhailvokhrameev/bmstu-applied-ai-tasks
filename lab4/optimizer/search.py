@@ -6,6 +6,7 @@ Checkpoint storage/resume is supplied by the journaling layer (task 6).
 from dataclasses import dataclass
 import json
 import math
+import time
 from pathlib import Path
 import random
 from .proposals import Proposal, ProposalError
@@ -67,7 +68,7 @@ def run(config,mode,seed,resume=False):
     Default validation always uses validator.validate and requires a real
     duplicate_checker. Infrastructure errors abort and never enter selection.
     runtime.on_generation(generation,population,evaluations,rng_state) is the
-    persistence seam. resume=True is reserved for the checkpoint integration.
+    persistence seam. resume accepts a validated journaling snapshot.
     """
     if isinstance(config,(str,Path)):config=load_config(config)
     unknown=set(config)-set(DEFAULTS)-{'runtime'}
@@ -77,7 +78,7 @@ def run(config,mode,seed,resume=False):
         if type(p[k]) is not type(v) or p[k]!=v:
             raise ValueError(k+' must equal the frozen specification value '+str(v))
     if mode not in ('model','control') or type(seed) is not int:raise ValueError('Invalid mode/seed')
-    if resume:raise NotImplementedError('Resume requires the checkpoint integration layer')
+    if resume is True:raise ValueError('Resume requires a checkpoint snapshot')
     services=config.get('runtime',{})
     generator=services.get(mode+'_generator')
     if generator is None:raise ValueError(mode+'_generator is required')
@@ -87,11 +88,13 @@ def run(config,mode,seed,resume=False):
         if checker is None:raise ValueError('A real duplicate_checker is required')
         check=lambda d:validate(d,duplicate_checker=checker)
     rng=random.Random(seed)
-    evaluated=[]; history=[]
+    evaluated=list(resume['evaluations']) if resume else []; history=list(resume['history']) if resume else []
+    if resume:rng.setstate(resume['rng_state'])
     def rank(c):return (-c.F,c.id) # exact equal F: oldest evaluation wins
     def tournament(pop):return min(rng.sample(pop,p['tournament_size']),key=rank)
-    def evaluate(delta,generation,parents,operator,proposal_error=None):
+    def evaluate(delta,generation,parents,operator,proposal_error=None,started=None):
         # Full validation also runs for crossed/conflicting candidates.
+        started=time.perf_counter() if started is None else started
         result=check(delta)
         if result.status=='error':raise SearchError(f'{result.code}: {result.detail}')
         if result.status not in ('valid','invalid'):raise SearchError('Unknown validation status')
@@ -101,19 +104,22 @@ def run(config,mode,seed,resume=False):
         if not isinstance(score,(float,int)) or not math.isfinite(score):raise SearchError('Invalid fitness')
         code='PROPOSAL' if proposal_error else 'CONFLICT' if conflict else result.code
         c=Candidate(len(evaluated),generation,parents,operator,delta,'invalid' if invalid else 'valid',score,code)
+        if services.get('on_evaluation'):
+            services['on_evaluation'](c,result,time.perf_counter()-started,proposal_error)
         evaluated.append(c)
         return c
     def mutation(parent,generation,parents,operator):
+        started=time.perf_counter()
         # Copy isolates elites against in-place mutation by generators.
         try:d=_delta(generator({k:list(v) for k,v in parent.items()},rng));error=None
         except ProposalError as e:d={'add':[],'remove':[]};error=str(e)
-        return evaluate(d,generation,parents,operator,error)
-    pop=[mutation({'add':[],'remove':[]},0,(),'initial') for _ in range(p['population_size'])]
+        return evaluate(d,generation,parents,operator,error,started)
+    pop=list(history[-1]) if resume else [mutation({'add':[],'remove':[]},0,(),'initial') for _ in range(p['population_size'])]
     def completed(g):
         history.append(tuple(sorted(pop,key=rank)))
         if services.get('on_generation'):services['on_generation'](g,history[-1],tuple(evaluated),rng.getstate())
-    completed(0)
-    for generation in range(1,p['generations']+1):
+    if not resume:completed(0)
+    for generation in range(len(history),p['generations']+1):
         next_pop=sorted(pop,key=rank)[:p['elite_count']]
         for _ in range(p['offspring_count']):
             parent=tournament(pop)

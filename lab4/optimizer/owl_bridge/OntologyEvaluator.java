@@ -16,6 +16,7 @@ public final class OntologyEvaluator {
         public final List<Map<String,String>> violations = new ArrayList<>();
         public final List<String> axioms = new ArrayList<>();
         public boolean core_preserved;
+        public String manchester;
     }
 
     static Set<OWLAxiom> parse(List<String> text) throws Exception {
@@ -108,6 +109,8 @@ public final class OntologyEvaluator {
             }
         }
         r.violations.addAll(violations.values()); r.counts.put("Q", (long)violations.size());
+        org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterOWLSyntaxOWLObjectRendererImpl renderer = new org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterOWLSyntaxOWLObjectRendererImpl();
+        r.manchester = o.getAxioms().stream().map(renderer::render).sorted().collect(Collectors.joining("\n"));
         r.axioms.addAll(o.getAxioms().stream().map(Object::toString).sorted().collect(Collectors.toList()));
         return r;
     }

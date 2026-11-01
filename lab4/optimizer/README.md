@@ -125,3 +125,35 @@ completes. Durable checkpoint files and resume are task 6 responsibilities;
 not launch series or attest T04/model/analyst acceptance.
 
 Unit tests: `python3 -m unittest lab4.tests.test_search`.
+
+### Durable runs (task 6)
+
+From `lab4`, use `python -m optimizer run --config optimizer/search.yaml
+--mode model --seed 101`; from the repository root the equivalent module is
+`lab4.optimizer`. Optional `--run-dir PATH` selects a new directory; otherwise a
+unique directory under `runs` is created. Continue with `resume --run-dir PATH`;
+reconstruct with `replay --run-dir PATH --candidate ID`. Replay uses the OWL bridge
+and metric formula, with no language model or embeddings. Exit 1 means a replay
+mismatch; configuration/storage errors exit 2 with a diagnostic.
+
+Production config adds a `services` object with explicit `model`, `embedding_model`,
+`model_sha256`, `embedding_sha256`, `server_version`, `acceptance_approved: true`,
+`inventory` (classes/object_properties/data_properties), and `entities` (full
+IRI/category/label/comment inventory for semantic comparison), plus optional
+`endpoint`. These values are an operator attestation, not an automatic model
+qualification. The supplied frozen search config deliberately has no accepted
+manifest: actual models and T04 remain unconfirmed. No real series was run.
+
+The copied config, sealed metadata, Python/platform and pinned jar checksums are
+never overwritten. Every evaluation is fsynced in `evaluations.jsonl`, including
+full proposal attempts, request context, raw response, validation outcome,
+metrics/ri/F, elapsed time, and reconstructed axiom set. Rejected candidates can
+have null metrics/axioms when those quantities cannot be defined. Model service
+failures are retained in `interruptions.jsonl` without consuming an evaluation.
+Checkpoint files are written via fsync and atomic replace after whole generations.
+Resume verifies config/core/metadata, checkpoint schema/budget/populations and
+committed log prefix; any uncommitted suffix (including a torn final JSON line)
+is copied to a unique `audit-*.jsonl` before truncating the active journal.
+IDs from that suffix can be reused only in the active, restored generation;
+audit records never enter its 170-evaluation count. Runs are single-writer;
+concurrent processes must use different directories.
