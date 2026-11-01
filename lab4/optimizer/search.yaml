@@ -1,0 +1,8 @@
+{
+  "population_size": 10,
+  "generations": 20,
+  "elite_count": 2,
+  "offspring_count": 8,
+  "tournament_size": 3,
+  "mutation_probability": 0.7
+}

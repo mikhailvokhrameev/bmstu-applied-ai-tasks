@@ -73,3 +73,55 @@ Run `PYTHONPYCACHEPREFIX=/private/tmp/nn-pycache python3 -m unittest lab4.tests.
 Ten cumulative fixture mutations with expected first code and defect reason are
 in `lab4/tests/validator_fixtures`; they are applied to the original OWL document
 at runtime, rather than storing ten nearly identical ontology copies.
+
+### Evolutionary search kernel (task 5)
+
+`search.run(config, mode, seed, resume=False)` returns `RunResult`. `search.yaml`
+is YAML 1.2 written in its JSON subset, loaded without additional dependencies.
+The specification parameters are frozen: 10 initial evaluations, then 20 × 8
+new evaluations; population 10, two unchanged elites, tournaments of 3 distinct
+population members, mutation probability 0.7. Equal fitness selects the oldest
+candidate ID. Invalid proposals count once and have F=0; infrastructure errors
+abort instead of entering selection. Crossover unions cumulative deltas and
+always invokes full validation; contradictory add/remove requests are rejected.
+
+Runtime integration is explicit (never serialized into YAML):
+
+```python
+from lab4.optimizer.search import load_config, run, ControlGenerator
+config = load_config('lab4/optimizer/search.yaml')
+config['runtime'] = {
+    'control_generator': ControlGenerator(entity_inventory),
+    'model_generator': cumulative_model_mutation,
+    'duplicate_checker': real_semantic_checker,
+    'on_generation': save_completed_generation,
+}
+result = run(config, 'control', 201)
+```
+
+Both generators receive `(parent_delta, run_rng)` and return a **cumulative**
+`{'add': [...], 'remove': [...]}` delta relative to the immutable baseline.
+The model adapter must use the bounded parser/retry service in `proposals.py`
+and include parent state in its context; `ProposalError` after retries consumes
+one invalid evaluation. Runtime `validate` is an optional injection seam for
+unit tests or a wrapper around the **complete** validator. Production defaults
+to `validator.validate` with the supplied real semantic checker.
+
+The control library samples available allowed templates uniformly and then
+suitable ontology entities: new subclass, defined class, new data property with
+unit suffix/domain/range, four property characteristics, object/data property
+hierarchy, cancellation of a previous addition. Its inventory contains sorted
+Functional Syntax IRIs in `classes`, `object_properties`, `data_properties`.
+It invokes no language model. Templates may produce semantically invalid
+candidates; the shared validator decides, with no retry/filtering of invalid
+candidates and no budget reduction. This is a library of permitted changes,
+not a claim that every permitted Table 4 kind is currently generated.
+
+`RunResult` exposes populations, all evaluations, best candidate, best F per
+generation and the final `random.Random.getstate()`. `on_generation` receives
+`(generation, population, evaluations, rng_state)` only after a whole generation
+completes. Durable checkpoint files and resume are task 6 responsibilities;
+`resume=True` explicitly raises until that layer is connected. This module does
+not launch series or attest T04/model/analyst acceptance.
+
+Unit tests: `python3 -m unittest lab4.tests.test_search`.
