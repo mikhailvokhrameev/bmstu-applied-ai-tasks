@@ -10,6 +10,7 @@
 - [Методика оценки](assessment/METHODOLOGY.md).
 - [Описание программы и полный шаблон запроса](docs/PROGRAM.md).
 - [Руководство оператора](docs/OPERATOR.md).
+- [Пошаговая инструкция для демонстрации](docs/DEMO.md).
 - [Отчёт об экспериментах](docs/EXPERIMENTS.md).
 - [Итоговая онтология и экспертные решения](docs/ONTOLOGY.md).
 - [Протокол испытаний](docs/ACCEPTANCE_STATUS.md).
