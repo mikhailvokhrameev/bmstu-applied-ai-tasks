@@ -12,7 +12,27 @@ from urllib.request import Request, urlopen
 from .bridge import LIB, _run
 
 class ProposalError(ValueError):
-    pass
+    def __init__(self,message,diagnostic=None):
+        super().__init__(message)
+        self.diagnostic=diagnostic
+
+
+def parser_feedback(detail,field=None,index=None,axiom=None):
+    """Bound model feedback while preserving the complete diagnostic separately."""
+    marker='Parser: org.semanticweb.owlapi.functional.parser.'
+    section=detail.split(marker,1)[-1].partition('\n')[2] if marker in detail else detail
+    section=section.split('\n--------------------------------------------------------------------------------',1)[0]
+    lines=[]
+    for line in section.splitlines():
+        line=line.strip()
+        if not line or line=='Stack trace:' or line.startswith(('at ','org.semanticweb.','java.','uk.ac.','OntologyEvaluator.','ProposalSyntax.')):
+            continue
+        lines.append(line)
+        if sum(map(len,lines))>220:break
+    summary=' '.join(lines)[:240] or 'неверная структура аксиомы'
+    location=f' {field}[{index}]' if field is not None and index is not None else ''
+    offending=f' Аксиома: {axiom[:300]}' if isinstance(axiom,str) else ''
+    return f'OWL syntax{location}: {summary}.{offending} Исправь эту аксиому: используй Functional Syntax, правильное число аргументов, сбалансированные скобки и строковые литералы с кавычками.'
 
 @dataclass(frozen=True)
 class Proposal:
@@ -68,7 +88,7 @@ def parse_proposal(text):
         result=json.loads(proc.stdout)
         if not isinstance(result,dict): raise ValueError('Expected object')
         if result.get('status')=='invalid' and isinstance(result.get('detail'),str):
-            raise ProposalError('OWL syntax: '+result['detail'])
+            raise ProposalError(parser_feedback(result['detail'],result.get('field'),result.get('index'),result.get('axiom')),diagnostic=result)
         if result.get('status')!='ok' or type(result.get('logical_count')) is not int:
             raise ValueError('Invalid checker schema')
     except ProposalError:
@@ -83,22 +103,37 @@ def render_prompt(context,previous_error=None):
     if set(metrics)!={f'M{i}' for i in range(1,7)} or len(relative)!=6:
         raise ValueError('M1–M6 and six ri required')
     return Template((Path(__file__).parent/'prompts/proposal.txt').read_text()).substitute(
-        ontology_manchester=context['ontology_manchester'],metrics=json.dumps(metrics,ensure_ascii=False),relative=json.dumps(relative),previous_error=previous_error or 'нет')
+        ontology_manchester=context['ontology_manchester'],metrics=json.dumps(metrics,ensure_ascii=False),relative=json.dumps(relative),previous_error=previous_error or 'нет',
+        added_axioms=json.dumps(context.get('added_axioms',[]),ensure_ascii=False),removed_axioms=json.dumps(context.get('removed_axioms',[]),ensure_ascii=False),
+        violations=json.dumps(context.get('violations',[]),ensure_ascii=False,separators=(',',':')),
+        inverse_operands=json.dumps(context.get('inverse_operands',[]),ensure_ascii=False,separators=(',',':')),
+        parent_validation=json.dumps(context.get('parent_validation'),ensure_ascii=False,separators=(',',':')))
 
 class OllamaModels:
     """Explicit local endpoint. Caller must attest pinned weights/context before series."""
-    def __init__(self,model,embedding_model,endpoint='http://127.0.0.1:11434',seed=100):
+    def __init__(self,model,embedding_model,endpoint='http://127.0.0.1:11434',seed=100,embedding_endpoint=None,embedding_instruction=''):
+        if not isinstance(embedding_instruction,str):raise ValueError('embedding_instruction must be text')
         self.model,self.embedding_model,self.endpoint,self.seed=model,embedding_model,endpoint.rstrip('/'),seed
+        self.embedding_endpoint=(embedding_endpoint or endpoint).rstrip('/')
+        self.embedding_instruction=embedding_instruction
     def _post(self,path,payload):
         request=Request(self.endpoint+path,data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
         with urlopen(request,timeout=180) as response: return json.load(response)
     def propose(self,context,previous_error=None):
         raw=self._post('/api/generate',dict(model=self.model,prompt=render_prompt(context,previous_error),stream=False,format='json',options=dict(temperature=.7,top_p=.95,num_predict=2000,num_ctx=32768,seed=self.seed)))
         response=ModelResponse(raw.get('response',''),raw.get('model',self.model),raw)
-        if raw.get('done') is not True or raw.get('done_reason')=='length': raise IncompleteModelResponse(response)
+        # A completed request can exhaust its output budget. Its delivered text
+        # still belongs to the normal syntax/feedback path, including retries.
+        if raw.get('done') is not True: raise IncompleteModelResponse(response)
         return response
     def embed(self,texts):
-        raw=self._post('/api/embed',dict(model=self.embedding_model,input=texts,truncate=False))
+        inputs=[f'Instruct: {self.embedding_instruction}\nQuery: {text}' for text in texts] if self.embedding_instruction else texts
+        payload=dict(model=self.embedding_model,input=inputs,truncate=False)
+        if self.embedding_endpoint==self.endpoint:
+            raw=self._post('/api/embed',payload)
+        else:
+            request=Request(self.embedding_endpoint+'/api/embed',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
+            with urlopen(request,timeout=180) as response:raw=json.load(response)
         vectors=raw['embeddings']
         if len(vectors)!=len(texts): raise ValueError('Embedding response length')
         return vectors
@@ -121,19 +156,39 @@ class SemanticDeduplicator:
     def __init__(self,embed,entities,threshold=.90):
         if not 0<=threshold<=1: raise ValueError('threshold')
         self.embed,self.entities,self.threshold=embed,list(entities),threshold
-    def is_duplicate(self,label,comment,category):
-        peers=[e for e in self.entities if e['category']==category]
+        self._embedding_cache={}
+    def _vectors(self,texts,category):
+        owner=getattr(self.embed,'__self__',None)
+        source=(owner.embedding_endpoint,owner.embedding_model,owner.embedding_instruction) if isinstance(owner,OllamaModels) else ('callable',id(self.embed))
+        keys=[(source,category,text) for text in texts]
+        missing=list(dict.fromkeys(key for key in keys if key not in self._embedding_cache))
+        pending={}
+        if missing:
+            vectors=self.embed([key[2] for key in missing])
+            if len(vectors)!=len(missing):raise ValueError('Embedding response length')
+            for key,vector in zip(missing,vectors):
+                vector=tuple(vector)
+                cosine(vector,vector) # Validate finite, nonzero vectors before caching.
+                pending[key]=vector
+        result=[pending[key] if key in pending else self._embedding_cache[key] for key in keys]
+        if len({len(vector) for vector in result})>1:raise ValueError('Invalid embeddings')
+        # Failed transport/validation cannot poison a subsequent attempt.
+        self._embedding_cache.update(pending)
+        return result
+    def _is_duplicate(self,label,comment,category,entities):
+        peers=[e for e in entities if e['category']==category]
         if not peers: return False
         texts=[f'{label}. {comment}']+[f"{e['label']}. {e['comment']}" for e in peers]
-        vectors=self.embed(texts)
-        if len(vectors)!=len(texts): raise ValueError('Embedding response length')
+        vectors=self._vectors(texts,category)
         return any(cosine(vectors[0],v)>=self.threshold for v in vectors[1:])
+    def is_duplicate(self,label,comment,category):
+        return self._is_duplicate(label,comment,category,self.entities)
     def __call__(self,new_entities):
         # Include earlier novel entities so duplicates within the same proposal are caught.
-        checker=SemanticDeduplicator(self.embed,self.entities,self.threshold)
+        entities=list(self.entities)
         for e in new_entities:
-            if checker.is_duplicate(e['label'],e['comment'],e['category']): return True
-            checker.entities.append(e)
+            if self._is_duplicate(e['label'],e['comment'],e['category'],entities): return True
+            entities.append(e)
         return False
 
 def assess_pairs(pairs,embed,threshold=.90):

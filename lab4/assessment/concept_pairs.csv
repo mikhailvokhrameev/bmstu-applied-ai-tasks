@@ -1,21 +1,21 @@
 id,left,right,synonym,review_status
-PAIR01,Видеокарта,Графическая плата,1,pending_system_analyst
-PAIR02,Графический процессор,GPU,1,pending_system_analyst
-PAIR03,Видеопамять,Графическая память,1,pending_system_analyst
-PAIR04,Объём видеопамяти,Ёмкость видеопамяти,1,pending_system_analyst
-PAIR05,Ширина шины памяти,Разрядность шины памяти,1,pending_system_analyst
-PAIR06,Активное охлаждение,Охлаждение с вентилятором,1,pending_system_analyst
-PAIR07,Пассивное охлаждение,Безвентиляторное охлаждение,1,pending_system_analyst
-PAIR08,Производитель видеокарты,Изготовитель графической платы,1,pending_system_analyst
-PAIR09,Видеовыход,Выход видеосигнала,1,pending_system_analyst
-PAIR10,Частота графического процессора,Тактовая частота GPU,1,pending_system_analyst
-PAIR11,Графический процессор,Видеопамять,0,pending_system_analyst
-PAIR12,Объём видеопамяти,Ширина шины памяти,0,pending_system_analyst
-PAIR13,Активное охлаждение,Пассивное охлаждение,0,pending_system_analyst
-PAIR14,Производитель видеокарты,Производитель GPU,0,pending_system_analyst
-PAIR15,Интерфейс подключения,Видеовыход,0,pending_system_analyst
-PAIR16,Частота GPU,Потребляемая мощность,0,pending_system_analyst
-PAIR17,Тип памяти,Объём памяти,0,pending_system_analyst
-PAIR18,Архитектура GPU,Модель GPU,0,pending_system_analyst
-PAIR19,Длина видеокарты,Ширина шины памяти,0,pending_system_analyst
-PAIR20,Число вентиляторов,Назначение видеокарты,0,pending_system_analyst
+PAIR01,Видеокарта,Графическая плата,1,approved
+PAIR02,Графический процессор,GPU,1,approved
+PAIR03,Видеопамять,Графическая память,1,approved
+PAIR04,Объём видеопамяти,Ёмкость видеопамяти,1,approved
+PAIR05,Ширина шины памяти,Разрядность шины памяти,1,approved
+PAIR06,Активное охлаждение,Охлаждение с вентилятором,1,approved
+PAIR07,Пассивное охлаждение,Безвентиляторное охлаждение,1,approved
+PAIR08,Производитель видеокарты,Изготовитель графической платы,1,approved
+PAIR09,Видеовыход,Выход видеосигнала,1,approved
+PAIR10,Частота графического процессора,Тактовая частота GPU,1,approved
+PAIR11,Графический процессор,Видеопамять,0,approved
+PAIR12,Объём видеопамяти,Ширина шины памяти,0,approved
+PAIR13,Активное охлаждение,Пассивное охлаждение,0,approved
+PAIR14,Производитель видеокарты,Производитель GPU,0,approved
+PAIR15,Интерфейс подключения,Видеовыход,0,approved
+PAIR16,Частота GPU,Потребляемая мощность,0,approved
+PAIR17,Тип памяти,Объём памяти,0,approved
+PAIR18,Архитектура GPU,Модель GPU,0,approved
+PAIR19,Длина видеокарты,Ширина шины памяти,0,approved
+PAIR20,Число вентиляторов,Назначение видеокарты,0,approved

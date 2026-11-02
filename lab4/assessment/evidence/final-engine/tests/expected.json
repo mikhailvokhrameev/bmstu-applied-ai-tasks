@@ -1,0 +1,178 @@
+{
+  "format": "Fixed expected answers for the 8 control questions, written by ontology/src/make_expected.py from ontology/src/ontology_data.py BEFORE any reasoner run. questions.Qn.expected is either a dict {argument IRI local name: sorted list of VideoCardModel individual local names} (Q1, Q2, Q4, Q6, Q7) or a sorted list (Q3, Q5, Q8, no argument). All names are local names in https://example.org/ontologies/videocard#. 'representative' is the argument used for the documented positive/negative check (member and non-member exist); it is null for argument-less questions. 'universe' lists all models.",
+  "namespace": "https://example.org/ontologies/videocard#",
+  "questions": {
+    "Q1": {
+      "argument": "manufacturer",
+      "expected": {
+        "P1": [
+          "U01",
+          "U02",
+          "U05",
+          "U08"
+        ],
+        "P2": [
+          "U03",
+          "U04",
+          "U06",
+          "U07"
+        ]
+      },
+      "negative_example": "U03",
+      "positive_example": "U01",
+      "question": "Models produced by a given manufacturer",
+      "representative": "P1"
+    },
+    "Q2": {
+      "argument": "gpu",
+      "expected": {
+        "GPU_G1": [
+          "U01",
+          "U08"
+        ],
+        "GPU_G2": [
+          "U02",
+          "U05"
+        ],
+        "GPU_G3": [
+          "U03",
+          "U06"
+        ],
+        "GPU_G4": [
+          "U04"
+        ],
+        "GPU_G5": [
+          "U07"
+        ]
+      },
+      "negative_example": "U01",
+      "positive_example": "U03",
+      "question": "Models using a given GPU",
+      "representative": "GPU_G3"
+    },
+    "Q3": {
+      "argument": null,
+      "expected": [
+        "U02",
+        "U03",
+        "U04",
+        "U06",
+        "U07"
+      ],
+      "question": "Models with memory of at least 8 GiB (CardWith8GBMemory)",
+      "representative": null
+    },
+    "Q4": {
+      "argument": "memory type",
+      "expected": {
+        "GDDR5": [
+          "U01",
+          "U08"
+        ],
+        "GDDR6": [
+          "U02",
+          "U03",
+          "U04",
+          "U05",
+          "U06"
+        ],
+        "GDDR6X": [
+          "U07"
+        ]
+      },
+      "negative_example": "U01",
+      "positive_example": "U02",
+      "question": "Models with a given memory type",
+      "representative": "GDDR6"
+    },
+    "Q5": {
+      "argument": null,
+      "expected": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U07"
+      ],
+      "question": "Models with active cooling (CardWithActiveCooling)",
+      "representative": null
+    },
+    "Q6": {
+      "argument": "video output",
+      "expected": {
+        "DVI": [
+          "U05",
+          "U06",
+          "U08"
+        ],
+        "DisplayPort": [
+          "U02",
+          "U03",
+          "U04",
+          "U07"
+        ],
+        "HDMI": [
+          "U01",
+          "U02",
+          "U03",
+          "U04",
+          "U05",
+          "U06",
+          "U07"
+        ],
+        "VGA": [
+          "U01",
+          "U08"
+        ]
+      },
+      "negative_example": "U01",
+      "positive_example": "U05",
+      "question": "Models having a given video output",
+      "representative": "DVI"
+    },
+    "Q7": {
+      "argument": "interface",
+      "expected": {
+        "PCIe_3_0_x16": [
+          "U01",
+          "U05",
+          "U06",
+          "U08"
+        ],
+        "PCIe_4_0_x16": [
+          "U02",
+          "U03",
+          "U04"
+        ],
+        "PCIe_5_0_x16": [
+          "U07"
+        ]
+      },
+      "negative_example": "U01",
+      "positive_example": "U02",
+      "question": "Models with a given connection interface",
+      "representative": "PCIe_4_0_x16"
+    },
+    "Q8": {
+      "argument": null,
+      "expected": [
+        "U02",
+        "U03",
+        "U04",
+        "U07"
+      ],
+      "question": "Models with memory >= 8 GiB AND active cooling",
+      "representative": null
+    }
+  },
+  "universe": [
+    "U01",
+    "U02",
+    "U03",
+    "U04",
+    "U05",
+    "U06",
+    "U07",
+    "U08"
+  ]
+}

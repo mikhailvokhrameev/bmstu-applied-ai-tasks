@@ -1,0 +1,532 @@
+2026-11-02 01:47:51.028 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:47:51.029 [main] INFO  Launcher    **                                  Protege                                   **
+2026-11-02 01:47:51.029 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:47:51.029 [main] INFO  Launcher    
+2026-11-02 01:47:51.029 [main] INFO  Launcher    ----------------- Initialising and Starting the OSGi Framework -----------------
+2026-11-02 01:47:51.029 [main] INFO  Launcher    FrameworkFactory Class: org.apache.felix.framework.FrameworkFactory
+2026-11-02 01:47:51.030 [main] INFO  Launcher    
+2026-11-02 01:47:51.083 [main] INFO  Launcher    The OSGi framework has been initialised
+2026-11-02 01:47:51.242 [main] INFO  Launcher    ------------------------------- Starting Bundles -------------------------------
+2026-11-02 01:47:51.242 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:47:51.242 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:47:51.242 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:47:51.242 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-dynamic
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle log4j.over.slf4j
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-tf
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.objectweb.asm.util
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.glassfish.external.management-api
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle jul.to.slf4j
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.glassfish.corba.glassfish-corba-omgapi
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-impl
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.objectweb.asm
+2026-11-02 01:47:51.243 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-basic
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle ch.qos.logback.core
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle slf4j.api
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle org.apache.commons.commons-io
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle jaxb-api
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-core
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle org.semanticweb.owl.owlapi
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle ch.qos.logback.classic
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:47:51.244 [main] INFO  Launcher    Starting bundle jakarta.activation-api
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.apache.felix.main
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.protege.editor.owl
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.jsr-305
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.apache.servicemix.bundles.javax-inject
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle com.googlecode.javaewah.JavaEWAH
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.eclipse.jgit
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle com.google.guava
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree.analysis
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:47:51.245 [main] INFO  Launcher    Starting bundle org.protege.editor.owl.rdf
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle existentialquery
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.protege.owl.rdf
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle uk.ac.manchester.cs.owl.explanation
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.protege.ontograf
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.coode.browser
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.coode.owlviz
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.semanticweb.hermit
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle cellfie
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle swrltab-plugin
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.coode.dlquery
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle org.semanticweb.elk
+2026-11-02 01:47:51.246 [main] INFO  Launcher    Starting bundle code-generation
+2026-11-02 01:47:51.755 [main] INFO  Launcher    The OSGi framework has been started
+2026-11-02 01:47:51.755 [main] INFO  Launcher    
+2026-11-02 01:47:51.755 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Protege -----------------------------------
+2026-11-02 01:47:51.756 [FelixDispatchQueue] INFO  ProtegeApplication    Protege Desktop
+2026-11-02 01:47:51.756 [FelixDispatchQueue] INFO  ProtegeApplication    Version 5.6.9, Build 
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    ----------------------------------- Platform -----------------------------------
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Java: JVM 17.0.21+9  Memory: 805M
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Language: en, Country: US
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Framework: Apache Software Foundation (1.9) 
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    OS: macosx (26.6.2)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Processor: aarch64
+
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Plugins -----------------------------------
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SPARQL Query Plugin (3.0.0)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Existential Query (2.0.0)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLAPI RDF Library (3.0.1)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Explanation Workbench (3.0.1)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OntoGraf (2.0.3)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Browser View (OWLDoc) (3.0.3)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLViz (5.0.3)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: HermiT Reasoner (1.4.3.456)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Cellfie Protege 5.0+ Plugin (2.1.0)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SWRLTab Plugin (2.0.10)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: DL Query (4.0.1)
+2026-11-02 01:47:51.757 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: ELK Reasoner Protege Plug-in (0.6.0)
+2026-11-02 01:47:51.758 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWL Code Generation Plug-in (2.0.0)
+2026-11-02 01:47:51.758 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:47:51.884 [FelixDispatchQueue] INFO  ProtegeApplication    Processing command line argument: file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:47:51.938 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------- Auto-update Check ------------------------------
+2026-11-02 01:47:51.938 [AWT-EventQueue-0] INFO  ProtegeApplication    Creating and setting up (default) editor kit for file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:47:51.940 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:47:51.939 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update last performed: Mon Nov 02 01:34:51 MSK 2026
+2026-11-02 01:47:51.942 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update has been performed today.  Not performing it again.
+2026-11-02 01:47:51.942 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:47:52.066 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:47:52.067 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:47:52.140 [pool-3-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:47:52.158 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:52.218 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:55.284 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:55.285 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:55.300 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 3233 ms
+2026-11-02 01:47:55.300 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:47:55.329 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:55.330 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:55.360 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:193)
+	at org.protege.editor.core.ProtegeApplication.lambda$createAndSetupDefaultEditorKit$2(ProtegeApplication.java:506)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:47:56.154 [AWT-EventQueue-0] INFO  OboFoundryRegistryManager    OBO Foundry registry loaded: 267 entries
+2026-11-02 01:47:56.248 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:47:56.619 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:56.620 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.262 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:47:57.323 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:47:57.323 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:47:57.323 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:47:57.344 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 81 ms by HermiT
+2026-11-02 01:47:57.344 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:47:57.400 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.401 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.641 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:47:57.649 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:47:57.649 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T06.owl
+2026-11-02 01:47:57.665 [pool-6-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T06.owl
+2026-11-02 01:47:57.733 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.734 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.744 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.745 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.760 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 110 ms
+2026-11-02 01:47:57.760 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:47:57.766 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.766 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.779 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at AcceptanceAgent.invoke(AcceptanceAgent.java:64)
+	at AcceptanceAgent.lambda$open$7(AcceptanceAgent.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:47:57.829 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.830 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.845 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:47:57.902 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.903 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:57.920 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:57.920 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:58.248 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:47:58.254 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:47:58.254 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:47:58.254 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:47:58.598 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:47:58.606 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:47:58.606 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T07.owl
+2026-11-02 01:47:58.617 [pool-8-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T07.owl
+2026-11-02 01:47:58.628 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:58.629 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:58.637 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:58.640 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:58.652 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 46 ms
+2026-11-02 01:47:58.652 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:47:58.657 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:58.658 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:58.668 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at AcceptanceAgent.invoke(AcceptanceAgent.java:64)
+	at AcceptanceAgent.lambda$open$7(AcceptanceAgent.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:47:58.765 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:47:58.941 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:47:58.946 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:47:58.946 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:47:58.946 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:47:59.279 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:47:59.286 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:47:59.286 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T08.owl
+2026-11-02 01:47:59.297 [pool-9-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T08.owl
+2026-11-02 01:47:59.314 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:59.315 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:59.325 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:59.325 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:59.339 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 52 ms
+2026-11-02 01:47:59.339 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:47:59.343 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:47:59.344 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:47:59.353 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at AcceptanceAgent.invoke(AcceptanceAgent.java:64)
+	at AcceptanceAgent.lambda$open$7(AcceptanceAgent.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:47:59.506 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:47:59.705 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:47:59.709 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:47:59.709 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:47:59.709 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:48:00.045 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:48:00.052 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:48:00.052 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T09.owl
+2026-11-02 01:48:00.063 [pool-10-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T09.owl
+2026-11-02 01:48:00.074 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.075 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.083 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.084 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.100 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 46 ms
+2026-11-02 01:48:00.100 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:48:00.103 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.104 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.113 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at AcceptanceAgent.invoke(AcceptanceAgent.java:64)
+	at AcceptanceAgent.lambda$open$7(AcceptanceAgent.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:48:00.288 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:48:00.526 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:48:00.529 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:48:00.530 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:48:00.530 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:48:00.542 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 16 ms by HermiT
+2026-11-02 01:48:00.542 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:48:00.861 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:48:00.870 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:48:00.870 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T10_resaved.owl
+2026-11-02 01:48:00.880 [pool-11-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-3/T10_resaved.owl
+2026-11-02 01:48:00.892 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.892 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.900 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.901 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.913 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 42 ms
+2026-11-02 01:48:00.913 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:48:00.919 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:48:00.920 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:48:00.930 [AWT-EventQueue-0] ERROR Workspace    Error whilst adding menu item: {}
+java.lang.IllegalAccessException: class org.protege.editor.core.ui.workspace.Workspace cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @7bd7f799
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:490)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at org.protege.editor.core.ui.workspace.Workspace.addLookAndFeelMenuItem(Workspace.java:219)
+	at org.protege.editor.core.ui.workspace.Workspace.installLookAndFeelMenu(Workspace.java:195)
+	at org.protege.editor.core.ui.workspace.Workspace.initialiseExtraMenuItems(Workspace.java:128)
+	at org.protege.editor.owl.model.OWLWorkspace.initialiseExtraMenuItems(OWLWorkspace.java:444)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.createUI(WorkspaceFrame.java:157)
+	at org.protege.editor.core.ui.workspace.WorkspaceFrame.<init>(WorkspaceFrame.java:58)
+	at org.protege.editor.core.ui.workspace.WorkspaceManager.addWorkspace(WorkspaceManager.java:47)
+	at org.protege.editor.core.editorkit.EditorKitManager.addEditorKit(EditorKitManager.java:44)
+	at org.protege.editor.core.ProtegeManager.createAndSetupNewEditorKit(ProtegeManager.java:172)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at AcceptanceAgent.invoke(AcceptanceAgent.java:64)
+	at AcceptanceAgent.lambda$open$7(AcceptanceAgent.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2026-11-02 01:48:01.027 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:48:01.050 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:48:01.054 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:48:01.054 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:48:01.054 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:48:01.058 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 7 ms by HermiT
+2026-11-02 01:48:01.058 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:02.234 [Close OSGi Session] INFO  Launcher    ----------------------- Shutting down Protege -----------------------
+2026-11-02 01:49:02.239 [Close OSGi Session] INFO  Launcher    Cleaning up temporary directories

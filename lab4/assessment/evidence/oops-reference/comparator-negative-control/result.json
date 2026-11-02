@@ -1,0 +1,11 @@
+{
+  "family": "P04",
+  "response_present": true,
+  "expected_pitfalls": 1,
+  "actual_pitfalls": 1,
+  "expected_triples": 7,
+  "actual_triples": 7,
+  "unexpected_codes": [],
+  "matches": false,
+  "comparison": "Selected pitfall rooted RDF subgraphs; only generated UUID resources become consistently mapped blank nodes; exact literal/predicate/relationship content retained"
+}

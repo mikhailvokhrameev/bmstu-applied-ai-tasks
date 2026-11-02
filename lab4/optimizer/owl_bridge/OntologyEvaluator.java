@@ -4,6 +4,13 @@ import java.util.stream.Collectors;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentSource;
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.formats.ManchesterSyntaxDocumentFormat;
+import java.nio.charset.StandardCharsets;
+import java.util.regex.Pattern;
+import org.semanticweb.owlapi.util.OWLObjectDuplicator;
+import org.semanticweb.owlapi.util.OWLObjectWalker;
+import org.semanticweb.owlapi.util.OWLObjectVisitorAdapter;
+import org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterOWLSyntaxPrefixNameShortFormProvider;
 import com.fasterxml.jackson.databind.*;
 
 /** Stateless candidate construction: every request starts from the original OWL axiom set. */
@@ -109,10 +116,61 @@ public final class OntologyEvaluator {
             }
         }
         r.violations.addAll(violations.values()); r.counts.put("Q", (long)violations.size());
-        org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterOWLSyntaxOWLObjectRendererImpl renderer = new org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterOWLSyntaxOWLObjectRendererImpl();
-        r.manchester = o.getAxioms().stream().map(renderer::render).sorted().collect(Collectors.joining("\n"));
+        r.manchester = manchester(o);
         r.axioms.addAll(o.getAxioms().stream().map(Object::toString).sorted().collect(Collectors.toList()));
         return r;
+    }
+
+    static String manchester(OWLOntology o) {
+        ManchesterSyntaxDocumentFormat format = new ManchesterSyntaxDocumentFormat();
+        format.setDefaultPrefix(NS);
+        format.setPrefix("vc:", NS);
+        format.setPrefix("owl:", "http://www.w3.org/2002/07/owl#");
+        format.setPrefix("rdf:", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+        format.setPrefix("rdfs:", "http://www.w3.org/2000/01/rdf-schema#");
+        format.setPrefix("xsd:", "http://www.w3.org/2001/XMLSchema#");
+        // OWL API 4.5 renders decimal "40" as bare 40, which its parser reads
+        // as integer. Render typed literals through temporary string tokens,
+        // then restore their explicit lexical form and datatype in the document.
+        // The actual ontology and the axiom/count interfaces are never changed.
+        Set<OWLLiteral> literals = new TreeSet<>();
+        List<OWLObject> objects = new ArrayList<>(o.getAxioms());
+        objects.addAll(o.getAnnotations());
+        new OWLObjectWalker<OWLObject>(objects).walkStructure(new OWLObjectVisitorAdapter() {
+            @Override public void visit(OWLLiteral literal) {
+                if (!literal.hasLang() && !literal.getDatatype().isString()) literals.add(literal);
+            }
+        });
+        Map<OWLLiteral,OWLLiteral> replacements = new LinkedHashMap<>();
+        String tokenPrefix = "__VC_TYPED_LITERAL_" + UUID.randomUUID().toString().replace("-", "") + "_";
+        int index = 0;
+        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+        for (OWLLiteral literal : literals) replacements.put(literal, manager.getOWLDataFactory().getOWLLiteral(tokenPrefix + index++));
+        OWLObjectDuplicator duplicator = new OWLObjectDuplicator(manager.getOWLDataFactory(), Collections.<IRI,IRI>emptyMap(), replacements);
+        try (ByteArrayOutputStream document = new ByteArrayOutputStream()) {
+            OWLOntology copy = manager.createOntology(o.getOntologyID());
+            for (OWLAxiom axiom : o.getAxioms()) manager.addAxiom(copy, duplicator.duplicateObject(axiom));
+            for (OWLAnnotation annotation : o.getAnnotations()) manager.applyChange(new AddOntologyAnnotation(copy, duplicator.duplicateObject(annotation)));
+            manager.saveOntology(copy, format, document);
+            String result = document.toString(StandardCharsets.UTF_8);
+            for (Map.Entry<OWLLiteral,OWLLiteral> entry : replacements.entrySet()) {
+                String token = "\"" + entry.getValue().getLiteral() + "\"";
+                result = result.replace(token + "^^xsd:string", entry.getKey().toString()).replace(token, entry.getKey().toString());
+            }
+            // The stock writer emits empty frames for referenced built-ins;
+            // parsing those frames invents declaration axioms absent in the core.
+            ManchesterOWLSyntaxPrefixNameShortFormProvider names = new ManchesterOWLSyntaxPrefixNameShortFormProvider(format);
+            Set<OWLEntity> entities = new HashSet<>(copy.getSignature());
+            entities.addAll(o.getSignature());
+            for (OWLEntity entity : entities) {
+                if (!entity.isBuiltIn() || o.containsAxiom(manager.getOWLDataFactory().getOWLDeclarationAxiom(entity))) continue;
+                String kind = entity.isOWLDatatype() ? "Datatype" : entity.isOWLAnnotationProperty() ? "AnnotationProperty" : entity.isOWLClass() ? "Class" : null;
+                if (kind != null) result = result.replaceAll("(?m)^" + kind + ": " + Pattern.quote(names.getShortForm(entity)) + "\\r?\\n(?:[ \\t]*\\r?\\n)*(?=\\S|\\z)", "");
+            }
+            return result;
+        } catch (OWLOntologyStorageException | OWLOntologyCreationException | IOException error) {
+            throw new IllegalStateException("Manchester serialization failed", error);
+        }
     }
     static void violation(Map<String,Map<String,String>> target, String code, String key) {
         Map<String,String> value = new TreeMap<>(); value.put("code",code); value.put("key",key);

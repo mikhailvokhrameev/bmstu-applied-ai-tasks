@@ -1,0 +1,9 @@
+{
+  "version": "5.6.9",
+  "source": "https://github.com/protegeproject/protege-distribution/releases/download/protege-5.6.9/Protege-5.6.9-platform-independent.zip",
+  "sha256": "89aa0ae7530112228d8f2c552d593474d14ca619472f5cfd185f1e861728aa98",
+  "official_digest": "sha256:89aa0ae7530112228d8f2c552d593474d14ca619472f5cfd185f1e861728aa98",
+  "size": 70777974,
+  "gui_verified": false,
+  "note": "Official platform-independent distribution prepared for Java17; no GUI action or verification performed"
+}

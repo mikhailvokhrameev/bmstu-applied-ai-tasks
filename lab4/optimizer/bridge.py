@@ -5,10 +5,9 @@ from pathlib import Path
 import subprocess
 import tempfile
 
-ROOT = Path(__file__).resolve().parents[2]
+from .paths import ROOT, CORE, LIB
+
 SOURCE = Path(__file__).parent / 'owl_bridge/OntologyEvaluator.java'
-LIB = ROOT / 'lab2/tests/harness/lib'
-CORE = ROOT / 'lab2/ontology/videocard.owl'
 CORE_SHA256 = 'd8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661'
 
 class BridgeError(RuntimeError):

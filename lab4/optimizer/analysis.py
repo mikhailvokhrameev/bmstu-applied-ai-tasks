@@ -1,7 +1,7 @@
 """Read-only analysis of schema-1 journals; never starts a search or model.
 
-Exact one-sided permutation Mann–Whitney handles ties by midranks. Timing
-stored by schema 1 measures evaluations only, not series wall-clock duration.
+Exact one-sided permutation Mann–Whitney handles ties by midranks. Debug
+qualification reports parsed first responses separately from ontology validity.
 """
 import argparse
 import csv
@@ -11,6 +11,7 @@ import math
 from pathlib import Path
 from statistics import median
 from . import journal
+from .search import PHASE_GENERATIONS
 
 
 def mann_whitney(model, control):
@@ -60,9 +61,50 @@ def timing_summary(root):
                 duration_acceptance='Run wall-clock span recorded; series span checked separately')
 
 
+def debug_assessment(rows, mode, timing):
+    """Describe observed debug quality; projections never qualify run duration."""
+    requests = [row for row in rows if mode == 'model' and row['operator'] != 'crossover']
+    first_attempts = [
+        row['attempts'][0] if isinstance(row.get('attempts'), list)
+        and row['attempts'] and isinstance(row['attempts'][0], dict) else {}
+        for row in requests]
+    complete = bool(requests) and all('response' in attempt for attempt in first_attempts)
+    successes = sum(
+        attempt.get('response') is not None
+        and 'parse_error' not in attempt and 'service_error' not in attempt
+        for attempt in first_attempts)
+    fraction = successes / len(requests) if requests else None
+    wall_seconds = timing.get('wall_clock_seconds')
+    projected = wall_seconds * 170 / 34 if wall_seconds is not None else None
+    projected_series = wall_seconds * 850 / 34 if wall_seconds is not None else None
+    durations = [row.get('elapsed_seconds') for row in rows]
+    complete_durations = all(isinstance(value, (float, int)) and not isinstance(value, bool)
+                             and math.isfinite(value) and value >= 0 for value in durations)
+    steady_series = sum(durations) * 850 / 34 if complete_durations else None
+    return dict(model_requests=len(requests), first_response_success_count=successes,
+                first_response_fraction=fraction, first_response_evidence_complete=complete,
+                meets_70_percent=(fraction >= .70) if complete else None,
+                valid_ontology_fraction=sum(row['status'] == 'valid' for row in rows) / len(rows),
+                projected_170_evaluation_seconds=projected,
+                projection_factor=170 / 34,
+                projected_within_eight_hours=(projected <= 8 * 3600) if projected is not None else None,
+                projected_850_evaluation_seconds=projected_series,
+                projection_series_factor=850 / 34,
+                projected_series_within_eight_hours=(projected_series <= 8 * 3600) if projected_series is not None else None,
+                steady_projection_series_seconds=steady_series,
+                steady_projection_status='Estimate from committed evaluation durations only; excludes repairs, gaps and discarded audit evaluations; not acceptance',
+                duration_acceptance=None,
+                projection_status='Estimates from debug wall-clock span: 170 evaluations is one run (legacy projected_within_eight_hours); 850 evaluations is a five-run series. The eight-hour requirement applies to the series; neither projection confirms acceptance')
+
+
 def analyze_run(directory, replay=False):
     root = Path(directory)
     meta = journal._metadata(root)
+    phase = meta.get('phase', 'main')
+    if phase not in PHASE_GENERATIONS:
+        raise ValueError('Invalid experiment phase')
+    last_generation = PHASE_GENERATIONS[phase]
+    evaluation_count = 10 + 8 * last_generation
     cp = json.loads((root/'checkpoint.json').read_text())
     seal = cp.pop('payload_sha256')
     if seal != journal.digest(journal.encoded(cp)):
@@ -71,8 +113,9 @@ def analyze_run(directory, replay=False):
     if cp['log_sha256'] != journal.digest(raw) or cp['metadata_sha256'] != journal.digest((root/'metadata.json').read_bytes()):
         raise ValueError('Journal/checkpoint checksum mismatch or uncommitted tail')
     rows = [json.loads(line) for line in raw.splitlines()]
-    if len(rows) != 170 or cp['generation'] != 20 or len(cp['history']) != 21 or len(cp['evaluations']) != 170:
-        raise ValueError('Incomplete run: expected 170 evaluations and generations 0–20')
+    if (len(rows) != evaluation_count or cp['generation'] != last_generation
+            or len(cp['history']) != last_generation + 1 or len(cp['evaluations']) != evaluation_count):
+        raise ValueError(f'Incomplete {phase} run: expected {evaluation_count} evaluations and generations 0–{last_generation}')
     for i, row in enumerate(rows):
         if row['id'] != i or any(row[k] != v for k,v in cp['evaluations'][i].items()):
             raise ValueError('Candidate/checkpoint mismatch')
@@ -108,10 +151,12 @@ def analyze_run(directory, replay=False):
     best=min(rows,key=lambda r:(-r['F'],r['id']))
     if cp['best'] != cp['history'][-1][0] or best['id'] != cp['best']['id']:
         raise ValueError('Best candidate mismatch')
-    return dict(path=str(root),mode=meta['mode'],seed=meta['seed'],config_sha256=meta['config_sha256'],
+    timing = timing_summary(root)
+    return dict(path=str(root),mode=meta['mode'],phase=phase,seed=meta['seed'],config_sha256=meta['config_sha256'],
                 best_F=best['F'],best_generation=best['generation'],best_id=best['id'],generations=generations,
                 evaluation_seconds=sum(r['elapsed_seconds'] for r in rows),
-                **timing_summary(root),
+                **timing,
+                t04=debug_assessment(rows,meta['mode'],timing) if phase=='debug' else None,
                 replay=journal.replay(root,best['id']) if replay else None)
 
 
@@ -145,6 +190,8 @@ def series_timing(group):
 
 
 def summarize(results):
+    if any(r.get('phase', 'main') != 'main' for r in results):
+        raise ValueError('Debug runs cannot enter main series')
     for mode,seeds in [('model',set(range(101,106))),('control',set(range(201,206)))]:
         group=[r for r in results if r['mode']==mode]
         if len(group)!=5 or {r['seed'] for r in group}!=seeds:

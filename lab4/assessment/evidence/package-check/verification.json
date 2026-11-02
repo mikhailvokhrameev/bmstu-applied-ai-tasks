@@ -1,0 +1,53 @@
+{
+  "source_archive": "/private/tmp/videocard-lab4-check-gdufbi7s/working-check.zip",
+  "verified_source_sha256": {
+    "lab4/optimizer/validator.py": "1327cf29d0ef9f9c8372809306a297ec4daf9688d9fbbe74e19d35e1f88e8957",
+    "lab4/optimizer/metrics.py": "f3abeaaf17bd370d1732a649810e5832b96fda1032d36ecd4b51028d38cc0839",
+    "lab4/optimizer/journal.py": "cec6760bf719dc40ef7413bb35772d7b8c44c8449eda7da2caf827de0d7bc38f",
+    "lab4/optimizer/analysis.py": "2d28f38c50ab71e0960e8cb2cc0f463f3b54f93b2fa0a65f0709178d48d3e2bc",
+    "lab4/optimizer/bridge.py": "af8db72a28740d5312395486d2995047d8a516c0cc0c1163f846161a9925b81a",
+    "lab4/optimizer/runtime.py": "5a292c13a524fc4980017419e665f3de4bedfe6b06a942cbf6d5bac4b03768f4",
+    "lab4/optimizer/search.py": "c68ffc818bd5894da4bab37bbaf3cac36302586943d11cd41323b97390d4aa4e",
+    "lab4/optimizer/proposals.py": "d11d7d86625d97147f6f9c870997905fadf2d1fc669364ba5368895f3ac4af18",
+    "lab4/optimizer/__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+    "lab4/optimizer/prepare.py": "fbcef8c4c68ac54bc4bb81438812a89e52fecd066dceafedb5ca91b789fff236",
+    "lab4/optimizer/owl_bridge/ProposalSyntax.java": "e61d9417a4c0cc25d26841d81a0dbb09f3296c8cb7db19e69d3ca698ca4b1b1b",
+    "lab4/optimizer/owl_bridge/CandidateValidator.java": "7b1778394d9d80bd873b9119c26fe2e2800b319faf3ce758b5662ea8c9aada78",
+    "lab4/optimizer/owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+    "lab4/optimizer/owl_bridge/OntologyEvaluator.java": "4ed80e21a2f5aac47ac5e30db2cbe8cbc5aece8d979b691e6e08a7f86443394d",
+    "lab4/tests/test_journal.py": "494afe51d4d6e57e198c9051e98263f85b899cc3ec96114447ecfd6ff7dd11f3",
+    "lab4/tests/test_package.py": "02b5b1dba9e7b5716843796f59467f125d663c861c7af7f307c367e4decfc0bb",
+    "lab4/tests/test_journal_debug.py": "179a0637578ef76c2c65ec92e02fd99ca43758bfc8475258ad00d8e896e10b5e",
+    "lab4/tests/test_search.py": "e7daa332bb2f927f6aa88e90d669b973454e01ea067197e561102cea19673557",
+    "lab4/tests/test_metrics_bridge.py": "898d22e1f3aa17a3eef27cafd6302a2820e1afbade34d89c2c3e5b9bc8fec12c",
+    "lab4/tests/test_runtime.py": "5814f638a1b009ef6e1582bbc3246289b6a9ea2939d1ebea228498dca68c0d27",
+    "lab4/tests/test_analysis.py": "53855a57aa4044af0330b9ca4a74a300d153d0a2987cbb6ef816fb850272701e",
+    "lab4/tests/test_proposals.py": "47a1e628285246a280d8ed5aa44f5f6f96fc5a2cc65b1644bfbb12c3eced8e40",
+    "lab4/tests/test_validator.py": "84c0b2c57a0d76380bb0a602c2024f63f717cefb8e0c30eb9878b0902c3d0007",
+    "lab4/tests/test_prepare.py": "3348259ac297ea47914b7d03b6c478539e647b38eae6b32904035471c270bbbb",
+    "lab4/assessment/test_verify_reference.py": "95196ed88d26dac7801166834a06fee6820af49ba1fe73230a8b57b865c27254",
+    "lab4/assessment/ReferenceAudit.java": "d8a35b70c594bb8b877c22d8d724afb98cdd77972eeb04d9e0714b212f9065af",
+    "lab4/assessment/verify_reference.py": "c391f2105f8291d1103efd07f9475bae90f6d5d3ce69860b76e954dba362c057",
+    "lab4/scripts/package.py": "ea2d7e428f129c958c01d3e128610ec034aebc65e9eb5f361c402858390365fe",
+    "lab4/optimizer/prompts/proposal.txt": "4704ed5ec08d10b0237cce60bde0518d9f8d8e467e7ee69f773ff2c7b70d5a56",
+    "lab4/optimizer/search.yaml": "2003023f6435a7e6f86a18addd26a62702f87180477e7b1d362873e259cd370b",
+    "lab4/optimizer/local-debug.json": "f201526f8fa5b275283dba71eb06d104426704251520bb3304a37ff273e96b1c",
+    "lab4/requirements.txt": "12a0a7bc6e1b1254c2f593a250e6ccff4dbd3cf0b27d6819696a9db86f4e530d"
+  },
+  "test_count": 103,
+  "tests_passed": true,
+  "baseline_test_groups_passed": "11/11",
+  "reference_verified": true,
+  "replay": {
+    "candidate": "20",
+    "axioms_match": true,
+    "F": 1.0,
+    "matches": true
+  },
+  "ollama_server_stopped": true,
+  "clean_installs": {
+    "python_requirements": true,
+    "jars_downloaded": 62
+  },
+  "working_materials_only": true
+}

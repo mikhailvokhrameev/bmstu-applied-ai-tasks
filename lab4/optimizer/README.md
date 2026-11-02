@@ -1,172 +1,122 @@
-# Evaluation component (task 2)
+# Оптимизатор онтологии видеокарт
 
-Run from the repository root with Python >= 3.10 and Java 17; use pinned
-`lab2/tests/harness/lib` jars (OWL API 4.5.29). No Maven or network is required.
+Python >=3.10 управляет поиском и моделями; Java 17, OWL API 4.5.29 и HermiT
+1.4.3.456 проверяют OWL. Исходное ядро `lab2/ontology/videocard.owl` неизменно:
+SHA-256 `d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661`.
+Установка, подготовка моделей и команды — в [руководстве оператора](../docs/OPERATOR.md).
+Фактические результаты — в [протоколе](../docs/ACCEPTANCE_STATUS.md).
 
-```sh
-python3 -m unittest lab4.tests.test_metrics_bridge
-```
+Исходное [ТЗ v1.0](../tz_videokarta_lr4_nn_v1.0.docx) включено в проект.
+Рабочие материалы и технические тесты не являются приёмкой по Т01–Т12.
 
-```python
-from lab4.optimizer.bridge import evaluate
-from lab4.optimizer.metrics import compute_metrics, fitness, BASELINE, Q0
-result = evaluate('lab2/ontology/videocard.owl', [], [])
-metrics = compute_metrics(result['counts'], Q0)
-score = fitness(metrics, BASELINE)
-```
+## Подготовка и фазы
 
-`evaluate(base_path, add, remove)` returns a dict containing `counts`, sorted
-`axioms` (OWL Functional Syntax axiom strings), sorted `violations` (`code`, `key`),
-and `core_preserved`. Java has the equivalent public static method returning
-`OntologyEvaluator.EvaluationResult`. The command-line Java process reads one
-UTF-8 JSON request (`base_path`, `add`, `remove`) from stdin and writes one JSON
-result; errors exit 2 and use stderr. Python errors raise `BridgeError`, including
-timeouts, missing jars/compiler, syntax errors and malformed responses.
+`python3.11 -m lab4.optimizer.prepare --help` описывает подготовку по работающему
+Ollama API и локальным весам. Команда сверяет manifests API/диска, вычисляет
+SHA-256 весов, получает inventory/entities из фактической онтологии и калибрует
+порог дубликатов по 20 парам. Их предметную разметку проверил ИИ:
+[решения](../assessment/AI_REVIEW.md). Качество embeddings требует отдельных измерений.
 
-Each add/remove item must contain exactly one OWL axiom, using full IRIs or
-prefixes `:`, `owl:`, `rdfs:`, `xsd:`. Changes represent a cumulative delta from
-base: additions are applied before removals; removing an added axiom cancels it.
-Removing an original axiom raises `CORE_REMOVAL`, even if the same axiom also
-appears in additions. Duplicate additions have set semantics. The original
-ontology is never saved. Imports and foreign user namespaces are unsupported
-under the current methodology. The known production core path is checksum checked.
-The Java compilation cache is outside the repository, keyed by source and root.
+Конфигурация `search.yaml` — JSON-подмножество YAML. Параметры поиска фиксированы:
+популяция 10, два элитных кандидата, турнир из трёх различных членов, вероятность
+мутации 0,7. Сервисы задаются отдельно в объекте services: model, embedding_model,
+model_sha256, embedding_sha256, server_version, inventory, entities,
+acceptance_approved; endpoint и duplicate_threshold необязательны.
 
-`Metrics` exposes M1–M6 and `values`; `Fitness` exposes `relative`, alias `r`,
-and `F`. Exact baseline counts are fixed in code, with Q0=10. `compute_metrics`
-accepts `q0` for the specified interface and validates it; Q0 is used for relative
-M6 through the baseline passed to `fitness`. Counts must be nonnegative integers.
-Undefined metrics and relative ratios raise `MetricError`; NaN/infinity never
-produce an accepted numeric result. See `../assessment/METHODOLOGY.md` for the
-precise counting and violation definitions.
+Inventory содержит classes/object_properties/data_properties с Functional Syntax
+ссылками (`<полный IRI>`). Новый prepare также формирует maps
+object_property_domains/object_property_ranges (свойство → список явных именованных
+классов), individuals (существующие U01–U08) и teaching_class (VideoCardModel).
+Эти операнды обеспечивают обратные свойства и условные учебные значения.
+Уже зафиксированный local-debug.json содержит только прежние три группы;
+отсутствующие maps/individuals ему не приписываются и при resume не добавляются.
+Entities содержит полный список iri/category/label/comment;
+iri без угловых скобок, category — Class, ObjectProperty или DataProperty.
+Неполный список делает проверку дубликатов неполной. Runtime сравнивает только
+одинаковые категории и использует текст «метка. комментарий»; проверяет также
+дубликаты между новыми сущностями одного предложения.
 
-This stage computes structural metrics only. It does not declare a candidate
-valid: consistency, competency queries, growth limits, supported mutation kinds
-and the 0.85 thresholds belong to the following validator stage. Fixture formula
-F values therefore remain available independently of production core validation.
+`--phase debug` выполняет seed 100, 34 оценки: 10 начальных + 3 × 8.
+Он допускает acceptance_approved=false. `--phase main` выполняет 170 оценок:
+10 + 20 × 8 и требует acceptance_approved=true после проверки Т04.
+Фаза хранится в metadata, исходные параметры search.yaml не сокращаются.
+Resume восстанавливает фазу; старые metadata без phase трактуются как main.
+Успешная подготовка конфигурации и debug не подтверждают Т04 автоматически.
 
-### Candidate validation
+Debug-анализ отдельно считает успешный разбор первого ответа модели среди
+обращений к модели, без crossover, и долю валидных онтологий среди всех оценок.
+Первая попытка должна содержать response и не иметь parse_error/service_error.
+Успешный retry не исправляет показатель первой попытки; неполные журналы его
+не подтверждают. Проекция времени на 170 оценок (`170/34`) — оценка,
+не подтверждение восьмичасового ограничения всей серии по п. 4.8.2 ТЗ.
+Debug запрещён в основном
+сравнении серий 101–105 и 201–205.
 
-`validator.validate(candidate, baseline=CORE, duplicate_checker=checker)` accepts a
-path or cumulative Functional Syntax `add`/`remove` lists. The baseline is the
-immutable original ontology, never a parent candidate. Every invocation rebuilds
-an isolated ontology. `checker(new_entities)` must perform the real semantic
-comparison and return a boolean; each entity has `iri`, `category`, `label`,
-`comment`. No embedding similarity is assumed by the validator.
-
-`ValidationResult.status` is `valid`, `invalid`, or `error`. Invalid candidates
-have `F=0`; errors have `F=None` and must not enter selection or be counted as
-ontology violations. A process timeout is `TIMEOUT`; other infrastructure failures
-are `VALIDATION_ERROR`. Validation conditions are ordered:
-`OWL2_DL`, `CONSISTENCY`, `QUERIES`, `NEGATIVE_TESTS`, `CORE`, `FORBIDDEN`,
-`ANNOTATIONS`, `DUPLICATE`, `GROWTH` / `RELATIVE_METRIC`. Table 4 conditions are
-reported afterward as `CHANGE_KIND`, so they cannot mask the required first code.
-External imports are never fetched by candidate-file loading.
-
-The new-data-property unit suffix vocabulary is GiB, MiB, MHz, GHz, Hz, Bit, Byte,
-MM, Cm, W, V, A, Percent, Count; extend it explicitly for another physical unit.
-A teaching value requires a Russian comment on its teaching individual containing
-`условн`. New inverse properties require explicit mirrored domain/range sets.
-These are deterministic local operationalizations of Table 4.
-
-Run `PYTHONPYCACHEPREFIX=/private/tmp/nn-pycache python3 -m unittest lab4.tests.test_validator`.
-Ten cumulative fixture mutations with expected first code and defect reason are
-in `lab4/tests/validator_fixtures`; they are applied to the original OWL document
-at runtime, rather than storing ten nearly identical ontology copies.
-
-### Evolutionary search kernel (task 5)
-
-`search.run(config, mode, seed, resume=False)` returns `RunResult`. `search.yaml`
-is YAML 1.2 written in its JSON subset, loaded without additional dependencies.
-The specification parameters are frozen: 10 initial evaluations, then 20 × 8
-new evaluations; population 10, two unchanged elites, tournaments of 3 distinct
-population members, mutation probability 0.7. Equal fitness selects the oldest
-candidate ID. Invalid proposals count once and have F=0; infrastructure errors
-abort instead of entering selection. Crossover unions cumulative deltas and
-always invokes full validation; contradictory add/remove requests are rejected.
-
-Runtime integration is explicit (never serialized into YAML):
+## Вычисление и валидация
 
 ```python
-from lab4.optimizer.search import load_config, run, ControlGenerator
-config = load_config('lab4/optimizer/search.yaml')
-config['runtime'] = {
-    'control_generator': ControlGenerator(entity_inventory),
-    'model_generator': cumulative_model_mutation,
-    'duplicate_checker': real_semantic_checker,
-    'on_generation': save_completed_generation,
-}
-result = run(config, 'control', 201)
+from lab4.optimizer.bridge import evaluate, CORE
+from lab4.optimizer.metrics import compute_metrics, fitness, BASELINE
+result = evaluate(CORE, [], [])
+score = fitness(compute_metrics(result['counts']), BASELINE)
 ```
 
-Both generators receive `(parent_delta, run_rng)` and return a **cumulative**
-`{'add': [...], 'remove': [...]}` delta relative to the immutable baseline.
-The model adapter must use the bounded parser/retry service in `proposals.py`
-and include parent state in its context; `ProposalError` after retries consumes
-one invalid evaluation. Runtime `validate` is an optional injection seam for
-unit tests or a wrapper around the **complete** validator. Production defaults
-to `validator.validate` with the supplied real semantic checker.
+Bridge возвращает counts, отсортированные axioms, violations, core_preserved
+и Manchester-представление. Каждый элемент add/remove — одна OWL Functional
+Syntax аксиома с полными IRI или префиксами :/owl:/rdfs:/xsd:.
+Дельта накопительная относительно исходного ядра. Удаление добавленной аксиомы
+отменяет добавление; удаление аксиомы ядра запрещено (CORE_REMOVAL).
+Повторы добавлений имеют семантику множества. Ядро не сохраняется поверх исходника.
 
-The control library samples available allowed templates uniformly and then
-suitable ontology entities: new subclass, defined class, new data property with
-unit suffix/domain/range, four property characteristics, object/data property
-hierarchy, cancellation of a previous addition. Its inventory contains sorted
-Functional Syntax IRIs in `classes`, `object_properties`, `data_properties`.
-It invokes no language model. Templates may produce semantically invalid
-candidates; the shared validator decides, with no retry/filtering of invalid
-candidates and no budget reduction. This is a library of permitted changes,
-not a claim that every permitted Table 4 kind is currently generated.
+M1–M6, точные исходные дроби, Q0=10 и F описаны в
+[методике](../assessment/METHODOLOGY.md). Неопределённые метрики и NaN/Infinity
+не принимаются. `validator.validate(delta, duplicate_checker=checker)` возвращает
+status valid/invalid/error. Невалидный кандидат получает F=0; ошибка сервиса или
+reasoner — F=None и прерывает поиск. Порядок первых отказов: OWL2_DL, CONSISTENCY,
+QUERIES, NEGATIVE_TESTS, CORE, FORBIDDEN, ANNOTATIONS, DUPLICATE, GROWTH,
+RELATIVE_METRIC; ограничение вида изменений CHANGE_KIND проверяется дополнительно.
 
-`RunResult` exposes populations, all evaluations, best candidate, best F per
-generation and the final `random.Random.getstate()`. `on_generation` receives
-`(generation, population, evaluations, rng_state)` only after a whole generation
-completes. Durable checkpoint files and resume are task 6 responsibilities;
-`resume=True` explicitly raises until that layer is connected. This module does
-not launch series or attest T04/model/analyst acceptance.
+Предложение модели — JSON с rationale/add/remove, 1–5 логических аксиом;
+шаблон — [proposal.txt](prompts/proposal.txt). Разбор ограничен тремя попытками.
+Ошибка формата после них расходует одну невалидную оценку. Отказ инфраструктуры
+сохраняется в interruptions.jsonl без расхода оценки. Новым сущностям нужны
+русские label/comment. Контрольный генератор не вызывает LLM, но использует
+общий валидатор и реальные embeddings. Его шаблоны могут давать невалидных
+кандидатов; предварительной фильтрации и уменьшения бюджета нет.
 
-Unit tests: `python3 -m unittest lab4.tests.test_search`.
+С полным новым inventory контрольный генератор поддерживает все виды таблицы 4,
+включая inverse, teaching values и DisjointClasses. Обратное свойство получает
+зеркальные domain/range прямого; один inverse и все эти аксиомы должны укладываться
+в пять логических аксиом. Условное значение добавляется только существующему
+учебному индивиду с соответствующим комментарием. Без новых maps/individuals
+inverse и teaching values недоступны; DisjointClasses доступен и со старым inventory.
 
-### Durable runs (task 6)
+При done=true даже done_reason=length не обходит разбор и обычный retry:
+некорректный доставленный текст расходует попытку, максимум три. При done=false
+ответ считается неполным ответом сервиса и сохраняется в interruption,
+а запуск прерывается без оценки кандидата.
 
-From `lab4`, use `python -m optimizer run --config optimizer/search.yaml
---mode model --seed 101`; from the repository root the equivalent module is
-`lab4.optimizer`. Optional `--run-dir PATH` selects a new directory; otherwise a
-unique directory under `runs` is created. Continue with `resume --run-dir PATH`;
-reconstruct with `replay --run-dir PATH --candidate ID`. Replay uses the OWL bridge
-and metric formula, with no language model or embeddings. Exit 1 means a replay
-mismatch; configuration/storage errors exit 2 with a diagnostic.
+## Журнал и воспроизведение
 
-Production config adds a `services` object with explicit `model`, `embedding_model`,
-`model_sha256`, `embedding_sha256`, `server_version`, `acceptance_approved: true`,
-`inventory` (classes/object_properties/data_properties), and `entities` (full
-IRI/category/label/comment inventory for semantic comparison), plus optional
-`endpoint`. These values are an operator attestation, not an automatic model
-qualification. The supplied frozen search config deliberately has no accepted
-manifest: actual models and T04 remain unconfirmed. No real series was run.
+Модульный интерфейс поиска: `search.run(config, mode, seed, resume=False,
+phase='main')`; runtime-адаптеры передаются в config['runtime'], не сериализуются.
+При равном F выбирается старейший ID. Crossover объединяет накопительные дельты,
+противоречивые add/remove отвергаются; мутация удалением отменяет добавление родителя.
 
-The copied config, sealed metadata, Python/platform and pinned jar checksums are
-never overwritten. Every evaluation is fsynced in `evaluations.jsonl`, including
-full proposal attempts, request context, raw response, validation outcome,
-metrics/ri/F, elapsed time, and reconstructed axiom set. Rejected candidates can
-have null metrics/axioms when those quantities cannot be defined. Model service
-failures are retained in `interruptions.jsonl` without consuming an evaluation.
-Checkpoint files are written via fsync and atomic replace after whole generations.
-Resume verifies config/core/metadata, checkpoint schema/budget/populations and
-committed log prefix; any uncommitted suffix (including a torn final JSON line)
-is copied to a unique `audit-*.jsonl` before truncating the active journal.
-IDs from that suffix can be reused only in the active, restored generation;
-audit records never enter its 170-evaluation count. Runs are single-writer;
-concurrent processes must use different directories.
+CLI: `python3.11 -m lab4.optimizer --help`. Run требует новый каталог, один процесс
+на каталог. Каждый evaluation fsync-сохраняет дельту, ответы/попытки, валидацию,
+метрики, ri/F, время и набор аксиом. Checkpoint сохраняется атомарно после целого
+поколения. Resume проверяет конфигурацию, исходник, JAR, metadata, бюджет и журнал;
+незавершённый хвост сохраняется в audit-*.jsonl перед откатом к checkpoint.
 
-Audit candidates remain replayable after resume: use
-`replay --run-dir PATH --candidate audit-<32 hex>:ID`, where `audit-<32 hex>`
-is the archive filename without `.jsonl`. Numeric `--candidate ID` continues
-to select the active journal. Archive identity distinguishes discarded evaluations
-from evaluations that reuse the same numeric ID. Complete archived JSON records
-remain readable even when the final append is a torn fragment.
+Replay восстанавливает аксиомы и F без модели и embeddings. Numeric ID выбирает
+активный журнал, `audit-<32 hex>:ID` — отдельный архивный хвост (ID могут повторно
+использоваться после отката). Код выхода 1 означает несовпадение, 2 — ошибку.
+Лучшие кандидаты и F должны совпасть с журналом. Программа не выполняет
+экспертное согласование финала или проверки Protégé/OOPS! автоматически.
 
-Resume/replay reject a changed JAR inventory or SHA-256 relative to the saved
-OWL API/HermiT environment. Model mutations cancel a parent's introduced axiom
-when the proposal removes it; crossover retains its conflict-preserving union.
-Incomplete HTTP model responses are retained in full (text and raw JSON) in
-attempts/interruption logs before the completion error propagates.
+Команды установки, тестов и проверки эталонов для обоих расположений приведены
+в [руководстве оператора](../docs/OPERATOR.md#установка-и-расположение-файлов).
+Модуль `lab4.optimizer.paths` выбирает исходное ядро и harness по фактическому
+расположению файлов. Канонический архив требует отдельной установки JDK,
+Ollama, моделей и закреплённых JAR; исполняемые среды в него не включаются.

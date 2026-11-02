@@ -1,0 +1,16 @@
+[
+  {
+    "url": "http://127.0.0.1:11438/oops-reference/rest",
+    "method": "HEAD",
+    "ontology_submitted": false,
+    "status": 405,
+    "seconds": 0.058
+  },
+  {
+    "url": "https://oops.linkeddata.es/rest",
+    "method": "HEAD",
+    "ontology_submitted": false,
+    "error_type": "URLError",
+    "seconds": 12.219
+  }
+]

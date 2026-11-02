@@ -1,0 +1,5 @@
+generation,best_F,median_F,best_candidate_generation,invalid_fraction,invalid_PROPOSAL
+0,0.0,0.0,2,1.0,1.0
+1,0.0,0.0,2,1.0,1.0
+2,1.0,0.0,2,0.625,0.625
+3,1.0,0.5,2,0.625,0.625

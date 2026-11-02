@@ -1,0 +1,231 @@
+2026-11-02 01:49:05.563 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:49:05.564 [main] INFO  Launcher    **                                  Protege                                   **
+2026-11-02 01:49:05.564 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:49:05.564 [main] INFO  Launcher    
+2026-11-02 01:49:05.564 [main] INFO  Launcher    ----------------- Initialising and Starting the OSGi Framework -----------------
+2026-11-02 01:49:05.564 [main] INFO  Launcher    FrameworkFactory Class: org.apache.felix.framework.FrameworkFactory
+2026-11-02 01:49:05.565 [main] INFO  Launcher    
+2026-11-02 01:49:05.623 [main] INFO  Launcher    The OSGi framework has been initialised
+2026-11-02 01:49:05.770 [main] INFO  Launcher    ------------------------------- Starting Bundles -------------------------------
+2026-11-02 01:49:05.770 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:49:05.770 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:49:05.770 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:49:05.770 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-dynamic
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle log4j.over.slf4j
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-tf
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.objectweb.asm.util
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.glassfish.external.management-api
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle jul.to.slf4j
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.glassfish.corba.glassfish-corba-omgapi
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-impl
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.objectweb.asm
+2026-11-02 01:49:05.771 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-basic
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle ch.qos.logback.core
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle slf4j.api
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.apache.commons.commons-io
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle jaxb-api
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-core
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.semanticweb.owl.owlapi
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle ch.qos.logback.classic
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle jakarta.activation-api
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.apache.felix.main
+2026-11-02 01:49:05.772 [main] INFO  Launcher    Starting bundle org.protege.editor.owl
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.jsr-305
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.apache.servicemix.bundles.javax-inject
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle com.googlecode.javaewah.JavaEWAH
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.eclipse.jgit
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle com.google.guava
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree.analysis
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.protege.editor.owl.rdf
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle existentialquery
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.protege.owl.rdf
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle uk.ac.manchester.cs.owl.explanation
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.protege.ontograf
+2026-11-02 01:49:05.773 [main] INFO  Launcher    Starting bundle org.coode.browser
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle org.coode.owlviz
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle org.semanticweb.hermit
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle cellfie
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle swrltab-plugin
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle org.coode.dlquery
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle org.semanticweb.elk
+2026-11-02 01:49:05.774 [main] INFO  Launcher    Starting bundle code-generation
+2026-11-02 01:49:06.198 [main] INFO  Launcher    The OSGi framework has been started
+2026-11-02 01:49:06.198 [main] INFO  Launcher    
+2026-11-02 01:49:06.199 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Protege -----------------------------------
+2026-11-02 01:49:06.199 [FelixDispatchQueue] INFO  ProtegeApplication    Protege Desktop
+2026-11-02 01:49:06.199 [FelixDispatchQueue] INFO  ProtegeApplication    Version 5.6.9, Build 
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    ----------------------------------- Platform -----------------------------------
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Java: JVM 17.0.21+9  Memory: 805M
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Language: en, Country: US
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Framework: Apache Software Foundation (1.9) 
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    OS: macosx (26.6.2)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Processor: aarch64
+
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Plugins -----------------------------------
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SPARQL Query Plugin (3.0.0)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Existential Query (2.0.0)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLAPI RDF Library (3.0.1)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Explanation Workbench (3.0.1)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OntoGraf (2.0.3)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Browser View (OWLDoc) (3.0.3)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLViz (5.0.3)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: HermiT Reasoner (1.4.3.456)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Cellfie Protege 5.0+ Plugin (2.1.0)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SWRLTab Plugin (2.0.10)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: DL Query (4.0.1)
+2026-11-02 01:49:06.200 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: ELK Reasoner Protege Plug-in (0.6.0)
+2026-11-02 01:49:06.201 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWL Code Generation Plug-in (2.0.0)
+2026-11-02 01:49:06.201 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:49:06.323 [FelixDispatchQueue] INFO  ProtegeApplication    Processing command line argument: file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:49:06.375 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------- Auto-update Check ------------------------------
+2026-11-02 01:49:06.375 [AWT-EventQueue-0] INFO  ProtegeApplication    Creating and setting up (default) editor kit for file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:49:06.377 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:06.376 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update last performed: Mon Nov 02 01:34:51 MSK 2026
+2026-11-02 01:49:06.378 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update has been performed today.  Not performing it again.
+2026-11-02 01:49:06.378 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:49:06.497 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:06.497 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:49:06.569 [pool-3-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:49:06.574 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:06.632 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:09.699 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:09.699 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:09.713 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 3220 ms
+2026-11-02 01:49:09.714 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:09.753 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:09.754 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:10.364 [AWT-EventQueue-0] INFO  OboFoundryRegistryManager    OBO Foundry registry loaded: 267 entries
+2026-11-02 01:49:10.459 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:10.510 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:10.511 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:11.476 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:11.531 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:11.531 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:11.531 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:11.558 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 81 ms by HermiT
+2026-11-02 01:49:11.559 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:11.602 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:11.603 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.246 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:12.255 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:12.255 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T06.owl
+2026-11-02 01:49:12.271 [pool-6-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T06.owl
+2026-11-02 01:49:12.280 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:12.281 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.293 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:12.293 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.306 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 50 ms
+2026-11-02 01:49:12.306 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:12.312 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:12.312 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.460 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:12.461 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.473 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:12.479 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:12.479 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:12.811 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:12.815 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:12.815 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:12.815 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:13.154 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:13.161 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:13.161 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T07.owl
+2026-11-02 01:49:13.174 [pool-8-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T07.owl
+2026-11-02 01:49:13.190 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:13.190 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:13.200 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:13.200 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:13.220 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 59 ms
+2026-11-02 01:49:13.220 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:13.225 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:13.226 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:13.364 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:13.633 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:13.636 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:13.636 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:13.636 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:13.972 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:13.980 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:13.980 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T08.owl
+2026-11-02 01:49:13.992 [pool-9-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T08.owl
+2026-11-02 01:49:14.004 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.004 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:14.014 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.014 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:14.035 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 55 ms
+2026-11-02 01:49:14.035 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:14.039 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.040 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:14.283 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:14.480 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:14.484 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:14.484 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:14.484 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:14.808 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:14.814 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:14.814 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T09.owl
+2026-11-02 01:49:14.825 [pool-10-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T09.owl
+2026-11-02 01:49:14.838 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.838 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:14.848 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.849 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:14.861 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 47 ms
+2026-11-02 01:49:14.861 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:14.865 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:14.866 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:15.001 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:15.235 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:15.239 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:15.239 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:15.239 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:15.244 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 8 ms by HermiT
+2026-11-02 01:49:15.244 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:15.566 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:49:15.574 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:49:15.574 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T10_resaved.owl
+2026-11-02 01:49:15.583 [pool-11-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T10_resaved.owl
+2026-11-02 01:49:15.594 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:15.595 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:15.603 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:15.604 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:15.620 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 46 ms
+2026-11-02 01:49:15.620 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:49:15.623 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:15.624 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:15.747 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:15.972 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:49:15.976 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:49:15.976 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:49:15.976 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:49:15.981 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 8 ms by HermiT
+2026-11-02 01:49:15.981 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:21.706 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:22.521 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:23.266 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:49:23.292 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:23.293 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:29.048 [AWT-EventQueue-0] INFO  OntologyReloader    ------------------------------ Reloading ontology ------------------------------
+2026-11-02 01:49:29.048 [AWT-EventQueue-0] INFO  OntologyReloader    Reloading ontology: OntologyID(OntologyIRI(<https://example.org/ontologies/videocard>) VersionIRI(<https://example.org/ontologies/videocard/1.0.0>))
+2026-11-02 01:49:29.049 [pool-12-thread-1] INFO  OntologyReloader    Copied ontologies in 0 ms.  Used: 0 MB
+2026-11-02 01:49:29.049 [pool-12-thread-1] INFO  OntologyReloader    Reloading OntologyID(OntologyIRI(<https://example.org/ontologies/videocard>) VersionIRI(<https://example.org/ontologies/videocard/1.0.0>)) from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/T06.owl
+2026-11-02 01:49:29.093 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:29.093 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:29.115 [AWT-EventQueue-0] INFO  OntologyReloader    Applying 0 change(s) to patch ontology to reloaded ontology
+2026-11-02 01:49:29.116 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:49:29.116 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:29.117 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:49:29.204 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:49:29.205 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:27.988 [Close OSGi Session] INFO  Launcher    ----------------------- Shutting down Protege -----------------------
+2026-11-02 01:51:27.994 [Close OSGi Session] INFO  Launcher    Cleaning up temporary directories

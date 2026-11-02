@@ -1,0 +1,14 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/27877a03-1e07-4394-92a3-479d648cc18e>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/4842fbfd-88bb-446e-86a4-03fe2474cda3> .
+
+<http://oops.linkeddata.es/data/4842fbfd-88bb-446e-86a4-03fe2474cda3>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP04#UnconnectedClass"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P04 - Creating unconnected ontology elements";
+        oops:hasDescription             "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Creating unconnected ontology elements";
+        oops:hasNumberAffectedElements  1 .

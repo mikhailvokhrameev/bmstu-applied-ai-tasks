@@ -1,0 +1,29 @@
+{
+  "local_Q0": 10,
+  "local_by_family": {
+    "P04": 0,
+    "P08": 0,
+    "P10": 0,
+    "P11": 0,
+    "P13": 10,
+    "P22": 0
+  },
+  "upstream_group_records": 2,
+  "upstream_sum_number_affected": 11,
+  "upstream_records_by_family": {
+    "P04": 1,
+    "P13": 1
+  },
+  "upstream_affected_by_family": {
+    "P04": 1,
+    "P13": 10
+  },
+  "p13_affected_sets_match": true,
+  "extra_upstream_p04": [
+    "https://example.org/ontologies/videocard#ModelComponent"
+  ],
+  "explanation": "Upstream P04 flags a named hierarchy root absent from property domain/range and flattened complex-axiom involvement; local P04 treats any logical axiom containing two user entities, including named SubClassOf and DisjointClasses, as a connection.",
+  "metric_policy": "Frozen local Q0=10 and all F calculations remain unchanged; upstream records and affected totals are reported separately.",
+  "public_endpoint_success": false,
+  "public_endpoint_status": "Previously timed out; not retried here"
+}

@@ -1,0 +1,14 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/4fcefaec-ced5-47b2-83ef-df18f66781bb>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP11#attributeLacksDomain"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#relationshipLacksRange"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#attributeLacksRange"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#relationshipLacksDomain"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P11 - Missing domain or range in properties";
+        oops:hasDescription             "Object and/or datatype properties missing domain or range (or both of them) are included in the ontology.";
+        oops:hasImportanceLevel         "IMPORTANT";
+        oops:hasName                    "Missing domain or range in properties";
+        oops:hasNumberAffectedElements  4 .
+
+<http://oops.linkeddata.es/data/e4bc80f0-a5b0-4535-b115-0288641523c1>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/4fcefaec-ced5-47b2-83ef-df18f66781bb> .

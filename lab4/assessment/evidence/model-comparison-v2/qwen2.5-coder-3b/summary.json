@@ -1,0 +1,83 @@
+{
+  "model": "qwen2.5-coder:3b",
+  "weights": {
+    "model": "qwen2.5-coder:3b",
+    "sha256": "4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba",
+    "bytes": 1929903072,
+    "manifest_sha256": "ce40a49b0aa2b3b607d26a603e0f2db06a256cecbc9cca7adf893ae11a80275a",
+    "api_manifest_sha256": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+    "registry_manifest": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:bb967eff3bda079d4ee62c09c5ef0b2e71a6a75934a4c92a13c755fcfd655703",
+        "size": 487
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.ollama.image.model",
+          "digest": "sha256:4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba",
+          "size": 1929903072
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.system",
+          "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+          "size": 68
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.template",
+          "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+          "size": 1615
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.license",
+          "digest": "sha256:45fc3ea7579acf3021044fc8c4c5dd5969ebc3ca2a68219b5075662cc949a4f1",
+          "size": 7384
+        }
+      ]
+    },
+    "manifest": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:bb967eff3bda079d4ee62c09c5ef0b2e71a6a75934a4c92a13c755fcfd655703",
+        "size": 487
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.ollama.image.model",
+          "digest": "sha256:4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba",
+          "size": 1929903072
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.system",
+          "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+          "size": 68
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.template",
+          "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+          "size": 1615
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.license",
+          "digest": "sha256:45fc3ea7579acf3021044fc8c4c5dd5969ebc3ca2a68219b5075662cc949a4f1",
+          "size": 7384
+        },
+        {
+          "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+          "digest": "sha256:f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+          "size": 857
+        }
+      ]
+    }
+  },
+  "count": 10,
+  "first_response_correct": 8,
+  "first_response_fraction": 0.8,
+  "wall_evaluation_seconds": 36.85058283100079,
+  "seconds_per_request": 3.685058283100079,
+  "limitation": "Baseline-only format probes; no candidate acceptance or T04 attestation"
+}

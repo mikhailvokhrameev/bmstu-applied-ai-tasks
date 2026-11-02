@@ -39,6 +39,7 @@ def _metadata(root):
         if digest(raw)!=seal:raise ValueError('metadata checksum')
         meta=json.loads(raw)
         if meta['schema']!=SCHEMA or meta['core_sha256']!=CORE_SHA256:raise ValueError('incompatible schema/core')
+        if meta.get('phase','main') not in search.PHASE_GENERATIONS:raise ValueError('invalid phase')
         if digest(CORE.read_bytes())!=meta['core_sha256']:raise ValueError('core changed')
         if digest((root/'config.yaml').read_bytes())!=meta['config_sha256']:raise ValueError('configuration changed')
         libraries={p.name:digest(p.read_bytes()) for p in sorted(LIB.glob('*.jar'))}
@@ -46,12 +47,13 @@ def _metadata(root):
         return meta
     except (OSError,ValueError,KeyError,TypeError) as e:raise JournalError('Invalid run metadata: '+str(e)) from e
 
-def start(config,mode,seed,run_dir,runtime=None):
+def start(config,mode,seed,run_dir,runtime=None,phase='main'):
+    if phase not in search.PHASE_GENERATIONS:raise JournalError('phase must be debug or main')
     started_at=time.time()
     raw=Path(config).read_bytes(); spec=search.load_config(config)
     root=Path(run_dir);root.mkdir(parents=True,exist_ok=False)
     manifest=spec.pop('services',{})
-    meta=dict(schema=SCHEMA,mode=mode,seed=seed,config_sha256=digest(raw),core_sha256=CORE_SHA256,
+    meta=dict(schema=SCHEMA,mode=mode,seed=seed,phase=phase,config_sha256=digest(raw),core_sha256=CORE_SHA256,
               environment=dict(python=sys.version,platform=platform.platform(),java=subprocess.run(['java','-version'],capture_output=True,text=True,timeout=10).stderr.strip(),libraries={p.name:digest(p.read_bytes()) for p in sorted(LIB.glob('*.jar'))}),models=manifest)
     atomic(root/'config.yaml',raw);atomic(root/'metadata.json',encoded(meta));atomic(root/'metadata.sha256',digest(encoded(meta)).encode())
     _timing_write(root,dict(schema=1,complete_origin=True,started_at=started_at,
@@ -116,11 +118,11 @@ def _run(root,meta,spec,runtime,snapshot):
 def _run_search(root,meta,spec,runtime,snapshot):
     if runtime is None:
         from .runtime import build_runtime
-        runtime=build_runtime(meta['models'],meta['seed'])
+        runtime=build_runtime(meta['models'],meta['seed'],phase=meta.get('phase','main'))
     runtime=dict(runtime); inspect=runtime.pop('inspect',lambda d:evaluate(CORE,d['add'],d['remove']))
     generator=runtime.get(meta['mode']+'_generator')
     def on_evaluation(candidate,validation,elapsed,error):
-        row=asdict(candidate);row.update(run_id=root.name,mode=meta['mode'],seed=meta['seed'],validation=asdict(validation),metrics=asdict(validation.metrics) if validation.metrics is not None else None,
+        row=asdict(candidate);row.update(run_id=root.name,mode=meta['mode'],seed=meta['seed'],phase=meta.get('phase','main'),validation=asdict(validation),metrics=asdict(validation.metrics) if validation.metrics is not None else None,
             ri=validation.relative,elapsed_seconds=elapsed,proposal_error=error,
             attempts=getattr(generator,'attempts',[]) if candidate.operator!='crossover' else [])
         try:
@@ -142,7 +144,7 @@ def _run_search(root,meta,spec,runtime,snapshot):
         atomic(root/'checkpoint.json',encoded(data))
     runtime.update(on_evaluation=on_evaluation,on_generation=on_generation)
     try:
-        return search.run({**spec,'runtime':runtime},meta['mode'],meta['seed'],resume=snapshot or False)
+        return search.run({**spec,'runtime':runtime},meta['mode'],meta['seed'],resume=snapshot or False,phase=meta.get('phase','main'))
     except BaseException as error:
         with (root/'interruptions.jsonl').open('ab') as f:
             f.write(encoded(dict(error=type(error).__name__,detail=str(error),attempts=getattr(generator,'attempts',[])))+b'\n');f.flush();os.fsync(f.fileno())
@@ -160,7 +162,7 @@ def resume(run_dir,runtime=None):
             if checksum!=digest(encoded(cp)):raise ValueError('checkpoint checksum (corrupt or incompatible)')
             if cp['schema']!=SCHEMA or cp['metadata_sha256']!=digest((root/'metadata.json').read_bytes()):raise ValueError('incompatible checkpoint')
             if digest(committed)!=cp['log_sha256']:raise ValueError('checkpoint journal mismatch')
-            if count!=10+8*cp['generation'] or len(cp['history'])!=cp['generation']+1 or not 0<=cp['generation']<=20:raise ValueError('checkpoint budget/history')
+            if count!=10+8*cp['generation'] or len(cp['history'])!=cp['generation']+1 or not 0<=cp['generation']<=search.PHASE_GENERATIONS[meta.get('phase','main')]:raise ValueError('checkpoint budget/history')
             rows=[json.loads(line) for line in lines[:count]]
             for index,(row,c) in enumerate(zip(rows,cp['evaluations'])):
                 if c['id']!=index or any(row[k]!=v for k,v in c.items()):raise ValueError('checkpoint candidate mismatch')

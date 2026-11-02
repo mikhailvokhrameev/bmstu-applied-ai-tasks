@@ -6,18 +6,35 @@ public final class ProposalSyntax {
   ObjectMapper json = new ObjectMapper();
   JsonNode input = json.readTree(System.in);
   Set<OWLAxiom> add = new HashSet<>(), remove = new HashSet<>();
+  String fieldName = null, axiomText = null;
+  int index = -1;
   try {
    for (String field : Arrays.asList("add", "remove")) {
     Set<OWLAxiom> target = field.equals("add") ? add : remove;
+    fieldName = field;
+    index = -1;
     for (JsonNode item : input.get(field)) {
-     for (OWLAxiom axiom : OntologyEvaluator.parse(Collections.singletonList(item.asText()))) {
+     index++;
+     axiomText = item.asText();
+     Set<OWLAxiom> parsed = OntologyEvaluator.parse(Collections.singletonList(axiomText));
+     if (parsed.size() != 1) throw new IllegalArgumentException("Exactly one axiom per array element required");
+     for (OWLAxiom axiom : parsed) {
       if (!target.add(axiom)) throw new IllegalArgumentException("Repeated axiom");
      }
     }
    }
+   fieldName = null;
    if (!Collections.disjoint(add, remove)) throw new IllegalArgumentException("Conflicting add/remove");
   } catch (OWLOntologyCreationException | IllegalArgumentException error) {
-   System.out.println(json.writeValueAsString(Map.of("status", "invalid", "detail", String.valueOf(error.getMessage()))));
+   Map<String,Object> failure = new TreeMap<>();
+   failure.put("status", "invalid");
+   failure.put("detail", String.valueOf(error.getMessage()));
+   if (fieldName != null) {
+    failure.put("field", fieldName);
+    failure.put("index", index);
+    failure.put("axiom", axiomText);
+   }
+   System.out.println(json.writeValueAsString(failure));
    return;
   }
   Set<OWLAxiom> unique = new HashSet<>(add);

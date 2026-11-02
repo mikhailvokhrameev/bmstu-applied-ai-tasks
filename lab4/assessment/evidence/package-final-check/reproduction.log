@@ -1,0 +1,43 @@
+test_csv_divergence_rejected (__main__.PublishedReferenceTests.test_csv_divergence_rejected) ... ok
+test_published_reference_passes (__main__.PublishedReferenceTests.test_published_reference_passes) ... ok
+test_wrong_m6_rejected_even_when_csv_agrees (__main__.PublishedReferenceTests.test_wrong_m6_rejected_even_when_csv_agrees) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.844s
+
+OK
+{"all_passed": true, "groups": {"T04": {"passed": true, "error": null, "note": "4/4 checks passed; HermiT 1.4.3.456", "log": "tests/results/T04.log"}, "T05": {"passed": true, "error": null, "note": "39/39 checks passed; exact set equality with expected.json", "log": "tests/results/T05.log"}, "T06": {"passed": true, "error": null, "note": "9/9 checks passed; copy inconsistent (HermiT negative control), final consistent and clean", "log": "tests/results/T06.log"}, "T07": {"passed": true, "error": null, "note": "8/8 checks passed; copy inconsistent (usesGPU exactly 1), final consistent with one GPU per model", "log": "tests/results/T07.log"}, "T08": {"passed": true, "error": null, "note": "10/10 checks passed; copy inconsistent by range positiveInteger (not functionality), final holds the original positive value", "log": "tests/results/T08.log"}, "T09": {"passed": true, "error": null, "note": "9/9 checks passed; copy consistent (open world) but card flags U05 hasMemory 0 vs 1; final card clean", "log": "tests/results/T09.log"}, "T10": {"passed": true, "error": null, "note": "59/59 checks passed; 508 axioms identical after RDF/XML round trip", "log": "tests/results/T10.log"}}, "negative_copy_sha256": {"T06": "06a4395ca4f1db33f380592b70bb3237a2664c876f6e34fe093f336ed29bd704", "T07": "db4c9fc4dac81ccaddd35f458a9c4e784c15f50aa7645075a93843d1f0376acd", "T08": "68aad0348acaad242737430ff34ab8a9d5344e92eeb86c48b7c726b5ab43d03d", "T09": "bf22da3e45a19df167d4ac11fbfcdee8d035c63b8af1ef38819930b514b1a582"}, "ontology_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb", "ontology_iri": "https://example.org/ontologies/videocard", "version_iri": "https://example.org/ontologies/videocard/2.0.0", "java": "17.0.21", "owl_api": "4.5.29.2024-05-13T12:11:03Z", "hermit": "1.4.3.456", "source": "/private/tmp/videocard-final-verification/ontology/2.0.0/videocard.owl", "evidence_dir": "/private/tmp/videocard-final-archive-engine", "gui_verified": false, "accepted": false, "limitation": "Local OWL API/HermiT checks only; no Protégé GUI or OOPS result"}
+No broken requirements found.
+baseline
+A=472 Al=253 C=15 H=5 Po=10 Pd=7 E=2 Individuals=41
+P13 <https://example.org/ontologies/videocard#gpuProducedBy>
+P13 <https://example.org/ontologies/videocard#hasArchitecture>
+P13 <https://example.org/ontologies/videocard#hasCooling>
+P13 <https://example.org/ontologies/videocard#hasInterface>
+P13 <https://example.org/ontologies/videocard#hasMemory>
+P13 <https://example.org/ontologies/videocard#hasMemoryType>
+P13 <https://example.org/ontologies/videocard#hasPurpose>
+P13 <https://example.org/ontologies/videocard#hasVideoOutput>
+P13 <https://example.org/ontologies/videocard#producedByManufacturer>
+P13 <https://example.org/ontologies/videocard#usesGPU>
+
+01-balanced
+A=18 Al=6 C=2 H=1 Po=1 Pd=1 E=1 Individuals=0
+P13 <https://example.org/ontologies/videocard#p>
+
+02-zero
+A=8 Al=2 C=1 H=0 Po=1 Pd=0 E=0 Individuals=0
+P13 <https://example.org/ontologies/videocard#p>
+
+03-pitfalls
+A=23 Al=6 C=4 H=2 Po=1 Pd=1 E=1 Individuals=0
+P04 https://example.org/ontologies/videocard#bad_class
+P08 https://example.org/ontologies/videocard#bad_class comment
+P22 https://example.org/ontologies/videocard#bad_class
+P13 <https://example.org/ontologies/videocard#p>
+P11 <https://example.org/ontologies/videocard#value> range
+P10 [https://example.org/ontologies/videocard#A, https://example.org/ontologies/videocard#C]
+
+PASS: source SHA-256; baseline and 3 hand-counted fixtures; six checks; exact M1–M6, capped ratios and F; CSV/JSON agreement
+{"replay_matches": 10, "series": {"model_best": [1.3254075849878237, 1.3270902684891568, 1.3230400562895064, 1.3230400562895064, 1.3207143079447086], "control_best": [1.1208639929673487, 1.1248706445574004, 1.1208639929673487, 1.049750106164048, 1.1203308366610978], "model_max": 1.3270902684891568, "model_median": 1.3230400562895064, "control_median": 1.1208639929673487, "targets": {"maximum": true, "median": true, "each_above_one": true, "median_above_control": true}, "mann_whitney": {"U": 25.0, "p": 0.003968253968253968, "alternative": "model > control", "alpha": 0.05, "method": "exact label permutation, midranks for ties, 252 allocations", "significant": true, "conclusion": "Evidence of higher model fitness"}, "series_timing": {"model": {"seconds": 37679.57486796379, "within_eight_hours": false, "status": "Includes all gaps between first start and final completion; UTC system clock must be stable"}, "control": {"seconds": 1317.2429718971252, "within_eight_hours": true, "status": "Includes all gaps between first start and final completion; UTC system clock must be stable"}}}}
+ALL_ARCHIVE_CHECKS_PASSED

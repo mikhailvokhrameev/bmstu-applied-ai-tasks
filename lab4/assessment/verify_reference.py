@@ -6,6 +6,10 @@ import json
 import csv
 import subprocess
 import tempfile
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from lab4.optimizer.paths import CORE, HARNESS
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -13,7 +17,7 @@ EXPECTED_SHA = 'd8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661
 
 def main(fixtures_dir=None):
     import hashlib
-    source = ROOT / 'lab2/ontology/videocard.owl'
+    source = CORE
     if hashlib.sha256(source.read_bytes()).hexdigest() != EXPECTED_SHA:
         raise SystemExit('STOP: source SHA-256 mismatch')
     fixtures_dir = Path(fixtures_dir) if fixtures_dir is not None else HERE / 'fixtures'
@@ -34,7 +38,7 @@ def main(fixtures_dir=None):
     weights = list(map(Fraction, ['.15','.15','.10','.15','.15','.30']))
     logs = []
     with tempfile.TemporaryDirectory(prefix='videocard-reference-') as classes:
-        libs = str(ROOT / 'lab2/tests/harness/lib/*')
+        libs = str(HARNESS / 'lib/*')
         subprocess.run(['javac','-cp',libs,'-d',classes,str(HERE/'ReferenceAudit.java')],check=True)
         for row in [{'fixture':'baseline', **baseline}, *expected['cases']]:
             path = source if row['fixture']=='baseline' else fixtures_dir/(row['fixture']+'.ofn')

@@ -1,0 +1,1 @@
+Actual running Protege Desktop model and Swing windows inspected. No other process or desktop captured.

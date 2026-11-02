@@ -1,0 +1,19 @@
+{
+  "case": "P22M2",
+  "family": "P22",
+  "endpoint": "http://127.0.0.1:11438/oops-reference/rest",
+  "input_sha256": "c541a0f400b503ac1c7b3bd8e5c36d7bdb830e7360bb9ff06a349d7a2c4f5f65",
+  "upstream_expected_sha256": "8d021abe3ce49a6ca8905654b69c1a4b02f0cabeb9e64bba0803a81846743fa8",
+  "http_status": 200,
+  "content_type": "text/turtle",
+  "response_sha256": "a42a6404ef6da45c795cff96d1431e2ff7cb4c1544e5eec0b0919733774680c3",
+  "response_present": true,
+  "expected_pitfalls": 1,
+  "actual_pitfalls": 1,
+  "expected_triples": 8,
+  "actual_triples": 8,
+  "unexpected_codes": [],
+  "matches": true,
+  "comparison": "Selected pitfall rooted RDF subgraphs; only generated UUID resources become consistently mapped blank nodes; exact literal/predicate/relationship content retained",
+  "seconds": 0.403
+}

@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 from .bridge import ROOT, CORE, CORE_SHA256, LIB, BridgeError, _run
+from .paths import HARNESS, EXPECTED
 from .metrics import compute_metrics, fitness
 
 @dataclass(frozen=True)
@@ -20,7 +21,7 @@ class ValidationResult:
 
 def _inspect(candidate, baseline):
     sources = sorted((Path(__file__).parent/'owl_bridge').glob('*.java'))
-    harness = sorted((ROOT/'lab2/tests/harness/src').glob('*.java'))
+    harness = sorted((HARNESS/'src').glob('*.java'))
     key = hashlib.sha256(b''.join(p.read_bytes() for p in sources+harness)).hexdigest()[:20]
     build = Path(tempfile.gettempdir())/('videocard-validator-'+key)
     build.mkdir(exist_ok=True)
@@ -28,7 +29,7 @@ def _inspect(candidate, baseline):
         _run(['javac','-encoding','UTF-8','-cp',str(LIB/'*'),'-d',str(build),*[str(p) for p in sources+harness]])
     request = dict(candidate) if isinstance(candidate, dict) else {'path':str(Path(candidate).resolve())}
     request['baseline'] = str(Path(baseline).resolve())
-    request['expected'] = str(ROOT/'lab2/tests/expected.json')
+    request['expected'] = str(EXPECTED)
     proc = subprocess.run(['java','-Dfile.encoding=UTF-8','-Dslf4j.internal.verbosity=ERROR','-cp',str(build)+':'+str(LIB/'*'),'CandidateValidator'], input=json.dumps(request, ensure_ascii=False), text=True, encoding='utf-8', capture_output=True, timeout=120)
     if proc.returncode:
         raise BridgeError(proc.stderr[-4000:])

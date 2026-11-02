@@ -1,0 +1,36 @@
+{
+  "upstream": "https://github.com/oeg-upm/OOPS",
+  "commit": "11572ea6b31cba29dd3f8a443e24311652f059de",
+  "interpretation": "Self-hosted official upstream REST reference; not the public production endpoint",
+  "packages": [
+    {
+      "name": "apache-maven-3.9.16-bin.tar.gz",
+      "url": "https://dlcdn.apache.org/maven/maven-3/3.9.16/binaries/apache-maven-3.9.16-bin.tar.gz",
+      "checksum": "https://downloads.apache.org/maven/maven-3/3.9.16/binaries/apache-maven-3.9.16-bin.tar.gz.sha512",
+      "directory": "apache-maven-3.9.16",
+      "bytes": 9278065,
+      "sha512": "831a8591fe20c8243b1dbe7d71e3244f31d1665b0804b2e825e38cbbe5ce0cafb8338851f90780735568773e0a6cd07bbec107cda0b896b008b861075358b6f6",
+      "apache_sha512_verified": true,
+      "seconds": 1.917
+    },
+    {
+      "name": "apache-tomcat-10.1.61.tar.gz",
+      "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.61/bin/apache-tomcat-10.1.61.tar.gz",
+      "checksum": "https://downloads.apache.org/tomcat/tomcat-10/v10.1.61/bin/apache-tomcat-10.1.61.tar.gz.sha512",
+      "directory": "apache-tomcat-10.1.61",
+      "bytes": 14488199,
+      "sha512": "35120a2b1182bac3d55438fbec0dc581d03b0f1c16ce692a930f3bb6a1097cf896b94b389152257071a87cb2928ac8c15f1bad08387c14acc7c17dbc1bb598fb",
+      "apache_sha512_verified": true,
+      "seconds": 2.31
+    },
+    {
+      "name": "OOPS-11572ea6b31cba29dd3f8a443e24311652f059de.tar.gz",
+      "url": "https://codeload.github.com/oeg-upm/OOPS/tar.gz/11572ea6b31cba29dd3f8a443e24311652f059de",
+      "directory": "OOPS-11572ea6b31cba29dd3f8a443e24311652f059de",
+      "bytes": 610089,
+      "sha512": "b3b4a73d56aa4953944b07f951d7c56d25b204a2c1838029b0a37bb7f1d685380e65e90abc7446e065ca1e16a24f45fb604a57351bbe64762055ab36ab79a9b2",
+      "apache_sha512_verified": false,
+      "seconds": 1.207
+    }
+  ]
+}

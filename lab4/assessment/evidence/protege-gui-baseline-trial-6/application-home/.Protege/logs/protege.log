@@ -1,0 +1,354 @@
+2026-11-02 01:52:06.755 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:52:06.755 [main] INFO  Launcher    **                                  Protege                                   **
+2026-11-02 01:52:06.755 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:52:06.756 [main] INFO  Launcher    
+2026-11-02 01:52:06.756 [main] INFO  Launcher    ----------------- Initialising and Starting the OSGi Framework -----------------
+2026-11-02 01:52:06.756 [main] INFO  Launcher    FrameworkFactory Class: org.apache.felix.framework.FrameworkFactory
+2026-11-02 01:52:06.756 [main] INFO  Launcher    
+2026-11-02 01:52:06.810 [main] INFO  Launcher    The OSGi framework has been initialised
+2026-11-02 01:52:06.932 [main] INFO  Launcher    ------------------------------- Starting Bundles -------------------------------
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-dynamic
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle log4j.over.slf4j
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-tf
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.objectweb.asm.util
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.glassfish.external.management-api
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle jul.to.slf4j
+2026-11-02 01:52:06.933 [main] INFO  Launcher    Starting bundle org.glassfish.corba.glassfish-corba-omgapi
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-impl
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.objectweb.asm
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-basic
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle ch.qos.logback.core
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle slf4j.api
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.apache.commons.commons-io
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle jaxb-api
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-core
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.semanticweb.owl.owlapi
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle ch.qos.logback.classic
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree
+2026-11-02 01:52:06.934 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle jakarta.activation-api
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.apache.felix.main
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.protege.editor.owl
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.jsr-305
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.apache.servicemix.bundles.javax-inject
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle com.googlecode.javaewah.JavaEWAH
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.eclipse.jgit
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle com.google.guava
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree.analysis
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle org.protege.editor.owl.rdf
+2026-11-02 01:52:06.935 [main] INFO  Launcher    Starting bundle existentialquery
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.protege.owl.rdf
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle uk.ac.manchester.cs.owl.explanation
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.protege.ontograf
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.coode.browser
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.coode.owlviz
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.semanticweb.hermit
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle cellfie
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle swrltab-plugin
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.coode.dlquery
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle org.semanticweb.elk
+2026-11-02 01:52:06.936 [main] INFO  Launcher    Starting bundle code-generation
+2026-11-02 01:52:07.366 [main] INFO  Launcher    The OSGi framework has been started
+2026-11-02 01:52:07.366 [main] INFO  Launcher    
+2026-11-02 01:52:07.367 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Protege -----------------------------------
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Protege Desktop
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Version 5.6.9, Build 
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    ----------------------------------- Platform -----------------------------------
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Java: JVM 17.0.21+9  Memory: 805M
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Language: en, Country: US
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Framework: Apache Software Foundation (1.9) 
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    OS: macosx (26.6.2)
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Processor: aarch64
+
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Plugins -----------------------------------
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SPARQL Query Plugin (3.0.0)
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Existential Query (2.0.0)
+2026-11-02 01:52:07.368 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLAPI RDF Library (3.0.1)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Explanation Workbench (3.0.1)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OntoGraf (2.0.3)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Browser View (OWLDoc) (3.0.3)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLViz (5.0.3)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: HermiT Reasoner (1.4.3.456)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Cellfie Protege 5.0+ Plugin (2.1.0)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SWRLTab Plugin (2.0.10)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: DL Query (4.0.1)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: ELK Reasoner Protege Plug-in (0.6.0)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWL Code Generation Plug-in (2.0.0)
+2026-11-02 01:52:07.369 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:52:07.493 [FelixDispatchQueue] INFO  ProtegeApplication    Processing command line argument: file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:52:07.544 [AWT-EventQueue-0] INFO  ProtegeApplication    Creating and setting up (default) editor kit for file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:52:07.544 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------- Auto-update Check ------------------------------
+2026-11-02 01:52:07.546 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:07.544 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update last performed: Mon Nov 02 01:34:51 MSK 2026
+2026-11-02 01:52:07.547 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update has been performed today.  Not performing it again.
+2026-11-02 01:52:07.547 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:52:07.663 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:07.663 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:52:07.736 [pool-3-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:52:07.739 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:07.793 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:10.862 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:10.863 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:10.878 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 3215 ms
+2026-11-02 01:52:10.879 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:10.915 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:10.915 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:11.875 [AWT-EventQueue-0] INFO  OboFoundryRegistryManager    OBO Foundry registry loaded: 267 entries
+2026-11-02 01:52:11.971 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:12.045 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:12.046 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:12.989 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:13.049 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:13.049 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:13.049 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:13.073 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 84 ms by HermiT
+2026-11-02 01:52:13.074 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:52:13.105 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:13.106 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:14.719 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:14.738 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 18 ms
+2026-11-02 01:52:14.738 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:15.702 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:15.717 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 15 ms
+2026-11-02 01:52:15.718 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:16.672 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:16.690 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 17 ms
+2026-11-02 01:52:16.690 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:17.647 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:17.665 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 18 ms
+2026-11-02 01:52:17.666 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:18.622 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:18.637 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:18.638 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:19.597 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:19.612 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:19.612 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:20.568 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:20.583 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:20.583 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:21.539 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:21.539 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 0 ms
+2026-11-02 01:52:21.539 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:22.493 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:22.501 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 7 ms
+2026-11-02 01:52:22.501 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:23.452 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:23.467 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:23.467 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:24.422 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:24.437 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:24.437 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:25.398 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:25.413 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:25.413 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:26.361 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:26.362 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 0 ms
+2026-11-02 01:52:26.362 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:27.314 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:27.320 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 5 ms
+2026-11-02 01:52:27.320 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:28.279 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:28.296 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 16 ms
+2026-11-02 01:52:28.296 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:29.252 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:29.265 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:29.265 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:30.218 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:30.231 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 12 ms
+2026-11-02 01:52:30.231 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:31.185 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:31.200 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:31.200 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:32.152 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:32.166 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:32.166 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:33.116 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:33.130 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:33.130 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:34.082 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:34.096 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:34.096 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:35.052 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:35.059 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 6 ms
+2026-11-02 01:52:35.059 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:36.017 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:36.025 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 7 ms
+2026-11-02 01:52:36.025 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:36.728 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:36.737 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:36.737 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T06.owl
+2026-11-02 01:52:36.753 [pool-6-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T06.owl
+2026-11-02 01:52:36.801 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:36.802 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:36.818 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:36.818 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:36.838 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 100 ms
+2026-11-02 01:52:36.838 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:36.844 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:36.845 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:36.924 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:36.925 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:36.939 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:36.991 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:36.992 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:37.007 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:37.008 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:37.211 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:37.214 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:37.215 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:37.215 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:38.011 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:38.020 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:38.020 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T07.owl
+2026-11-02 01:52:38.033 [pool-8-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T07.owl
+2026-11-02 01:52:38.039 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:38.039 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:38.058 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:38.059 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:38.082 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 61 ms
+2026-11-02 01:52:38.082 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:38.087 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:38.088 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:38.183 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:38.301 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:38.304 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:38.304 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:38.304 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:39.158 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:39.165 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:39.165 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T08.owl
+2026-11-02 01:52:39.175 [pool-9-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T08.owl
+2026-11-02 01:52:39.190 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:39.191 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:39.203 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:39.204 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:39.226 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 60 ms
+2026-11-02 01:52:39.226 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:39.232 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:39.232 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:39.341 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:39.477 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:39.481 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:39.481 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:39.481 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:40.269 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:40.275 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:40.275 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T09.owl
+2026-11-02 01:52:40.284 [pool-10-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T09.owl
+2026-11-02 01:52:40.292 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:40.293 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:40.305 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:40.305 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:40.328 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 52 ms
+2026-11-02 01:52:40.328 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:40.332 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:40.333 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:40.433 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:40.529 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:40.532 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:40.532 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:40.532 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:40.537 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 7 ms by HermiT
+2026-11-02 01:52:40.537 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:52:41.332 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:52:41.340 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:52:41.340 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T10_resaved.owl
+2026-11-02 01:52:41.349 [pool-11-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-6/T10_resaved.owl
+2026-11-02 01:52:41.370 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:41.370 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:41.388 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:41.388 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:41.405 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 64 ms
+2026-11-02 01:52:41.405 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:52:41.409 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:52:41.409 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:52:41.534 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:52:41.566 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:52:41.570 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:52:41.570 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:52:41.570 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:52:41.572 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 5 ms by HermiT
+2026-11-02 01:52:41.572 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:52:43.172 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:43.187 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:43.188 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:44.147 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:44.162 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:44.163 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:45.114 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:45.135 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 20 ms
+2026-11-02 01:52:45.135 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:46.090 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:46.105 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:46.105 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:47.060 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:47.077 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 17 ms
+2026-11-02 01:52:47.077 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:48.026 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:48.042 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 16 ms
+2026-11-02 01:52:48.043 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:48.995 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:49.013 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 17 ms
+2026-11-02 01:52:49.013 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:49.974 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:49.974 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 0 ms
+2026-11-02 01:52:49.974 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:50.929 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:50.936 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 6 ms
+2026-11-02 01:52:50.936 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:51.891 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:51.905 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:51.906 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:52.858 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:52.873 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:52:52.873 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:53.825 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:53.841 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 15 ms
+2026-11-02 01:52:53.841 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:54.798 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:54.798 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 0 ms
+2026-11-02 01:52:54.798 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:55.748 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:55.755 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 6 ms
+2026-11-02 01:52:55.755 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:56.707 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:56.722 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:56.722 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:57.672 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:57.689 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 16 ms
+2026-11-02 01:52:57.689 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:58.638 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:58.651 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:52:58.651 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:59.601 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:52:59.622 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 20 ms
+2026-11-02 01:52:59.623 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:53:00.572 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:53:00.586 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:53:00.586 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:53:01.534 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:53:01.548 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 13 ms
+2026-11-02 01:53:01.548 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:53:02.501 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:53:02.515 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 14 ms
+2026-11-02 01:53:02.515 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:53:03.466 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:53:03.472 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 5 ms
+2026-11-02 01:53:03.473 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:53:04.427 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:53:04.433 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 5 ms
+2026-11-02 01:53:04.433 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:55:20.530 [Close OSGi Session] INFO  Launcher    ----------------------- Shutting down Protege -----------------------
+2026-11-02 01:55:20.537 [Close OSGi Session] INFO  Launcher    Cleaning up temporary directories

@@ -1,0 +1,12 @@
+{
+  "registered_utc": "2026-11-01T21:10:41.479819+00:00",
+  "repo": "intfloat/multilingual-e5-large-instruct",
+  "revision": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+  "instruction": "Retrieve semantically similar text.",
+  "source": "https://raw.githubusercontent.com/microsoft/unilm/master/e5/utils.py",
+  "policy": "Official STS task definition; identical query prefix for every text; no pair-dependent rules or changes to frozen labels/comments",
+  "datasets": {
+    "concept_pairs_context.csv": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+    "concept_pairs_holdout.csv": "3b25323c08554337025c26c6c6508d982ebcc5fc16a8fdf14e8cdcedb5562b38"
+  }
+}

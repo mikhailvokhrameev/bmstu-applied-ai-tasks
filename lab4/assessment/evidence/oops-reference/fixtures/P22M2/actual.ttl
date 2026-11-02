@@ -1,0 +1,14 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/53202615-3b40-4548-bbab-e0807cab067d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/521e6054-6944-4b97-b8a7-26910b5b6572> .
+
+<http://oops.linkeddata.es/data/521e6054-6944-4b97-b8a7-26910b5b6572>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP22#ClassA"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP22#classB"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P22 - Using different naming conventions in the ontology";
+        oops:hasDescription             "The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as \"-\" or \"_\"). Some notions about naming conventions are provided in [2].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Using different naming conventions in the ontology";
+        oops:hasNumberAffectedElements  1 .

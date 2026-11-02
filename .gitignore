@@ -24,5 +24,13 @@ hs_err_pid*
 .claude/
 .superpowers/
 
-# Delivery archives (rebuilt from sources)
+# Working archives (the final lab4 delivery is retained)
 lab2/*.zip
+lab4/*.zip
+!lab4/videocard-nn-2.0.0.zip
+
+# Local portable tools and downloaded model weights
+.local-runtime/
+
+# Generated GUI inspection agents (sources and evidence are retained)
+lab4/assessment/evidence/**/acceptance-agent.jar

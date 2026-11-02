@@ -1,0 +1,143 @@
+Actual Protégé WorkspaceFrame; Swing component rendering only.
+TAB 0 : Active ontology
+TAB 1 : Entities
+TAB 2 : Individuals by class
+TAB 3 : DL Query
+javax.swing.JLabel : Ontology header: 
+org.protege.editor.core.ui.util.LinkLabel : Ontology IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard
+org.protege.editor.core.ui.util.LinkLabel : Ontology Version IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard/1.0.0
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Ontology metrics: 
+javax.swing.JLabel : Metrics
+TABLE 8x2
+Axiom	472	
+Logical axiom count	253	
+Declaration axioms count	73	
+Class count	16	
+Object property count	10	
+Data property count	7	
+Individual count	41	
+Annotation Property count	2	
+javax.swing.JLabel : Class axioms
+TABLE 5x2
+SubClassOf	16	
+EquivalentClasses	2	
+DisjointClasses	3	
+GCI count	0	
+Hidden GCI Count	0	
+javax.swing.JLabel : Object property axioms
+TABLE 14x2
+SubObjectPropertyOf	0	
+EquivalentObjectProperties	0	
+InverseObjectProperties	0	
+DisjointObjectProperties	0	
+FunctionalObjectProperty	0	
+InverseFunctionalObjectProperty	0	
+TransitiveObjectProperty	0	
+SymmetricObjectProperty	0	
+AsymmetricObjectProperty	0	
+ReflexiveObjectProperty	0	
+IrrefexiveObjectProperty	0	
+ObjectPropertyDomain	10	
+ObjectPropertyRange	10	
+SubPropertyChainOf	0	
+javax.swing.JLabel : Data property axioms
+TABLE 6x2
+SubDataPropertyOf	0	
+EquivalentDataProperties	0	
+DisjointDataProperties	0	
+FunctionalDataProperty	6	
+DataPropertyDomain	7	
+DataPropertyRange	7	
+javax.swing.JLabel : Individual axioms
+TABLE 7x2
+ClassAssertion	41	
+ObjectPropertyAssertion	81	
+DataPropertyAssertion	69	
+NegativeObjectPropertyAssertion	0	
+NegativeDataPropertyAssertion	0	
+SameIndividual	0	
+DifferentIndividuals	1	
+javax.swing.JLabel : Annotation axioms
+TABLE 3x2
+AnnotationAssertion	146	
+AnnotationPropertyDomain	0	
+AnnotationPropertyRangeOf	0	
+TAB 0 : Ontology imports
+TAB 1 : Ontology Prefixes
+TAB 2 : General class axioms
+javax.swing.JLabel : Imported ontologies: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Classes
+TAB 1 : Object properties
+TAB 2 : Data properties
+TAB 3 : Annotation properties
+TAB 4 : Datatypes
+TAB 5 : Individuals
+javax.swing.JLabel : Individuals: 
+javax.swing.JLabel : Selected entity: 
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Characteristics: 
+javax.swing.JCheckBox : Functional
+javax.swing.JCheckBox : Inverse functional
+javax.swing.JCheckBox : Transitive
+javax.swing.JCheckBox : Symmetric
+javax.swing.JCheckBox : Asymmetric
+javax.swing.JCheckBox : Reflexive
+javax.swing.JCheckBox : Irreflexive
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Characteristics: 
+javax.swing.JCheckBox : Functional
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Property assertions: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Individuals
+TAB 1 : Individuals (Inferred)
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : <html><body>Git: <span style="font-weight: bold;">dev</span></body></html>
+javax.swing.JLabel : Reasoner active but the ontology is inconsistent
+javax.swing.JCheckBox : Show Inferences
+javax.swing.JMenu : File
+javax.swing.JMenu : Edit
+javax.swing.JMenu : View
+javax.swing.JMenu : Reasoner
+javax.swing.JMenu : Tools
+javax.swing.JMenu : Refactor
+javax.swing.JMenu : Window
+javax.swing.JMenu : Help

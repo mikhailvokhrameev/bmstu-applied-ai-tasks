@@ -1,0 +1,8 @@
+test_csv_divergence_rejected (__main__.PublishedReferenceTests.test_csv_divergence_rejected) ... ok
+test_published_reference_passes (__main__.PublishedReferenceTests.test_published_reference_passes) ... ok
+test_wrong_m6_rejected_even_when_csv_agrees (__main__.PublishedReferenceTests.test_wrong_m6_rejected_even_when_csv_agrees) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.460s
+
+OK

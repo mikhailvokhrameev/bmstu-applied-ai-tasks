@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "frozen_at_utc": "2026-11-01T20:34:47.920369+00:00",
+  "reviewed_by": "AI",
+  "stage": "Frozen before any context/holdout embedding measurement",
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "original_pairs_sha256": "04d2ea7925e6044fbfeab3396d568e20e80b2a028983cd856ced4c7a09e15ae2",
+  "builder_sha256": "2388bac51acdd7682d3d5a47a193039c7b52c7f5ec5816604203cc9ab96b682e",
+  "datasets": {
+    "concept_pairs_context.csv": {
+      "sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+      "count": 20,
+      "synonyms": 10,
+      "distinct": 10
+    },
+    "concept_pairs_holdout.csv": {
+      "sha256": "3b25323c08554337025c26c6c6508d982ebcc5fc16a8fdf14e8cdcedb5562b38",
+      "count": 20,
+      "synonyms": 10,
+      "distinct": 10
+    }
+  },
+  "protocol": {
+    "text": "label + \". \" + exact Russian ontology comment; shared definition per actual entity IRI",
+    "embedding_inputs": "Only left/right; no pair ID, expected label, category or score is embedded",
+    "labels": "Original 20 labels and phrases preserved; all 20 pairs embedding-scored without category skips",
+    "categories": "Taken from actual OWL entity type; cross-category negative pairs remain scored",
+    "threshold": "Try 0.90; if errors, choose midpoint of nonempty separating interval; otherwise report blocker",
+    "holdout": "20 additional balanced pairs with disjoint concept IRIs; fixed calibration threshold, no tuning",
+    "no_adaptation": "Do not rewrite definitions, remove pairs, or relabel after scores; retain every measured attempt",
+    "limitations": "Ontology-grounded semisynthetic definitions; synonyms share comments; holdout shares construction method and is not independent human validation",
+    "acceptance": "No success assumed; T04 still requires zero errors on mandatory pairs and >=70% valid first responses"
+  },
+  "cross_category_calibration_ids": [
+    "PAIR17",
+    "PAIR20"
+  ],
+  "calibration_holdout_iri_overlap": []
+}

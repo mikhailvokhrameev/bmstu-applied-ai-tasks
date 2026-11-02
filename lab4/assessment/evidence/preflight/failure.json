@@ -1,0 +1,5 @@
+{
+  "error": "ValueError",
+  "detail": "Server/local manifest digest mismatch: qwen2.5-coder:3b",
+  "acceptance_approved": false
+}

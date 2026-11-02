@@ -1,0 +1,4 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/56ca0f98-1798-4248-860d-7241f7ecedf1>
+        a       oops:response .

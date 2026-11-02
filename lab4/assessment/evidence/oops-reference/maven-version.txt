@@ -1,0 +1,5 @@
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-maven-3.9.16
+Java version: 17.0.21, vendor: Eclipse Adoptium, runtime: /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/jdk-17.0.21+9/Contents/Home
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "26.6.2", arch: "aarch64", family: "mac"

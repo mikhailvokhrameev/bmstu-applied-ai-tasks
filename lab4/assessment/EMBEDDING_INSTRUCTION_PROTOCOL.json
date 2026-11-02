@@ -1,0 +1,8 @@
+{
+  "registered_utc": "2026-11-01T21:02:03.206378+00:00",
+  "model": "qwen3-embedding:8b",
+  "instruction": "Represent the precise meaning of an ontology concept for detecting synonymous definitions, rather than merely related concepts.",
+  "policy": "One identical model task instruction for every text; no pair IDs, labels, categories or conditional branches; original frozen datasets unchanged",
+  "calibration_sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+  "validation_sha256": "3b25323c08554337025c26c6c6508d982ebcc5fc16a8fdf14e8cdcedb5562b38"
+}

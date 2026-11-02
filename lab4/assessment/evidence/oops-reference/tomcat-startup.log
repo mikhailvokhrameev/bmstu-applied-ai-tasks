@@ -1,0 +1,2409 @@
+02-Nov-2026 01:23:20.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.61
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 6 2026 22:56:25 UTC
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.61.0
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.6.2
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/jdk-17.0.21+9/Contents/Home
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.21+9
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance
+02-Nov-2026 01:23:20.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-tomcat-10.1.61
+02-Nov-2026 01:23:21.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/conf/logging.properties
+02-Nov-2026 01:23:21.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768m
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ActiveProcessorCount=2
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-tomcat-10.1.61
+02-Nov-2026 01:23:21.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/temp
+02-Nov-2026 01:23:21.016 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/imkaruzin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-Nov-2026 01:23:21.125 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-11438"]
+02-Nov-2026 01:23:21.139 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [262] milliseconds
+02-Nov-2026 01:23:21.159 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+02-Nov-2026 01:23:21.160 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.61]
+02-Nov-2026 01:23:21.176 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference.war]
+02-Nov-2026 01:23:29.564 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Nov-2026 01:23:30.323 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference.war] has finished in [9,146] ms
+02-Nov-2026 01:23:30.326 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-127.0.0.1-11438"]
+02-Nov-2026 01:23:30.335 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [9195] milliseconds
+2026-11-02 01:26:52 DEBUG JenaIOEnvironment:167 - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;etc/location-mapping.rdf;etc/location-mapping.ttl
+2026-11-02 01:26:52 DEBUG FileManager:170 - Add location: LocatorFile
+2026-11-02 01:26:52 DEBUG FileManager:170 - Add location: LocatorURL
+2026-11-02 01:26:52 DEBUG FileManager:170 - Add location: ClassLoaderLocator
+2026-11-02 01:26:52 DEBUG FileManager:446 - Found: ont-policy.rdf (ClassLoaderLocator)
+2026-11-02 01:26:52 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP04#"
+     xml:base="http://oops.linkeddata.es/data/testP04"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP04">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <rdfs:comment xml:lang="en">Test for P04</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP04#UnconnectedClass -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP04#UnconnectedClass">
+        <rdfs:label xml:lang="en">Unconnected class</rdfs:label>
+        <rdfs:comment xml:lang="en">This class should appear in P04 detection.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2026-11-02 01:26:52 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@29bcfc81
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:52 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:52 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-parsers-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-oboformat-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-rio-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-parsers-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-oboformat-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-rio-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2026-11-02 01:26:52 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@ee98bcb, org.semanticweb.owlapi.rio.RioTrixParserFactory@2b3ce4fa, org.semanticweb.owlapi.rio.RioN3ParserFactory@6b6da66a, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@50ea907, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@5db298d8, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@2c1019dd, org.semanticweb.owlapi.rio.RioRDFaParserFactory@4fc4f48b, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@5dfeb5ea, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@12abd05f, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@626addbe, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@4a281c7c, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@7e8e8b7b, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@32d72581, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@1ba57cc, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@22262a31, org.semanticweb.owlapi.rio.RioJsonParserFactory@21799140, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@67fc5786, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@4350af8b, org.semanticweb.owlapi.rio.RioTurtleParserFactory@56483054, org.semanticweb.owlapi.rio.RioTrigParserFactory@47c1281f]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-impl-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2026-11-02 01:26:52 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@3f811599]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:52 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-parsers-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-oboformat-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-rio-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-parsers-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-oboformat-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:400 - Loading URL for service jar:file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance/webapps/oops-reference/WEB-INF/lib/owlapi-rio-5.5.1.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2026-11-02 01:26:52 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@4cf392b2, org.semanticweb.owlapi.rio.RioJsonStorerFactory@7317f1f5, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@5818f69b, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@3c1638b2, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@25d71812, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@75c7ea01, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@43888ecf, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@39933c9f, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@61ab8765, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@1724a56b, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@6e1d63ac, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@712eff3c, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@287fb7ac, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@47fad4c9, org.semanticweb.owlapi.rio.RioTrigStorerFactory@703bb24f, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@2d824cd7, org.semanticweb.owlapi.rio.RioTrixStorerFactory@7d65d752, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@5d326ba5, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@7657f9cf, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@68d2cf6, org.semanticweb.owlapi.rio.RioN3StorerFactory@3a47e7d9]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:53 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 DEBUG TripleLogger:137 - Total number of triples: 7
+2026-11-02 01:26:53 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP04>) VersionIRI(<null>))
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:53 INFO  Linter:204 - Checking C04 ...
+2026-11-02 01:26:53 INFO  Linter:206 - Checking C04 done.
+2026-11-02 01:26:53 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:53 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:53 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/27877a03-1e07-4394-92a3-479d648cc18e">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/4842fbfd-88bb-446e-86a4-03fe2474cda3">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP04#UnconnectedClass</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.</oops:hasDescription>
+        <oops:hasName>Creating unconnected ontology elements</oops:hasName>
+        <oops:hasCode>P04 - Creating unconnected ontology elements</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:53 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:53 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/27877a03-1e07-4394-92a3-479d648cc18e>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/4842fbfd-88bb-446e-86a4-03fe2474cda3> .
+
+<http://oops.linkeddata.es/data/4842fbfd-88bb-446e-86a4-03fe2474cda3>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP04#UnconnectedClass"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P04 - Creating unconnected ontology elements";
+        oops:hasDescription             "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Creating unconnected ontology elements";
+        oops:hasNumberAffectedElements  1 .
+
+2026-11-02 01:26:53 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP08#"
+     xml:base="http://oops.linkeddata.es/data/testP08"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP08">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P08</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#relationshipNoComment -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP08#relationshipNoComment">
+        <rdfs:label xml:lang="en">Relationship lacks comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#relationshipNoLabel -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP08#relationshipNoLabel">
+        <rdfs:comment xml:lang="en">Relationship lacks label</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#attributeNoComment -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP08#attributeNoComment">
+        <rdfs:label xml:lang="en">Attribute lacks comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#attributeNoLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP08#attributeNoLabel">
+        <rdfs:comment xml:lang="en">Attribute lacks label</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#ClassNoComment -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP08#ClassNoComment">
+        <rdfs:label xml:lang="en">Class lacks comment.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP08#ClassNoLabel -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP08#ClassNoLabel">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Class lacks label</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:53 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@31d863b0
+2026-11-02 01:26:53 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:53 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@7be15841, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@33941af4, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@3484ad05, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@7f4359c1, org.semanticweb.owlapi.rio.RioTrigParserFactory@1b5810ba, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@5f9154f5, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@3fc2e687, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@33062e83, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@61677b20, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@f0eed09, org.semanticweb.owlapi.rio.RioTurtleParserFactory@3d8dcc65, org.semanticweb.owlapi.rio.RioN3ParserFactory@2c920a5b, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@56fcd016, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@34daee56, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@9566f38, org.semanticweb.owlapi.rio.RioRDFaParserFactory@ffa2df5, org.semanticweb.owlapi.rio.RioJsonParserFactory@4fd9f5a8, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@e912b02, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@25278372, org.semanticweb.owlapi.rio.RioTrixParserFactory@6346d07d]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@3f7d8f61]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioJsonStorerFactory@3938850, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@328cbbcb, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@70b8b7f0, org.semanticweb.owlapi.rio.RioTrixStorerFactory@1036fdde, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@3103f52e, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@647b85f4, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@7f7c8f13, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@9ef82df, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@69041215, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@27bd08cf, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@3621ae53, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@739ea24d, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@62567882, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@7fbd0549, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@31eb743e, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@5738090d, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@63cf5d58, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@1c089231, org.semanticweb.owlapi.rio.RioTrigStorerFactory@7d1fc48, org.semanticweb.owlapi.rio.RioN3StorerFactory@4ca7039d, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@6cd0668f]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:53 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 DEBUG TripleLogger:137 - Total number of triples: 17
+2026-11-02 01:26:53 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP08>) VersionIRI(<null>))
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:53 INFO  Linter:204 - Checking C08 ...
+2026-11-02 01:26:53 INFO  Linter:206 - Checking C08 done.
+2026-11-02 01:26:53 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:53 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:53 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/8f533cd4-773f-4d9d-b33b-b5ab6bbca483">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/df5e2929-4e5a-47c1-98c1-ee968d846726">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#relationshipNoComment</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#relationshipNoLabel</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#ClassNoComment</oops:hasAffectedElement>
+        <oops:hasCode>P08-A - Missing annotations - Label &amp; Comment</oops:hasCode>
+        <oops:hasName>Missing annotations - Label &amp; Comment</oops:hasName>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#attributeNoLabel</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#attributeNoComment</oops:hasAffectedElement>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >6</oops:hasNumberAffectedElements>
+        <oops:hasDescription>This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].</oops:hasDescription>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP08#ClassNoLabel</oops:hasAffectedElement>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:53 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:53 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/df5e2929-4e5a-47c1-98c1-ee968d846726>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP08#relationshipNoComment"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP08#relationshipNoLabel"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP08#ClassNoComment"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP08#attributeNoLabel"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP08#attributeNoComment"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP08#ClassNoLabel"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P08-A - Missing annotations - Label & Comment";
+        oops:hasDescription             "This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Missing annotations - Label & Comment";
+        oops:hasNumberAffectedElements  6 .
+
+<http://oops.linkeddata.es/data/8f533cd4-773f-4d9d-b33b-b5ab6bbca483>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/df5e2929-4e5a-47c1-98c1-ee968d846726> .
+
+2026-11-02 01:26:53 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:53 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP10#"
+     xml:base="http://oops.linkeddata.es/data/testP10"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP10">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P10</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassA">
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassB">
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassC">
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassD">
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassE">
+        <rdfs:label xml:lang="en">Class E</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassF">
+        <rdfs:label xml:lang="en">Class F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassG">
+        <rdfs:label xml:lang="en">Class G</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassH">
+        <rdfs:label xml:lang="en">Class H</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+    
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassI">
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:53 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@e74f282
+2026-11-02 01:26:53 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:53 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@3994ee34, org.semanticweb.owlapi.rio.RioTrigParserFactory@7e3a49fb, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@245bda99, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@2b4b716f, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@49a3abcb, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@54eb1962, org.semanticweb.owlapi.rio.RioJsonParserFactory@3881f368, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@181d1b50, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@725e9193, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@4ed8460d, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@1fecbefb, org.semanticweb.owlapi.rio.RioTurtleParserFactory@249ca00b, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@3764b53c, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@4a90ab4a, org.semanticweb.owlapi.rio.RioTrixParserFactory@4db3ba1, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@60eaa5b6, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@1eb9a6a5, org.semanticweb.owlapi.rio.RioRDFaParserFactory@284104dd, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@7704dc39, org.semanticweb.owlapi.rio.RioN3ParserFactory@34adcd13]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@22486f02]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:53 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@7dfed5e, org.semanticweb.owlapi.rio.RioJsonStorerFactory@391bdd59, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@59868f25, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@e133d17, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@77bb55fd, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@23fccf15, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@53caab61, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@1c684de5, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@23a73b48, org.semanticweb.owlapi.rio.RioN3StorerFactory@41567239, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@e919f21, org.semanticweb.owlapi.rio.RioTrigStorerFactory@7ca64156, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@73c688d4, org.semanticweb.owlapi.rio.RioTrixStorerFactory@717ba4e9, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@5b2ffe7c, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@e1e93cb, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@2cc43291, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@712c691a, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@369a80a1, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@1217c5eb, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@6905c47b]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:53 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:53 DEBUG TripleLogger:137 - Total number of triples: 39
+2026-11-02 01:26:53 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP10>) VersionIRI(<null>))
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:53 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:54 INFO  Linter:204 - Checking C10 ...
+2026-11-02 01:26:54 INFO  Linter:206 - Checking C10 done.
+2026-11-02 01:26:54 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:54 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:54 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/26197cca-0b6b-44b9-bdf5-88471118f75d">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/7da7d335-684a-4bae-9f0a-5511f2966831">
+        <oops:hasImportanceLevel>IMPORTANT</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related to the guidelines provided in [6], [2] and [7].</oops:hasDescription>
+        <oops:hasName>Missing disjoint-ness</oops:hasName>
+        <oops:hasCode>P10 - Missing disjoint-ness</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:54 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:54 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/7da7d335-684a-4bae-9f0a-5511f2966831>
+        a                               oops:pitfall;
+        oops:hasCode                    "P10 - Missing disjoint-ness";
+        oops:hasDescription             "The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related to the guidelines provided in [6], [2] and [7].";
+        oops:hasImportanceLevel         "IMPORTANT";
+        oops:hasName                    "Missing disjoint-ness";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/26197cca-0b6b-44b9-bdf5-88471118f75d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/7da7d335-684a-4bae-9f0a-5511f2966831> .
+
+2026-11-02 01:26:54 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP10#"
+     xml:base="http://oops.linkeddata.es/data/testP10"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP10">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P10</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassA">
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+        <owl:disjointWith rdf:resource="http://oops.linkeddata.es/data/testP10#ClassB"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassB">
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassC -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassC">
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassD -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassD">
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassE -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassE">
+        <rdfs:label xml:lang="en">Class E</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassF -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassF">
+        <rdfs:label xml:lang="en">Class F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassG -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassG">
+        <rdfs:label xml:lang="en">Class G</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassH -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassH">
+        <rdfs:label xml:lang="en">Class H</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassI -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassI">
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:54 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@17897dc5
+2026-11-02 01:26:54 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:54 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioNTriplesParserFactory@3b8542e4, org.semanticweb.owlapi.rio.RioTurtleParserFactory@e051f06, org.semanticweb.owlapi.rio.RioRDFaParserFactory@34664e00, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@627c9e71, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@3cf1f7bc, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@7a82d04d, org.semanticweb.owlapi.rio.RioTrixParserFactory@895565a, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@7c0b467a, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@1cafb99c, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@6338df4b, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@473bc38f, org.semanticweb.owlapi.rio.RioJsonParserFactory@3097ef63, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@1b80e9f8, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@3394242c, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@78c4143c, org.semanticweb.owlapi.rio.RioTrigParserFactory@1996a5ee, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@6535d5cf, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@158a8871, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@79e63fb8, org.semanticweb.owlapi.rio.RioN3ParserFactory@711f3000]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@3d7a456d]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@336a9d08, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@248b86a9, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@38d4d617, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@694f9faa, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@5c5e7f98, org.semanticweb.owlapi.rio.RioTrixStorerFactory@5fa35ea4, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@6843550b, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@5ebbc81, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@23388912, org.semanticweb.owlapi.rio.RioTrigStorerFactory@38b420b9, org.semanticweb.owlapi.rio.RioJsonStorerFactory@d626c30, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@76dea40c, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@759a8b6e, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@7a0f37ba, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@116f2ef9, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@6afec7a8, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@752412f3, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@12ffc6e4, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@2d73ac68, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@15b1594c, org.semanticweb.owlapi.rio.RioN3StorerFactory@139877e5]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:54 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:54 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:54 DEBUG TripleLogger:137 - Total number of triples: 40
+2026-11-02 01:26:54 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP10>) VersionIRI(<null>))
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:54 INFO  Linter:204 - Checking C10 ...
+2026-11-02 01:26:54 INFO  Linter:206 - Checking C10 done.
+2026-11-02 01:26:54 INFO  Linter:213 - #Pitfall Ids triggered: 0
+2026-11-02 01:26:54 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:54 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/56ca0f98-1798-4248-860d-7241f7ecedf1"/>
+</rdf:RDF>
+
+2026-11-02 01:26:54 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:54 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/56ca0f98-1798-4248-860d-7241f7ecedf1>
+        a       oops:response .
+
+2026-11-02 01:26:54 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP10#"
+     xml:base="http://oops.linkeddata.es/data/testP10"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP10">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P10</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassA">
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassB">
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassC -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassC">
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassD -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassD">
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassE -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassE">
+        <rdfs:label xml:lang="en">Class E</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassF -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassF">
+        <rdfs:label xml:lang="en">Class F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassG -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassG">
+        <rdfs:label xml:lang="en">Class G</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassH -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassH">
+        <rdfs:label xml:lang="en">Class H</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassI -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassI">
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassC"/>
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassD"/>
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassE"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:54 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@17f61b7f
+2026-11-02 01:26:54 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:54 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@9384a58, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@78d15ff3, org.semanticweb.owlapi.rio.RioN3ParserFactory@639c6c3e, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@76b6fbd2, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@232b624e, org.semanticweb.owlapi.rio.RioTrixParserFactory@3afb011e, org.semanticweb.owlapi.rio.RioTurtleParserFactory@bd80d5f, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@72608b69, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@3c6c11, org.semanticweb.owlapi.rio.RioTrigParserFactory@5a1bae8a, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@5ef07d22, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@5d67bcf3, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@4463c8b6, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@66b3ba44, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@41b9680e, org.semanticweb.owlapi.rio.RioRDFaParserFactory@449ea187, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@23c8b8, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@3cbbb37, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@39785b65, org.semanticweb.owlapi.rio.RioJsonParserFactory@15d1862e]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@51a442ea]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:54 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@787134f2, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@ce42ea1, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@564cc9aa, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@79fb52dd, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@66de40b9, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@7fa490ad, org.semanticweb.owlapi.rio.RioN3StorerFactory@44cce665, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@1648dce, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@1e5d04b7, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@10b78bfd, org.semanticweb.owlapi.rio.RioTrigStorerFactory@336ba840, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@10983514, org.semanticweb.owlapi.rio.RioTrixStorerFactory@f758738, org.semanticweb.owlapi.rio.RioJsonStorerFactory@3367a069, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@345dc18c, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@3d249537, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@c3f6c6c, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@5d5ec86a, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@6f7a6b0e, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@152bded3, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@3cd5b70e]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:54 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:54 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:54 DEBUG TripleLogger:137 - Total number of triples: 50
+2026-11-02 01:26:54 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassC>
+2026-11-02 01:26:54 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassD>
+2026-11-02 01:26:54 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassE>
+2026-11-02 01:26:54 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP10>) VersionIRI(<null>))
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:54 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:54 INFO  Linter:204 - Checking C10 ...
+2026-11-02 01:26:54 INFO  Linter:206 - Checking C10 done.
+2026-11-02 01:26:54 INFO  Linter:213 - #Pitfall Ids triggered: 0
+2026-11-02 01:26:54 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:54 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/ec953421-298c-439f-9949-0325b72e9905"/>
+</rdf:RDF>
+
+2026-11-02 01:26:54 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:54 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:54 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/ec953421-298c-439f-9949-0325b72e9905>
+        a       oops:response .
+
+2026-11-02 01:26:54 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP10#"
+     xml:base="http://oops.linkeddata.es/data/testP10"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP10">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P10</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassA">
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassB">
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassC -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassC">
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassD -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassD">
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassE -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassE">
+        <rdfs:label xml:lang="en">Class E</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassF -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassF">
+        <rdfs:label xml:lang="en">Class F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassG"/>
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassH"/>
+            <rdf:Description rdf:about="http://oops.linkeddata.es/data/testP10#ClassI"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassG -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassG">
+        <rdfs:label xml:lang="en">Class G</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassH -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassH">
+        <rdfs:label xml:lang="en">Class H</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP10#ClassI -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP10#ClassI">
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Element involved in pattern A, B and c.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:55 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@2cbf4055
+2026-11-02 01:26:55 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:55 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioTrigParserFactory@34a921a9, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@79c21100, org.semanticweb.owlapi.rio.RioJsonParserFactory@5cd55ef6, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@656438a1, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@22f43e9, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@3b6ed908, org.semanticweb.owlapi.rio.RioTrixParserFactory@53a991d, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@6b1388da, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@1fc55b88, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@1246276b, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@2a83642d, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@7bdc0cae, org.semanticweb.owlapi.rio.RioRDFaParserFactory@5cd7ad65, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@190d867e, org.semanticweb.owlapi.rio.RioN3ParserFactory@7f0b4778, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@5048269e, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@6ce3d1f4, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@54440cdc, org.semanticweb.owlapi.rio.RioTurtleParserFactory@6467b05a, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@678d6392]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@d44e7c7]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioTrixStorerFactory@3631ec71, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@4925c544, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@1f573374, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@52529dd5, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@13fc757b, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@4b0b9463, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@79956b9d, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@6a112fb8, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@65d30459, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@2747f6cc, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@b95105e, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@1adbdc3, org.semanticweb.owlapi.rio.RioN3StorerFactory@1ab6d638, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@780227cd, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@51d91016, org.semanticweb.owlapi.rio.RioJsonStorerFactory@673ae74a, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@701d2baf, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@3078d42c, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@21beb6c0, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@7682531c, org.semanticweb.owlapi.rio.RioTrigStorerFactory@553e7581]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:55 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:55 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:55 DEBUG TripleLogger:137 - Total number of triples: 49
+2026-11-02 01:26:55 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassG>
+2026-11-02 01:26:55 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassH>
+2026-11-02 01:26:55 DEBUG OptimisedListTranslator:50 - list: <http://oops.linkeddata.es/data/testP10#ClassI>
+2026-11-02 01:26:55 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP10>) VersionIRI(<null>))
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:55 INFO  Linter:204 - Checking C10 ...
+2026-11-02 01:26:55 INFO  Linter:206 - Checking C10 done.
+2026-11-02 01:26:55 INFO  Linter:213 - #Pitfall Ids triggered: 0
+2026-11-02 01:26:55 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:55 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/e420a46d-c442-46de-b68e-67e5726e5b3b"/>
+</rdf:RDF>
+
+2026-11-02 01:26:55 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:55 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/e420a46d-c442-46de-b68e-67e5726e5b3b>
+        a       oops:response .
+
+2026-11-02 01:26:55 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP11#"
+     xml:base="http://oops.linkeddata.es/data/testP11"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP11">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P11</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP11#relationshipLacksDomain -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP11#relationshipLacksDomain">
+        <rdfs:label xml:lang="en">Lacks domain</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern A.</rdfs:comment>
+        <rdfs:range rdf:resource="http://oops.linkeddata.es/data/testP11#ClassA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP11#relationshipLacksRange -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP11#relationshipLacksRange">
+        <rdfs:label xml:lang="en">Lacks range</rdfs:label>
+        <rdfs:comment>Element involved in pattern B.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://oops.linkeddata.es/data/testP11#ClassA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP11#attributeLacksDomain -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP11#attributeLacksDomain">
+        <rdfs:label xml:lang="en">attributeU</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern A.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP11#attributeLacksRange -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP11#attributeLacksRange">
+        <rdfs:label xml:lang="en">attributeLacksRange</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in pattern B.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://oops.linkeddata.es/data/testP11#ClassA"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP11#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP11#ClassA">
+        <rdfs:label xml:lang="en">ClassA</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:55 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@603f5c13
+2026-11-02 01:26:55 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:55 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@7d3933bc, org.semanticweb.owlapi.rio.RioTrixParserFactory@7bd247f7, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@407647ff, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@77262cad, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@60263ec, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@22437cad, org.semanticweb.owlapi.rio.RioN3ParserFactory@50d60ab9, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@3ff4fee4, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@c368e27, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@51b65e8e, org.semanticweb.owlapi.rio.RioTurtleParserFactory@1904a03c, org.semanticweb.owlapi.rio.RioJsonParserFactory@16d30f8a, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@7f2bcc11, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@5a1e88a4, org.semanticweb.owlapi.rio.RioRDFaParserFactory@5f97b46d, org.semanticweb.owlapi.rio.RioTrigParserFactory@18f32849, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@6829f132, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@1cc778fb, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@6efc8d23, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@4f168fa9]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@11f6e26]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:55 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@32b4f915, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@1b2bba09, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@2faf2c, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@24a0bee6, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@692bbd21, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@5592e578, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@52ad43a1, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@3dc28e8f, org.semanticweb.owlapi.rio.RioTrigStorerFactory@5949a7e4, org.semanticweb.owlapi.rio.RioJsonStorerFactory@3593fd9d, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@77a0b2b0, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@66c7d1f5, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@2f86dfb2, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@739e9ae8, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@54a72dd, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@3a5d642a, org.semanticweb.owlapi.rio.RioTrixStorerFactory@1599d41, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@5df5c6cc, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@643eb904, org.semanticweb.owlapi.rio.RioN3StorerFactory@732ee2d4, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@66db3e60]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:55 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:55 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:55 DEBUG TripleLogger:137 - Total number of triples: 22
+2026-11-02 01:26:55 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP11>) VersionIRI(<null>))
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:55 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:55 INFO  Linter:204 - Checking C11 ...
+2026-11-02 01:26:55 INFO  Linter:206 - Checking C11 done.
+2026-11-02 01:26:55 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:55 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:55 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/e4bc80f0-a5b0-4535-b115-0288641523c1">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/4fcefaec-ced5-47b2-83ef-df18f66781bb">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP11#attributeLacksDomain</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP11#relationshipLacksRange</oops:hasAffectedElement>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >4</oops:hasNumberAffectedElements>
+        <oops:hasName>Missing domain or range in properties</oops:hasName>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP11#attributeLacksRange</oops:hasAffectedElement>
+        <oops:hasCode>P11 - Missing domain or range in properties</oops:hasCode>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP11#relationshipLacksDomain</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>IMPORTANT</oops:hasImportanceLevel>
+        <oops:hasDescription>Object and/or datatype properties missing domain or range (or both of them) are included in the ontology.</oops:hasDescription>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:55 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:55 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:55 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/4fcefaec-ced5-47b2-83ef-df18f66781bb>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP11#attributeLacksDomain"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#relationshipLacksRange"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#attributeLacksRange"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP11#relationshipLacksDomain"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P11 - Missing domain or range in properties";
+        oops:hasDescription             "Object and/or datatype properties missing domain or range (or both of them) are included in the ontology.";
+        oops:hasImportanceLevel         "IMPORTANT";
+        oops:hasName                    "Missing domain or range in properties";
+        oops:hasNumberAffectedElements  4 .
+
+<http://oops.linkeddata.es/data/e4bc80f0-a5b0-4535-b115-0288641523c1>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/4fcefaec-ced5-47b2-83ef-df18f66781bb> .
+
+2026-11-02 01:26:55 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP13#"
+     xml:base="http://oops.linkeddata.es/data/testP13"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP13">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P13</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP13#relationshipNoInverse -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP13#relationshipNoInverse">
+        <rdfs:label xml:lang="en">Relationship with no inverse</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in M1-P13 pattern A.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP13#relationshipSuggestion1 -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP13#relationshipSuggestion1">
+        <rdfs:label xml:lang="en">relationship suggestion 1</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in M1-P13 pattern B.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://oops.linkeddata.es/data/testP13#ClassA"/>
+        <rdfs:range rdf:resource="http://oops.linkeddata.es/data/testP13#ClassB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP13#relationshipSuggestion2 -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP13#relationshipSuggestion2">
+        <rdfs:label xml:lang="en">relationship suggestion 2</rdfs:label>
+        <rdfs:comment xml:lang="en">Element involved in M1-P13 pattern B.</rdfs:comment>
+        <rdfs:range rdf:resource="http://oops.linkeddata.es/data/testP13#ClassA"/>
+        <rdfs:domain rdf:resource="http://oops.linkeddata.es/data/testP13#ClassB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP13#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP13#ClassA">
+        <rdfs:label xml:lang="en">ClassA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP13#ClassB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP13#ClassB">
+        <rdfs:label xml:lang="en">ClassB</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:56 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@fe223e1
+2026-11-02 01:26:56 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@72d4a9f4, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@879563a, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@135de835, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@62dba791, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@582ef2, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@330dcce7, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@1c6440a, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@cd50238, org.semanticweb.owlapi.rio.RioJsonParserFactory@692d2142, org.semanticweb.owlapi.rio.RioTurtleParserFactory@5380e0cf, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@1abdf36c, org.semanticweb.owlapi.rio.RioRDFaParserFactory@1a9ae648, org.semanticweb.owlapi.rio.RioTrigParserFactory@6b364564, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@29bc1eef, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@33ba3ecf, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@7c386d00, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@b833abb, org.semanticweb.owlapi.rio.RioTrixParserFactory@1ee5edfd, org.semanticweb.owlapi.rio.RioN3ParserFactory@3e61be9a, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@2fe339bd]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@727d2be7]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@230f45ce, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@7e938431, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@6cfba69f, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@734019cd, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@5113c9bd, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@49130bbd, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@3102fd8d, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@262f2bff, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@5c4bc7db, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@1b0718b5, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@2a98736b, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@68faf469, org.semanticweb.owlapi.rio.RioTrigStorerFactory@2e917ce2, org.semanticweb.owlapi.rio.RioTrixStorerFactory@9ecebbf, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@4772fda6, org.semanticweb.owlapi.rio.RioJsonStorerFactory@5df2e9e6, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@71377d2f, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@185d5664, org.semanticweb.owlapi.rio.RioN3StorerFactory@6294078d, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@445c70c7, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@268cc671]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:56 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 DEBUG TripleLogger:137 - Total number of triples: 21
+2026-11-02 01:26:56 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP13>) VersionIRI(<null>))
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:56 INFO  Linter:204 - Checking C13 ...
+2026-11-02 01:26:56 INFO  Linter:206 - Checking C13 done.
+2026-11-02 01:26:56 INFO  Linter:213 - #Pitfall Ids triggered: 2
+2026-11-02 01:26:56 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:56 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/aa8c58aa-659d-49d5-99e7-22bd3cc3695e">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/b5bb7195-a4a2-48f3-8b8d-808790fc41c4">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP13#relationshipSuggestion1</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP13#relationshipSuggestion2</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.</oops:hasDescription>
+        <oops:hasName>Inverse relationships not explicitly declared - With Suggestion</oops:hasName>
+        <oops:hasCode>P13-Y - Inverse relationships not explicitly declared - With Suggestion</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/7965d567-d67d-41aa-98db-4547643ea763">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP13#relationshipNoInverse</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.</oops:hasDescription>
+        <oops:hasName>Inverse relationships not explicitly declared - No Suggestion</oops:hasName>
+        <oops:hasCode>P13-N - Inverse relationships not explicitly declared - No Suggestion</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:56 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:56 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/7965d567-d67d-41aa-98db-4547643ea763>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP13#relationshipNoInverse"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P13-N - Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasDescription             "This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/b5bb7195-a4a2-48f3-8b8d-808790fc41c4>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP13#relationshipSuggestion1"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP13#relationshipSuggestion2"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P13-Y - Inverse relationships not explicitly declared - With Suggestion";
+        oops:hasDescription             "This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Inverse relationships not explicitly declared - With Suggestion";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/aa8c58aa-659d-49d5-99e7-22bd3cc3695e>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/b5bb7195-a4a2-48f3-8b8d-808790fc41c4> , <http://oops.linkeddata.es/data/7965d567-d67d-41aa-98db-4547643ea763> .
+
+2026-11-02 01:26:56 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP22M1#"
+     xml:base="http://oops.linkeddata.es/data/testP22M1"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP22M1">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P22 method 1</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#relationship-s -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP22#relationship-s">
+        <rdfs:label xml:lang="en">relationship-s</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP22#ClassA">
+        <rdfs:label xml:lang="en">ClassA</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:56 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@120ff03a
+2026-11-02 01:26:56 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@5450bb90, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@9a63e06, org.semanticweb.owlapi.rio.RioRDFaParserFactory@57f2edd6, org.semanticweb.owlapi.rio.RioTrixParserFactory@6529fa4d, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@4c7b6ddc, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@32481dc1, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@70f80bb3, org.semanticweb.owlapi.rio.RioN3ParserFactory@6b71d5dc, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@59ed15e0, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@1db93b56, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@7c7350e3, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@43d336c, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@51c1ab72, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@39330f00, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@25d767e4, org.semanticweb.owlapi.rio.RioTurtleParserFactory@25f53763, org.semanticweb.owlapi.rio.RioTrigParserFactory@54dab723, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@55e09e7b, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@21b0816c, org.semanticweb.owlapi.rio.RioJsonParserFactory@3fc63af9]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@57a18009]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@5fbc2efc, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@2bd2f552, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@51f6a634, org.semanticweb.owlapi.rio.RioN3StorerFactory@2a6f138c, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@7c122576, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@7c9ec3fa, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@4a922455, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@70d05bb8, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@2baa3c63, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@4f71211a, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@501481d8, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@20ec283, org.semanticweb.owlapi.rio.RioTrixStorerFactory@8f0897d, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@78bdb0d3, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@671687b9, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@14eb4c9b, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@56c35671, org.semanticweb.owlapi.rio.RioTrigStorerFactory@46cadef9, org.semanticweb.owlapi.rio.RioJsonStorerFactory@149a042d, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@a4227b8, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@162b1bf6]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:56 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 DEBUG TripleLogger:137 - Total number of triples: 8
+2026-11-02 01:26:56 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP22M1>) VersionIRI(<null>))
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:56 INFO  Linter:204 - Checking C22 ...
+2026-11-02 01:26:56 INFO  Linter:206 - Checking C22 done.
+2026-11-02 01:26:56 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:56 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:56 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/e8a1394e-ac94-4055-a0fd-be27f670265d">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/7225b5fa-30f2-49c7-ae67-65add6efc4e1">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#ClassA</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#relationship-s</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as "-" or "_"). Some notions about naming conventions are provided in [2].</oops:hasDescription>
+        <oops:hasName>Using different naming conventions in the ontology</oops:hasName>
+        <oops:hasCode>P22 - Using different naming conventions in the ontology</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:56 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:56 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/e8a1394e-ac94-4055-a0fd-be27f670265d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/7225b5fa-30f2-49c7-ae67-65add6efc4e1> .
+
+<http://oops.linkeddata.es/data/7225b5fa-30f2-49c7-ae67-65add6efc4e1>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP22#ClassA"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP22#relationship-s"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P22 - Using different naming conventions in the ontology";
+        oops:hasDescription             "The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as \"-\" or \"_\"). Some notions about naming conventions are provided in [2].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Using different naming conventions in the ontology";
+        oops:hasNumberAffectedElements  1 .
+
+2026-11-02 01:26:56 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:56 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP22M2#"
+     xml:base="http://oops.linkeddata.es/data/testP22M2"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP22M2">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P22 method 2</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#ClassA -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP22#ClassA">
+        <rdfs:label xml:lang="en">ClassA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#classB -->
+
+    <owl:Class rdf:about="http://oops.linkeddata.es/data/testP22#classB">
+        <rdfs:label xml:lang="en">classB</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:56 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@368bac84
+2026-11-02 01:26:56 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@198d912c, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@30ea91e8, org.semanticweb.owlapi.rio.RioTrigParserFactory@9221140, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@459af3f2, org.semanticweb.owlapi.rio.RioRDFaParserFactory@194f38c7, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@2c4d3084, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@1ae6980d, org.semanticweb.owlapi.rio.RioN3ParserFactory@443db630, org.semanticweb.owlapi.rio.RioJsonParserFactory@df67818, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@202a313a, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@637590e4, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@27a0d752, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@8f1ff82, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@9a8155b, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@5d9f69ec, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@27c7b29f, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@62cb7752, org.semanticweb.owlapi.rio.RioTurtleParserFactory@7302821b, org.semanticweb.owlapi.rio.RioTrixParserFactory@136b09b1, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@6f176e8c]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@17832842]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:56 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioJsonStorerFactory@77fb9efe, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@3652ab34, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@588be60c, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@455f3515, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@7bed5e47, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@11b3331, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@6ebfbdf3, org.semanticweb.owlapi.rio.RioN3StorerFactory@c061708, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@a19c776, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@479f504f, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@e3293e3, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@5866f5b4, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@6cb82a2c, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@22aa75ff, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@2c6598d0, org.semanticweb.owlapi.rio.RioTrixStorerFactory@65abdfde, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@d0ed118, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@1c00abb9, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@7bceeaf2, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@54dc3f02, org.semanticweb.owlapi.rio.RioTrigStorerFactory@50badee4]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:56 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:56 DEBUG TripleLogger:137 - Total number of triples: 8
+2026-11-02 01:26:56 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP22M2>) VersionIRI(<null>))
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:56 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:57 INFO  Linter:204 - Checking C22 ...
+2026-11-02 01:26:57 INFO  Linter:206 - Checking C22 done.
+2026-11-02 01:26:57 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:57 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:57 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/53202615-3b40-4548-bbab-e0807cab067d">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/521e6054-6944-4b97-b8a7-26910b5b6572">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#ClassA</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#classB</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as "-" or "_"). Some notions about naming conventions are provided in [2].</oops:hasDescription>
+        <oops:hasName>Using different naming conventions in the ontology</oops:hasName>
+        <oops:hasCode>P22 - Using different naming conventions in the ontology</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:57 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:57 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/53202615-3b40-4548-bbab-e0807cab067d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/521e6054-6944-4b97-b8a7-26910b5b6572> .
+
+<http://oops.linkeddata.es/data/521e6054-6944-4b97-b8a7-26910b5b6572>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP22#ClassA"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP22#classB"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P22 - Using different naming conventions in the ontology";
+        oops:hasDescription             "The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as \"-\" or \"_\"). Some notions about naming conventions are provided in [2].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Using different naming conventions in the ontology";
+        oops:hasNumberAffectedElements  1 .
+
+2026-11-02 01:26:57 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP22M3#"
+     xml:base="http://oops.linkeddata.es/data/testP22M3"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP22M3">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P22 method 3</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#RelationshipS -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP22#RelationshipS">
+        <rdfs:label xml:lang="en">RelationshipS</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#relationshipS -->
+
+    <owl:ObjectProperty rdf:about="http://oops.linkeddata.es/data/testP22#relationshipS">
+        <rdfs:label xml:lang="en">relationship-s</rdfs:label>
+    </owl:ObjectProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:57 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@16a055e4
+2026-11-02 01:26:57 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:57 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@6faafe2a, org.semanticweb.owlapi.rio.RioJsonParserFactory@7505d3e4, org.semanticweb.owlapi.rio.RioTrixParserFactory@78c93dc8, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@4ab104f5, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@326b32af, org.semanticweb.owlapi.rio.RioN3ParserFactory@4d6628c0, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@260919e3, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@5dabca20, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@2419c794, org.semanticweb.owlapi.rio.RioTurtleParserFactory@f95227b, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@405ac2aa, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@565ac75, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@5441a2b3, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@133c632a, org.semanticweb.owlapi.rio.RioRDFaParserFactory@4e372381, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@2dfec986, org.semanticweb.owlapi.rio.RioTrigParserFactory@5fd90903, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@7ab3c28f, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@168f6a13, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@15f65828]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@6480876c]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@1033d372, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@3db9403b, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@369d9539, org.semanticweb.owlapi.rio.RioN3StorerFactory@1f0fea08, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@73060bee, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@704ad840, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@42905f3b, org.semanticweb.owlapi.rio.RioTrixStorerFactory@a5348f8, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@322d3421, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@4561808d, org.semanticweb.owlapi.rio.RioJsonStorerFactory@4be47169, org.semanticweb.owlapi.rio.RioTrigStorerFactory@437fddf2, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@4eb7be5, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@41d2bda0, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@62523bc7, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@7d8bfaf, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@4bc76310, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@64303be8, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@23403c38, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@47f149ed, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@7afc6541]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:57 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:57 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:57 DEBUG TripleLogger:137 - Total number of triples: 9
+2026-11-02 01:26:57 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP22M3>) VersionIRI(<null>))
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:57 INFO  Linter:204 - Checking C22 ...
+2026-11-02 01:26:57 INFO  Linter:206 - Checking C22 done.
+2026-11-02 01:26:57 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:57 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:57 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/0d391743-6e6e-499e-aaac-563027e1edd1">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/862c3c0a-0310-4cfe-b152-314cd2372734">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#RelationshipS</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#relationshipS</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as "-" or "_"). Some notions about naming conventions are provided in [2].</oops:hasDescription>
+        <oops:hasName>Using different naming conventions in the ontology</oops:hasName>
+        <oops:hasCode>P22 - Using different naming conventions in the ontology</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:57 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:57 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/0d391743-6e6e-499e-aaac-563027e1edd1>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/862c3c0a-0310-4cfe-b152-314cd2372734> .
+
+<http://oops.linkeddata.es/data/862c3c0a-0310-4cfe-b152-314cd2372734>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP22#RelationshipS"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP22#relationshipS"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P22 - Using different naming conventions in the ontology";
+        oops:hasDescription             "The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as \"-\" or \"_\"). Some notions about naming conventions are provided in [2].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Using different naming conventions in the ontology";
+        oops:hasNumberAffectedElements  1 .
+
+2026-11-02 01:26:57 DEBUG Linter:355 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG ModelLoader:83 - <?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2014 María Poveda Villalón <mpovedavillalon@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://oops.linkeddata.es/data/testP22M4#"
+     xml:base="http://oops.linkeddata.es/data/testP22M4"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://oops.linkeddata.es/data/testP22M4">
+        <dc:creator rdf:datatype="&xsd;anyURI">http://purl.org/net/mpoveda</dc:creator>
+        <rdfs:comment xml:lang="en">Test for P22 method 4</rdfs:comment>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#AttributeV -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP22#AttributeV">
+        <rdfs:label xml:lang="en">AttributeV</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://oops.linkeddata.es/data/testP22#attributeU -->
+
+    <owl:DatatypeProperty rdf:about="http://oops.linkeddata.es/data/testP22#attributeU">
+        <rdfs:label xml:lang="en">attributeU</rdfs:label>
+    </owl:DatatypeProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
+
+2026-11-02 01:26:57 DEBUG Injector:189 - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@cc2a7d1
+2026-11-02 01:26:57 DEBUG Injector:307 - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:57 DEBUG Injector:405 - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@6fb961d9, org.semanticweb.owlapi.rio.RioTrixParserFactory@6b751d15, org.semanticweb.owlapi.rio.RioN3ParserFactory@268269c1, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@2323bfc4, org.semanticweb.owlapi.dlsyntax.parser.DLSyntaxOWLParserFactory@5cb5377f, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@21fbc257, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@d16965b, org.semanticweb.owlapi.rio.RioHDTRdfParserFactory@4989eaa7, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@35eaa005, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@14d65819, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@7044b6d4, org.semanticweb.owlapi.rio.RioJsonParserFactory@29167e3, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@381e06aa, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@41f1b4e5, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@3cf22226, org.semanticweb.owlapi.rio.RioRDFaParserFactory@4b15665, org.semanticweb.owlapi.rio.RioTrigParserFactory@52e8fd5d, org.semanticweb.owlapi.rio.RioTurtleParserFactory@65796c60, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@3148eb53, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@20586364]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@139d01ef]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2026-11-02 01:26:57 DEBUG Injector:217 - Injecting values [[org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@1089b4e9, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@222683e7, org.semanticweb.owlapi.rio.RioJsonStorerFactory@72ce710f, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@164ce608, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@5bbf1659, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@38d6435a, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@455a59a, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@69593429, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@45d43ca5, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@6b604213, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@51e0a8b4, org.semanticweb.owlapi.rio.RioTrixStorerFactory@352e823a, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@4bbf3d6a, org.semanticweb.owlapi.rio.RioN3StorerFactory@5296fb03, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@4d109da7, org.semanticweb.owlapi.rio.RioHDTRdfStorerFactory@18d4e3ac, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@46f3ae88, org.semanticweb.owlapi.rio.RioTrigStorerFactory@5dfdf9a0, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@68a04d4, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@6d60ab7e, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@39911b6e]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2026-11-02 01:26:57 WARN  SAXParsers:112 - http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit' is not recognized.
+2026-11-02 01:26:57 WARN  SAXParsers:102 - entityExpansionLimit not supported by parser type org.apache.xerces.jaxp.SAXParserImpl, error message: Property 'entityExpansionLimit' is not recognized.
+2026-11-02 01:26:57 DEBUG TripleLogger:137 - Total number of triples: 8
+2026-11-02 01:26:57 DEBUG TripleLogger:33 - Loaded OntologyID(OntologyIRI(<http://oops.linkeddata.es/data/testP22M4>) VersionIRI(<null>))
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?y rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:label ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:comment ?y) -> (?y rdf:type rdfs:Literal) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?y rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:rest ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:first ?y) -> (?x rdf:type rdf:List) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:object ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:predicate ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:subject ?y) -> (?x rdf:type rdf:Statement) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:range ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:domain ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subClassOf ?y) -> (?x rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdfs:subPropertyOf ?y) -> (?x rdf:type rdf:Property) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?x rdf:type ?y) -> (?y rdf:type rdfs:Class) ]
+2026-11-02 01:26:57 DEBUG FBRuleInfGraph:245 - Adding rule [ (?a rdfs:isDefinedBy ?b) -> (?a rdfs:seeAlso ?b) ]
+2026-11-02 01:26:57 INFO  Linter:204 - Checking C22 ...
+2026-11-02 01:26:57 INFO  Linter:206 - Checking C22 done.
+2026-11-02 01:26:57 INFO  Linter:213 - #Pitfall Ids triggered: 1
+2026-11-02 01:26:57 DEBUG Linter:345 - The output model (in RDF/XML:
+2026-11-02 01:26:57 DEBUG Linter:346 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:347 - <rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:oops="http://oops.linkeddata.es/def#">
+  <oops:response rdf:about="http://oops.linkeddata.es/data/e49f2d10-a78e-486a-bf37-3c2bd7bc7dd5">
+    <oops:hasPitfall>
+      <oops:pitfall rdf:about="http://oops.linkeddata.es/data/17225efa-f5fe-4481-8f19-754fb8cf4a4d">
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#AttributeV</oops:hasAffectedElement>
+        <oops:hasAffectedElement rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://oops.linkeddata.es/data/testP22#attributeU</oops:hasAffectedElement>
+        <oops:hasImportanceLevel>MINOR</oops:hasImportanceLevel>
+        <oops:hasNumberAffectedElements rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</oops:hasNumberAffectedElements>
+        <oops:hasDescription>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as "-" or "_"). Some notions about naming conventions are provided in [2].</oops:hasDescription>
+        <oops:hasName>Using different naming conventions in the ontology</oops:hasName>
+        <oops:hasCode>P22 - Using different naming conventions in the ontology</oops:hasCode>
+      </oops:pitfall>
+    </oops:hasPitfall>
+  </oops:response>
+</rdf:RDF>
+
+2026-11-02 01:26:57 DEBUG Linter:348 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:352 - The output model (in Turtle):
+2026-11-02 01:26:57 DEBUG Linter:353 - ------------------------------------------------------------------------------
+2026-11-02 01:26:57 DEBUG Linter:354 - PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/e49f2d10-a78e-486a-bf37-3c2bd7bc7dd5>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/17225efa-f5fe-4481-8f19-754fb8cf4a4d> .
+
+<http://oops.linkeddata.es/data/17225efa-f5fe-4481-8f19-754fb8cf4a4d>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "http://oops.linkeddata.es/data/testP22#AttributeV"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "http://oops.linkeddata.es/data/testP22#attributeU"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P22 - Using different naming conventions in the ontology";
+        oops:hasDescription             "The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as \"-\" or \"_\"). Some notions about naming conventions are provided in [2].";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Using different naming conventions in the ontology";
+        oops:hasNumberAffectedElements  1 .
+
+2026-11-02 01:26:57 DEBUG Linter:355 - ------------------------------------------------------------------------------

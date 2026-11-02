@@ -1,0 +1,31 @@
+{
+  "ontology": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl",
+  "source_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "expected": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab2/tests/expected.json",
+  "expected_sha256": "831a5bf6129b4504ffe5b54b27ece1ee287fc2181ccc45962c0abf8355b87c0b",
+  "helper_sha256": "cae1f75751a1426a4437ea2211712cb30bfcf2be3560fba2ad5f5f253fa39344",
+  "agent_sha256": "39a6f53a41e6e904202d017066ffc3ff30120ae23a4de68d998a539f63deee1f",
+  "command": [
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/jdk-17.0.21+9/Contents/Home/bin/java",
+    "-Xmx768m",
+    "-XX:ActiveProcessorCount=2",
+    "-DentityExpansionLimit=100000000",
+    "-Dlogback.configurationFile=conf/logback.xml",
+    "-Dfile.encoding=UTF-8",
+    "-Duser.home=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/application-home",
+    "-Djava.util.prefs.userRoot=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/preferences",
+    "-XX:CompileCommand=exclude,javax/swing/text/GlyphView,getBreakSpot",
+    "--add-opens=java.desktop/sun.swing=ALL-UNNAMED",
+    "--add-opens=java.desktop/com.apple.laf=ALL-UNNAMED",
+    "-javaagent:/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/acceptance-agent.jar=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-gui-baseline-trial-4/collector.properties",
+    "-classpath",
+    "bundles/guava.jar:bundles/logback-classic.jar:bundles/logback-core.jar:bundles/slf4j-api.jar:bundles/glassfish-corba-orb.jar:bundles/org.apache.felix.main.jar:bundles/maven-artifact.jar:bundles/protege-launcher.jar",
+    "org.protege.osgi.framework.Launcher",
+    "file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl"
+  ],
+  "cwd": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9",
+  "query_count": 23,
+  "mode": "real GUI, launch-only premain, public in-process API",
+  "not_performed": "No attachment, accessibility, desktop screenshots or independent HermiT instance",
+  "pid": 55924
+}

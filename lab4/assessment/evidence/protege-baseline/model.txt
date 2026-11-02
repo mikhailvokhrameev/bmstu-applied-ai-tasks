@@ -1,0 +1,28 @@
+EDITOR org.protege.editor.owl.OWLEditorKit
+ONTOLOGY OntologyID(OntologyIRI(<https://example.org/ontologies/videocard>) VersionIRI(<https://example.org/ontologies/videocard/1.0.0>))
+getAxiomCount=472
+getLogicalAxiomCount=253
+getClassesInSignature=16
+getObjectPropertiesInSignature=10
+getDataPropertiesInSignature=7
+getIndividualsInSignature=41
+REASONER_MANAGER org.protege.editor.owl.model.inference.OWLReasonerManagerImpl
+RM public org.protege.editor.owl.model.inference.ProtegeOWLReasonerInfo org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getCurrentReasonerFactory()
+RM public java.lang.String org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getCurrentReasonerName()
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.killCurrentReasoner()
+RM public boolean org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.isClassificationInProgress()
+RM public boolean org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.isClassified()
+RM public boolean org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.classifyAsynchronously(java.util.Set)
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.killCurrentClassification()
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.addReasonerFilter(org.protege.editor.owl.model.inference.ReasonerFilter)
+RM public org.semanticweb.owlapi.reasoner.ReasonerProgressMonitor org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getReasonerProgressMonitor()
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.addReasonerFactories(java.util.Set)
+RM public java.util.Set org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getInstalledReasonerFactories()
+RM public java.lang.String org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getCurrentReasonerFactoryId()
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.setReasonerProgressMonitor(org.semanticweb.owlapi.reasoner.ReasonerProgressMonitor)
+RM public org.protege.editor.owl.model.inference.ReasonerPreferences org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getReasonerPreferences()
+RM public org.semanticweb.owlapi.reasoner.OWLReasoner org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getCurrentReasoner()
+RM public org.protege.editor.owl.model.inference.ReasonerStatus org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.getReasonerStatus()
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.setCurrentReasonerFactoryId(java.lang.String)
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.setReasonerExceptionHandler(org.protege.editor.owl.model.inference.OWLReasonerExceptionHandler)
+RM public void org.protege.editor.owl.model.inference.OWLReasonerManagerImpl.dispose() throws java.lang.Exception

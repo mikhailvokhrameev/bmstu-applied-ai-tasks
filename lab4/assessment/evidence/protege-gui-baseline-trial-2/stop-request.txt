@@ -1,0 +1,1 @@
+Stop this collector-owned trial after sandbox GUI startup restriction.

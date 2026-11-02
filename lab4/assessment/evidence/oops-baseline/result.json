@@ -1,0 +1,16 @@
+{
+  "endpoint": "https://oops.linkeddata.es/rest",
+  "documentation": "https://oops.linkeddata.es/webservice.html",
+  "started_utc": "2026-11-01T18:34:33.488913+00:00",
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "pitfalls": [
+    "P04",
+    "P08",
+    "P10",
+    "P11",
+    "P13",
+    "P22"
+  ],
+  "error": "URLError: <urlopen error [Errno 60] Operation timed out>",
+  "wall_seconds": 75.33174586296082
+}

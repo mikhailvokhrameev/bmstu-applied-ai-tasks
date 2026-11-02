@@ -1,0 +1,28 @@
+{
+  "frozen_utc": "2026-11-01T21:29:32.253208+00:00",
+  "purpose": "v3 after explicit inverse operands and saved parent validation; no change to model/data/threshold",
+  "files": {
+    "lab4/optimizer/validator.py": "38d808e229a505e46e992c11771e3e0a5068a9f8c3fb4701df79b887be9826af",
+    "lab4/optimizer/metrics.py": "f3abeaaf17bd370d1732a649810e5832b96fda1032d36ecd4b51028d38cc0839",
+    "lab4/optimizer/requirements-embeddings.txt": "c0fe338776a77dc31e0876e0129e83938ffae354c1f82eeff29696faf62dbcf5",
+    "lab4/optimizer/release.py": "55908ababe15f28b7b438f3733aef1171bdb5bdf20da907469bfea98c2ffc3e5",
+    "lab4/optimizer/journal.py": "cec6760bf719dc40ef7413bb35772d7b8c44c8449eda7da2caf827de0d7bc38f",
+    "lab4/optimizer/benchmark.py": "a74224b52122ea85ebd69e7a2aa06f186551fd143246ad7e849c12ce74d4b218",
+    "lab4/optimizer/analysis.py": "2d28f38c50ab71e0960e8cb2cc0f463f3b54f93b2fa0a65f0709178d48d3e2bc",
+    "lab4/optimizer/paths.py": "daf689e3616bd34635628fbdb145ff2a7a8c5d746a8fc01d52e4c54ea369e01d",
+    "lab4/optimizer/bridge.py": "2d9b2ef693718cf14b65661c53630b105cf70b9217eadade2210f47fb58af16f",
+    "lab4/optimizer/embedding_server.py": "60f8d3a7265def3645df3acecb66804a8aade30211010c2a4cf3bbb6f1ebbed0",
+    "lab4/optimizer/runtime.py": "504bc6d78802580b568e1f35afcfb6285dc37e6c232a689085e52eec2eaa9ffe",
+    "lab4/optimizer/search.py": "5bf23d523d45e12176fd2de672505976f5b80f9e15bb584498918b94e242679f",
+    "lab4/optimizer/proposals.py": "aa904e736a44f4d50a5b84529cc03d3c3db14cc09d79543f1196835708f03560",
+    "lab4/optimizer/__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+    "lab4/optimizer/prepare.py": "c1fe3ca6c0b94fc4d9609c958c59813150a108819305235bf05533249099c206",
+    "lab4/optimizer/owl_bridge/ProposalSyntax.java": "42e86e75adc9dc140eb70e215e4471402bae6f18bd20c33f013496b914573f7c",
+    "lab4/optimizer/owl_bridge/CandidateValidator.java": "7b1778394d9d80bd873b9119c26fe2e2800b319faf3ce758b5662ea8c9aada78",
+    "lab4/optimizer/owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+    "lab4/optimizer/owl_bridge/OntologyRelease.java": "67ca6162109f164b6e0dfcec4205641f48fcc4be5df9ab48f9ba5f49ba2e9aa5",
+    "lab4/optimizer/owl_bridge/OntologyEvaluator.java": "39342d1afe2f7e23a53592df5cb9ea4fb451012fed94e182523c59b3438294ce",
+    "lab4/optimizer/prompts/proposal.txt": "3eee159cb4d7ec534249159c17f6809df99c84dec705e8fa95c0adf3f7e82c21"
+  },
+  "config_sha256": "8e841503bc5f477fcdbfa59595fe8cfca59eb13b26f18a06e9ef82b03a9905bb"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "application": "Protégé Desktop",
+  "version": "5.6.9",
+  "source": "official platform-independent distribution",
+  "verification": "Real application launched with baseline; own OWLModelManager inspected and its actual Swing window painted, no other apps captured",
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "gui_verified": true,
+  "reasoner_verified": false,
+  "counts": {
+    "A": 472,
+    "Al": 253,
+    "C_user": 15,
+    "C_with_owl_Thing": 16,
+    "Po": 10,
+    "Pd": 7,
+    "Individuals": 41,
+    "SubClassOf": 16,
+    "EquivalentClasses": 2,
+    "DisjointClasses": 3
+  },
+  "limitation": "Reasoner not yet started; GUI class count includes owl:Thing, excluded by the specified user-class metric",
+  "files": {
+    "model.txt": "d68611674b914d8d490b9a96785dde14de77734095777e5024013489c1ed8805",
+    "window-0.png": "d9e257a16fc5bad5d8291c5530da3654db96e9b91cc9c84075f8085981b60b78",
+    "complete.txt": "3327a0b415f04ed6c87e90fcc501d00880fda0f3a15e4016ffc76903499a6e3e",
+    "ui.txt": "d775b12d69b529bc01e7d9c87894a76ddabde11f03096cdf3689cc5bd70ce77b"
+  }
+}

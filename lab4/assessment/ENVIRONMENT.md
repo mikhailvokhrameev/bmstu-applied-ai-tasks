@@ -1,24 +1,47 @@
-# Фактическая среда этапа 1, 2026-11-01
+# Фактическая среда испытаний
 
-Проверки выполнены в локальном worktree; сетевые операции и часть sysctl ограничены sandbox. Наличие файла/manifest не означает успешного запуска модели.
+Обновлено 2026-11-02. Работа выполняется в постоянном репозитории, ветка `dev`.
+История исходной реализации включена merge-коммитом `8471b36`. Фактические версии,
+контрольные суммы зависимостей и исходников каждого запуска записаны в его
+`metadata.json`; старые сведения о MacBook Air M2 не описывают эту среду.
 
-| Компонент | Наблюдение | Готовность |
-|---|---|---|
-| ОС | macOS 26.6.2, build 25G83, arm64 | доступна |
-| Компьютер | MacBook Air Mac14,2, Apple M2, 8 CPU cores (4+4), 8 GB unified RAM, 10 GPU cores, Metal supported; `system_profiler SPHardwareDataType SPDisplaysDataType` | ресурсы зафиксированы; пригодность модели ещё не подтверждена |
-| Java | Temurin OpenJDK 17.0.2+8, 64-Bit Server VM | lab2 suite прошёл |
-| Python по `python3` | 3.9.6 | ниже требования ≥3.10; не использовать для optimizer |
-| `/opt/homebrew/bin/python3.11` | 3.11.18 | подходит по версии |
-| `/usr/local/bin/python3.11` | 3.11.5 | также доступен |
-| OWL API | 4.5.29, закреплённый JAR | успешно использован |
-| HermiT | 1.4.3.456, закреплённый JAR | успешно использован |
-| Protégé Desktop 5.6.9 | не найден в /Applications и ~/Applications, поиск maxdepth 2 | GUI-проверки недоступны; не заявлены выполненными |
-| Ollama CLI | 0.40.9, /usr/local/bin/ollama; приложение Ollama.app установлено | клиент доступен |
-| Ollama API | GET http://localhost:11434/api/tags → curl exit 7 (connection failed); ollama --version предупреждает об отсутствии соединения | сервер недоступен из данной сессии; возможно ограничение sandbox/неработающий сервис |
-| Локальные manifests | qwen2.5-coder:3b и qwen3.5:397b-cloud в ~/.ollama/models/manifests/registry.ollama.ai/library | только наличие manifests, не перечень реально обслуживаемых моделей |
-| qwen2.5-coder:3b manifest | model layer digest sha256:4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba, заявленный размер 1 929 903 072 bytes | digest прочитан из manifest, не независимо рассчитанный SHA файла весов; модель не выбрана и не запущена |
-| Embedding model | доступная модель через API не установлена; в обнаруженных manifests embedding model отсутствует | условие этапа 3 |
+| Компонент | Проверенное состояние |
+|---|---|
+| Компьютер | MacBook Pro Mac16,8, Apple M4 Pro, 14 CPU, 20 GPU, 48 GB unified RAM; Metal |
+| Python | 3.11.15; локальная `.venv`, закреплённые зависимости в `requirements.txt` |
+| Java | Temurin JDK 17.0.21+9, `.local-runtime/jdk-17.0.21+9/Contents/Home` |
+| JDK SHA-256 | `78b08c7f5a0598242d5719c022e19479cb4a3aa45c37c19726a757a469ed1c15`, совпадает с Adoptium |
+| OWL API / HermiT | 4.5.29 / 1.4.3.456; 62 закреплённых JAR, SHA-256 в metadata |
+| Ollama | 0.40.13, локальный `127.0.0.1:11435`, cloud отключён, один поток генерации |
+| LLM основной серии | `qwen2.5-coder:7b`, Q4_K_M, контекст 32768 |
+| Вес LLM SHA-256 | `60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463` |
+| Эмбеддинги | `intfloat/multilingual-e5-large-instruct`, Sentence Transformers, MPS, `127.0.0.1:11437` |
+| Ревизия E5 | `274baa43b0e13e37fafa6428dbc7938e62e5c439` |
+| Манифест assets E5 SHA-256 | `071e12c3e0013df6ee8b248bb46d1acadbd9e79a3c33478e194ce72ff0244063`; это хеш полного закреплённого набора, а не одного файла весов |
+| Инструкция / порог | `Retrieve semantically similar text.` / `0.960735025415394` |
+| Protégé Desktop | 5.6.9, официальный platform-independent ZIP; исходная онтология открыта в настоящем GUI |
+| Protégé ZIP SHA-256 | `89aa0ae7530112228d8f2c552d593474d14ca619472f5cfd185f1e861728aa98`, совпадает с официальным digest |
+| Точное ТЗ | Неизменённая копия из Downloads: `lab4/tz_videokarta_lr4_nn_v1.0.docx` |
 
-Не запускались сервисы, не скачивались веса, не расходовался платный API. Способ доступа к LLM, поддержка русского языка, контекст ≥32000, embedding-модель, наименования/версии и SHA весов выбранной локальной модели ещё должны быть подтверждены до серий. Для ресурсов 8 GB нельзя заявлять пригодность любого LLM по одному названию. Требования выбранной модели к RAM/GPU должны быть сверены с её документацией после выбора.
+[Квалификация Т04](evidence/qualification-v4.json) фиксирует модели и исходники до
+серий. Реальная длинная проба обработала 32069 входных токенов и вернула контрольный
+маркер; debug-100-v4 выполнил 34 оценки. Длительность основных серий проверяется
+по фактическим `timing.json` после их завершения, а не по прогнозу debug.
 
-Команды проверки: `java -version`, `python3 --version`, `/opt/homebrew/bin/python3.11 --version`, `/usr/local/bin/python3.11 --version`, `sw_vers`, `uname -m`, `system_profiler SPHardwareDataType SPDisplaysDataType`, `ollama --version`, `curl -sS --max-time 5 http://localhost:11434/api/tags`, поиск Protégé в двух стандартных каталогах. Прямой `sysctl -n hw.memsize hw.ncpu machdep.cpu.brand_string` запрещён sandbox; сведения CPU/RAM взяты из system_profiler. Серийные номера и UUID компьютера намеренно не записаны.
+[Проверка Protégé](evidence/protege-baseline/evidence.json) содержит настоящий снимок
+окна и значения живого OWLModelManager. Отображаемые 16 классов включают owl:Thing;
+методика ТЗ учитывает 15 пользовательских классов. Итоговая онтология дополнительно прошла все проверки: [Protégé](evidence/protege-final/evidence.json).
+
+Публичный OOPS REST не ответил на разрешённую попытку проверки исходника.
+Для независимой проверки поднят локальный официальный OOPS REST из неизменённых
+upstream-исходников: 12 эталонных REST-проверок совпали с официальными fixtures.
+[Результат исходника](evidence/oops-baseline-reference/comparison.json) и объяснение
+различия P04 сохранены отдельно. Локальная проверка не объявляется ответом
+публичного endpoint. Исходник и итог отправлены локальному сервису по одному разу;
+[результат версии 2.0.0](evidence/oops-final-reference/result.json) сохранён отдельно.
+
+Веса и исполняемые среды находятся в `.local-runtime`, исключены из Git и архива.
+Сеть и localhost требуют разрешённого запуска вне sandbox. Содержимое ключей и
+токенов не читалось и в доказательства не включалось. Инструкции установки и
+воспроизведения приведены в [руководстве](../docs/OPERATOR.md), текущая приёмка —
+в [протоколе](../docs/ACCEPTANCE_STATUS.md).

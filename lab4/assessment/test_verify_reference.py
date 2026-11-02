@@ -8,7 +8,10 @@ import shutil
 import tempfile
 import unittest
 
-import verify_reference
+if __package__:
+    from . import verify_reference
+else:
+    import verify_reference
 
 
 class PublishedReferenceTests(unittest.TestCase):

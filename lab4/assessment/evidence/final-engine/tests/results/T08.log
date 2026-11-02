@@ -1,0 +1,29 @@
+== T08 negative: negative volumeGiB typed xsd:integer vs range xsd:positiveInteger ==
+defect copy: tests/negative/T08_negative_volume.owl
+  [PASS] defect copy file exists
+
+-- the copy differs from ontology/videocard.owl only by the intended mutation
+    - DataPropertyAssertion(<https://example.org/ontologies/videocard#volumeGiB> <https://example.org/ontologies/videocard#Mem_4GiB_GDDR5> "4"^^xsd:positiveInteger)
+    + DataPropertyAssertion(<https://example.org/ontologies/videocard#volumeGiB> <https://example.org/ontologies/videocard#Mem_4GiB_GDDR5> "-8"^^xsd:integer)
+  [PASS] axioms only in the copy (+1)
+  [PASS] axioms only in the final ontology (-1)
+
+-- defect copy
+  volumeGiB of Mem_4GiB_GDDR5 in the copy: ["-8"^^xsd:integer]
+  [PASS] exactly one volumeGiB value (replaced, not added: functionality is not violated)
+  expected: inconsistent=true (value -8 is not in the range xsd:positiveInteger)
+    HermiT 1.4.3.456 isConsistent = false
+  [PASS] HermiT reports the copy inconsistent
+  [PASS] the copy has one DataPropertyRange axiom for volumeGiB
+  in-memory variant without the volumeGiB range axiom (not written to disk):
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] without the range axiom HermiT finds the variant consistent: the range axiom is the only cause
+
+-- rollback: ontology/videocard.owl
+  expected: consistent=true
+    HermiT 1.4.3.456 isConsistent = true
+  [PASS] HermiT reports the final ontology consistent
+  volumeGiB of Mem_4GiB_GDDR5 in the final ontology: ["4"^^xsd:positiveInteger]
+  [PASS] Mem_4GiB_GDDR5 volumeGiB in the final ontology is the original positive value
+  [PASS] no negative or non-positiveInteger volumeGiB literal anywhere in the final ontology
+T08: PASS

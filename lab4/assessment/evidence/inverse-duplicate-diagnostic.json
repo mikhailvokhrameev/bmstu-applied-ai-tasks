@@ -1,0 +1,58 @@
+{
+  "kind": "diagnostic of rejected unchanged model proposal; not calibration tuning",
+  "threshold": 0.960735025415394,
+  "new_label": "Конфигурация памяти модели",
+  "new_comment": "Связывает конфигурацию видеопамяти с моделью видеокарты, использующей эту конфигурацию; обратно к имеет память.",
+  "scores": [
+    {
+      "iri": "https://example.org/ontologies/videocard#hasMemory",
+      "label": "имеет память",
+      "score": 0.964309900875357
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasMemoryType",
+      "label": "имеет тип памяти",
+      "score": 0.9320263395441859
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasPurpose",
+      "label": "имеет назначение",
+      "score": 0.913974028320538
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#usesGPU",
+      "label": "использует GPU",
+      "score": 0.9138161573660537
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasVideoOutput",
+      "label": "имеет видеовыход",
+      "score": 0.9082551000619021
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#producedByManufacturer",
+      "label": "выпущена производителем",
+      "score": 0.9055474175853954
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasCooling",
+      "label": "имеет охлаждение",
+      "score": 0.8942542711080513
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasInterface",
+      "label": "имеет интерфейс",
+      "score": 0.8931014807760395
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#hasArchitecture",
+      "label": "имеет архитектуру",
+      "score": 0.8870648241564101
+    },
+    {
+      "iri": "https://example.org/ontologies/videocard#gpuProducedBy",
+      "label": "GPU выпущен производителем",
+      "score": 0.8688739578442224
+    }
+  ]
+}

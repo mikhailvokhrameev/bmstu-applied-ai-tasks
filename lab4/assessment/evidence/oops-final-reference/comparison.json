@@ -1,0 +1,30 @@
+{
+  "final_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "local_Q": 4,
+  "local_by_family": {
+    "P04": 0,
+    "P08": 0,
+    "P10": 0,
+    "P11": 0,
+    "P13": 4,
+    "P22": 0
+  },
+  "upstream_group_records": 2,
+  "upstream_sum_number_affected": 5,
+  "upstream_records_by_family": {
+    "P04": 1,
+    "P13": 1
+  },
+  "upstream_affected_by_family": {
+    "P04": 1,
+    "P13": 4
+  },
+  "p13_affected_sets_match": true,
+  "extra_upstream_p04": [
+    "https://example.org/ontologies/videocard#ModelComponent"
+  ],
+  "explanation": "Upstream P04 flags a named hierarchy root absent from property domain/range and flattened complex-axiom involvement; local P04 treats logical axioms containing two user entities, including named SubClassOf and DisjointClasses, as a connection.",
+  "metric_policy": "Frozen local Q0=10, final Q=4 and all F calculations remain unchanged; upstream report records and affected totals are reported separately.",
+  "service_scope": "Self-hosted official upstream OOPS REST, not public production",
+  "public_endpoint_success": false
+}

@@ -1,0 +1,50 @@
+{
+  "sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "ontology_iri": "https://example.org/ontologies/videocard",
+  "version_iri": "https://example.org/ontologies/videocard/2.0.0",
+  "version_info": "2.0.0",
+  "core_preserved": true,
+  "roundtrip_verified": true,
+  "counts": {
+    "A": 508,
+    "Al": 271,
+    "C": 15,
+    "DisjointClasses": 3,
+    "E": 2,
+    "EquivalentClasses": 2,
+    "H": 5,
+    "Individuals": 41,
+    "Pd": 7,
+    "Po": 16,
+    "Q": 4,
+    "SubClassOf": 16
+  },
+  "output": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/ontology/videocard.owl",
+  "status": "exported-unaccepted",
+  "accepted": false,
+  "validation": {
+    "status": "valid",
+    "code": null,
+    "F": 1.3207143079447086,
+    "detail": "",
+    "metrics": {
+      "M1": 0.3333333333333333,
+      "M2": 0.7619047619047619,
+      "M3": 0.4666666666666667,
+      "M4": 0.13333333333333333,
+      "M5": 0.5334645669291339,
+      "M6": 4
+    },
+    "relative": [
+      1.0,
+      1.1428571428571428,
+      1.0,
+      1.0,
+      0.9952382434409138,
+      2.0
+    ]
+  },
+  "gui_verified": false,
+  "limitation": "Technical export only; expert manifest, series targets, Protégé and OOPS remain separate checks"
+}

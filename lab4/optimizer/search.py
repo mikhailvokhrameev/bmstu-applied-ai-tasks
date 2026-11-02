@@ -14,6 +14,7 @@ from .validator import validate
 
 DEFAULTS = dict(population_size=10, generations=20, elite_count=2,
                 offspring_count=8, tournament_size=3, mutation_probability=.7)
+PHASE_GENERATIONS = dict(debug=3, main=20)
 
 class SearchError(RuntimeError):
     pass
@@ -60,8 +61,8 @@ def _delta(value):
     return {k:sorted(set(value[k])) for k in ('add','remove')}
 
 
-def run(config,mode,seed,resume=False):
-    """Run generation 0 plus 20 generations; no early stop or fitness caching.
+def run(config,mode,seed,resume=False,phase='main'):
+    """Run generation 0 plus 3 debug or 20 main generations; no fitness caching.
 
     runtime.model_generator/control_generator(parent_delta, rng) returns a
     cumulative delta; runtime.validate(delta) is the complete candidate validator.
@@ -77,6 +78,8 @@ def run(config,mode,seed,resume=False):
     for k,v in DEFAULTS.items():
         if type(p[k]) is not type(v) or p[k]!=v:
             raise ValueError(k+' must equal the frozen specification value '+str(v))
+    if phase not in PHASE_GENERATIONS:raise ValueError('Invalid experiment phase')
+    p['generations']=PHASE_GENERATIONS[phase]
     if mode not in ('model','control') or type(seed) is not int:raise ValueError('Invalid mode/seed')
     if resume is True:raise ValueError('Resume requires a checkpoint snapshot')
     services=config.get('runtime',{})
@@ -110,13 +113,25 @@ def run(config,mode,seed,resume=False):
         return c
     def mutation(parent,generation,parents,operator):
         started=time.perf_counter()
+        set_parent_context=getattr(generator,'set_parent_context',None)
+        if set_parent_context is not None:
+            if parents:
+                previous=evaluated[parents[0]]
+                info=dict(id=previous.id,status=previous.status,code=previous.code,F=previous.F)
+            else:
+                info=dict(kind='immutable_core')
+            set_parent_context(info)
         # Copy isolates elites against in-place mutation by generators.
         try:d=_delta(generator({k:list(v) for k,v in parent.items()},rng));error=None
         except ProposalError as e:d={'add':[],'remove':[]};error=str(e)
         return evaluate(d,generation,parents,operator,error,started)
     pop=list(history[-1]) if resume else [mutation({'add':[],'remove':[]},0,(),'initial') for _ in range(p['population_size'])]
     def completed(g):
-        history.append(tuple(sorted(pop,key=rank)))
+        # Tournament sampling uses indices, so live and restored populations
+        # must have exactly the same order as the persisted checkpoint.
+        nonlocal pop
+        pop=sorted(pop,key=rank)
+        history.append(tuple(pop))
         if services.get('on_generation'):services['on_generation'](g,history[-1],tuple(evaluated),rng.getstate())
     if not resume:completed(0)
     for generation in range(len(history),p['generations']+1):
@@ -139,35 +154,81 @@ class ControlGenerator:
 
     No model/embedding endpoint is referenced here. Semantic checking belongs to
     the shared validator. Inventory IRIs use Functional Syntax (:name or <IRI>).
+    Optional object_property_domains/ranges map each property to a list of named
+    class IRIs. Optional individuals contains existing teaching individuals;
+    teaching_class identifies their domain (default :VideoCardModel).
     Available template kinds are sampled uniformly, then compatible entities.
     """
+    LOGICAL_AXIOM_KINDS=frozenset((
+        'SubClassOf','EquivalentClasses','InverseObjectProperties',
+        'FunctionalObjectProperty','InverseFunctionalObjectProperty',
+        'AsymmetricObjectProperty','IrreflexiveObjectProperty',
+        'SubObjectPropertyOf','SubDataPropertyOf','DataPropertyDomain',
+        'DataPropertyRange','DataPropertyAssertion','DisjointClasses',
+        'ObjectPropertyDomain','ObjectPropertyRange'))
+
     def __init__(self,inventory):
-        self.inventory={k:tuple(sorted(set(v))) for k,v in inventory.items()}
+        self.inventory={k:tuple(sorted(set(inventory.get(k,())))) for k in
+                        ('classes','object_properties','data_properties','individuals')}
+        for kind in ('object_property_domains','object_property_ranges'):
+            self.inventory[kind]={p:tuple(sorted(set(classes))) for p,classes in inventory.get(kind,{}).items()}
+        self.inventory['teaching_class']=inventory.get('teaching_class',':VideoCardModel')
         if not self.inventory.get('classes'):raise ValueError('classes inventory required')
     def __call__(self,parent,rng):
         i=self.inventory;c=i['classes'];op=i.get('object_properties',());dp=i.get('data_properties',())
-        kinds=['subclass','defined','data_property']
+        domains=i['object_property_domains'];ranges=i['object_property_ranges']
+        # One inverse axiom plus all explicit mirrored domain/range axioms must
+        # fit the same five-logical-axiom limit as a model proposal.
+        inverse_properties=[p for p in op if domains.get(p) and ranges.get(p) and len(domains[p])+len(ranges[p])<=4]
+        kinds=['subclass','defined','data_property','disjoint']
         if op:kinds+=['characteristic']
         if len(op)>1:kinds+=['object_hierarchy']
         if len(dp)>1:kinds+=['data_hierarchy']
-        if parent['add']:kinds+=['remove']
+        if inverse_properties:kinds+=['inverse']
+        if i['individuals']:kinds+=['teaching_value']
+        # Control-generated Functional Syntax has one axiom per string. Only
+        # logical template axioms can satisfy the one-to-five change budget;
+        # cancelling a declaration or annotation alone would count as zero.
+        removable=[axiom for axiom in parent['add']
+                   if axiom.lstrip().partition('(')[0].strip() in self.LOGICAL_AXIOM_KINDS]
+        if removable:kinds+=['remove']
         kind=rng.choice(kinds)
         add=list(parent['add']);remove=list(parent['remove'])
         if kind=='remove':
             # Cancel only a prior addition; no core removal request is emitted.
-            add.remove(rng.choice(add))
+            add.remove(rng.choice(removable))
             return {'add':add,'remove':remove}
         name=':Search'+str(rng.getrandbits(64))
         cls=rng.choice(c)
-        if kind in ('subclass','defined','data_property'):
-            if kind=='data_property':name+='Count'
-            entity_type='DataProperty' if kind=='data_property' else 'Class'
-            add += [f'Declaration({entity_type}({name}))']
-            label='Учебный показатель' if kind=='data_property' else 'Учебный класс'
-            add += [f'AnnotationAssertion(rdfs:label {name} "{label}"@ru)',f'AnnotationAssertion(rdfs:comment {name} "Условное учебное определение для класса {cls.replace(chr(34), chr(39))}"@ru)']
+        def entity(iri,entity_type,label,comment):
+            add.extend([f'Declaration({entity_type}({iri}))',
+                        f'AnnotationAssertion(rdfs:label {iri} "{label}"@ru)',
+                        f'AnnotationAssertion(rdfs:comment {iri} "{comment}"@ru)'])
+        if kind in ('subclass','defined','data_property','teaching_value'):
+            if kind in ('data_property','teaching_value'):name+='Count'
+            entity_type='DataProperty' if kind in ('data_property','teaching_value') else 'Class'
+            label='Учебный показатель' if entity_type=='DataProperty' else 'Учебный класс'
+            domain=i['teaching_class'] if kind=='teaching_value' else cls
+            entity(name,entity_type,label,f'Условное учебное определение для класса {domain.replace(chr(34), chr(39))}')
         if kind=='subclass':add += [f'SubClassOf({name} {cls})']
         elif kind=='defined':add += [f'EquivalentClasses({name} {cls})']
         elif kind=='data_property':add += [f'DataPropertyDomain({name} {cls})',f'DataPropertyRange({name} xsd:integer)']
+        elif kind=='teaching_value':
+            individual=rng.choice(i['individuals']);value=rng.randrange(1,101)
+            add += [f'DataPropertyDomain({name} {i["teaching_class"]})',f'DataPropertyRange({name} xsd:integer)',
+                    f'DataPropertyAssertion({name} {individual} "{value}"^^xsd:integer)',
+                    f'AnnotationAssertion(rdfs:comment {individual} "Условные учебные данные: значение нового показателя Count, не характеристика коммерческого изделия"@ru)']
+        elif kind=='inverse':
+            direct=rng.choice(inverse_properties)
+            entity(name,'ObjectProperty','Обратная учебная связь',f'Условное учебное обратное свойство к {direct.replace(chr(34), chr(39))}')
+            add += [f'InverseObjectProperties({name} {direct})']
+            add += [f'ObjectPropertyDomain({name} {value})' for value in ranges[direct]]
+            add += [f'ObjectPropertyRange({name} {value})' for value in domains[direct]]
+        elif kind=='disjoint':
+            other=name+'Alternative'
+            entity(name,'Class','Учебный вариант А','Условный первый вариант классификации, исключающий второй учебный вариант')
+            entity(other,'Class','Учебный вариант Б','Условный второй вариант классификации, исключающий первый учебный вариант')
+            add += [f'SubClassOf({name} {cls})',f'SubClassOf({other} {cls})',f'DisjointClasses({name} {other})']
         elif kind=='characteristic':add += [f'{rng.choice(("Functional","InverseFunctional","Asymmetric","Irreflexive"))}ObjectProperty({rng.choice(op)})']
         elif kind=='object_hierarchy':
             a,b=rng.sample(op,2);add += [f'SubObjectPropertyOf({a} {b})']
