@@ -11,6 +11,8 @@
 - [Описание программы и полный шаблон запроса](docs/PROGRAM.md).
 - [Руководство оператора](docs/OPERATOR.md).
 - [Пошаговая инструкция для демонстрации](docs/DEMO.md).
+- [Сокращённый Word-отчёт с метриками ТЗ 1.3](docs/otchet_lr4_videocard_nn_v1.3_short.docx).
+- [Реализация ТЗ 1.3 и состояние её запусков](optimizer_v13/README.md).
 - [Отчёт об экспериментах](docs/EXPERIMENTS.md).
 - [Итоговая онтология и экспертные решения](docs/ONTOLOGY.md).
 - [Протокол испытаний](docs/ACCEPTANCE_STATUS.md).

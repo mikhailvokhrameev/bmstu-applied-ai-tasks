@@ -1,0 +1,507 @@
+{
+  "schema": 1,
+  "verified_at": "2026-11-09T09:40:09.846615+00:00",
+  "spec_path": "/Users/imkaruzin/Downloads/tz_videokarta_lr4_nn_v1.3 (1).docx",
+  "spec_sha256": "3f9484f464814a38dc7c24e9b24b8fd9aab03b47ddaf9a27137e0755406e2b4c",
+  "config_sha256": "3736b07f42560e71474a1900ca0090ed6045038db381a8e4310338c903283956",
+  "model_weights": {
+    "model": "qwen2.5-coder:7b",
+    "sha256": "60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+    "bytes": 4683074048,
+    "manifest_sha256": "4aaba1ee422af93aad53ecbdfc8a159770cf254a9950b7a4304cf9ee3555ef31",
+    "api_manifest_sha256": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "registry_manifest": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:d9bb33f2786931fea42f50936a2424818aa2f14500638af2f01861eb2c8fb446",
+        "size": 487
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.ollama.image.model",
+          "digest": "sha256:60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+          "size": 4683074048
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.system",
+          "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+          "size": 68
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.template",
+          "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+          "size": 1615
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.license",
+          "digest": "sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "size": 11343
+        }
+      ]
+    },
+    "manifest": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:d9bb33f2786931fea42f50936a2424818aa2f14500638af2f01861eb2c8fb446",
+        "size": 487
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.ollama.image.model",
+          "digest": "sha256:60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+          "size": 4683074048
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.system",
+          "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+          "size": 68
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.template",
+          "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+          "size": 1615
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.license",
+          "digest": "sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "size": 11343
+        },
+        {
+          "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+          "digest": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "size": 858
+        }
+      ]
+    }
+  },
+  "embedding_snapshot": {
+    "model": "intfloat/multilingual-e5-large-instruct",
+    "backend": "sentence-transformers",
+    "revision": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+    "sha256": "071e12c3e0013df6ee8b248bb46d1acadbd9e79a3c33478e194ce72ff0244063",
+    "sha256_kind": "complete inference asset manifest",
+    "files": [
+      {
+        "path": "1_Pooling/config.json",
+        "sha256": "aa629215c1d83e73d9c51184e566f2c53456bc742f936984355a2990c8c8d046",
+        "bytes": 271
+      },
+      {
+        "path": "config.json",
+        "sha256": "d185df634c872f06fc6dcb3bad4375d3c447234baea8a6e548103f653b595a35",
+        "bytes": 690
+      },
+      {
+        "path": "config_sentence_transformers.json",
+        "sha256": "7e16d286cc304f7d34ffb4e21fa1a11f227cf2b6d49cb615aa44d87723d17e28",
+        "bytes": 128
+      },
+      {
+        "path": "model.safetensors",
+        "sha256": "dd6b6e4f52db0a7aff83a13d10e6c5342ef9f6ab799bad3221f4b35ef390fa85",
+        "bytes": 1119825680
+      },
+      {
+        "path": "modules.json",
+        "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "bytes": 349
+      },
+      {
+        "path": "sentence_xlm-roberta_config.json",
+        "sha256": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "bytes": 53
+      },
+      {
+        "path": "sentencepiece.bpe.model",
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "bytes": 5069051
+      },
+      {
+        "path": "special_tokens_map.json",
+        "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+        "bytes": 964
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af",
+        "bytes": 17082756
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "49f06d15a18f81855c338f8ab6241ca2e502a65b62968be69b74f094489f8175",
+        "bytes": 1182
+      }
+    ],
+    "weights": [
+      {
+        "path": "model.safetensors",
+        "sha256": "dd6b6e4f52db0a7aff83a13d10e6c5342ef9f6ab799bad3221f4b35ef390fa85",
+        "bytes": 1119825680
+      }
+    ],
+    "snapshot": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/hf/snapshots/e5-274baa43b0e13e37fafa6428dbc7938e62e5c439",
+    "device": "mps:0",
+    "max_seq_length": 512,
+    "packages": {
+      "sentence-transformers": "5.1.2",
+      "transformers": "4.57.1",
+      "torch": "2.9.1",
+      "huggingface-hub": "0.36.0",
+      "safetensors": "0.6.2"
+    }
+  },
+  "api_version": {
+    "version": "0.40.13"
+  },
+  "duplicate_threshold": 0.960735025415394,
+  "control_pair_assessments": [
+    {
+      "path": "lab4/assessment/concept_pairs_context.csv",
+      "sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+      "assessment": {
+        "count": 20,
+        "threshold": 0.960735025415394,
+        "errors": 0,
+        "rows": [
+          {
+            "id": "PAIR01",
+            "score": 0.9750965060531641,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR02",
+            "score": 0.9797069527730745,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR03",
+            "score": 0.9616982074131354,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR04",
+            "score": 0.9914181086160472,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR05",
+            "score": 0.9855666080798025,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR06",
+            "score": 0.9728567740646328,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR07",
+            "score": 0.9717016454550875,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR08",
+            "score": 0.979371162256353,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR09",
+            "score": 0.9901077495275726,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR10",
+            "score": 0.9784760377076714,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "PAIR11",
+            "score": 0.8764210904357256,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR12",
+            "score": 0.8686290480928435,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR13",
+            "score": 0.9227149613141781,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR14",
+            "score": 0.9597718231376586,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR15",
+            "score": 0.8815116931129383,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR16",
+            "score": 0.8496969676569287,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR17",
+            "score": 0.8806021425494126,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR18",
+            "score": 0.9153862432052937,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR19",
+            "score": 0.8437215518378307,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "PAIR20",
+            "score": 0.7951267077206834,
+            "expected": false,
+            "duplicate": false
+          }
+        ],
+        "analyst_approved": true
+      }
+    },
+    {
+      "path": "lab4/assessment/concept_pairs_holdout.csv",
+      "sha256": "3b25323c08554337025c26c6c6508d982ebcc5fc16a8fdf14e8cdcedb5562b38",
+      "assessment": {
+        "count": 20,
+        "threshold": 0.960735025415394,
+        "errors": 0,
+        "rows": [
+          {
+            "id": "HOLDOUT01",
+            "score": 0.9972128525185864,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT02",
+            "score": 0.9909574170997569,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT03",
+            "score": 0.9931218215771132,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT04",
+            "score": 0.9838076984160323,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT05",
+            "score": 0.9849185631304112,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT06",
+            "score": 0.9915043039284434,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT07",
+            "score": 0.9844635778879509,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT08",
+            "score": 0.9763464930273648,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT09",
+            "score": 0.9716253303400171,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT10",
+            "score": 0.9768762222451779,
+            "expected": true,
+            "duplicate": true
+          },
+          {
+            "id": "HOLDOUT11",
+            "score": 0.9189320327484625,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT12",
+            "score": 0.9153790387134505,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT13",
+            "score": 0.9129504358603987,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT14",
+            "score": 0.8771742599713693,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT15",
+            "score": 0.9066540408720171,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT16",
+            "score": 0.9195239006608242,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT17",
+            "score": 0.8971941054016774,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT18",
+            "score": 0.9222323037239453,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT19",
+            "score": 0.9430367412838411,
+            "expected": false,
+            "duplicate": false
+          },
+          {
+            "id": "HOLDOUT20",
+            "score": 0.9453099212567112,
+            "expected": false,
+            "duplicate": false
+          }
+        ],
+        "analyst_approved": true
+      }
+    }
+  ],
+  "baseline_counts": {
+    "C": 15,
+    "H": 5,
+    "Po": 10,
+    "Pd": 7,
+    "E": 2,
+    "Al": 253,
+    "A": 472,
+    "Q": 10
+  },
+  "baseline_graph": {
+    "vertices": [
+      "https://example.org/ontologies/videocard#ActiveCooling",
+      "https://example.org/ontologies/videocard#CardWith8GBMemory",
+      "https://example.org/ontologies/videocard#CardWithActiveCooling",
+      "https://example.org/ontologies/videocard#ConnectionInterface",
+      "https://example.org/ontologies/videocard#CoolingSystem",
+      "https://example.org/ontologies/videocard#GPUArchitecture",
+      "https://example.org/ontologies/videocard#GPUModel",
+      "https://example.org/ontologies/videocard#Manufacturer",
+      "https://example.org/ontologies/videocard#MemoryConfiguration",
+      "https://example.org/ontologies/videocard#MemoryType",
+      "https://example.org/ontologies/videocard#ModelComponent",
+      "https://example.org/ontologies/videocard#PassiveCooling",
+      "https://example.org/ontologies/videocard#Purpose",
+      "https://example.org/ontologies/videocard#VideoCardModel",
+      "https://example.org/ontologies/videocard#VideoOutput"
+    ],
+    "edges": [
+      [
+        "https://example.org/ontologies/videocard#CoolingSystem",
+        "https://example.org/ontologies/videocard#ActiveCooling"
+      ],
+      [
+        "https://example.org/ontologies/videocard#CoolingSystem",
+        "https://example.org/ontologies/videocard#PassiveCooling"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#CoolingSystem"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#GPUModel"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#MemoryConfiguration"
+      ]
+    ]
+  },
+  "baseline_metrics": {
+    "M1": 0.3333333333333333,
+    "M2": 0.6666666666666666,
+    "M3": 0.4666666666666667,
+    "M4": 0.13333333333333333,
+    "M5": 0.5360169491525424,
+    "M6": 10,
+    "structural": {
+      "N": 15,
+      "H": 5,
+      "U": 0,
+      "D1": 2,
+      "D2": 0.46153846153846156,
+      "D3": 6,
+      "W1": 10,
+      "W2": 5.0,
+      "W3": 15,
+      "T1": 0,
+      "T2": 0.3333333333333333,
+      "T3": 0.0,
+      "I1": 1.0,
+      "I2": 0.6666666666666666,
+      "I3": 0.0,
+      "I4": 1.0465362369445672,
+      "CY1": 0,
+      "CY2": 0.0
+    }
+  },
+  "source_of_parameters": "Unchanged model identities and generation parameters from series-v1; new v1.3 metrics and prompt"
+}

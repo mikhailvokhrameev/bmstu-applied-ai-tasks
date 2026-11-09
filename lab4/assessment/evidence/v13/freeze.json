@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-09T09:49:16.654014+00:00",
+  "tests_passed": 73,
+  "tests_evidence": [
+    "tests.log",
+    "additional-tests.log"
+  ],
+  "source_sha256": {
+    "lab4/optimizer_v13/__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+    "lab4/optimizer_v13/analysis.py": "4ee45a3314ca94ca8d1396bafd86260d254f176e30a82d492f8b1a6632137e88",
+    "lab4/optimizer_v13/bridge.py": "279d48623d5046c3664ac2b9517f11c045eff5afb5081459ae3c024611fe1b5e",
+    "lab4/optimizer_v13/journal.py": "e1b4010acf441f00d1e957927366692332607da871561759254e317f1b583629",
+    "lab4/optimizer_v13/metrics.py": "acac13a294202d3fed3b7c73839bdde5af28b8f1d1b84f0806f9e1860856bdfd",
+    "lab4/optimizer_v13/owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+    "lab4/optimizer_v13/owl_bridge/CandidateValidator.java": "1d95bf419eadf2bc72744007e830be974bcfa46805f413090fe67cbeb398bc1e",
+    "lab4/optimizer_v13/owl_bridge/OntologyEvaluator.java": "40d319916cb6d7ed63663b1e2224cd90275cc5952822dcad4f2ecdd9c7e7317b",
+    "lab4/optimizer_v13/owl_bridge/OntologyRelease.java": "67ca6162109f164b6e0dfcec4205641f48fcc4be5df9ab48f9ba5f49ba2e9aa5",
+    "lab4/optimizer_v13/owl_bridge/ProposalSyntax.java": "27d1041212b9a79b0774f072fdb0b3ed6ff99b727592312423b77056cfc311ee",
+    "lab4/optimizer_v13/owl_bridge/StreamWorker.java": "fdc0227be9e2e464ce3332ccebcddb3fb5945928aff449d4e548e1b5c9157503",
+    "lab4/optimizer_v13/paths.py": "a2195fe9e3d2f6f89547ffd55eb1d7be2f6b2ecc137d01b6ad07591e75ae1b70",
+    "lab4/optimizer_v13/prompts/proposal.txt": "83ed6090aa2032f8357cf4423c56ba49e296c94a75216d74d42dff24850c2ccb",
+    "lab4/optimizer_v13/proposals.py": "8592a94a97e86e01ead4a80f99185826c0e37ce4465fe0c2c268b122170f6d93",
+    "lab4/optimizer_v13/release.py": "55908ababe15f28b7b438f3733aef1171bdb5bdf20da907469bfea98c2ffc3e5",
+    "lab4/optimizer_v13/runtime.py": "148002ea34702ec75bebc9e43cc1962fc145b8531cdcf51b187eb9229059e7af",
+    "lab4/optimizer_v13/search.py": "5bf23d523d45e12176fd2de672505976f5b80f9e15bb584498918b94e242679f",
+    "lab4/optimizer_v13/structural.py": "9a4135fd442169f60633c47861f24c457a30ec5171c2ee4bc734a3e3babf43e8",
+    "lab4/optimizer_v13/validator.py": "eef9ce60e347cdc94b4287ea3e7d504d2cbeeea64b555ce46ce9807c6681b0bd",
+    "lab4/scripts/prepare_v13.py": "113dcfb13f54679585110f27ec4a1ba7429656258732be41ec04382d2f0de603",
+    "lab4/scripts/run_v13_part.py": "ae876bb3545c16f30b7fe7e859807dd4ff038e0674b9c60296cf7585bf2e91f5"
+  },
+  "config_sha256": "3736b07f42560e71474a1900ca0090ed6045038db381a8e4310338c903283956",
+  "spec_sha256": "3f9484f464814a38dc7c24e9b24b8fd9aab03b47ddaf9a27137e0755406e2b4c"
+}

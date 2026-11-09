@@ -1,0 +1,40 @@
+--- before/journal.py
++++ after/journal.py
+@@ -48,0 +49,34 @@
++def _verify_source_migration(root, metadata_raw, meta, current):
++    """Accept only the recorded parser bug fix without rewriting original seals."""
++    before = meta.get('source_sha256')
++    if before == current:
++        return
++    allowed = {'owl_bridge/ProposalSyntax.java', 'journal.py'}
++    if not isinstance(before, dict) or before.keys() != current.keys():
++        raise ValueError('implementation or prompt changed: source inventory keys differ')
++    changed = {name for name in before if before[name] != current[name]}
++    if changed != allowed:
++        raise ValueError('implementation or prompt changed: migration scope is not the parser bug fix')
++    try:
++        proof = json.loads((root / 'source-migration.json').read_text(encoding='utf-8'))
++        if not isinstance(proof, dict):
++            raise ValueError('migration proof must be an object')
++        seal = proof.pop('payload_sha256')
++        if seal != digest(encoded(proof)):
++            raise ValueError('migration proof checksum')
++        if proof.get('metadata_sha256') != digest(metadata_raw):
++            raise ValueError('migration metadata checksum')
++        if proof.get('config_sha256') != meta['config_sha256']:
++            raise ValueError('migration configuration checksum')
++        if proof.get('sources_before') != before or proof.get('sources_after') != current:
++            raise ValueError('migration source inventories')
++        listed = proof.get('changed')
++        if (not isinstance(listed, list) or any(not isinstance(name, str) for name in listed)
++                or len(listed) != len(changed) or set(listed) != changed):
++            raise ValueError('migration changed-source list')
++        if not isinstance(proof.get('reason'), str) or not proof['reason'].strip():
++            raise ValueError('migration reason is required')
++    except (OSError, ValueError, KeyError, TypeError) as error:
++        raise ValueError('implementation or prompt changed: invalid source migration: ' + str(error)) from error
++
++
+@@ -56 +90 @@
+-        if meta.get('source_sha256') != source_inventory():raise ValueError('implementation or prompt changed')
++        _verify_source_migration(root, raw, meta, source_inventory())

@@ -1,0 +1,44 @@
+{
+  "qualified": true,
+  "methodology": "videocard-lr4-v1.3",
+  "config_sha256": "3736b07f42560e71474a1900ca0090ed6045038db381a8e4310338c903283956",
+  "debug_run": "lab4/runs/series-v13/debug-100",
+  "debug_log_sha256": "0817f7bf15e65780ecdccd3247d5b5c9fae25b9644243f6d147e8c97dd71d7cc",
+  "valid_candidates": 17,
+  "first_responses": {
+    "total": 28,
+    "syntax_correct": 17
+  },
+  "completed_evaluations": 34,
+  "completed_generations": 3,
+  "baseline_metrics": {
+    "M1": 0.3333333333333333,
+    "M2": 0.6666666666666666,
+    "M3": 0.4666666666666667,
+    "M4": 0.13333333333333333,
+    "M5": 0.5360169491525424,
+    "M6": 10,
+    "structural": {
+      "N": 15,
+      "H": 5,
+      "U": 0,
+      "D1": 2,
+      "D2": 0.46153846153846156,
+      "D3": 6,
+      "W1": 10,
+      "W2": 5.0,
+      "W3": 15,
+      "T1": 0,
+      "T2": 0.3333333333333333,
+      "T3": 0.0,
+      "I1": 1.0,
+      "I2": 0.6666666666666666,
+      "I3": 0.0,
+      "I4": 1.0465362369445672,
+      "CY1": 0,
+      "CY2": 0.0
+    }
+  },
+  "preflight_sha256": "8d8d05ab2222a6f42ac5b91850757a1df43e652f1ecedbba49111dfda3d66a77",
+  "scope": "Technical readiness after full v1.3 tests and the single debug run; experiment quality is assessed after both series"
+}

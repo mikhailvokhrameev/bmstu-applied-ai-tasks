@@ -1,0 +1,101 @@
+{
+  "mode": "model",
+  "phase": "debug",
+  "seed": 100,
+  "schema": 2,
+  "methodology": "videocard-lr4-v1.3",
+  "best_F": 1.1246297491328545,
+  "best_B": 1.1246297491328545,
+  "best_S": 1.0,
+  "best_counts": {
+    "A": 490,
+    "Al": 262,
+    "C": 15,
+    "DisjointClasses": 3,
+    "E": 2,
+    "EquivalentClasses": 2,
+    "H": 5,
+    "Individuals": 41,
+    "Pd": 7,
+    "Po": 13,
+    "Q": 7,
+    "SubClassOf": 16
+  },
+  "best_metrics": {
+    "M1": 0.3333333333333333,
+    "M2": 0.7222222222222222,
+    "M3": 0.4666666666666667,
+    "M4": 0.13333333333333333,
+    "M5": 0.5346938775510204,
+    "M6": 7,
+    "structural": {
+      "CY1": 0,
+      "CY2": 0.0,
+      "D1": 2,
+      "D2": 0.46153846153846156,
+      "D3": 6,
+      "H": 5,
+      "I1": 1.0,
+      "I2": 0.6666666666666666,
+      "I3": 0.0,
+      "I4": 1.0465362369445672,
+      "N": 15,
+      "T1": 0,
+      "T2": 0.3333333333333333,
+      "T3": 0.0,
+      "U": 0,
+      "W1": 10,
+      "W2": 5.0,
+      "W3": 15
+    }
+  },
+  "best_coefficients": {
+    "KD": 1.0,
+    "KI": 1.0,
+    "KT": 1.0,
+    "KW": 1.0
+  },
+  "best_graph": {
+    "edges": [
+      [
+        "https://example.org/ontologies/videocard#CoolingSystem",
+        "https://example.org/ontologies/videocard#ActiveCooling"
+      ],
+      [
+        "https://example.org/ontologies/videocard#CoolingSystem",
+        "https://example.org/ontologies/videocard#PassiveCooling"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#CoolingSystem"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#GPUModel"
+      ],
+      [
+        "https://example.org/ontologies/videocard#ModelComponent",
+        "https://example.org/ontologies/videocard#MemoryConfiguration"
+      ]
+    ],
+    "vertices": [
+      "https://example.org/ontologies/videocard#ActiveCooling",
+      "https://example.org/ontologies/videocard#CardWith8GBMemory",
+      "https://example.org/ontologies/videocard#CardWithActiveCooling",
+      "https://example.org/ontologies/videocard#ConnectionInterface",
+      "https://example.org/ontologies/videocard#CoolingSystem",
+      "https://example.org/ontologies/videocard#GPUArchitecture",
+      "https://example.org/ontologies/videocard#GPUModel",
+      "https://example.org/ontologies/videocard#Manufacturer",
+      "https://example.org/ontologies/videocard#MemoryConfiguration",
+      "https://example.org/ontologies/videocard#MemoryType",
+      "https://example.org/ontologies/videocard#ModelComponent",
+      "https://example.org/ontologies/videocard#PassiveCooling",
+      "https://example.org/ontologies/videocard#Purpose",
+      "https://example.org/ontologies/videocard#VideoCardModel",
+      "https://example.org/ontologies/videocard#VideoOutput"
+    ]
+  },
+  "best_generation": 3,
+  "best_id": 30
+}
