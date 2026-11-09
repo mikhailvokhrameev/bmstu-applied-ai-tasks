@@ -1,0 +1,1 @@
+QA completed; stop only this collector application.

@@ -1,0 +1,8 @@
+test_unsatisfiable_isolated_class_is_rejected_by_reasoner (lab4.tests_v13.test_validator.ValidatorTests.test_unsatisfiable_isolated_class_is_rejected_by_reasoner) ... ok
+test_queries_and_negative_controls_are_still_executed (lab4.tests_v13.test_validator.ValidatorTests.test_queries_and_negative_controls_are_still_executed) ... ok
+test_missing_annotation_is_rejected_when_metrics_are_eligible (lab4.tests_v13.test_validator.ValidatorTests.test_missing_annotation_is_rejected_when_metrics_are_eligible) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.231s
+
+OK

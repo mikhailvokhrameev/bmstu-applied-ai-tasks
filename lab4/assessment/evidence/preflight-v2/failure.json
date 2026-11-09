@@ -1,0 +1,5 @@
+{
+  "error": "URLError",
+  "detail": "<urlopen error [Errno 1] Operation not permitted>",
+  "acceptance_approved": false
+}

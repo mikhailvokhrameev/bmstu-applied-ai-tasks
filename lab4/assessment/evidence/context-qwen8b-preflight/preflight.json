@@ -1,0 +1,1387 @@
+{
+  "schema": 1,
+  "prepared_at": "2026-11-01T20:54:51.116015+00:00",
+  "api": {
+    "version": {
+      "version": "0.40.13"
+    },
+    "tags": {
+      "models": [
+        {
+          "name": "qwen3-embedding:8b",
+          "model": "qwen3-embedding:8b",
+          "modified_at": "2026-11-01T23:51:47.748897589+03:00",
+          "size": 4676805193,
+          "digest": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+          "details": {
+            "parent_model": "/Users/ollama/.ollama/models/blobs/sha256-3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 4096,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "tools",
+            "embedding"
+          ]
+        },
+        {
+          "name": "embeddinggemma:300m",
+          "model": "embeddinggemma:300m",
+          "modified_at": "2026-11-01T23:48:13.525313785+03:00",
+          "size": 621875917,
+          "digest": "85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1",
+          "details": {
+            "parent_model": "embeddinggemma:300m-bf16",
+            "format": "gguf",
+            "family": "gemma3",
+            "families": [
+              "gemma3"
+            ],
+            "parameter_size": "307.58M",
+            "quantization_level": "BF16",
+            "context_length": 2048,
+            "embedding_length": 768,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "qwen3-embedding:4b",
+          "model": "qwen3-embedding:4b",
+          "modified_at": "2026-11-01T23:44:59.903503566+03:00",
+          "size": 2496704041,
+          "digest": "df5bd2e3c74cd8d069d21dc038f1b359fcdc9458fce1c99bd43c9eb1518ff907",
+          "details": {
+            "parent_model": "/Users/ollama/.ollama/models/blobs/sha256-2b0cf8f17b4c723c27303015383c27ec4bf2d8314bb677d05e920dd70bb0f16b",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "4.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2560,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "tools",
+            "embedding"
+          ]
+        },
+        {
+          "name": "qwen3-embedding:0.6b",
+          "model": "qwen3-embedding:0.6b",
+          "modified_at": "2026-11-01T23:42:17.264922143+03:00",
+          "size": 639150858,
+          "digest": "ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d",
+          "details": {
+            "parent_model": "/Users/ollama/.ollama/models/blobs/sha256-06507c7b42688469c4e7298b0a1e16deff06caf291cf0a5b278c308249c3e439",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "595.78M",
+            "quantization_level": "Q8_0",
+            "context_length": 32768,
+            "embedding_length": 1024,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "tools",
+            "thinking",
+            "embedding"
+          ]
+        },
+        {
+          "name": "bge-m3:567m",
+          "model": "bge-m3:567m",
+          "modified_at": "2026-11-01T23:39:40.280115105+03:00",
+          "size": 1157672605,
+          "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "bert",
+            "families": [
+              "bert"
+            ],
+            "parameter_size": "566.70M",
+            "quantization_level": "F16",
+            "context_length": 8192,
+            "embedding_length": 1024,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "qwen2.5-coder:7b",
+          "model": "qwen2.5-coder:7b",
+          "modified_at": "2026-11-01T23:35:53.224827924+03:00",
+          "size": 4683087561,
+          "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "insert"
+          ]
+        },
+        {
+          "name": "paraphrase-multilingual:278m",
+          "model": "paraphrase-multilingual:278m",
+          "modified_at": "2026-11-01T21:25:20.178769929+03:00",
+          "size": 562777863,
+          "digest": "ba13c2e06707cde2895d11e3c6e7905685edcca25861b93ccf15f692256e4339",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "bert",
+            "families": [
+              "bert"
+            ],
+            "parameter_size": "277.45M",
+            "quantization_level": "F16",
+            "context_length": 512,
+            "embedding_length": 768,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "qwen2.5-coder:3b",
+          "model": "qwen2.5-coder:3b",
+          "modified_at": "2026-11-01T21:24:03.440636407+03:00",
+          "size": 1929912626,
+          "digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "3.1B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 2048,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "insert"
+          ]
+        }
+      ]
+    },
+    "model_show": {
+      "license": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright 2024 Alibaba Cloud\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.",
+      "modelfile": "# Modelfile generated by \"ollama show\"\n# To build a new Modelfile based on this, replace FROM with:\n# FROM qwen2.5-coder:7b\n\nFROM /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/models/blobs/sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463\nTEMPLATE \"\"\"{{- if .Suffix }}<|fim_prefix|>{{ .Prompt }}<|fim_suffix|>{{ .Suffix }}<|fim_middle|>\n{{- else if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools>:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> with NO other text. Do not include any backticks or ```json.\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}\"\"\"\nSYSTEM You are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nLICENSE \"\"\"\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright 2024 Alibaba Cloud\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\"\"\"\n",
+      "template": "{{- if .Suffix }}<|fim_prefix|>{{ .Prompt }}<|fim_suffix|>{{ .Suffix }}<|fim_middle|>\n{{- else if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools>:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> with NO other text. Do not include any backticks or ```json.\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}",
+      "system": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+      "template_source": "go_template",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M"
+      },
+      "model_info": {
+        "general.architecture": "qwen2",
+        "general.base_model.0.name": "Qwen2.5 Coder 7B",
+        "general.base_model.0.organization": "Qwen",
+        "general.base_model.0.repo_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B",
+        "general.base_model.count": 1,
+        "general.basename": "Qwen2.5-Coder",
+        "general.file_type": 15,
+        "general.finetune": "Instruct",
+        "general.languages": [
+          "en"
+        ],
+        "general.license": "apache-2.0",
+        "general.license.link": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/main/LICENSE",
+        "general.parameter_count": 7615616512,
+        "general.quantization_version": 2,
+        "general.size_label": "7B",
+        "general.tags": [
+          "code",
+          "codeqwen",
+          "chat",
+          "qwen",
+          "qwen-coder",
+          "text-generation"
+        ],
+        "general.type": "model",
+        "qwen2.attention.head_count": 28,
+        "qwen2.attention.head_count_kv": 4,
+        "qwen2.attention.layer_norm_rms_epsilon": 1e-06,
+        "qwen2.block_count": 28,
+        "qwen2.context_length": 32768,
+        "qwen2.embedding_length": 3584,
+        "qwen2.feed_forward_length": 18944,
+        "qwen2.rope.freq_base": 1000000,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 151643,
+        "tokenizer.ggml.eos_token_id": 151645,
+        "tokenizer.ggml.merges": [],
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 151643,
+        "tokenizer.ggml.pre": "qwen2",
+        "tokenizer.ggml.token_type": [],
+        "tokenizer.ggml.tokens": []
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "insert"
+      ],
+      "modified_at": "2026-11-01T23:35:53.224827924+03:00"
+    },
+    "embedding_show": {
+      "modelfile": "# Modelfile generated by \"ollama show\"\n# To build a new Modelfile based on this, replace FROM with:\n# FROM qwen3-embedding:8b\n\nFROM /Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/models/blobs/sha256-3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85\nTEMPLATE {{ .Prompt }}\n",
+      "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "template_source": "gguf_chat_template",
+      "details": {
+        "parent_model": "/Users/ollama/.ollama/models/blobs/sha256-3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M"
+      },
+      "model_info": {
+        "general.architecture": "qwen3",
+        "general.base_model.0.name": "Qwen3 8B Base",
+        "general.base_model.0.organization": "Qwen",
+        "general.base_model.0.repo_url": "https://huggingface.co/Qwen/Qwen3-8B-Base",
+        "general.base_model.count": 1,
+        "general.basename": "Qwen3-Embedding",
+        "general.file_type": 15,
+        "general.license": "apache-2.0",
+        "general.parameter_count": 7567295488,
+        "general.quantization_version": 2,
+        "general.size_label": "8B",
+        "general.tags": [
+          "transformers",
+          "sentence-transformers",
+          "sentence-similarity",
+          "feature-extraction",
+          "text-embeddings-inference"
+        ],
+        "general.type": "model",
+        "qwen3.attention.head_count": 32,
+        "qwen3.attention.head_count_kv": 8,
+        "qwen3.attention.key_length": 128,
+        "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+        "qwen3.attention.value_length": 128,
+        "qwen3.block_count": 36,
+        "qwen3.context_length": 40960,
+        "qwen3.embedding_length": 4096,
+        "qwen3.feed_forward_length": 12288,
+        "qwen3.pooling_type": 3,
+        "qwen3.rope.freq_base": 1000000,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.add_eos_token": true,
+        "tokenizer.ggml.bos_token_id": 151643,
+        "tokenizer.ggml.eos_token_id": 151643,
+        "tokenizer.ggml.eot_token_id": 151645,
+        "tokenizer.ggml.merges": [],
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 151643,
+        "tokenizer.ggml.pre": "qwen2",
+        "tokenizer.ggml.token_type": [],
+        "tokenizer.ggml.tokens": []
+      },
+      "capabilities": [
+        "tools",
+        "embedding"
+      ],
+      "modified_at": "2026-11-01T23:51:47.748897589+03:00"
+    }
+  },
+  "weights": {
+    "model": {
+      "model": "qwen2.5-coder:7b",
+      "sha256": "60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+      "bytes": 4683074048,
+      "manifest_sha256": "4aaba1ee422af93aad53ecbdfc8a159770cf254a9950b7a4304cf9ee3555ef31",
+      "api_manifest_sha256": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "registry_manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:d9bb33f2786931fea42f50936a2424818aa2f14500638af2f01861eb2c8fb446",
+          "size": 487
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+            "size": 4683074048
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.system",
+            "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+            "size": 68
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.template",
+            "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+            "size": 1615
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.license",
+            "digest": "sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+            "size": 11343
+          }
+        ]
+      },
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:d9bb33f2786931fea42f50936a2424818aa2f14500638af2f01861eb2c8fb446",
+          "size": 487
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+            "size": 4683074048
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.system",
+            "digest": "sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+            "size": 68
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.template",
+            "digest": "sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+            "size": 1615
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.license",
+            "digest": "sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+            "size": 11343
+          },
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+            "size": 858
+          }
+        ]
+      }
+    },
+    "embedding_model": {
+      "model": "qwen3-embedding:8b",
+      "sha256": "3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+      "bytes": 4676804928,
+      "manifest_sha256": "557c69415958a222c832a2787787502e44b7745903c32a25af580f03507746d9",
+      "api_manifest_sha256": "64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+      "registry_manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:0a3d61b01340ca9dceb4a661e21b3dfe1418ed5206d91291ab933a3762f8bb89",
+          "size": 265
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+            "size": 4676804928,
+            "from": "/Users/ollama/.ollama/models/blobs/sha256-3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85"
+          }
+        ]
+      },
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:0a3d61b01340ca9dceb4a661e21b3dfe1418ed5206d91291ab933a3762f8bb89",
+          "size": 265
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85",
+            "size": 4676804928,
+            "from": "/Users/ollama/.ollama/models/blobs/sha256-3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85"
+          },
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:64b933495768fbd3b87c20583d379728a07471e0c66733a9df87cd1901b3c44b",
+            "size": 531
+          }
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "initial_threshold": 0.9,
+    "initial_errors": 2,
+    "chosen_threshold": 0.9,
+    "errors": 2,
+    "min_positive": 0.8295735356882625,
+    "max_negative": 0.8319318632242269,
+    "rows": [
+      {
+        "id": "PAIR01",
+        "score": 0.9213951879031537,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR02",
+        "score": 0.9244695628266715,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR03",
+        "score": 0.8465395249396559,
+        "expected": true,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR04",
+        "score": 0.9611255850963127,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR05",
+        "score": 0.9082492737209487,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR06",
+        "score": 0.9117706094410064,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR07",
+        "score": 0.9103135223256104,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR08",
+        "score": 0.8295735356882625,
+        "expected": true,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR09",
+        "score": 0.958506940785889,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR10",
+        "score": 0.9559287362521134,
+        "expected": true,
+        "duplicate": true
+      },
+      {
+        "id": "PAIR11",
+        "score": 0.6030340147956482,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR12",
+        "score": 0.47521371140314245,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR13",
+        "score": 0.8319318632242269,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR14",
+        "score": 0.8177295701201963,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR15",
+        "score": 0.5535773063911862,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR16",
+        "score": 0.36461248925512413,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR17",
+        "score": 0.6270215612010992,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR18",
+        "score": 0.5903596087337102,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR19",
+        "score": 0.3764790459817444,
+        "expected": false,
+        "duplicate": false
+      },
+      {
+        "id": "PAIR20",
+        "score": 0.2055443285557056,
+        "expected": false,
+        "duplicate": false
+      }
+    ],
+    "analyst_approved": true,
+    "review_performed_by": "AI; see assessment/AI_REVIEW.md",
+    "decision": "No separating threshold in [0, 1]; retain 0.90 for debug diagnosis",
+    "main_blockers": [
+      "No single admissible threshold separates all labelled pairs"
+    ],
+    "limitation": "20 ontology-grounded label.comment pairs, including cross-category negatives; all pairs embedding-scored without category skips; semisynthetic definitions"
+  },
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "calibration_inputs": [
+    {
+      "id": "PAIR01",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Видеокарта. Модель дискретной видеокарты; основной объект описания.",
+      "left_label": "Видеокарта",
+      "left_comment": "Модель дискретной видеокарты; основной объект описания.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#VideoCardModel",
+      "right": "Графическая плата. Модель дискретной видеокарты; основной объект описания.",
+      "right_label": "Графическая плата",
+      "right_comment": "Модель дискретной видеокарты; основной объект описания.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#VideoCardModel",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR02",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Графический процессор. Модель графического процессора; подкласс «Компонент модели».",
+      "left_label": "Графический процессор",
+      "left_comment": "Модель графического процессора; подкласс «Компонент модели».",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#GPUModel",
+      "right": "GPU. Модель графического процессора; подкласс «Компонент модели».",
+      "right_label": "GPU",
+      "right_comment": "Модель графического процессора; подкласс «Компонент модели».",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#GPUModel",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR03",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Видеопамять. Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "left_label": "Видеопамять",
+      "left_comment": "Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#MemoryConfiguration",
+      "right": "Графическая память. Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "right_label": "Графическая память",
+      "right_comment": "Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#MemoryConfiguration",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR04",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Объём видеопамяти. Объём видеопамяти в ГиБ.",
+      "left_label": "Объём видеопамяти",
+      "left_comment": "Объём видеопамяти в ГиБ.",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#volumeGiB",
+      "right": "Ёмкость видеопамяти. Объём видеопамяти в ГиБ.",
+      "right_label": "Ёмкость видеопамяти",
+      "right_comment": "Объём видеопамяти в ГиБ.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#volumeGiB",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR05",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Ширина шины памяти. Ширина шины памяти в битах.",
+      "left_label": "Ширина шины памяти",
+      "left_comment": "Ширина шины памяти в битах.",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#busWidthBit",
+      "right": "Разрядность шины памяти. Ширина шины памяти в битах.",
+      "right_label": "Разрядность шины памяти",
+      "right_comment": "Ширина шины памяти в битах.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#busWidthBit",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR06",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Активное охлаждение. Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "left_label": "Активное охлаждение",
+      "left_comment": "Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#ActiveCooling",
+      "right": "Охлаждение с вентилятором. Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "right_label": "Охлаждение с вентилятором",
+      "right_comment": "Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#ActiveCooling",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR07",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Пассивное охлаждение. Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "left_label": "Пассивное охлаждение",
+      "left_comment": "Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#PassiveCooling",
+      "right": "Безвентиляторное охлаждение. Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "right_label": "Безвентиляторное охлаждение",
+      "right_comment": "Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#PassiveCooling",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR08",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Производитель видеокарты. Связывает модель видеокарты с производителем.",
+      "left_label": "Производитель видеокарты",
+      "left_comment": "Связывает модель видеокарты с производителем.",
+      "left_category": "ObjectProperty",
+      "left_iri": "https://example.org/ontologies/videocard#producedByManufacturer",
+      "right": "Изготовитель графической платы. Связывает модель видеокарты с производителем.",
+      "right_label": "Изготовитель графической платы",
+      "right_comment": "Связывает модель видеокарты с производителем.",
+      "right_category": "ObjectProperty",
+      "right_iri": "https://example.org/ontologies/videocard#producedByManufacturer",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR09",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Видеовыход. Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "left_label": "Видеовыход",
+      "left_comment": "Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#VideoOutput",
+      "right": "Выход видеосигнала. Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "right_label": "Выход видеосигнала",
+      "right_comment": "Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#VideoOutput",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR10",
+      "synonym": "1",
+      "review_status": "approved",
+      "left": "Частота графического процессора. Частота модели GPU в МГц (десятичное число больше 0).",
+      "left_label": "Частота графического процессора",
+      "left_comment": "Частота модели GPU в МГц (десятичное число больше 0).",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#frequencyMHz",
+      "right": "Тактовая частота GPU. Частота модели GPU в МГц (десятичное число больше 0).",
+      "right_label": "Тактовая частота GPU",
+      "right_comment": "Частота модели GPU в МГц (десятичное число больше 0).",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#frequencyMHz",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR11",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Графический процессор. Модель графического процессора; подкласс «Компонент модели».",
+      "left_label": "Графический процессор",
+      "left_comment": "Модель графического процессора; подкласс «Компонент модели».",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#GPUModel",
+      "right": "Видеопамять. Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "right_label": "Видеопамять",
+      "right_comment": "Тип, объём и организация памяти; подкласс «Компонент модели».",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#MemoryConfiguration",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR12",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Объём видеопамяти. Объём видеопамяти в ГиБ.",
+      "left_label": "Объём видеопамяти",
+      "left_comment": "Объём видеопамяти в ГиБ.",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#volumeGiB",
+      "right": "Ширина шины памяти. Ширина шины памяти в битах.",
+      "right_label": "Ширина шины памяти",
+      "right_comment": "Ширина шины памяти в битах.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#busWidthBit",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR13",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Активное охлаждение. Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "left_label": "Активное охлаждение",
+      "left_comment": "Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#ActiveCooling",
+      "right": "Пассивное охлаждение. Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "right_label": "Пассивное охлаждение",
+      "right_comment": "Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#PassiveCooling",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR14",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Производитель видеокарты. Связывает модель видеокарты с производителем.",
+      "left_label": "Производитель видеокарты",
+      "left_comment": "Связывает модель видеокарты с производителем.",
+      "left_category": "ObjectProperty",
+      "left_iri": "https://example.org/ontologies/videocard#producedByManufacturer",
+      "right": "Производитель GPU. Связывает модель GPU с производителем.",
+      "right_label": "Производитель GPU",
+      "right_comment": "Связывает модель GPU с производителем.",
+      "right_category": "ObjectProperty",
+      "right_iri": "https://example.org/ontologies/videocard#gpuProducedBy",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR15",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Интерфейс подключения. Стандарт подключения видеокарты к компьютеру.",
+      "left_label": "Интерфейс подключения",
+      "left_comment": "Стандарт подключения видеокарты к компьютеру.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#ConnectionInterface",
+      "right": "Видеовыход. Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "right_label": "Видеовыход",
+      "right_comment": "Поддерживаемый моделью тип интерфейса вывода изображения.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#VideoOutput",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR16",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Частота GPU. Частота модели GPU в МГц (десятичное число больше 0).",
+      "left_label": "Частота GPU",
+      "left_comment": "Частота модели GPU в МГц (десятичное число больше 0).",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#frequencyMHz",
+      "right": "Потребляемая мощность. Заявленная мощность модели платы в Вт (не рекомендуемая мощность блока питания); десятичное число больше 0.",
+      "right_label": "Потребляемая мощность",
+      "right_comment": "Заявленная мощность модели платы в Вт (не рекомендуемая мощность блока питания); десятичное число больше 0.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#powerW",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR17",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Тип памяти. Технология видеопамяти, например GDDR6.",
+      "left_label": "Тип памяти",
+      "left_comment": "Технология видеопамяти, например GDDR6.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#MemoryType",
+      "right": "Объём памяти. Объём видеопамяти в ГиБ.",
+      "right_label": "Объём памяти",
+      "right_comment": "Объём видеопамяти в ГиБ.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#volumeGiB",
+      "same_category": "false"
+    },
+    {
+      "id": "PAIR18",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Архитектура GPU. Архитектура графического процессора.",
+      "left_label": "Архитектура GPU",
+      "left_comment": "Архитектура графического процессора.",
+      "left_category": "Class",
+      "left_iri": "https://example.org/ontologies/videocard#GPUArchitecture",
+      "right": "Модель GPU. Модель графического процессора; подкласс «Компонент модели».",
+      "right_label": "Модель GPU",
+      "right_comment": "Модель графического процессора; подкласс «Компонент модели».",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#GPUModel",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR19",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Длина видеокарты. Длина платы в мм (десятичное число больше 0).",
+      "left_label": "Длина видеокарты",
+      "left_comment": "Длина платы в мм (десятичное число больше 0).",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#lengthMM",
+      "right": "Ширина шины памяти. Ширина шины памяти в битах.",
+      "right_label": "Ширина шины памяти",
+      "right_comment": "Ширина шины памяти в битах.",
+      "right_category": "DataProperty",
+      "right_iri": "https://example.org/ontologies/videocard#busWidthBit",
+      "same_category": "true"
+    },
+    {
+      "id": "PAIR20",
+      "synonym": "0",
+      "review_status": "approved",
+      "left": "Число вентиляторов. Число вентиляторов системы охлаждения, шт.",
+      "left_label": "Число вентиляторов",
+      "left_comment": "Число вентиляторов системы охлаждения, шт.",
+      "left_category": "DataProperty",
+      "left_iri": "https://example.org/ontologies/videocard#fanCount",
+      "right": "Назначение видеокарты. Заявленная область использования модели видеокарты.",
+      "right_label": "Назначение видеокарты",
+      "right_comment": "Заявленная область использования модели видеокарты.",
+      "right_category": "Class",
+      "right_iri": "https://example.org/ontologies/videocard#Purpose",
+      "same_category": "false"
+    }
+  ],
+  "concept_pairs_sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+  "context_verification": {
+    "architecture": "qwen2",
+    "context_length_key": "qwen2.context_length",
+    "advertised_context_length": 32768,
+    "advertised_at_least_32000": true,
+    "actual_context_verified": false,
+    "limitation": "API metadata advertises capacity; no long-context inference was measured"
+  },
+  "acceptance_approved": false,
+  "main_blockers": [
+    "No single admissible threshold separates all labelled pairs",
+    "T04 debug first-response correctness has not been measured",
+    "Actual long-context inference has not been measured",
+    "Russian generation and eight-hour run budget have not been qualified"
+  ],
+  "holdout": {
+    "assessment": {
+      "count": 20,
+      "threshold": 0.9,
+      "errors": 1,
+      "rows": [
+        {
+          "id": "HOLDOUT01",
+          "score": 0.9827120969804011,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT02",
+          "score": 0.9589720928941987,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT03",
+          "score": 0.9464589584911286,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT04",
+          "score": 0.9173413050505257,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT05",
+          "score": 0.9469644844343389,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT06",
+          "score": 0.9568820648468348,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT07",
+          "score": 0.9590012364369478,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT08",
+          "score": 0.9307996984161079,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT09",
+          "score": 0.8486100971741453,
+          "expected": true,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT10",
+          "score": 0.9337722422659624,
+          "expected": true,
+          "duplicate": true
+        },
+        {
+          "id": "HOLDOUT11",
+          "score": 0.6388557501488236,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT12",
+          "score": 0.5814197814533218,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT13",
+          "score": 0.7008106174678725,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT14",
+          "score": 0.5442128031709007,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT15",
+          "score": 0.552206388786557,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT16",
+          "score": 0.6996255086898205,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT17",
+          "score": 0.5889604494104488,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT18",
+          "score": 0.6526141463467938,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT19",
+          "score": 0.7362401687098937,
+          "expected": false,
+          "duplicate": false
+        },
+        {
+          "id": "HOLDOUT20",
+          "score": 0.7636114225022638,
+          "expected": false,
+          "duplicate": false
+        }
+      ],
+      "analyst_approved": true
+    },
+    "inputs": [
+      {
+        "id": "HOLDOUT01",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Система охлаждения. Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_label": "Система охлаждения",
+        "left_comment": "Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CoolingSystem",
+        "right": "Охлаждающая система. Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "right_label": "Охлаждающая система",
+        "right_comment": "Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CoolingSystem",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT02",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Компонент модели. Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "left_label": "Компонент модели",
+        "left_comment": "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#ModelComponent",
+        "right": "Составная часть модели. Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "right_label": "Составная часть модели",
+        "right_comment": "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#ModelComponent",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT03",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Карта с памятью от 8 ГиБ. Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "left_label": "Карта с памятью от 8 ГиБ",
+        "left_comment": "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CardWith8GBMemory",
+        "right": "Карта с объёмом видеопамяти не менее 8 ГиБ. Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "right_label": "Карта с объёмом видеопамяти не менее 8 ГиБ",
+        "right_comment": "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CardWith8GBMemory",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT04",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Карта с активным охлаждением. Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "left_label": "Карта с активным охлаждением",
+        "left_comment": "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CardWithActiveCooling",
+        "right": "Видеокарта с вентиляторным охлаждением. Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_label": "Видеокарта с вентиляторным охлаждением",
+        "right_comment": "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CardWithActiveCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT05",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет архитектуру. Связывает модель GPU с архитектурой GPU.",
+        "left_label": "Имеет архитектуру",
+        "left_comment": "Связывает модель GPU с архитектурой GPU.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasArchitecture",
+        "right": "Построен на архитектуре. Связывает модель GPU с архитектурой GPU.",
+        "right_label": "Построен на архитектуре",
+        "right_comment": "Связывает модель GPU с архитектурой GPU.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasArchitecture",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT06",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет охлаждение. Связывает модель видеокарты с системой охлаждения.",
+        "left_label": "Имеет охлаждение",
+        "left_comment": "Связывает модель видеокарты с системой охлаждения.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasCooling",
+        "right": "Оснащена системой охлаждения. Связывает модель видеокарты с системой охлаждения.",
+        "right_label": "Оснащена системой охлаждения",
+        "right_comment": "Связывает модель видеокарты с системой охлаждения.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT07",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет интерфейс. Связывает модель видеокарты с интерфейсом подключения.",
+        "left_label": "Имеет интерфейс",
+        "left_comment": "Связывает модель видеокарты с интерфейсом подключения.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasInterface",
+        "right": "Подключается через интерфейс. Связывает модель видеокарты с интерфейсом подключения.",
+        "right_label": "Подключается через интерфейс",
+        "right_comment": "Связывает модель видеокарты с интерфейсом подключения.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasInterface",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT08",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет память. Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "left_label": "Имеет память",
+        "left_comment": "Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasMemory",
+        "right": "Оснащена конфигурацией видеопамяти. Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "right_label": "Оснащена конфигурацией видеопамяти",
+        "right_comment": "Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasMemory",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT09",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет тип памяти. Связывает конфигурацию видеопамяти с типом памяти.",
+        "left_label": "Имеет тип памяти",
+        "left_comment": "Связывает конфигурацию видеопамяти с типом памяти.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasMemoryType",
+        "right": "Использует технологию видеопамяти. Связывает конфигурацию видеопамяти с типом памяти.",
+        "right_label": "Использует технологию видеопамяти",
+        "right_comment": "Связывает конфигурацию видеопамяти с типом памяти.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasMemoryType",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT10",
+        "synonym": "1",
+        "review_status": "approved",
+        "left": "Имеет назначение. Связывает модель видеокарты с назначением.",
+        "left_label": "Имеет назначение",
+        "left_comment": "Связывает модель видеокарты с назначением.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasPurpose",
+        "right": "Предназначена для применения. Связывает модель видеокарты с назначением.",
+        "right_label": "Предназначена для применения",
+        "right_comment": "Связывает модель видеокарты с назначением.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasPurpose",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT11",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Система охлаждения. Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_label": "Система охлаждения",
+        "left_comment": "Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CoolingSystem",
+        "right": "Компонент модели. Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "right_label": "Компонент модели",
+        "right_comment": "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#ModelComponent",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT12",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Карта с памятью от 8 ГиБ. Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "left_label": "Карта с памятью от 8 ГиБ",
+        "left_comment": "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CardWith8GBMemory",
+        "right": "Карта с активным охлаждением. Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_label": "Карта с активным охлаждением",
+        "right_comment": "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CardWithActiveCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT13",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Система охлаждения. Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_label": "Система охлаждения",
+        "left_comment": "Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#CoolingSystem",
+        "right": "Карта с активным охлаждением. Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_label": "Карта с активным охлаждением",
+        "right_comment": "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CardWithActiveCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT14",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Компонент модели. Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "left_label": "Компонент модели",
+        "left_comment": "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "left_category": "Class",
+        "left_iri": "https://example.org/ontologies/videocard#ModelComponent",
+        "right": "Карта с памятью от 8 ГиБ. Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "right_label": "Карта с памятью от 8 ГиБ",
+        "right_comment": "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "right_category": "Class",
+        "right_iri": "https://example.org/ontologies/videocard#CardWith8GBMemory",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT15",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Имеет архитектуру. Связывает модель GPU с архитектурой GPU.",
+        "left_label": "Имеет архитектуру",
+        "left_comment": "Связывает модель GPU с архитектурой GPU.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasArchitecture",
+        "right": "Имеет охлаждение. Связывает модель видеокарты с системой охлаждения.",
+        "right_label": "Имеет охлаждение",
+        "right_comment": "Связывает модель видеокарты с системой охлаждения.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT16",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Имеет интерфейс. Связывает модель видеокарты с интерфейсом подключения.",
+        "left_label": "Имеет интерфейс",
+        "left_comment": "Связывает модель видеокарты с интерфейсом подключения.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasInterface",
+        "right": "Имеет память. Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "right_label": "Имеет память",
+        "right_comment": "Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasMemory",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT17",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Имеет тип памяти. Связывает конфигурацию видеопамяти с типом памяти.",
+        "left_label": "Имеет тип памяти",
+        "left_comment": "Связывает конфигурацию видеопамяти с типом памяти.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasMemoryType",
+        "right": "Имеет назначение. Связывает модель видеокарты с назначением.",
+        "right_label": "Имеет назначение",
+        "right_comment": "Связывает модель видеокарты с назначением.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasPurpose",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT18",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Имеет память. Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "left_label": "Имеет память",
+        "left_comment": "Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasMemory",
+        "right": "Имеет охлаждение. Связывает модель видеокарты с системой охлаждения.",
+        "right_label": "Имеет охлаждение",
+        "right_comment": "Связывает модель видеокарты с системой охлаждения.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasCooling",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT19",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Использует GPU. Связывает модель видеокарты с используемой моделью GPU.",
+        "left_label": "Использует GPU",
+        "left_comment": "Связывает модель видеокарты с используемой моделью GPU.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#usesGPU",
+        "right": "Имеет архитектуру. Связывает модель GPU с архитектурой GPU.",
+        "right_label": "Имеет архитектуру",
+        "right_comment": "Связывает модель GPU с архитектурой GPU.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasArchitecture",
+        "same_category": "true"
+      },
+      {
+        "id": "HOLDOUT20",
+        "synonym": "0",
+        "review_status": "approved",
+        "left": "Имеет видеовыход. Связывает модель видеокарты с поддерживаемым видеовыходом.",
+        "left_label": "Имеет видеовыход",
+        "left_comment": "Связывает модель видеокарты с поддерживаемым видеовыходом.",
+        "left_category": "ObjectProperty",
+        "left_iri": "https://example.org/ontologies/videocard#hasVideoOutput",
+        "right": "Имеет интерфейс. Связывает модель видеокарты с интерфейсом подключения.",
+        "right_label": "Имеет интерфейс",
+        "right_comment": "Связывает модель видеокарты с интерфейсом подключения.",
+        "right_category": "ObjectProperty",
+        "right_iri": "https://example.org/ontologies/videocard#hasInterface",
+        "same_category": "true"
+      }
+    ],
+    "sha256": "3b25323c08554337025c26c6c6508d982ebcc5fc16a8fdf14e8cdcedb5562b38",
+    "protocol": "Fixed calibration threshold; holdout does not retune it"
+  }
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "run": "control-201",
+    "old_trace_reproduced": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 168,
+      "best_F": 1.1208639929673487
+    },
+    "new_numeric_scores_prior_validity": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 168,
+      "best_F": 1.0967452893530962
+    },
+    "new_scores_possible_relaxed_kind": {
+      "matched_evaluations": 130,
+      "first_divergence": {
+        "id": 130,
+        "generation": 16,
+        "kind": "generated delta differs from archived candidate"
+      }
+    }
+  },
+  {
+    "run": "control-202",
+    "old_trace_reproduced": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 166,
+      "best_F": 1.1248706445574004
+    },
+    "new_numeric_scores_prior_validity": {
+      "matched_evaluations": 20,
+      "first_divergence": {
+        "id": 20,
+        "generation": 2,
+        "kind": "generated delta differs from archived candidate"
+      }
+    },
+    "new_scores_possible_relaxed_kind": {
+      "matched_evaluations": 20,
+      "first_divergence": {
+        "id": 20,
+        "generation": 2,
+        "kind": "generated delta differs from archived candidate"
+      }
+    }
+  },
+  {
+    "run": "control-203",
+    "old_trace_reproduced": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 163,
+      "best_F": 1.1208639929673487
+    },
+    "new_numeric_scores_prior_validity": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 163,
+      "best_F": 1.0967452893530962
+    },
+    "new_scores_possible_relaxed_kind": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 163,
+      "best_F": 1.0967452893530962
+    }
+  },
+  {
+    "run": "control-204",
+    "old_trace_reproduced": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 96,
+      "best_F": 1.049750106164048
+    },
+    "new_numeric_scores_prior_validity": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 96,
+      "best_F": 1.0271616281341909
+    },
+    "new_scores_possible_relaxed_kind": {
+      "matched_evaluations": 121,
+      "first_divergence": {
+        "id": 121,
+        "generation": 14,
+        "kind": "generated delta differs from archived candidate"
+      }
+    }
+  },
+  {
+    "run": "control-205",
+    "old_trace_reproduced": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 87,
+      "best_F": 1.1203308366610978
+    },
+    "new_numeric_scores_prior_validity": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 87,
+      "best_F": 1.0962236054815129
+    },
+    "new_scores_possible_relaxed_kind": {
+      "matched_evaluations": 170,
+      "first_divergence": null,
+      "best_id": 87,
+      "best_F": 1.0962236054815129
+    }
+  }
+]

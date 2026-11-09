@@ -1,0 +1,1 @@
+CompileCommand: exclude javax/swing/text/GlyphView.getBreakSpot bool exclude = true

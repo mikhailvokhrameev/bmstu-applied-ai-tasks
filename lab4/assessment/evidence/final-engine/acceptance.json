@@ -1,0 +1,64 @@
+{
+  "all_passed": true,
+  "groups": {
+    "T04": {
+      "passed": true,
+      "error": null,
+      "note": "4/4 checks passed; HermiT 1.4.3.456",
+      "log": "tests/results/T04.log"
+    },
+    "T05": {
+      "passed": true,
+      "error": null,
+      "note": "39/39 checks passed; exact set equality with expected.json",
+      "log": "tests/results/T05.log"
+    },
+    "T06": {
+      "passed": true,
+      "error": null,
+      "note": "9/9 checks passed; copy inconsistent (HermiT negative control), final consistent and clean",
+      "log": "tests/results/T06.log"
+    },
+    "T07": {
+      "passed": true,
+      "error": null,
+      "note": "8/8 checks passed; copy inconsistent (usesGPU exactly 1), final consistent with one GPU per model",
+      "log": "tests/results/T07.log"
+    },
+    "T08": {
+      "passed": true,
+      "error": null,
+      "note": "10/10 checks passed; copy inconsistent by range positiveInteger (not functionality), final holds the original positive value",
+      "log": "tests/results/T08.log"
+    },
+    "T09": {
+      "passed": true,
+      "error": null,
+      "note": "9/9 checks passed; copy consistent (open world) but card flags U05 hasMemory 0 vs 1; final card clean",
+      "log": "tests/results/T09.log"
+    },
+    "T10": {
+      "passed": true,
+      "error": null,
+      "note": "59/59 checks passed; 508 axioms identical after RDF/XML round trip",
+      "log": "tests/results/T10.log"
+    }
+  },
+  "negative_copy_sha256": {
+    "T06": "06a4395ca4f1db33f380592b70bb3237a2664c876f6e34fe093f336ed29bd704",
+    "T07": "db4c9fc4dac81ccaddd35f458a9c4e784c15f50aa7645075a93843d1f0376acd",
+    "T08": "68aad0348acaad242737430ff34ab8a9d5344e92eeb86c48b7c726b5ab43d03d",
+    "T09": "bf22da3e45a19df167d4ac11fbfcdee8d035c63b8af1ef38819930b514b1a582"
+  },
+  "ontology_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "ontology_iri": "https://example.org/ontologies/videocard",
+  "version_iri": "https://example.org/ontologies/videocard/2.0.0",
+  "java": "17.0.21",
+  "owl_api": "4.5.29.2024-05-13T12:11:03Z",
+  "hermit": "1.4.3.456",
+  "source": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/ontology/videocard.owl",
+  "evidence_dir": "lab4/assessment/evidence/final-engine",
+  "gui_verified": false,
+  "accepted": false,
+  "limitation": "Local OWL API/HermiT checks only; no Protégé GUI or OOPS result"
+}

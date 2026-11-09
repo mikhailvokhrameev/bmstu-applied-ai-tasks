@@ -1,0 +1,11 @@
+{
+  "expected_code": "NEGATIVE_TESTS",
+  "reason": "Deleting positiveInteger range makes T08 no longer detect negative volume",
+  "candidate": {
+    "add": [],
+    "remove": [
+      "DataPropertyRange(:volumeGiB xsd:positiveInteger)"
+    ]
+  },
+  "duplicate": false
+}

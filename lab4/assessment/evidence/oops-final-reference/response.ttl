@@ -1,0 +1,23 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/929eab3c-a3a0-41b6-a04b-9709661dca2d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/82af605b-dda0-4267-91df-bace17f7acf4> , <http://oops.linkeddata.es/data/af6ce17c-eb47-40e9-a54f-f30283ca1db5> .
+
+<http://oops.linkeddata.es/data/af6ce17c-eb47-40e9-a54f-f30283ca1db5>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "https://example.org/ontologies/videocard#ModelComponent"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P04 - Creating unconnected ontology elements";
+        oops:hasDescription             "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Creating unconnected ontology elements";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/82af605b-dda0-4267-91df-bace17f7acf4>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "https://example.org/ontologies/videocard#gpuProducedBy"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasVideoOutput"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasMemoryType"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#producedByManufacturer"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P13-N - Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasDescription             "This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasNumberAffectedElements  4 .

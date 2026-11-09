@@ -1,0 +1,20 @@
+{
+  "review_performed_by": "AI at user request",
+  "decided_utc": "2026-11-01T21:13:12.987474+00:00",
+  "model": "intfloat/multilingual-e5-large-instruct",
+  "revision": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+  "instruction": "Retrieve semantically similar text.",
+  "threshold": 0.960735025415394,
+  "control_errors": 0,
+  "control_count": 20,
+  "additional_validation_errors": 0,
+  "additional_validation_count": 20,
+  "separating_interval": {
+    "exclusive_lower": 0.9597718551929688,
+    "inclusive_upper": 0.9616981956378192
+  },
+  "decision": "Accept midpoint threshold for fixed calibration representation before debug and series; T04 not approved until debug first-response check",
+  "source_sha256": "5f330c63086759e77262cd07268da18692e46a950bb588d9378f18e782382146",
+  "calibration_sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+  "limitation": "Small semisynthetic ontology-grounded set with shared definitions; no claim of perfect domain-wide duplicate detection"
+}

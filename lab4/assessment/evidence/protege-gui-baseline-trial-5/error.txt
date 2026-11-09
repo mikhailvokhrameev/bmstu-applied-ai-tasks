@@ -1,0 +1,5 @@
+java.lang.IllegalStateException: DL Query results did not refresh for Q1 [P1]
+	at AcceptanceAgent.uiQueries(AcceptanceAgent.java:280)
+	at AcceptanceAgent.run(AcceptanceAgent.java:505)
+	at AcceptanceAgent.lambda$premain$32(AcceptanceAgent.java:597)
+	at java.base/java.lang.Thread.run(Thread.java:840)

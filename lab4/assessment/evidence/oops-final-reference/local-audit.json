@@ -1,0 +1,35 @@
+{
+  "ontology_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "counts": {
+    "A": 508,
+    "Al": 271,
+    "C": 15,
+    "DisjointClasses": 3,
+    "E": 2,
+    "EquivalentClasses": 2,
+    "H": 5,
+    "Individuals": 41,
+    "Pd": 7,
+    "Po": 16,
+    "Q": 4,
+    "SubClassOf": 16
+  },
+  "violations": [
+    {
+      "code": "P13",
+      "key": "https://example.org/ontologies/videocard#gpuProducedBy"
+    },
+    {
+      "code": "P13",
+      "key": "https://example.org/ontologies/videocard#hasMemoryType"
+    },
+    {
+      "code": "P13",
+      "key": "https://example.org/ontologies/videocard#hasVideoOutput"
+    },
+    {
+      "code": "P13",
+      "key": "https://example.org/ontologies/videocard#producedByManufacturer"
+    }
+  ]
+}

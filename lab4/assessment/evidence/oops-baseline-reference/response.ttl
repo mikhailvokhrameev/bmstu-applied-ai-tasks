@@ -1,0 +1,23 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/313834f3-b29e-4688-8205-15e6665921c6>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "https://example.org/ontologies/videocard#ModelComponent"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P04 - Creating unconnected ontology elements";
+        oops:hasDescription             "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Creating unconnected ontology elements";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/87ab00e7-baa2-4751-bded-90c1ecd40674>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/6022ef20-e3d7-44bf-b9d1-335080c66588> , <http://oops.linkeddata.es/data/313834f3-b29e-4688-8205-15e6665921c6> .
+
+<http://oops.linkeddata.es/data/6022ef20-e3d7-44bf-b9d1-335080c66588>
+        a                               oops:pitfall;
+        oops:hasAffectedElement         "https://example.org/ontologies/videocard#usesGPU"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasPurpose"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasVideoOutput"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasInterface"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasMemory"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasMemoryType"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#gpuProducedBy"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasArchitecture"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#hasCooling"^^<http://www.w3.org/2001/XMLSchema#anyURI> , "https://example.org/ontologies/videocard#producedByManufacturer"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+        oops:hasCode                    "P13-N - Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasDescription             "This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.";
+        oops:hasImportanceLevel         "MINOR";
+        oops:hasName                    "Inverse relationships not explicitly declared - No Suggestion";
+        oops:hasNumberAffectedElements  10 .

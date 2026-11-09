@@ -1,0 +1,13 @@
+Prefix(:=<https://example.org/ontologies/videocard#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Ontology(<https://example.org/fixtures/02-zero>
+Declaration(Class(:A))
+AnnotationAssertion(rdfs:label :A "Понятие A"@ru)
+AnnotationAssertion(rdfs:comment :A "Контрольное описание A"@ru)
+Declaration(ObjectProperty(:p))
+AnnotationAssertion(rdfs:label :p "Понятие p"@ru)
+AnnotationAssertion(rdfs:comment :p "Контрольное описание p"@ru)
+ObjectPropertyDomain(:p :A)
+ObjectPropertyRange(:p :A)
+)

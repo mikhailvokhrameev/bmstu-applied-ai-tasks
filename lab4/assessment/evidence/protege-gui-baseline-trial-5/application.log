@@ -1,0 +1,125 @@
+CompileCommand: exclude javax/swing/text/GlyphView.getBreakSpot bool exclude = true
+[34m********************************************************************************[0;39m 
+[34m**                                  Protege                                   **[0;39m 
+[34m********************************************************************************[0;39m 
+[34m[0;39m 
+[34m----------------- Initialising and Starting the OSGi Framework -----------------[0;39m 
+[34mFrameworkFactory Class: org.apache.felix.framework.FrameworkFactory[0;39m 
+[34m[0;39m 
+[34mThe OSGi framework has been initialised[0;39m 
+[34m------------------------------- Starting Bundles -------------------------------[0;39m 
+[34mStarting bundle org.protege.common[0;39m 
+[34mStarting bundle org.eclipse.equinox.common[0;39m 
+[34mStarting bundle org.eclipse.equinox.supplement[0;39m 
+[34mStarting bundle org.protege.editor.core.application[0;39m 
+[34mStarting bundle org.eclipse.equinox.registry[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-dynamic[0;39m 
+[34mStarting bundle log4j.over.slf4j[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-tf[0;39m 
+[34mStarting bundle org.objectweb.asm.util[0;39m 
+[34mStarting bundle org.glassfish.external.management-api[0;39m 
+[34mStarting bundle jul.to.slf4j[0;39m 
+[34mStarting bundle org.glassfish.corba.glassfish-corba-omgapi[0;39m 
+[34mStarting bundle com.sun.xml.bind.jaxb-impl[0;39m 
+[34mStarting bundle org.objectweb.asm[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-basic[0;39m 
+[34mStarting bundle ch.qos.logback.core[0;39m 
+[34mStarting bundle slf4j.api[0;39m 
+[34mStarting bundle org.apache.commons.commons-io[0;39m 
+[34mStarting bundle jaxb-api[0;39m 
+[34mStarting bundle com.sun.xml.bind.jaxb-core[0;39m 
+[34mStarting bundle org.semanticweb.owl.owlapi[0;39m 
+[34mStarting bundle ch.qos.logback.classic[0;39m 
+[34mStarting bundle org.objectweb.asm.tree[0;39m 
+[34mStarting bundle org.eclipse.equinox.common[0;39m 
+[34mStarting bundle org.protege.common[0;39m 
+[34mStarting bundle jakarta.activation-api[0;39m 
+[34mStarting bundle org.apache.felix.main[0;39m 
+[34mStarting bundle org.protege.editor.owl[0;39m 
+[34mStarting bundle org.jsr-305[0;39m 
+[34mStarting bundle org.apache.servicemix.bundles.javax-inject[0;39m 
+[34mStarting bundle org.protege.editor.core.application[0;39m 
+[34mStarting bundle com.googlecode.javaewah.JavaEWAH[0;39m 
+[34mStarting bundle org.eclipse.jgit[0;39m 
+[34mStarting bundle com.google.guava[0;39m 
+[34mStarting bundle org.objectweb.asm.tree.analysis[0;39m 
+[34mStarting bundle org.eclipse.equinox.registry[0;39m 
+[34mStarting bundle org.eclipse.equinox.supplement[0;39m 
+[34mStarting bundle org.protege.editor.owl.rdf[0;39m 
+[34mStarting bundle existentialquery[0;39m 
+[34mStarting bundle org.protege.owl.rdf[0;39m 
+[34mStarting bundle uk.ac.manchester.cs.owl.explanation[0;39m 
+[34mStarting bundle org.protege.ontograf[0;39m 
+[34mStarting bundle org.coode.browser[0;39m 
+[34mStarting bundle org.coode.owlviz[0;39m 
+[34mStarting bundle org.semanticweb.hermit[0;39m 
+[34mStarting bundle cellfie[0;39m 
+[34mStarting bundle swrltab-plugin[0;39m 
+[34mStarting bundle org.coode.dlquery[0;39m 
+[34mStarting bundle org.semanticweb.elk[0;39m 
+[34mStarting bundle code-generation[0;39m 
+[34mThe OSGi framework has been started[0;39m 
+[34m[0;39m 
+[34m------------------------------------ Protege -----------------------------------[0;39m 
+[34mProtege Desktop[0;39m 
+[34mVersion 5.6.9, Build [0;39m 
+[34m[0;39m 
+[34m[0;39m 
+[34m----------------------------------- Platform -----------------------------------[0;39m 
+[34mJava: JVM 17.0.21+9  Memory: 805M[0;39m 
+[34mLanguage: en, Country: US[0;39m 
+[34mFramework: Apache Software Foundation (1.9) [0;39m 
+[34mOS: macosx (26.6.2)[0;39m 
+[34mProcessor: aarch64
+[0;39m 
+[34m[0;39m 
+[34m------------------------------------ Plugins -----------------------------------[0;39m 
+[34mPlugin: SPARQL Query Plugin (3.0.0)[0;39m 
+[34mPlugin: Existential Query (2.0.0)[0;39m 
+[34mPlugin: OWLAPI RDF Library (3.0.1)[0;39m 
+[34mPlugin: Explanation Workbench (3.0.1)[0;39m 
+[34mPlugin: OntoGraf (2.0.3)[0;39m 
+[34mPlugin: Browser View (OWLDoc) (3.0.3)[0;39m 
+[34mPlugin: OWLViz (5.0.3)[0;39m 
+[34mPlugin: HermiT Reasoner (1.4.3.456)[0;39m 
+[34mPlugin: Cellfie Protege 5.0+ Plugin (2.1.0)[0;39m 
+[34mPlugin: SWRLTab Plugin (2.0.10)[0;39m 
+[34mPlugin: DL Query (4.0.1)[0;39m 
+[34mPlugin: ELK Reasoner Protege Plug-in (0.6.0)[0;39m 
+[34mPlugin: OWL Code Generation Plug-in (2.0.0)[0;39m 
+[34m[0;39m 
+[34mProcessing command line argument: file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl[0;39m 
+[34m------------------------------- Auto-update Check ------------------------------[0;39m 
+[34mCreating and setting up (default) editor kit for file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl[0;39m 
+[34mOWL API Version: 4.5.29.2024-05-13T12:11:03Z[0;39m 
+[34mAuto-update last performed: Mon Nov 02 01:34:51 MSK 2026[0;39m 
+[34mAuto-update has been performed today.  Not performing it again.[0;39m 
+[34m[0;39m 
+[34m------------------------------- Loading Ontology -------------------------------[0;39m 
+[34mLoading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl[0;39m 
+[34mFinished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl[0;39m 
+[34m[GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git[0;39m 
+[34m[GitRepo] On branch: dev[0;39m 
+[34m[GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git[0;39m 
+[34m[GitRepo] On branch: dev[0;39m 
+[34mLoading for ontology and imports closure successfully completed in 3229 ms[0;39m 
+[34m[0;39m 
+[34m[GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git[0;39m 
+[34m[GitRepo] On branch: dev[0;39m 
+[34mOBO Foundry registry loaded: 267 entries[0;39m 
+[34m[IdRanges] Updating entity creation preferences[0;39m 
+[34m[GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git[0;39m 
+[34m[GitRepo] On branch: dev[0;39m 
+[34m------------------------------- Running Reasoner -------------------------------[0;39m 
+[34mPre-computing inferences:[0;39m 
+[34m    - class hierarchy[0;39m 
+[34m    - class assertions[0;39m 
+[34mOntologies processed in 81 ms by HermiT[0;39m 
+[34m[0;39m 
+[34m[GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git[0;39m 
+[34m[GitRepo] On branch: dev[0;39m 
+[34m------------------------------ Executing DL Query ------------------------------[0;39m 
+[34mComputed results for Instances in 18 ms[0;39m 
+[34m[0;39m 
+[34m----------------------- Shutting down Protege -----------------------[0;39m 
+[34mCleaning up temporary directories[0;39m 

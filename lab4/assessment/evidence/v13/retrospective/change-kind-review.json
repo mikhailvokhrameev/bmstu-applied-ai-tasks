@@ -1,0 +1,221 @@
+[
+  {
+    "run": "control-201",
+    "id": 10,
+    "generation": 1,
+    "classes": [
+      "Declaration(Class(:Search4235852729943590070))"
+    ],
+    "relations": [],
+    "B": 0.9490526315789474,
+    "S": 0.978482042633557,
+    "formula_F": 0.9286309575141211,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-201",
+    "id": 23,
+    "generation": 2,
+    "classes": [
+      "Declaration(Class(:Search4235852729943590070))",
+      "Declaration(Class(:Search9405884476052063841))"
+    ],
+    "relations": [
+      "SubClassOf(:Search9405884476052063841 <https://example.org/ontologies/videocard#ActiveCooling>)"
+    ],
+    "B": 0.9434289189798555,
+    "S": 0.9105801434189359,
+    "formula_F": 0.8590676403502484,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-201",
+    "id": 126,
+    "generation": 15,
+    "classes": [
+      "Declaration(Class(:Search5433626727011654409))"
+    ],
+    "relations": [],
+    "B": 0.9538978062011054,
+    "S": 0.978482042633557,
+    "formula_F": 0.9333718738753265,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-202",
+    "id": 24,
+    "generation": 2,
+    "classes": [
+      "Declaration(Class(:Search6400290682472424662))"
+    ],
+    "relations": [],
+    "B": 0.9536262228517662,
+    "S": 0.978482042633557,
+    "formula_F": 0.9331061344449199,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-202",
+    "id": 91,
+    "generation": 11,
+    "classes": [
+      "Declaration(Class(:Search7009209610161058180))"
+    ],
+    "relations": [],
+    "B": 0.9581869960331668,
+    "S": 0.978482042633557,
+    "formula_F": 0.937568769103445,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-202",
+    "id": 132,
+    "generation": 16,
+    "classes": [
+      "Declaration(Class(:Search7009209610161058180))"
+    ],
+    "relations": [],
+    "B": 0.9584532785446194,
+    "S": 0.978482042633557,
+    "formula_F": 0.9378293217591687,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-202",
+    "id": 147,
+    "generation": 18,
+    "classes": [
+      "Declaration(Class(:Search7009209610161058180))"
+    ],
+    "relations": [],
+    "B": 0.9584532785446194,
+    "S": 0.978482042633557,
+    "formula_F": 0.9378293217591687,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-202",
+    "id": 159,
+    "generation": 19,
+    "classes": [
+      "Declaration(Class(:Search7009209610161058180))"
+    ],
+    "relations": [],
+    "B": 0.9587184764022576,
+    "S": 0.978482042633557,
+    "formula_F": 0.9380888131006127,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-203",
+    "id": 121,
+    "generation": 14,
+    "classes": [
+      "Declaration(Class(:Search9151230276190242235))"
+    ],
+    "relations": [],
+    "B": 0.9544376061640478,
+    "S": 0.978482042633557,
+    "formula_F": 0.9339000584456799,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-204",
+    "id": 51,
+    "generation": 6,
+    "classes": [
+      "Declaration(Class(:Search17406525568336240431))"
+    ],
+    "relations": [],
+    "B": 0.9536262228517662,
+    "S": 0.978482042633557,
+    "formula_F": 0.9331061344449199,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-204",
+    "id": 113,
+    "generation": 13,
+    "classes": [
+      "Declaration(Class(:Search17406525568336240431))"
+    ],
+    "relations": [],
+    "B": 0.95416826498171,
+    "S": 0.978482042633557,
+    "formula_F": 0.9336365129354207,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  },
+  {
+    "run": "control-204",
+    "id": 116,
+    "generation": 14,
+    "classes": [
+      "Declaration(Class(:Search17406525568336240431))"
+    ],
+    "relations": [],
+    "B": 0.9538978062011054,
+    "S": 0.978482042633557,
+    "formula_F": 0.9333718738753265,
+    "restrictions": {
+      "acyclic": true,
+      "structure": true,
+      "relative": true,
+      "size": true
+    }
+  }
+]

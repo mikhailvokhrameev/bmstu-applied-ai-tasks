@@ -1,0 +1,55 @@
+{
+  "pid": 5309,
+  "started_at": 1793571800.486623,
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-tomcat-10.1.61/bin/catalina.sh",
+    "run"
+  ],
+  "upstream_commit": "11572ea6b31cba29dd3f8a443e24311652f059de",
+  "endpoint": "http://127.0.0.1:11438/oops-reference/rest",
+  "http_port": 11438,
+  "shutdown_port": 11439,
+  "bind": "127.0.0.1",
+  "manager_deployed": false,
+  "java_home": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/jdk-17.0.21+9/Contents/Home",
+  "tomcat_version": "10.1.61",
+  "active_processors": 2,
+  "war_sha256": "2fab177a7de24180aee24e278ff5d27e9ed3d222b7ac0394080f43c50b7c251f",
+  "instance": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-instance",
+  "console_log": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-console.log",
+  "status": "restarting qualified instance; no ontology submitted by restart",
+  "official_fixtures_passed": true,
+  "baseline_sent": true,
+  "final_sent": true,
+  "upstream_sources_unchanged": true,
+  "source_file_count": 273,
+  "comparator_negative_control_rejected": true,
+  "baseline_attempts": 1,
+  "baseline_evidence": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/oops-baseline-reference",
+  "baseline_outcome": "response saved",
+  "restarts": [
+    {
+      "pid": 5309,
+      "started_at": 1793606042.024447,
+      "command": [
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-tomcat-10.1.61/bin/catalina.sh",
+        "run"
+      ],
+      "console_log": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/tomcat-restart-1793606042.log",
+      "baseline_sent_preserved": true,
+      "final_sent_preserved": false,
+      "upstream_source_hashes_verified": 273,
+      "war_sha256": "2fab177a7de24180aee24e278ff5d27e9ed3d222b7ac0394080f43c50b7c251f"
+    }
+  ],
+  "final_attempts": 1,
+  "final_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "final_evidence": "lab4/assessment/evidence/oops-final-reference",
+  "final_outcome": "verified RDF response saved"
+}

@@ -1,0 +1,874 @@
+{
+  "schema": 1,
+  "approved": true,
+  "review_status": "approved-after-formal-validation",
+  "review_performed_by": "ИИ по поручению пользователя",
+  "source": {
+    "run": "lab4/runs/series-v1/model-102",
+    "seed": 102,
+    "candidate_id": 120,
+    "generation": 14,
+    "F": 1.3270902684891568,
+    "log_sha256": "4a60f2c90965c293c3acf85b48e4d79f1a09ac774b43d8a21d5966569ffacfbd",
+    "original_delta": {
+      "add": [
+        "AnnotationAssertion(rdfs:comment :architectureUsedByGPU \"От модели архитектуры к модели GPU: объект отношения — GPU, использующая данную архитектуру. Если hasArchitecture(a,g), то architectureUsedByGPU(g,a).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :coolingUsedByCard \"От системы охлаждения до модели видеокарты: объект отношения — карта, использующая данную систему охлаждения.\"@ru)",
+        "AnnotationAssertion(rdfs:comment :coolingUsedByVideoCard \"От модели охлаждения к модели видеокарты: объект отношения — карта, использующая данную модель охлаждения. Если hasCooling(v,c), то coolingUsedByVideoCard(c,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :gpuProducedByVideoCard \"От модели производителя к модели видеокарты: объект отношения — карта, выпущенная данным производителем. Если gpuProducedBy(v,g), то gpuProducedByVideoCard(g,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :gpuUsedByVideoCard \"От модели GPU к модели видеокарты: объект отношения — карта, использующая данную модель GPU. Если usesGPU(v,g), то gpuUsedByVideoCard(g,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :interfaceUsedByCard \"От интерфейса подключения к модели видеокарты: объект отношения — карта, использующая данный интерфейс. Если hasInterface(v,i), то interfaceUsedByCard(i,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :memoryUsedByCard \"От конфигурации видеопамяти к модели видеокарты: объект отношения — карта, использующая данную конфигурацию. Если hasMemory(v,m), то memoryUsedByCard(m,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :producedByManufacturerInverse \"Обратное отношение от производителя модели видеокарты до производителя\"@ru)",
+        "AnnotationAssertion(rdfs:comment :purposeUsedByCard \"От назначения до модели видеокарты: объект отношения — карта, предназначенная для данного назначения. Если hasPurpose(v,p), то purposeUsedByCard(p,v).\"@ru)",
+        "AnnotationAssertion(rdfs:label :architectureUsedByGPU \"используется моделью GPU\"@ru)",
+        "AnnotationAssertion(rdfs:label :coolingUsedByCard \"Используется моделью видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :coolingUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :gpuProducedByVideoCard \"производитель модели видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :gpuUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :interfaceUsedByCard \"Используется моделью видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :memoryUsedByCard \"Используется моделью видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :producedByManufacturerInverse \"Производитель модели видеокарты\"@ru)",
+        "AnnotationAssertion(rdfs:label :purposeUsedByCard \"Используется моделью видеокарты\"@ru)",
+        "Declaration(ObjectProperty(:architectureUsedByGPU))",
+        "Declaration(ObjectProperty(:coolingUsedByCard))",
+        "Declaration(ObjectProperty(:coolingUsedByVideoCard))",
+        "Declaration(ObjectProperty(:gpuProducedByVideoCard))",
+        "Declaration(ObjectProperty(:gpuUsedByVideoCard))",
+        "Declaration(ObjectProperty(:interfaceUsedByCard))",
+        "Declaration(ObjectProperty(:memoryUsedByCard))",
+        "Declaration(ObjectProperty(:producedByManufacturerInverse))",
+        "Declaration(ObjectProperty(:purposeUsedByCard))",
+        "InverseObjectProperties(:architectureUsedByGPU :hasArchitecture)",
+        "InverseObjectProperties(:coolingUsedByCard :hasCooling)",
+        "InverseObjectProperties(:coolingUsedByVideoCard :hasCooling)",
+        "InverseObjectProperties(:gpuProducedByVideoCard :producedByManufacturer)",
+        "InverseObjectProperties(:gpuUsedByVideoCard :usesGPU)",
+        "InverseObjectProperties(:interfaceUsedByCard :hasInterface)",
+        "InverseObjectProperties(:memoryUsedByCard :hasMemory)",
+        "InverseObjectProperties(:producedByManufacturer :producedByManufacturerInverse)",
+        "InverseObjectProperties(:producedByManufacturerInverse :producedByManufacturer)",
+        "InverseObjectProperties(:purposeUsedByCard :hasPurpose)",
+        "ObjectPropertyDomain(:architectureUsedByGPU :GPUArchitecture)",
+        "ObjectPropertyDomain(:coolingUsedByCard :CoolingSystem)",
+        "ObjectPropertyDomain(:coolingUsedByVideoCard :CoolingSystem)",
+        "ObjectPropertyDomain(:gpuProducedByVideoCard :Manufacturer)",
+        "ObjectPropertyDomain(:gpuUsedByVideoCard :GPUModel)",
+        "ObjectPropertyDomain(:interfaceUsedByCard :ConnectionInterface)",
+        "ObjectPropertyDomain(:memoryUsedByCard :MemoryConfiguration)",
+        "ObjectPropertyDomain(:producedByManufacturerInverse :Manufacturer)",
+        "ObjectPropertyDomain(:purposeUsedByCard :Purpose)",
+        "ObjectPropertyRange(:architectureUsedByGPU :GPUModel)",
+        "ObjectPropertyRange(:coolingUsedByCard :VideoCardModel)",
+        "ObjectPropertyRange(:coolingUsedByVideoCard :VideoCardModel)",
+        "ObjectPropertyRange(:gpuProducedByVideoCard :VideoCardModel)",
+        "ObjectPropertyRange(:gpuUsedByVideoCard :VideoCardModel)",
+        "ObjectPropertyRange(:interfaceUsedByCard :VideoCardModel)",
+        "ObjectPropertyRange(:memoryUsedByCard :VideoCardModel)",
+        "ObjectPropertyRange(:producedByManufacturerInverse :VideoCardModel)",
+        "ObjectPropertyRange(:purposeUsedByCard :VideoCardModel)"
+      ],
+      "remove": []
+    }
+  },
+  "methodology": "Поаксиомная предметная проверка определения, направления, domain/range, границ и смысловых дубликатов; неверные компоненты отменяются целиком; новые аксиомы и ручные исправления не вносятся.",
+  "components": [
+    {
+      "entity": "architectureUsedByGPU",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "hasArchitecture",
+      "domain": "GPUArchitecture",
+      "range": "GPUModel",
+      "reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены.",
+      "first_appearance_candidate": 49
+    },
+    {
+      "entity": "coolingUsedByCard",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "hasCooling",
+      "domain": "CoolingSystem",
+      "range": "VideoCardModel",
+      "reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата.",
+      "first_appearance_candidate": 4
+    },
+    {
+      "entity": "coolingUsedByVideoCard",
+      "category": "ObjectProperty",
+      "decision": "reject",
+      "direct_property": "hasCooling",
+      "domain": "CoolingSystem",
+      "range": "VideoCardModel",
+      "reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком.",
+      "first_appearance_candidate": 29
+    },
+    {
+      "entity": "gpuProducedByVideoCard",
+      "category": "ObjectProperty",
+      "decision": "reject",
+      "direct_property": "producedByManufacturer",
+      "domain": "Manufacturer",
+      "range": "VideoCardModel",
+      "reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком.",
+      "first_appearance_candidate": 14
+    },
+    {
+      "entity": "gpuUsedByVideoCard",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "usesGPU",
+      "domain": "GPUModel",
+      "range": "VideoCardModel",
+      "reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную.",
+      "first_appearance_candidate": 2
+    },
+    {
+      "entity": "interfaceUsedByCard",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "hasInterface",
+      "domain": "ConnectionInterface",
+      "range": "VideoCardModel",
+      "reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует.",
+      "first_appearance_candidate": 120
+    },
+    {
+      "entity": "memoryUsedByCard",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "hasMemory",
+      "domain": "MemoryConfiguration",
+      "range": "VideoCardModel",
+      "reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты.",
+      "first_appearance_candidate": 0
+    },
+    {
+      "entity": "producedByManufacturerInverse",
+      "category": "ObjectProperty",
+      "decision": "reject",
+      "direct_property": "producedByManufacturer",
+      "domain": "Manufacturer",
+      "range": "VideoCardModel",
+      "reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком.",
+      "first_appearance_candidate": 13
+    },
+    {
+      "entity": "purposeUsedByCard",
+      "category": "ObjectProperty",
+      "decision": "accept",
+      "direct_property": "hasPurpose",
+      "domain": "Purpose",
+      "range": "VideoCardModel",
+      "reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты.",
+      "first_appearance_candidate": 39
+    }
+  ],
+  "decisions": [
+    {
+      "index": 0,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :architectureUsedByGPU \"От модели архитектуры к модели GPU: объект отношения — GPU, использующая данную архитектуру. Если hasArchitecture(a,g), то architectureUsedByGPU(g,a).\"@ru)",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 1,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :coolingUsedByCard \"От системы охлаждения до модели видеокарты: объект отношения — карта, использующая данную систему охлаждения.\"@ru)",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 2,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :coolingUsedByVideoCard \"От модели охлаждения к модели видеокарты: объект отношения — карта, использующая данную модель охлаждения. Если hasCooling(v,c), то coolingUsedByVideoCard(c,v).\"@ru)",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 3,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :gpuProducedByVideoCard \"От модели производителя к модели видеокарты: объект отношения — карта, выпущенная данным производителем. Если gpuProducedBy(v,g), то gpuProducedByVideoCard(g,v).\"@ru)",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 4,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :gpuUsedByVideoCard \"От модели GPU к модели видеокарты: объект отношения — карта, использующая данную модель GPU. Если usesGPU(v,g), то gpuUsedByVideoCard(g,v).\"@ru)",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 5,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :interfaceUsedByCard \"От интерфейса подключения к модели видеокарты: объект отношения — карта, использующая данный интерфейс. Если hasInterface(v,i), то interfaceUsedByCard(i,v).\"@ru)",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 6,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :memoryUsedByCard \"От конфигурации видеопамяти к модели видеокарты: объект отношения — карта, использующая данную конфигурацию. Если hasMemory(v,m), то memoryUsedByCard(m,v).\"@ru)",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 7,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :producedByManufacturerInverse \"Обратное отношение от производителя модели видеокарты до производителя\"@ru)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 8,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:comment :purposeUsedByCard \"От назначения до модели видеокарты: объект отношения — карта, предназначенная для данного назначения. Если hasPurpose(v,p), то purposeUsedByCard(p,v).\"@ru)",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    },
+    {
+      "index": 9,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :architectureUsedByGPU \"используется моделью GPU\"@ru)",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 10,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :coolingUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 11,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :coolingUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 12,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :gpuProducedByVideoCard \"производитель модели видеокарты\"@ru)",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 13,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :gpuUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 14,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :interfaceUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 15,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :memoryUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 16,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :producedByManufacturerInverse \"Производитель модели видеокарты\"@ru)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 17,
+      "operation": "add",
+      "axiom": "AnnotationAssertion(rdfs:label :purposeUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Русская аннотация передаёт смысл принятой связи; исходная строка сохранена без ручного изменения.",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    },
+    {
+      "index": 18,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:architectureUsedByGPU))",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 19,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:coolingUsedByCard))",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 20,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:coolingUsedByVideoCard))",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 21,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:gpuProducedByVideoCard))",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 22,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:gpuUsedByVideoCard))",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 23,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:interfaceUsedByCard))",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 24,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:memoryUsedByCard))",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 25,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:producedByManufacturerInverse))",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 26,
+      "operation": "add",
+      "axiom": "Declaration(ObjectProperty(:purposeUsedByCard))",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объявление нового объектного свойства необходимо для принятой обратной связи.",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    },
+    {
+      "index": 27,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:architectureUsedByGPU :hasArchitecture)",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает architectureUsedByGPU(r,d) обратной hasArchitecture(d,r).",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 28,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:coolingUsedByCard :hasCooling)",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает coolingUsedByCard(r,d) обратной hasCooling(d,r).",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 29,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:coolingUsedByVideoCard :hasCooling)",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 30,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:gpuProducedByVideoCard :producedByManufacturer)",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 31,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:gpuUsedByVideoCard :usesGPU)",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает gpuUsedByVideoCard(r,d) обратной usesGPU(d,r).",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 32,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:interfaceUsedByCard :hasInterface)",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает interfaceUsedByCard(r,d) обратной hasInterface(d,r).",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 33,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:memoryUsedByCard :hasMemory)",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает memoryUsedByCard(r,d) обратной hasMemory(d,r).",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 34,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:producedByManufacturer :producedByManufacturerInverse)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 35,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:producedByManufacturerInverse :producedByManufacturer)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 36,
+      "operation": "add",
+      "axiom": "InverseObjectProperties(:purposeUsedByCard :hasPurpose)",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Аксиома делает purposeUsedByCard(r,d) обратной hasPurpose(d,r).",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    },
+    {
+      "index": 37,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:architectureUsedByGPU :GPUArchitecture)",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит GPUArchitecture, что совпадает с range прямого свойства.",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 38,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:coolingUsedByCard :CoolingSystem)",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит CoolingSystem, что совпадает с range прямого свойства.",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 39,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:coolingUsedByVideoCard :CoolingSystem)",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 40,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:gpuProducedByVideoCard :Manufacturer)",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 41,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:gpuUsedByVideoCard :GPUModel)",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит GPUModel, что совпадает с range прямого свойства.",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 42,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:interfaceUsedByCard :ConnectionInterface)",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит ConnectionInterface, что совпадает с range прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 43,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:memoryUsedByCard :MemoryConfiguration)",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит MemoryConfiguration, что совпадает с range прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 44,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:producedByManufacturerInverse :Manufacturer)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 45,
+      "operation": "add",
+      "axiom": "ObjectPropertyDomain(:purposeUsedByCard :Purpose)",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Субъект обратной связи принадлежит Purpose, что совпадает с range прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    },
+    {
+      "index": 46,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:architectureUsedByGPU :GPUModel)",
+      "component": "architectureUsedByGPU",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит GPUModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Метка и определение задают отношение от архитектуры к модели GPU. Формула hasArchitecture(a,g) => architectureUsedByGPU(g,a) верно переставляет произвольные переменные; их буквы не задают тип. Границы предметной области сохранены."
+    },
+    {
+      "index": 47,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:coolingUsedByCard :VideoCardModel)",
+      "component": "coolingUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит VideoCardModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Обратная связь от системы охлаждения к использующей её модели видеокарты определена однозначно. Это первый корректный компонент для hasCooling в данном запуске; сохраняется вместо более позднего дубликата."
+    },
+    {
+      "index": 48,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:coolingUsedByVideoCard :VideoCardModel)",
+      "component": "coolingUsedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Второе свойство задаёт ту же обратную связь hasCooling с теми же domain/range, что уже задаёт coolingUsedByCard. Это смысловой дубликат, создающий формальный рост числа свойств без нового знания. Компонент отменяется целиком."
+    },
+    {
+      "index": 49,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:gpuProducedByVideoCard :VideoCardModel)",
+      "component": "gpuProducedByVideoCard",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Имя gpuProducedByVideoCard указывает на GPU и видеокарту, но OWL-аксиома инвертирует producedByManufacturer (производитель -> модель видеокарты). Комментарий вместо него ссылается на gpuProducedBy, относящееся к модели GPU. Метка обозначает производителя, а не направление отношения. Несогласованный компонент отменяется целиком."
+    },
+    {
+      "index": 50,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:gpuUsedByVideoCard :VideoCardModel)",
+      "component": "gpuUsedByVideoCard",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит VideoCardModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Определение, формула и domain/range однозначно связывают модель GPU с использующей её моделью видеокарты. Опечатка «моделю» в русской метке отмечена; она не меняет предметный смысл и не исправляется вручную."
+    },
+    {
+      "index": 51,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:interfaceUsedByCard :VideoCardModel)",
+      "component": "interfaceUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит VideoCardModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от интерфейса подключения к модели видеокарты, которая его использует."
+    },
+    {
+      "index": 52,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:memoryUsedByCard :VideoCardModel)",
+      "component": "memoryUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит VideoCardModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от конфигурации видеопамяти к использующей её модели видеокарты."
+    },
+    {
+      "index": 53,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:producedByManufacturerInverse :VideoCardModel)",
+      "component": "producedByManufacturerInverse",
+      "decision": "reject",
+      "axiom_reason": "Аксиома относится к целиком отклонённому компоненту; частичное сохранение создало бы неописанную или неверно названную связь.",
+      "component_reason": "Комментарий определяет связь «от производителя модели видеокарты до производителя», хотя range — VideoCardModel. Метка называет производителя, не обратный предикат. Добавлены также две записи одной коммутативной InverseObjectProperties в обратном порядке. Ошибочный компонент отменяется целиком."
+    },
+    {
+      "index": 54,
+      "operation": "add",
+      "axiom": "ObjectPropertyRange(:purposeUsedByCard :VideoCardModel)",
+      "component": "purposeUsedByCard",
+      "decision": "accept",
+      "axiom_reason": "Объект обратной связи принадлежит VideoCardModel, что совпадает с domain прямого свойства.",
+      "component_reason": "Русское определение и формула задают обратную связь от назначения к предназначенной для него модели видеокарты."
+    }
+  ],
+  "accepted_delta": {
+    "add": [
+      "AnnotationAssertion(rdfs:comment :architectureUsedByGPU \"От модели архитектуры к модели GPU: объект отношения — GPU, использующая данную архитектуру. Если hasArchitecture(a,g), то architectureUsedByGPU(g,a).\"@ru)",
+      "AnnotationAssertion(rdfs:comment :coolingUsedByCard \"От системы охлаждения до модели видеокарты: объект отношения — карта, использующая данную систему охлаждения.\"@ru)",
+      "AnnotationAssertion(rdfs:comment :gpuUsedByVideoCard \"От модели GPU к модели видеокарты: объект отношения — карта, использующая данную модель GPU. Если usesGPU(v,g), то gpuUsedByVideoCard(g,v).\"@ru)",
+      "AnnotationAssertion(rdfs:comment :interfaceUsedByCard \"От интерфейса подключения к модели видеокарты: объект отношения — карта, использующая данный интерфейс. Если hasInterface(v,i), то interfaceUsedByCard(i,v).\"@ru)",
+      "AnnotationAssertion(rdfs:comment :memoryUsedByCard \"От конфигурации видеопамяти к модели видеокарты: объект отношения — карта, использующая данную конфигурацию. Если hasMemory(v,m), то memoryUsedByCard(m,v).\"@ru)",
+      "AnnotationAssertion(rdfs:comment :purposeUsedByCard \"От назначения до модели видеокарты: объект отношения — карта, предназначенная для данного назначения. Если hasPurpose(v,p), то purposeUsedByCard(p,v).\"@ru)",
+      "AnnotationAssertion(rdfs:label :architectureUsedByGPU \"используется моделью GPU\"@ru)",
+      "AnnotationAssertion(rdfs:label :coolingUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "AnnotationAssertion(rdfs:label :gpuUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+      "AnnotationAssertion(rdfs:label :interfaceUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "AnnotationAssertion(rdfs:label :memoryUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "AnnotationAssertion(rdfs:label :purposeUsedByCard \"Используется моделью видеокарты\"@ru)",
+      "Declaration(ObjectProperty(:architectureUsedByGPU))",
+      "Declaration(ObjectProperty(:coolingUsedByCard))",
+      "Declaration(ObjectProperty(:gpuUsedByVideoCard))",
+      "Declaration(ObjectProperty(:interfaceUsedByCard))",
+      "Declaration(ObjectProperty(:memoryUsedByCard))",
+      "Declaration(ObjectProperty(:purposeUsedByCard))",
+      "InverseObjectProperties(:architectureUsedByGPU :hasArchitecture)",
+      "InverseObjectProperties(:coolingUsedByCard :hasCooling)",
+      "InverseObjectProperties(:gpuUsedByVideoCard :usesGPU)",
+      "InverseObjectProperties(:interfaceUsedByCard :hasInterface)",
+      "InverseObjectProperties(:memoryUsedByCard :hasMemory)",
+      "InverseObjectProperties(:purposeUsedByCard :hasPurpose)",
+      "ObjectPropertyDomain(:architectureUsedByGPU :GPUArchitecture)",
+      "ObjectPropertyDomain(:coolingUsedByCard :CoolingSystem)",
+      "ObjectPropertyDomain(:gpuUsedByVideoCard :GPUModel)",
+      "ObjectPropertyDomain(:interfaceUsedByCard :ConnectionInterface)",
+      "ObjectPropertyDomain(:memoryUsedByCard :MemoryConfiguration)",
+      "ObjectPropertyDomain(:purposeUsedByCard :Purpose)",
+      "ObjectPropertyRange(:architectureUsedByGPU :GPUModel)",
+      "ObjectPropertyRange(:coolingUsedByCard :VideoCardModel)",
+      "ObjectPropertyRange(:gpuUsedByVideoCard :VideoCardModel)",
+      "ObjectPropertyRange(:interfaceUsedByCard :VideoCardModel)",
+      "ObjectPropertyRange(:memoryUsedByCard :VideoCardModel)",
+      "ObjectPropertyRange(:purposeUsedByCard :VideoCardModel)"
+    ],
+    "remove": []
+  },
+  "rejected_additions": [
+    "AnnotationAssertion(rdfs:comment :coolingUsedByVideoCard \"От модели охлаждения к модели видеокарты: объект отношения — карта, использующая данную модель охлаждения. Если hasCooling(v,c), то coolingUsedByVideoCard(c,v).\"@ru)",
+    "AnnotationAssertion(rdfs:comment :gpuProducedByVideoCard \"От модели производителя к модели видеокарты: объект отношения — карта, выпущенная данным производителем. Если gpuProducedBy(v,g), то gpuProducedByVideoCard(g,v).\"@ru)",
+    "AnnotationAssertion(rdfs:comment :producedByManufacturerInverse \"Обратное отношение от производителя модели видеокарты до производителя\"@ru)",
+    "AnnotationAssertion(rdfs:label :coolingUsedByVideoCard \"используется моделю видеокарты\"@ru)",
+    "AnnotationAssertion(rdfs:label :gpuProducedByVideoCard \"производитель модели видеокарты\"@ru)",
+    "AnnotationAssertion(rdfs:label :producedByManufacturerInverse \"Производитель модели видеокарты\"@ru)",
+    "Declaration(ObjectProperty(:coolingUsedByVideoCard))",
+    "Declaration(ObjectProperty(:gpuProducedByVideoCard))",
+    "Declaration(ObjectProperty(:producedByManufacturerInverse))",
+    "InverseObjectProperties(:coolingUsedByVideoCard :hasCooling)",
+    "InverseObjectProperties(:gpuProducedByVideoCard :producedByManufacturer)",
+    "InverseObjectProperties(:producedByManufacturer :producedByManufacturerInverse)",
+    "InverseObjectProperties(:producedByManufacturerInverse :producedByManufacturer)",
+    "ObjectPropertyDomain(:coolingUsedByVideoCard :CoolingSystem)",
+    "ObjectPropertyDomain(:gpuProducedByVideoCard :Manufacturer)",
+    "ObjectPropertyDomain(:producedByManufacturerInverse :Manufacturer)",
+    "ObjectPropertyRange(:coolingUsedByVideoCard :VideoCardModel)",
+    "ObjectPropertyRange(:gpuProducedByVideoCard :VideoCardModel)",
+    "ObjectPropertyRange(:producedByManufacturerInverse :VideoCardModel)"
+  ],
+  "summary": {
+    "additions_reviewed": 55,
+    "additions_accepted": 36,
+    "additions_rejected": 19,
+    "components_reviewed": 9,
+    "components_accepted": 6,
+    "components_rejected": 3,
+    "canonical_axioms_rejected": 18
+  },
+  "validation": {
+    "status": "valid",
+    "code": null,
+    "F": 1.3207143079447086,
+    "detail": "",
+    "metrics": {
+      "M1": 0.3333333333333333,
+      "M2": 0.7619047619047619,
+      "M3": 0.4666666666666667,
+      "M4": 0.13333333333333333,
+      "M5": 0.5334645669291339,
+      "M6": 4
+    },
+    "relative": [
+      1.0,
+      1.1428571428571428,
+      1.0,
+      1.0,
+      0.9952382434409138,
+      2.0
+    ]
+  },
+  "limitation": "Экспертное решение выполнено ИИ по поручению пользователя. Оно не является заявлением о прохождении отдельных GUI/OOPS/поставочных проверок.",
+  "approval_scope": "Предметная экспертная проверка Т10 ЛР4 и повторная формальная валидация. Итоговая приёмка комплекта, Protégé и OOPS фиксируются отдельными доказательствами.",
+  "final_ontology": "lab4/ontology/videocard.owl",
+  "final_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "config_sha256": "a39eec24440de1545432117db3d925c1d72da02222adb3e749dc30727e8d0ab4",
+  "baseline_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "analysis_sha256": "4a273583ae7dd9326e1622c6bf6bc15cd02a011041c6d7c5fda5d4495d5b9eb1",
+  "ranked_run_best": [
+    {
+      "seed": 102,
+      "candidate_id": 120,
+      "generation": 14,
+      "F": 1.3270902684891568
+    },
+    {
+      "seed": 101,
+      "candidate_id": 131,
+      "generation": 16,
+      "F": 1.3254075849878237
+    },
+    {
+      "seed": 103,
+      "candidate_id": 90,
+      "generation": 11,
+      "F": 1.3230400562895064
+    },
+    {
+      "seed": 104,
+      "candidate_id": 102,
+      "generation": 12,
+      "F": 1.3230400562895064
+    },
+    {
+      "seed": 105,
+      "candidate_id": 85,
+      "generation": 10,
+      "F": 1.3207143079447086
+    }
+  ],
+  "final_counts": {
+    "A": 508,
+    "Al": 271,
+    "C": 15,
+    "DisjointClasses": 3,
+    "E": 2,
+    "EquivalentClasses": 2,
+    "H": 5,
+    "Individuals": 41,
+    "Pd": 7,
+    "Po": 16,
+    "Q": 4,
+    "SubClassOf": 16
+  },
+  "baseline_metrics": {
+    "M1": 0.3333333333333333,
+    "M2": 0.6666666666666666,
+    "M3": 0.4666666666666667,
+    "M4": 0.13333333333333333,
+    "M5": 0.5360169491525424,
+    "M6": 10
+  },
+  "core_preserved": true,
+  "roundtrip_verified": true,
+  "post_export_engine": {
+    "all_passed": true,
+    "ontology_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+    "groups": {
+      "T04": {
+        "passed": true,
+        "error": null,
+        "note": "4/4 checks passed; HermiT 1.4.3.456",
+        "log": "tests/results/T04.log"
+      },
+      "T05": {
+        "passed": true,
+        "error": null,
+        "note": "39/39 checks passed; exact set equality with expected.json",
+        "log": "tests/results/T05.log"
+      },
+      "T06": {
+        "passed": true,
+        "error": null,
+        "note": "9/9 checks passed; copy inconsistent (HermiT negative control), final consistent and clean",
+        "log": "tests/results/T06.log"
+      },
+      "T07": {
+        "passed": true,
+        "error": null,
+        "note": "8/8 checks passed; copy inconsistent (usesGPU exactly 1), final consistent with one GPU per model",
+        "log": "tests/results/T07.log"
+      },
+      "T08": {
+        "passed": true,
+        "error": null,
+        "note": "10/10 checks passed; copy inconsistent by range positiveInteger (not functionality), final holds the original positive value",
+        "log": "tests/results/T08.log"
+      },
+      "T09": {
+        "passed": true,
+        "error": null,
+        "note": "9/9 checks passed; copy consistent (open world) but card flags U05 hasMemory 0 vs 1; final card clean",
+        "log": "tests/results/T09.log"
+      },
+      "T10": {
+        "passed": true,
+        "error": null,
+        "note": "59/59 checks passed; 508 axioms identical after RDF/XML round trip",
+        "log": "tests/results/T10.log"
+      }
+    },
+    "evidence": "lab4/assessment/evidence/final-engine/acceptance.json"
+  },
+  "target_checks": {
+    "selected_final_F_ge_1_25": true,
+    "series_median_ge_1_15": true,
+    "each_original_run_best_above_one": true
+  }
+}

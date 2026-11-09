@@ -1,0 +1,11 @@
+{
+  "expected_code": "FORBIDDEN",
+  "reason": "Manual membership for a defined class",
+  "candidate": {
+    "add": [
+      "ClassAssertion(:CardWith8GBMemory :U02)"
+    ],
+    "remove": []
+  },
+  "duplicate": false
+}

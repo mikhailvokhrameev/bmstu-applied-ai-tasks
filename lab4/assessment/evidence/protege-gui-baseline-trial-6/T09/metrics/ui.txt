@@ -1,0 +1,277 @@
+Actual Protégé WorkspaceFrame; Swing component rendering only.
+TAB 0 : Active ontology
+TAB 1 : Entities
+TAB 2 : Individuals by class
+TAB 3 : DL Query
+javax.swing.JLabel : Ontology header: 
+org.protege.editor.core.ui.util.LinkLabel : Ontology IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard
+org.protege.editor.core.ui.util.LinkLabel : Ontology Version IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard/1.0.0
+LIST org.protege.editor.owl.ui.ontology.annotation.OWLOntologyAnnotationList size=3
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$1@27144553
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$AnnotationsListItem@af92bfd
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$AnnotationsListItem@6fd46639
+javax.swing.JLabel : Ontology metrics: 
+javax.swing.JLabel : Metrics
+TABLE 8x2
+Axiom	471	
+Logical axiom count	252	
+Declaration axioms count	73	
+Class count	16	
+Object property count	10	
+Data property count	7	
+Individual count	41	
+Annotation Property count	2	
+javax.swing.JLabel : Class axioms
+TABLE 5x2
+SubClassOf	16	
+EquivalentClasses	2	
+DisjointClasses	3	
+GCI count	0	
+Hidden GCI Count	0	
+javax.swing.JLabel : Object property axioms
+TABLE 14x2
+SubObjectPropertyOf	0	
+EquivalentObjectProperties	0	
+InverseObjectProperties	0	
+DisjointObjectProperties	0	
+FunctionalObjectProperty	0	
+InverseFunctionalObjectProperty	0	
+TransitiveObjectProperty	0	
+SymmetricObjectProperty	0	
+AsymmetricObjectProperty	0	
+ReflexiveObjectProperty	0	
+IrrefexiveObjectProperty	0	
+ObjectPropertyDomain	10	
+ObjectPropertyRange	10	
+SubPropertyChainOf	0	
+javax.swing.JLabel : Data property axioms
+TABLE 6x2
+SubDataPropertyOf	0	
+EquivalentDataProperties	0	
+DisjointDataProperties	0	
+FunctionalDataProperty	6	
+DataPropertyDomain	7	
+DataPropertyRange	7	
+javax.swing.JLabel : Individual axioms
+TABLE 7x2
+ClassAssertion	41	
+ObjectPropertyAssertion	80	
+DataPropertyAssertion	69	
+NegativeObjectPropertyAssertion	0	
+NegativeDataPropertyAssertion	0	
+SameIndividual	0	
+DifferentIndividuals	1	
+javax.swing.JLabel : Annotation axioms
+TABLE 3x2
+AnnotationAssertion	146	
+AnnotationPropertyDomain	0	
+AnnotationPropertyRangeOf	0	
+TAB 0 : Ontology imports
+TAB 1 : Ontology Prefixes
+TAB 2 : General class axioms
+javax.swing.JLabel : Imported ontologies: 
+LIST org.protege.editor.owl.ui.ontology.imports.OntologyImportsList size=2
+  org.protege.editor.owl.ui.ontology.imports.OntologyImportsList$1@29ba9126
+  org.protege.editor.owl.ui.ontology.imports.OntologyImportsList$2@2c81679f
+TAB 0 : Classes
+TAB 1 : Object properties
+TAB 2 : Data properties
+TAB 3 : Annotation properties
+TAB 4 : Datatypes
+TAB 5 : Individuals
+javax.swing.JLabel : Individuals: 
+LIST org.protege.editor.owl.ui.list.OWLObjectList size=41
+  <https://example.org/ontologies/videocard#Arch_A1>
+  <https://example.org/ontologies/videocard#Arch_A2>
+  <https://example.org/ontologies/videocard#Arch_A3>
+  <https://example.org/ontologies/videocard#Cooling_Active_2fan>
+  <https://example.org/ontologies/videocard#Cooling_Active_3fan>
+  <https://example.org/ontologies/videocard#Cooling_Passive>
+  <https://example.org/ontologies/videocard#DisplayPort>
+  <https://example.org/ontologies/videocard#DVI>
+  <https://example.org/ontologies/videocard#Gaming>
+  <https://example.org/ontologies/videocard#GDDR5>
+  <https://example.org/ontologies/videocard#GDDR6>
+  <https://example.org/ontologies/videocard#GDDR6X>
+  <https://example.org/ontologies/videocard#GPU_G1>
+  <https://example.org/ontologies/videocard#GPU_G2>
+  <https://example.org/ontologies/videocard#GPU_G3>
+  <https://example.org/ontologies/videocard#GPU_G4>
+  <https://example.org/ontologies/videocard#GPU_G5>
+  <https://example.org/ontologies/videocard#HDMI>
+  <https://example.org/ontologies/videocard#Mem_12GiB_GDDR6>
+  <https://example.org/ontologies/videocard#Mem_16GiB_GDDR6>
+  <https://example.org/ontologies/videocard#Mem_24GiB_GDDR6X>
+  <https://example.org/ontologies/videocard#Mem_2GiB_GDDR5>
+  <https://example.org/ontologies/videocard#Mem_4GiB_GDDR5>
+  <https://example.org/ontologies/videocard#Mem_6GiB_GDDR6>
+  <https://example.org/ontologies/videocard#Mem_8GiB_GDDR6>
+  <https://example.org/ontologies/videocard#Office>
+  <https://example.org/ontologies/videocard#P1>
+  <https://example.org/ontologies/videocard#P2>
+  <https://example.org/ontologies/videocard#PCIe_3_0_x16>
+  <https://example.org/ontologies/videocard#PCIe_4_0_x16>
+  <https://example.org/ontologies/videocard#PCIe_5_0_x16>
+  <https://example.org/ontologies/videocard#U01>
+  <https://example.org/ontologies/videocard#U02>
+  <https://example.org/ontologies/videocard#U03>
+  <https://example.org/ontologies/videocard#U04>
+  <https://example.org/ontologies/videocard#U05>
+  <https://example.org/ontologies/videocard#U06>
+  <https://example.org/ontologies/videocard#U07>
+  <https://example.org/ontologies/videocard#U08>
+  <https://example.org/ontologies/videocard#VGA>
+  <https://example.org/ontologies/videocard#Workstation>
+javax.swing.JLabel : Selected entity: 
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=8
+  Equivalent To:
+
+  SubClass Of:
+
+  General class axioms:
+
+  SubClass Of (Anonymous Ancestor):
+
+  Instances:
+
+  Target for Key:
+
+  Disjoint With:
+
+  Disjoint Union Of:
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Characteristics: 
+javax.swing.JCheckBox : Functional
+javax.swing.JCheckBox : Inverse functional
+javax.swing.JCheckBox : Transitive
+javax.swing.JCheckBox : Symmetric
+javax.swing.JCheckBox : Asymmetric
+javax.swing.JCheckBox : Reflexive
+javax.swing.JCheckBox : Irreflexive
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=7
+  Equivalent To:
+
+  SubProperty Of:
+
+  Inverse Of:
+
+  Domains (intersection):
+
+  Ranges (intersection):
+
+  Disjoint With:
+
+  SuperProperty Of (Chain):
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Characteristics: 
+javax.swing.JCheckBox : Functional
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=5
+  Equivalent To:
+
+  SubProperty Of:
+
+  Domains (intersection):
+
+  Ranges:
+
+  Disjoint With:
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=3
+  Domains (intersection):
+
+  Range (intersection):
+
+  Superproperties:
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=3
+  Types:
+
+  Same Individual As:
+
+  Different Individuals:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Property assertions: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=4
+  Object property assertions:
+
+  Data property assertions:
+
+  Negative object property assertions:
+
+  Negative data property assertions:
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Annotations: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Annotations:
+
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Description: 
+LIST org.protege.editor.owl.ui.framelist.OWLFrameList size=1
+  Datatype Definitions:
+
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Individuals
+TAB 1 : Individuals (Inferred)
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : <html><body>Git: <span style="font-weight: bold;">dev</span></body></html>
+javax.swing.JLabel : Reasoner active
+javax.swing.JCheckBox : Show Inferences
+javax.swing.JMenu : File
+javax.swing.JMenu : Edit
+javax.swing.JMenu : View
+javax.swing.JMenu : Reasoner
+javax.swing.JMenu : Tools
+javax.swing.JMenu : Refactor
+javax.swing.JMenu : Window
+javax.swing.JMenu : Help

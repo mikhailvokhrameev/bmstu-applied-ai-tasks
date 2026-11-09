@@ -1,0 +1,38 @@
+{
+  "review_performed_by": "AI assistant",
+  "source_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "all_six_cases_passed": true,
+  "exact_query_comparisons": 92,
+  "source_unchanged": true,
+  "visual_checks": {
+    "source/window.png": {
+      "sha256": "e173b720d341c841eeed0eae3b7a90d224bfd593c1eb0af606c86d54ae0ae2b4",
+      "inspected": true
+    },
+    "source-dl-query/08-Q3__defined_/window.png": {
+      "sha256": "e2fc11cd36cad1ab1b977ac4e361dd0a2bc7aff3690c8bb62824bd8fc54a356b",
+      "inspected": true
+    },
+    "T06/window.png": {
+      "sha256": "9cc744e65f98a3ed2bacb7aa3d3708ef04141437258d3adce89317b607a9e012",
+      "inspected": true
+    },
+    "T07/window.png": {
+      "sha256": "8bf67d576753d45b5c0b463ca5065e07bc28953cbe9be64af12950716eae9945",
+      "inspected": true
+    },
+    "T08/window.png": {
+      "sha256": "2e6bca98b49756ca9416a1aeea13676186c2ebe9daefa8580c9a15e1f9af713b",
+      "inspected": true
+    },
+    "T09/window.png": {
+      "sha256": "99fdd6ff8084713c134db8bec1ce7d917d262703ad6f1fbb6c7032ec38bbafba",
+      "inspected": true
+    },
+    "T10-dl-query/23-Q8__raw_cross-check_/window.png": {
+      "sha256": "e4049c818db54581e7f896b2fe00473e763ea2d89d25a366bc5e704184b3993e",
+      "inspected": true
+    }
+  },
+  "findings": "Actual GUI metrics and query results match evidence; negative copies display intended defects and expected reasoner status; T10 Q8 lists U02,U03,U04,U07."
+}

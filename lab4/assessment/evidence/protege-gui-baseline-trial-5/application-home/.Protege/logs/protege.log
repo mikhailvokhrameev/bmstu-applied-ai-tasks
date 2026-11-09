@@ -1,0 +1,124 @@
+2026-11-02 01:51:30.474 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:51:30.475 [main] INFO  Launcher    **                                  Protege                                   **
+2026-11-02 01:51:30.475 [main] INFO  Launcher    ********************************************************************************
+2026-11-02 01:51:30.475 [main] INFO  Launcher    
+2026-11-02 01:51:30.475 [main] INFO  Launcher    ----------------- Initialising and Starting the OSGi Framework -----------------
+2026-11-02 01:51:30.475 [main] INFO  Launcher    FrameworkFactory Class: org.apache.felix.framework.FrameworkFactory
+2026-11-02 01:51:30.476 [main] INFO  Launcher    
+2026-11-02 01:51:30.527 [main] INFO  Launcher    The OSGi framework has been initialised
+2026-11-02 01:51:30.682 [main] INFO  Launcher    ------------------------------- Starting Bundles -------------------------------
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-dynamic
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle log4j.over.slf4j
+2026-11-02 01:51:30.682 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-tf
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.objectweb.asm.util
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.glassfish.external.management-api
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle jul.to.slf4j
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.glassfish.corba.glassfish-corba-omgapi
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-impl
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.objectweb.asm
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.glassfish.pfl.pfl-basic
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle ch.qos.logback.core
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle slf4j.api
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle org.apache.commons.commons-io
+2026-11-02 01:51:30.683 [main] INFO  Launcher    Starting bundle jaxb-api
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle com.sun.xml.bind.jaxb-core
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.semanticweb.owl.owlapi
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle ch.qos.logback.classic
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.common
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.protege.common
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle jakarta.activation-api
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.apache.felix.main
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.protege.editor.owl
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.jsr-305
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.apache.servicemix.bundles.javax-inject
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle org.protege.editor.core.application
+2026-11-02 01:51:30.684 [main] INFO  Launcher    Starting bundle com.googlecode.javaewah.JavaEWAH
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.eclipse.jgit
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle com.google.guava
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.objectweb.asm.tree.analysis
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.registry
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.eclipse.equinox.supplement
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.protege.editor.owl.rdf
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle existentialquery
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.protege.owl.rdf
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle uk.ac.manchester.cs.owl.explanation
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.protege.ontograf
+2026-11-02 01:51:30.685 [main] INFO  Launcher    Starting bundle org.coode.browser
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle org.coode.owlviz
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle org.semanticweb.hermit
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle cellfie
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle swrltab-plugin
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle org.coode.dlquery
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle org.semanticweb.elk
+2026-11-02 01:51:30.686 [main] INFO  Launcher    Starting bundle code-generation
+2026-11-02 01:51:31.121 [main] INFO  Launcher    The OSGi framework has been started
+2026-11-02 01:51:31.121 [main] INFO  Launcher    
+2026-11-02 01:51:31.121 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Protege -----------------------------------
+2026-11-02 01:51:31.122 [FelixDispatchQueue] INFO  ProtegeApplication    Protege Desktop
+2026-11-02 01:51:31.122 [FelixDispatchQueue] INFO  ProtegeApplication    Version 5.6.9, Build 
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    ----------------------------------- Platform -----------------------------------
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Java: JVM 17.0.21+9  Memory: 805M
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Language: en, Country: US
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Framework: Apache Software Foundation (1.9) 
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    OS: macosx (26.6.2)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Processor: aarch64
+
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------------ Plugins -----------------------------------
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SPARQL Query Plugin (3.0.0)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Existential Query (2.0.0)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLAPI RDF Library (3.0.1)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Explanation Workbench (3.0.1)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OntoGraf (2.0.3)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Browser View (OWLDoc) (3.0.3)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWLViz (5.0.3)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: HermiT Reasoner (1.4.3.456)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: Cellfie Protege 5.0+ Plugin (2.1.0)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: SWRLTab Plugin (2.0.10)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: DL Query (4.0.1)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: ELK Reasoner Protege Plug-in (0.6.0)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    Plugin: OWL Code Generation Plug-in (2.0.0)
+2026-11-02 01:51:31.123 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:51:31.247 [FelixDispatchQueue] INFO  ProtegeApplication    Processing command line argument: file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:51:31.298 [FelixDispatchQueue] INFO  ProtegeApplication    ------------------------------- Auto-update Check ------------------------------
+2026-11-02 01:51:31.298 [AWT-EventQueue-0] INFO  ProtegeApplication    Creating and setting up (default) editor kit for file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:51:31.300 [AWT-EventQueue-0] INFO  OWLEditorKit    OWL API Version: 4.5.29.2024-05-13T12:11:03Z
+2026-11-02 01:51:31.298 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update last performed: Mon Nov 02 01:34:51 MSK 2026
+2026-11-02 01:51:31.301 [FelixDispatchQueue] INFO  ProtegeApplication    Auto-update has been performed today.  Not performing it again.
+2026-11-02 01:51:31.301 [FelixDispatchQueue] INFO  ProtegeApplication    
+2026-11-02 01:51:31.419 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    ------------------------------- Loading Ontology -------------------------------
+2026-11-02 01:51:31.419 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading ontology from file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:51:31.493 [pool-3-thread-1] INFO  OntologyLoader    Finished loading file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl
+2026-11-02 01:51:31.497 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:51:31.557 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:34.631 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:51:34.632 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:34.649 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    Loading for ontology and imports closure successfully completed in 3229 ms
+2026-11-02 01:51:34.650 [AWT-EventQueue-0] INFO  OWLModelManagerImpl    
+2026-11-02 01:51:34.680 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:51:34.681 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:35.262 [AWT-EventQueue-0] INFO  OboFoundryRegistryManager    OBO Foundry registry loaded: 267 entries
+2026-11-02 01:51:35.371 [AWT-EventQueue-0] INFO  ActiveOntologyIdRangesPolicyManager    [IdRanges] Updating entity creation preferences
+2026-11-02 01:51:35.432 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:51:35.433 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:36.390 [Classification Thread] INFO  OWLReasonerManager    ------------------------------- Running Reasoner -------------------------------
+2026-11-02 01:51:36.450 [Classification Thread] INFO  OWLReasonerManager    Pre-computing inferences:
+2026-11-02 01:51:36.450 [Classification Thread] INFO  OWLReasonerManager        - class hierarchy
+2026-11-02 01:51:36.450 [Classification Thread] INFO  OWLReasonerManager        - class assertions
+2026-11-02 01:51:36.472 [Classification Thread] INFO  OWLReasonerManager    Ontologies processed in 81 ms by HermiT
+2026-11-02 01:51:36.472 [Classification Thread] INFO  OWLReasonerManager    
+2026-11-02 01:51:36.531 [AWT-EventQueue-0] INFO  GitRepositoryManager    [GitRepo] Git repository detected: /Users/imkaruzin/bmstu-applied-ai-tasks/.git
+2026-11-02 01:51:36.532 [AWT-EventQueue-0] INFO  GitRepoStatusPresenter    [GitRepo] On branch: dev
+2026-11-02 01:51:38.331 [AWT-EventQueue-0] INFO  ResultsList    ------------------------------ Executing DL Query ------------------------------
+2026-11-02 01:51:38.350 [AWT-EventQueue-0] INFO  ResultsList    Computed results for Instances in 18 ms
+2026-11-02 01:51:38.351 [AWT-EventQueue-0] INFO  ResultsList    
+2026-11-02 01:52:04.544 [Close OSGi Session] INFO  Launcher    ----------------------- Shutting down Protege -----------------------
+2026-11-02 01:52:04.551 [Close OSGi Session] INFO  Launcher    Cleaning up temporary directories

@@ -1,0 +1,42 @@
+WINDOW org.protege.editor.core.ui.workspace.WorkspaceFrame : videocard (https://example.org/ontologies/videocard/1.0.0)  : [/Users/imkaruzin/bmstu-applied-ai-tasks/lab2/ontology/videocard.owl]
+TAB 0 : Active ontology
+TAB 1 : Entities
+TAB 2 : Individuals by class
+TAB 3 : DL Query
+javax.swing.JLabel : Ontology header: 
+org.protege.editor.core.ui.util.LinkLabel : Ontology IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard
+org.protege.editor.core.ui.util.LinkLabel : Ontology Version IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard/1.0.0
+javax.swing.JLabel : Ontology metrics: 
+javax.swing.JLabel : Metrics
+javax.swing.JLabel : Class axioms
+javax.swing.JLabel : Object property axioms
+javax.swing.JLabel : Data property axioms
+javax.swing.JLabel : Individual axioms
+javax.swing.JLabel : Annotation axioms
+TAB 0 : Ontology imports
+TAB 1 : Ontology Prefixes
+TAB 2 : General class axioms
+javax.swing.JLabel : Imported ontologies: 
+TAB 0 : Classes
+TAB 1 : Object properties
+TAB 2 : Data properties
+TAB 3 : Annotation properties
+TAB 4 : Datatypes
+TAB 5 : Individuals
+TAB 0 : Individuals
+TAB 1 : Individuals (Inferred)
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : <html><body>Git: <span style="font-weight: bold;">dev</span></body></html>
+javax.swing.JLabel : No Reasoner set. Select a reasoner from the Reasoner menu
+javax.swing.JCheckBox : Show Inferences
+javax.swing.JMenu : File
+javax.swing.JMenu : Edit
+javax.swing.JMenu : View
+javax.swing.JMenu : Reasoner
+javax.swing.JMenu : Tools
+javax.swing.JMenu : Refactor
+javax.swing.JMenu : Window
+javax.swing.JMenu : Help

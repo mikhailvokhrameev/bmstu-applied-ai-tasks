@@ -1,0 +1,13 @@
+PREFIX oops: <http://oops.linkeddata.es/def#>
+
+<http://oops.linkeddata.es/data/7da7d335-684a-4bae-9f0a-5511f2966831>
+        a                               oops:pitfall;
+        oops:hasCode                    "P10 - Missing disjoint-ness";
+        oops:hasDescription             "The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related to the guidelines provided in [6], [2] and [7].";
+        oops:hasImportanceLevel         "IMPORTANT";
+        oops:hasName                    "Missing disjoint-ness";
+        oops:hasNumberAffectedElements  1 .
+
+<http://oops.linkeddata.es/data/26197cca-0b6b-44b9-bdf5-88471118f75d>
+        a                oops:response;
+        oops:hasPitfall  <http://oops.linkeddata.es/data/7da7d335-684a-4bae-9f0a-5511f2966831> .

@@ -1,0 +1,11 @@
+--- before/owl_bridge/ProposalSyntax.java
++++ after/owl_bridge/ProposalSyntax.java
+@@ -23,7 +23,7 @@
+    }
+    fieldName = null;
+    if (!Collections.disjoint(add, remove)) throw new IllegalArgumentException("Conflicting add/remove");
+-  } catch (OWLOntologyCreationException | IllegalArgumentException error) {
++  } catch (OWLOntologyCreationException | OWLRuntimeException | IllegalArgumentException error) {
+    Map<String,Object> failure = new TreeMap<>();
+    failure.put("status", "invalid");
+    failure.put("detail", String.valueOf(error.getMessage()));

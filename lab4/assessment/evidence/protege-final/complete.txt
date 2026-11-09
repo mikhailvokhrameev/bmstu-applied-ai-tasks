@@ -1,0 +1,1 @@
+Collector completed. Inspect individual passed fields and exact query sets before acceptance. This file alone is not acceptance.

@@ -1,0 +1,124 @@
+Actual Protégé WorkspaceFrame; Swing component rendering only.
+TAB 0 : Active ontology
+TAB 1 : Entities
+TAB 2 : Individuals by class
+TAB 3 : DL Query
+javax.swing.JLabel : Ontology header: 
+org.protege.editor.core.ui.util.LinkLabel : Ontology IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard
+org.protege.editor.core.ui.util.LinkLabel : Ontology Version IRI
+org.protege.editor.core.ui.util.AugmentedJTextField : https://example.org/ontologies/videocard/1.0.0
+LIST org.protege.editor.owl.ui.ontology.annotation.OWLOntologyAnnotationList size=3
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$1@61f37d57
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$AnnotationsListItem@47d77db2
+  org.protege.editor.owl.ui.list.AbstractAnnotationsList$AnnotationsListItem@228a04d2
+javax.swing.DefaultListCellRenderer :  
+javax.swing.JLabel : Ontology metrics: 
+javax.swing.JLabel : Metrics
+TABLE 8x2
+Axiom	472	
+Logical axiom count	253	
+Declaration axioms count	73	
+Class count	16	
+Object property count	10	
+Data property count	7	
+Individual count	41	
+Annotation Property count	2	
+javax.swing.JLabel : Class axioms
+TABLE 5x2
+SubClassOf	16	
+EquivalentClasses	2	
+DisjointClasses	3	
+GCI count	0	
+Hidden GCI Count	0	
+javax.swing.JLabel : Object property axioms
+TABLE 14x2
+SubObjectPropertyOf	0	
+EquivalentObjectProperties	0	
+InverseObjectProperties	0	
+DisjointObjectProperties	0	
+FunctionalObjectProperty	0	
+InverseFunctionalObjectProperty	0	
+TransitiveObjectProperty	0	
+SymmetricObjectProperty	0	
+AsymmetricObjectProperty	0	
+ReflexiveObjectProperty	0	
+IrrefexiveObjectProperty	0	
+ObjectPropertyDomain	10	
+ObjectPropertyRange	10	
+SubPropertyChainOf	0	
+javax.swing.JLabel : Data property axioms
+TABLE 6x2
+SubDataPropertyOf	0	
+EquivalentDataProperties	0	
+DisjointDataProperties	0	
+FunctionalDataProperty	6	
+DataPropertyDomain	7	
+DataPropertyRange	7	
+javax.swing.JLabel : Individual axioms
+TABLE 7x2
+ClassAssertion	41	
+ObjectPropertyAssertion	81	
+DataPropertyAssertion	69	
+NegativeObjectPropertyAssertion	0	
+NegativeDataPropertyAssertion	0	
+SameIndividual	0	
+DifferentIndividuals	1	
+javax.swing.JLabel : Annotation axioms
+TABLE 3x2
+AnnotationAssertion	146	
+AnnotationPropertyDomain	0	
+AnnotationPropertyRangeOf	0	
+TAB 0 : Ontology imports
+TAB 1 : Ontology Prefixes
+TAB 2 : General class axioms
+javax.swing.JLabel : Imported ontologies: 
+LIST org.protege.editor.owl.ui.ontology.imports.OntologyImportsList size=2
+  org.protege.editor.owl.ui.ontology.imports.OntologyImportsList$1@62e0d583
+  org.protege.editor.owl.ui.ontology.imports.OntologyImportsList$2@1ea61e80
+javax.swing.DefaultListCellRenderer :  
+TAB 0 : Classes
+TAB 1 : Object properties
+TAB 2 : Data properties
+TAB 3 : Annotation properties
+TAB 4 : Datatypes
+TAB 5 : Individuals
+TAB 0 : Individuals
+TAB 1 : Individuals (Inferred)
+TAB 0 : Annotations
+TAB 1 : Usage
+javax.swing.JLabel : Class hierarchy: 
+javax.swing.tree.DefaultTreeCellRenderer : owl:Thing
+javax.swing.JTextPane : owl:Thing
+javax.swing.JLabel : DL query: 
+org.protege.editor.owl.ui.clsdescriptioneditor.ExpressionEditor : VideoCardModel and producedByManufacturer value P1
+javax.swing.JButton : Execute
+javax.swing.JButton : Add to ontology
+LIST org.coode.dlquery.ResultsList size=5
+  org.coode.dlquery.DLQueryResultsSection@4026754d
+  <https://example.org/ontologies/videocard#U01>
+  <https://example.org/ontologies/videocard#U02>
+  <https://example.org/ontologies/videocard#U05>
+  <https://example.org/ontologies/videocard#U08>
+javax.swing.JLabel : Query for
+javax.swing.JCheckBox : Direct superclasses
+javax.swing.JCheckBox : Superclasses
+javax.swing.JCheckBox : Equivalent classes
+javax.swing.JCheckBox : Direct subclasses
+javax.swing.JCheckBox : Subclasses
+javax.swing.JCheckBox : Instances
+javax.swing.JLabel : Result filters
+javax.swing.JLabel : Name contains
+javax.swing.JCheckBox : <html><body>Display owl:Thing<br><span style="color: #808080; font-size: 0.8em;">(in superclass results)</span></body></html>
+javax.swing.JCheckBox : <html><body>Display owl:Nothing<br><span style="color: #808080; font-size: 0.8em;">(in subclass results)</span></body></html>
+javax.swing.JLabel : <html><body>Git: <span style="font-weight: bold;">dev</span></body></html>
+javax.swing.JLabel : Reasoner active
+javax.swing.JCheckBox : Show Inferences
+javax.swing.JMenu : File
+javax.swing.JMenu : Edit
+javax.swing.JMenu : View
+javax.swing.JMenu : Reasoner
+javax.swing.JMenu : Tools
+javax.swing.JMenu : Refactor
+javax.swing.JMenu : Window
+javax.swing.JMenu : Help

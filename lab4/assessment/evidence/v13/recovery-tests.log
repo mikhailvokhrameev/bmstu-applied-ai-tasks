@@ -1,0 +1,9 @@
+test_changed_seed_refuses_to_resample (lab4.tests_v13.test_response_recovery.ResponseRecoveryTests.test_changed_seed_refuses_to_resample) ... {"event": "recovering_delivered_responses", "checkpoint_evaluations": 0, "completed_tail_evaluations": 1, "delivered_responses": 1, "metadata_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "original_journal_sha256": "97e8296851703cf57f0a9bb9d2a183c1c537539d65fb72b8742e2978d218097c", "policy": "Exact recorded HTTP requests and raw delivered responses; no model call for replayed requests"}
+ok
+test_recorded_response_does_not_call_model (lab4.tests_v13.test_response_recovery.ResponseRecoveryTests.test_recorded_response_does_not_call_model) ... {"event": "recovering_delivered_responses", "checkpoint_evaluations": 0, "completed_tail_evaluations": 1, "delivered_responses": 1, "metadata_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "original_journal_sha256": "97e8296851703cf57f0a9bb9d2a183c1c537539d65fb72b8742e2978d218097c", "policy": "Exact recorded HTTP requests and raw delivered responses; no model call for replayed requests"}
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK

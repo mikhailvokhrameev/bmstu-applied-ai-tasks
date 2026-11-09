@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "lab4.optimizer",
+      "replay",
+      "--run-dir",
+      "lab4/runs/debug-100",
+      "--candidate",
+      "20"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "lab4.optimizer.analysis",
+      "lab4/runs/debug-100",
+      "--output",
+      "verification-analysis",
+      "--replay"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "lab4/assessment/verify_reference.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "bash",
+      "lab2/tests/run_tests.sh"
+    ],
+    "exit_code": 0
+  }
+]

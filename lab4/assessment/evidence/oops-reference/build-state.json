@@ -1,0 +1,31 @@
+{
+  "pid": 51034,
+  "started_at": 1793571626.26771,
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/apache-maven-3.9.16/bin/mvn",
+    "--batch-mode",
+    "--no-transfer-progress",
+    "--settings",
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/empty-settings.xml",
+    "--global-settings",
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/empty-global-settings.xml",
+    "-Dmaven.repo.local=/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/oops-reference/m2",
+    "-Dstyle.color=never",
+    "package",
+    "-Dmaven.test.skip=true"
+  ],
+  "source_commit": "11572ea6b31cba29dd3f8a443e24311652f059de",
+  "settings": "explicit empty user and global settings",
+  "maven_skip_rc": true,
+  "environment": "explicit minimal environment; no inherited tokens",
+  "active_processors": 2,
+  "nice": 10,
+  "exit_code": 0,
+  "ended_at": 1793571678.948361,
+  "seconds": 52.68065094947815,
+  "war_sha256": "2fab177a7de24180aee24e278ff5d27e9ed3d222b7ac0394080f43c50b7c251f",
+  "war_bytes": 110737362
+}

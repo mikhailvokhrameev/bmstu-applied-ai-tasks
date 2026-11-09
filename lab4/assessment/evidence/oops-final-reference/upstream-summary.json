@@ -1,0 +1,41 @@
+{
+  "response_present": true,
+  "rdf_triples": 20,
+  "pitfall_records": 2,
+  "sum_number_affected": 5,
+  "records_by_family": {
+    "P04": 1,
+    "P13": 1
+  },
+  "affected_counts_by_family": {
+    "P04": 1,
+    "P13": 4
+  },
+  "findings": [
+    {
+      "code": "P04 - Creating unconnected ontology elements",
+      "family": "P04",
+      "hasName": "Creating unconnected ontology elements",
+      "hasDescription": "Ontology elements (classes, object properties and datatype properties) exist in isolation, with no relation to the rest of the ontology.",
+      "hasImportanceLevel": "MINOR",
+      "number_affected": 1,
+      "affected_elements": [
+        "https://example.org/ontologies/videocard#ModelComponent"
+      ]
+    },
+    {
+      "code": "P13-N - Inverse relationships not explicitly declared - No Suggestion",
+      "family": "P13",
+      "hasName": "Inverse relationships not explicitly declared - No Suggestion",
+      "hasDescription": "This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.",
+      "hasImportanceLevel": "MINOR",
+      "number_affected": 4,
+      "affected_elements": [
+        "https://example.org/ontologies/videocard#gpuProducedBy",
+        "https://example.org/ontologies/videocard#hasMemoryType",
+        "https://example.org/ontologies/videocard#hasVideoOutput",
+        "https://example.org/ontologies/videocard#producedByManufacturer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "preliminary first-response benchmark; not T04",
+  "started_utc": "2026-11-01T20:40:06.200583+00:00",
+  "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+  "prompt_sha256": "df30126310d3773fc5fbf14a9cdaeda56959b8ddd57348adf81021d0a34bc9c8",
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009
+  ],
+  "server_version": {
+    "version": "0.40.13"
+  },
+  "fixed_options": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "num_predict": 2000,
+    "num_ctx": 32768
+  },
+  "models": []
+}

@@ -1,0 +1,157 @@
+CompileCommand: exclude javax/swing/text/GlyphView.getBreakSpot bool exclude = true
+01:46:25,416 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [conf/logback.xml] at [file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9/conf/logback.xml]
+01:46:25,440 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+01:46:25,443 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Will scan for changes in [file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9/conf/logback.xml] 
+01:46:25,443 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Setting ReconfigureOnChangeTask scanning period to 10 seconds
+01:46:25,443 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+01:46:25,444 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [stdout]
+01:46:25,453 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+01:46:25,454 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [files]
+01:46:25,468 |-INFO in ch.qos.logback.core.FileAppender[files] - File property is set to [/Users/imkaruzin/.Protege/logs/protege.log]
+01:46:25,468 |-ERROR in ch.qos.logback.core.FileAppender[files] - openFile(/Users/imkaruzin/.Protege/logs/protege.log,true) call failed. java.io.FileNotFoundException: /Users/imkaruzin/.Protege/logs/protege.log (Operation not permitted)
+	at java.io.FileNotFoundException: /Users/imkaruzin/.Protege/logs/protege.log (Operation not permitted)
+	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:64)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:134)
+	at 	at org.slf4j.impl.StaticLoggerBinder.init(StaticLoggerBinder.java:84)
+	at 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:55)
+	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:417)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:362)
+	at 	at org.protege.osgi.framework.Launcher.<init>(Launcher.java:33)
+	at 	at org.protege.osgi.framework.Launcher.main(Launcher.java:244)
+01:46:25,468 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+01:46:25,469 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[ROOT]
+01:46:25,469 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [files] to Logger[ROOT]
+01:46:25,469 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+01:46:25,469 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@2ac273d3 - Registering current configuration as safe fallback point
+
+[34m********************************************************************************[0;39m 
+[34m**                                  Protege                                   **[0;39m 
+[34m********************************************************************************[0;39m 
+[34m[0;39m 
+[34m----------------- Initialising and Starting the OSGi Framework -----------------[0;39m 
+[34mFrameworkFactory Class: org.apache.felix.framework.FrameworkFactory[0;39m 
+[34m[0;39m 
+[34mThe OSGi framework has been initialised[0;39m 
+[34m------------------------------- Starting Bundles -------------------------------[0;39m 
+[34mStarting bundle org.protege.common[0;39m 
+[34mStarting bundle org.eclipse.equinox.common[0;39m 
+[34mStarting bundle org.eclipse.equinox.supplement[0;39m 
+[34mStarting bundle org.protege.editor.core.application[0;39m 
+[34mStarting bundle org.eclipse.equinox.registry[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-dynamic[0;39m 
+[34mStarting bundle log4j.over.slf4j[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-tf[0;39m 
+[34mStarting bundle org.objectweb.asm.util[0;39m 
+[34mStarting bundle org.glassfish.external.management-api[0;39m 
+[34mStarting bundle jul.to.slf4j[0;39m 
+[34mStarting bundle org.glassfish.corba.glassfish-corba-omgapi[0;39m 
+[34mStarting bundle com.sun.xml.bind.jaxb-impl[0;39m 
+[34mStarting bundle org.objectweb.asm[0;39m 
+[34mStarting bundle org.glassfish.pfl.pfl-basic[0;39m 
+[34mStarting bundle ch.qos.logback.core[0;39m 
+[34mStarting bundle slf4j.api[0;39m 
+[34mStarting bundle org.apache.commons.commons-io[0;39m 
+[34mStarting bundle jaxb-api[0;39m 
+[34mStarting bundle com.sun.xml.bind.jaxb-core[0;39m 
+[34mStarting bundle org.semanticweb.owl.owlapi[0;39m 
+[34mStarting bundle ch.qos.logback.classic[0;39m 
+[34mStarting bundle org.objectweb.asm.tree[0;39m 
+[34mStarting bundle org.eclipse.equinox.common[0;39m 
+[34mStarting bundle org.protege.common[0;39m 
+[34mStarting bundle jakarta.activation-api[0;39m 
+[34mStarting bundle org.apache.felix.main[0;39m 
+[34mStarting bundle org.protege.editor.owl[0;39m 
+[34mStarting bundle org.jsr-305[0;39m 
+[34mStarting bundle org.apache.servicemix.bundles.javax-inject[0;39m 
+[34mStarting bundle org.protege.editor.core.application[0;39m 
+[34mStarting bundle com.googlecode.javaewah.JavaEWAH[0;39m 
+[34mStarting bundle org.eclipse.jgit[0;39m 
+[34mStarting bundle com.google.guava[0;39m 
+[34mStarting bundle org.objectweb.asm.tree.analysis[0;39m 
+[34mStarting bundle org.eclipse.equinox.registry[0;39m 
+[34mStarting bundle org.eclipse.equinox.supplement[0;39m 
+[34mStarting bundle org.protege.editor.owl.rdf[0;39m 
+[34mStarting bundle existentialquery[0;39m 
+[34mStarting bundle org.protege.owl.rdf[0;39m 
+[34mStarting bundle uk.ac.manchester.cs.owl.explanation[0;39m 
+[34mStarting bundle org.protege.ontograf[0;39m 
+[34mStarting bundle org.coode.browser[0;39m 
+[34mStarting bundle org.coode.owlviz[0;39m 
+[34mStarting bundle org.semanticweb.hermit[0;39m 
+[34mStarting bundle cellfie[0;39m 
+[34mStarting bundle swrltab-plugin[0;39m 
+[34mStarting bundle org.coode.dlquery[0;39m 
+[34mStarting bundle org.semanticweb.elk[0;39m 
+[34mStarting bundle code-generation[0;39m 
+01:46:25,740 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [conf/logback.xml] at [file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9/conf/logback.xml]
+01:46:25,748 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+01:46:25,750 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Will scan for changes in [file:/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9/conf/logback.xml] 
+01:46:25,750 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Setting ReconfigureOnChangeTask scanning period to 10 seconds
+01:46:25,750 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+01:46:25,751 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [stdout]
+01:46:25,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+01:46:25,757 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [files]
+01:46:25,758 |-INFO in ch.qos.logback.core.FileAppender[files] - File property is set to [/Users/imkaruzin/.Protege/logs/protege.log]
+01:46:25,759 |-ERROR in ch.qos.logback.core.FileAppender[files] - openFile(/Users/imkaruzin/.Protege/logs/protege.log,true) call failed. java.io.FileNotFoundException: /Users/imkaruzin/.Protege/logs/protege.log (Operation not permitted)
+	at java.io.FileNotFoundException: /Users/imkaruzin/.Protege/logs/protege.log (Operation not permitted)
+	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:64)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:134)
+	at 	at org.slf4j.impl.StaticLoggerBinder.init(StaticLoggerBinder.java:84)
+	at 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:55)
+	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:417)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:362)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:388)
+	at 	at org.protege.common.Activator.<init>(Activator.java:10)
+	at 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at 	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at 	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:347)
+	at 	at java.base/java.lang.Class.newInstance(Class.java:647)
+	at 	at org.apache.felix.framework.Felix.createBundleActivator(Felix.java:4780)
+	at 	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2410)
+	at 	at org.apache.felix.framework.Felix.startBundle(Felix.java:2335)
+	at 	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at 	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:297)
+	at 	at java.base/java.lang.Thread.run(Thread.java:840)
+01:46:25,759 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+01:46:25,759 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[ROOT]
+01:46:25,759 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [files] to Logger[ROOT]
+01:46:25,759 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+01:46:25,759 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@59722cbe - Registering current configuration as safe fallback point
+

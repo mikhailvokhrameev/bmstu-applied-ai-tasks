@@ -1,0 +1,31 @@
+{
+  "ontology": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/ontology/videocard.owl",
+  "source_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "expected": "/Users/imkaruzin/bmstu-applied-ai-tasks/lab2/tests/expected.json",
+  "expected_sha256": "831a5bf6129b4504ffe5b54b27ece1ee287fc2181ccc45962c0abf8355b87c0b",
+  "helper_sha256": "4c5bed4296af6bfa287a63e1ead78eeabe7bea07efff8a1f2c73ec53947ab316",
+  "agent_sha256": "d52da192a4a86c67cc218f1c37cd8a94621e6c0ad7515c3d3640ca68985a5efc",
+  "command": [
+    "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/jdk-17.0.21+9/Contents/Home/bin/java",
+    "-Xmx768m",
+    "-XX:ActiveProcessorCount=2",
+    "-DentityExpansionLimit=100000000",
+    "-Dlogback.configurationFile=conf/logback.xml",
+    "-Dfile.encoding=UTF-8",
+    "-Duser.home=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-final/application-home",
+    "-Djava.util.prefs.userRoot=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-final/preferences",
+    "-XX:CompileCommand=exclude,javax/swing/text/GlyphView,getBreakSpot",
+    "--add-opens=java.desktop/sun.swing=ALL-UNNAMED",
+    "--add-opens=java.desktop/com.apple.laf=ALL-UNNAMED",
+    "-javaagent:/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-final/acceptance-agent.jar=/Users/imkaruzin/bmstu-applied-ai-tasks/lab4/assessment/evidence/protege-final/collector.properties",
+    "-classpath",
+    "bundles/guava.jar:bundles/logback-classic.jar:bundles/logback-core.jar:bundles/slf4j-api.jar:bundles/glassfish-corba-orb.jar:bundles/org.apache.felix.main.jar:bundles/maven-artifact.jar:bundles/protege-launcher.jar",
+    "org.protege.osgi.framework.Launcher",
+    "file:///Users/imkaruzin/bmstu-applied-ai-tasks/lab4/ontology/videocard.owl"
+  ],
+  "cwd": "/Users/imkaruzin/bmstu-applied-ai-tasks/.local-runtime/protege-5.6.9/Protege-5.6.9",
+  "query_count": 23,
+  "mode": "real GUI, launch-only premain, public in-process API",
+  "not_performed": "No attachment, accessibility, desktop screenshots or independent HermiT instance",
+  "pid": 14509
+}

@@ -1,0 +1,377 @@
+{
+  "elite_count": 2,
+  "generations": 20,
+  "mutation_probability": 0.7,
+  "offspring_count": 8,
+  "population_size": 10,
+  "services": {
+    "acceptance_approved": true,
+    "concept_pairs_path": "lab4/assessment/concept_pairs_context.csv",
+    "concept_pairs_sha256": "27663c633c4a44177e168effb3c0db07398306ba167e5fc37a5cafb284c6a22a",
+    "context_verification": {
+      "actual_context_verified": true,
+      "actual_input_tokens": 32069,
+      "advertised_at_least_32000": true,
+      "advertised_context_length": 32768,
+      "architecture": "qwen2",
+      "context_length_key": "qwen2.context_length",
+      "evidence": "lab4/assessment/evidence/long-context-7b.json",
+      "limitation": "API metadata advertises capacity; no long-context inference was measured"
+    },
+    "core_sha256": "d8ac600a45ce642deee38be726ae5d0d81f9e47967a9e1bb07a66b5005ae3661",
+    "duplicate_threshold": 0.960735025415394,
+    "embedding_backend": "sentence-transformers",
+    "embedding_endpoint": "http://127.0.0.1:11437",
+    "embedding_instruction": "Retrieve semantically similar text.",
+    "embedding_model": "intfloat/multilingual-e5-large-instruct",
+    "embedding_revision": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+    "embedding_sha256": "071e12c3e0013df6ee8b248bb46d1acadbd9e79a3c33478e194ce72ff0244063",
+    "endpoint": "http://127.0.0.1:11435",
+    "entities": [
+      {
+        "category": "Class",
+        "comment": "Подкласс «Система охлаждения»; охлаждение с вентилятором.",
+        "iri": "https://example.org/ontologies/videocard#ActiveCooling",
+        "label": "Активное охлаждение"
+      },
+      {
+        "category": "Class",
+        "comment": "Определяемый класс: модель видеокарты, у которой конфигурация памяти имеет объём не менее 8 ГиБ. Принадлежность выводится reasoner.",
+        "iri": "https://example.org/ontologies/videocard#CardWith8GBMemory",
+        "label": "Карта с памятью от 8 ГиБ"
+      },
+      {
+        "category": "Class",
+        "comment": "Определяемый класс: модель видеокарты, у которой система охлаждения является активной. Принадлежность выводится reasoner.",
+        "iri": "https://example.org/ontologies/videocard#CardWithActiveCooling",
+        "label": "Карта с активным охлаждением"
+      },
+      {
+        "category": "Class",
+        "comment": "Стандарт подключения видеокарты к компьютеру.",
+        "iri": "https://example.org/ontologies/videocard#ConnectionInterface",
+        "label": "Интерфейс подключения"
+      },
+      {
+        "category": "Class",
+        "comment": "Вариант охлаждения модели карты; подкласс «Компонент модели».",
+        "iri": "https://example.org/ontologies/videocard#CoolingSystem",
+        "label": "Система охлаждения"
+      },
+      {
+        "category": "Class",
+        "comment": "Архитектура графического процессора.",
+        "iri": "https://example.org/ontologies/videocard#GPUArchitecture",
+        "label": "Архитектура GPU"
+      },
+      {
+        "category": "Class",
+        "comment": "Модель графического процессора; подкласс «Компонент модели».",
+        "iri": "https://example.org/ontologies/videocard#GPUModel",
+        "label": "Модель GPU"
+      },
+      {
+        "category": "Class",
+        "comment": "Организация, выпускающая модель видеокарты или модель GPU.",
+        "iri": "https://example.org/ontologies/videocard#Manufacturer",
+        "label": "Производитель"
+      },
+      {
+        "category": "Class",
+        "comment": "Тип, объём и организация памяти; подкласс «Компонент модели».",
+        "iri": "https://example.org/ontologies/videocard#MemoryConfiguration",
+        "label": "Конфигурация видеопамяти"
+      },
+      {
+        "category": "Class",
+        "comment": "Технология видеопамяти, например GDDR6.",
+        "iri": "https://example.org/ontologies/videocard#MemoryType",
+        "label": "Тип памяти"
+      },
+      {
+        "category": "Class",
+        "comment": "Общий класс для модели GPU, конфигурации видеопамяти и системы охлаждения.",
+        "iri": "https://example.org/ontologies/videocard#ModelComponent",
+        "label": "Компонент модели"
+      },
+      {
+        "category": "Class",
+        "comment": "Подкласс «Система охлаждения»; охлаждение без вентилятора.",
+        "iri": "https://example.org/ontologies/videocard#PassiveCooling",
+        "label": "Пассивное охлаждение"
+      },
+      {
+        "category": "Class",
+        "comment": "Заявленная область использования модели видеокарты.",
+        "iri": "https://example.org/ontologies/videocard#Purpose",
+        "label": "Назначение"
+      },
+      {
+        "category": "Class",
+        "comment": "Модель дискретной видеокарты; основной объект описания.",
+        "iri": "https://example.org/ontologies/videocard#VideoCardModel",
+        "label": "Модель видеокарты"
+      },
+      {
+        "category": "Class",
+        "comment": "Поддерживаемый моделью тип интерфейса вывода изображения.",
+        "iri": "https://example.org/ontologies/videocard#VideoOutput",
+        "label": "Видеовыход"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Ширина шины памяти в битах.",
+        "iri": "https://example.org/ontologies/videocard#busWidthBit",
+        "label": "ширина шины, бит"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Число вентиляторов системы охлаждения, шт.",
+        "iri": "https://example.org/ontologies/videocard#fanCount",
+        "label": "число вентиляторов"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Частота модели GPU в МГц (десятичное число больше 0).",
+        "iri": "https://example.org/ontologies/videocard#frequencyMHz",
+        "label": "частота, МГц"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Длина платы в мм (десятичное число больше 0).",
+        "iri": "https://example.org/ontologies/videocard#lengthMM",
+        "label": "длина, мм"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Название сущности (строка, единица отсутствует).",
+        "iri": "https://example.org/ontologies/videocard#name",
+        "label": "название"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Заявленная мощность модели платы в Вт (не рекомендуемая мощность блока питания); десятичное число больше 0.",
+        "iri": "https://example.org/ontologies/videocard#powerW",
+        "label": "мощность, Вт"
+      },
+      {
+        "category": "DataProperty",
+        "comment": "Объём видеопамяти в ГиБ.",
+        "iri": "https://example.org/ontologies/videocard#volumeGiB",
+        "label": "объём, ГиБ"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель GPU с производителем.",
+        "iri": "https://example.org/ontologies/videocard#gpuProducedBy",
+        "label": "GPU выпущен производителем"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель GPU с архитектурой GPU.",
+        "iri": "https://example.org/ontologies/videocard#hasArchitecture",
+        "label": "имеет архитектуру"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с системой охлаждения.",
+        "iri": "https://example.org/ontologies/videocard#hasCooling",
+        "label": "имеет охлаждение"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с интерфейсом подключения.",
+        "iri": "https://example.org/ontologies/videocard#hasInterface",
+        "label": "имеет интерфейс"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с конфигурацией видеопамяти.",
+        "iri": "https://example.org/ontologies/videocard#hasMemory",
+        "label": "имеет память"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает конфигурацию видеопамяти с типом памяти.",
+        "iri": "https://example.org/ontologies/videocard#hasMemoryType",
+        "label": "имеет тип памяти"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с назначением.",
+        "iri": "https://example.org/ontologies/videocard#hasPurpose",
+        "label": "имеет назначение"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с поддерживаемым видеовыходом.",
+        "iri": "https://example.org/ontologies/videocard#hasVideoOutput",
+        "label": "имеет видеовыход"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с производителем.",
+        "iri": "https://example.org/ontologies/videocard#producedByManufacturer",
+        "label": "выпущена производителем"
+      },
+      {
+        "category": "ObjectProperty",
+        "comment": "Связывает модель видеокарты с используемой моделью GPU.",
+        "iri": "https://example.org/ontologies/videocard#usesGPU",
+        "label": "использует GPU"
+      }
+    ],
+    "inventory": {
+      "classes": [
+        "<https://example.org/ontologies/videocard#ActiveCooling>",
+        "<https://example.org/ontologies/videocard#CardWith8GBMemory>",
+        "<https://example.org/ontologies/videocard#CardWithActiveCooling>",
+        "<https://example.org/ontologies/videocard#ConnectionInterface>",
+        "<https://example.org/ontologies/videocard#CoolingSystem>",
+        "<https://example.org/ontologies/videocard#GPUArchitecture>",
+        "<https://example.org/ontologies/videocard#GPUModel>",
+        "<https://example.org/ontologies/videocard#Manufacturer>",
+        "<https://example.org/ontologies/videocard#MemoryConfiguration>",
+        "<https://example.org/ontologies/videocard#MemoryType>",
+        "<https://example.org/ontologies/videocard#ModelComponent>",
+        "<https://example.org/ontologies/videocard#PassiveCooling>",
+        "<https://example.org/ontologies/videocard#Purpose>",
+        "<https://example.org/ontologies/videocard#VideoCardModel>",
+        "<https://example.org/ontologies/videocard#VideoOutput>"
+      ],
+      "data_properties": [
+        "<https://example.org/ontologies/videocard#busWidthBit>",
+        "<https://example.org/ontologies/videocard#fanCount>",
+        "<https://example.org/ontologies/videocard#frequencyMHz>",
+        "<https://example.org/ontologies/videocard#lengthMM>",
+        "<https://example.org/ontologies/videocard#name>",
+        "<https://example.org/ontologies/videocard#powerW>",
+        "<https://example.org/ontologies/videocard#volumeGiB>"
+      ],
+      "individuals": [
+        "<https://example.org/ontologies/videocard#U01>",
+        "<https://example.org/ontologies/videocard#U02>",
+        "<https://example.org/ontologies/videocard#U03>",
+        "<https://example.org/ontologies/videocard#U04>",
+        "<https://example.org/ontologies/videocard#U05>",
+        "<https://example.org/ontologies/videocard#U06>",
+        "<https://example.org/ontologies/videocard#U07>",
+        "<https://example.org/ontologies/videocard#U08>"
+      ],
+      "object_properties": [
+        "<https://example.org/ontologies/videocard#gpuProducedBy>",
+        "<https://example.org/ontologies/videocard#hasArchitecture>",
+        "<https://example.org/ontologies/videocard#hasCooling>",
+        "<https://example.org/ontologies/videocard#hasInterface>",
+        "<https://example.org/ontologies/videocard#hasMemory>",
+        "<https://example.org/ontologies/videocard#hasMemoryType>",
+        "<https://example.org/ontologies/videocard#hasPurpose>",
+        "<https://example.org/ontologies/videocard#hasVideoOutput>",
+        "<https://example.org/ontologies/videocard#producedByManufacturer>",
+        "<https://example.org/ontologies/videocard#usesGPU>"
+      ],
+      "object_property_domains": {
+        "<https://example.org/ontologies/videocard#gpuProducedBy>": [
+          "<https://example.org/ontologies/videocard#GPUModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasArchitecture>": [
+          "<https://example.org/ontologies/videocard#GPUModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasCooling>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasInterface>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasMemory>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasMemoryType>": [
+          "<https://example.org/ontologies/videocard#MemoryConfiguration>"
+        ],
+        "<https://example.org/ontologies/videocard#hasPurpose>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#hasVideoOutput>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#producedByManufacturer>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ],
+        "<https://example.org/ontologies/videocard#usesGPU>": [
+          "<https://example.org/ontologies/videocard#VideoCardModel>"
+        ]
+      },
+      "object_property_ranges": {
+        "<https://example.org/ontologies/videocard#gpuProducedBy>": [
+          "<https://example.org/ontologies/videocard#Manufacturer>"
+        ],
+        "<https://example.org/ontologies/videocard#hasArchitecture>": [
+          "<https://example.org/ontologies/videocard#GPUArchitecture>"
+        ],
+        "<https://example.org/ontologies/videocard#hasCooling>": [
+          "<https://example.org/ontologies/videocard#CoolingSystem>"
+        ],
+        "<https://example.org/ontologies/videocard#hasInterface>": [
+          "<https://example.org/ontologies/videocard#ConnectionInterface>"
+        ],
+        "<https://example.org/ontologies/videocard#hasMemory>": [
+          "<https://example.org/ontologies/videocard#MemoryConfiguration>"
+        ],
+        "<https://example.org/ontologies/videocard#hasMemoryType>": [
+          "<https://example.org/ontologies/videocard#MemoryType>"
+        ],
+        "<https://example.org/ontologies/videocard#hasPurpose>": [
+          "<https://example.org/ontologies/videocard#Purpose>"
+        ],
+        "<https://example.org/ontologies/videocard#hasVideoOutput>": [
+          "<https://example.org/ontologies/videocard#VideoOutput>"
+        ],
+        "<https://example.org/ontologies/videocard#producedByManufacturer>": [
+          "<https://example.org/ontologies/videocard#Manufacturer>"
+        ],
+        "<https://example.org/ontologies/videocard#usesGPU>": [
+          "<https://example.org/ontologies/videocard#GPUModel>"
+        ]
+      },
+      "teaching_class": "<https://example.org/ontologies/videocard#VideoCardModel>"
+    },
+    "main_blockers": [],
+    "model": "qwen2.5-coder:7b",
+    "model_sha256": "60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+    "pending_acceptance": [
+      "actual eight-hour span of each series",
+      "target fitness and comparison",
+      "expert-reviewed final ontology",
+      "Protégé and OOPS",
+      "canonical delivery verification"
+    ],
+    "program_sources_sha256": {
+      "lab4/optimizer/__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+      "lab4/optimizer/analysis.py": "2d28f38c50ab71e0960e8cb2cc0f463f3b54f93b2fa0a65f0709178d48d3e2bc",
+      "lab4/optimizer/benchmark.py": "a74224b52122ea85ebd69e7a2aa06f186551fd143246ad7e849c12ce74d4b218",
+      "lab4/optimizer/bridge.py": "2d9b2ef693718cf14b65661c53630b105cf70b9217eadade2210f47fb58af16f",
+      "lab4/optimizer/embedding_server.py": "60f8d3a7265def3645df3acecb66804a8aade30211010c2a4cf3bbb6f1ebbed0",
+      "lab4/optimizer/journal.py": "cec6760bf719dc40ef7413bb35772d7b8c44c8449eda7da2caf827de0d7bc38f",
+      "lab4/optimizer/metrics.py": "f3abeaaf17bd370d1732a649810e5832b96fda1032d36ecd4b51028d38cc0839",
+      "lab4/optimizer/owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+      "lab4/optimizer/owl_bridge/CandidateValidator.java": "7b1778394d9d80bd873b9119c26fe2e2800b319faf3ce758b5662ea8c9aada78",
+      "lab4/optimizer/owl_bridge/OntologyEvaluator.java": "39342d1afe2f7e23a53592df5cb9ea4fb451012fed94e182523c59b3438294ce",
+      "lab4/optimizer/owl_bridge/OntologyRelease.java": "67ca6162109f164b6e0dfcec4205641f48fcc4be5df9ab48f9ba5f49ba2e9aa5",
+      "lab4/optimizer/owl_bridge/ProposalSyntax.java": "42e86e75adc9dc140eb70e215e4471402bae6f18bd20c33f013496b914573f7c",
+      "lab4/optimizer/paths.py": "daf689e3616bd34635628fbdb145ff2a7a8c5d746a8fc01d52e4c54ea369e01d",
+      "lab4/optimizer/prepare.py": "c1fe3ca6c0b94fc4d9609c958c59813150a108819305235bf05533249099c206",
+      "lab4/optimizer/prompts/proposal.txt": "b371ec96139f90d3444806f3012fdbef0998a3dd4839ff944ce3c83c502df1c2",
+      "lab4/optimizer/proposals.py": "aa904e736a44f4d50a5b84529cc03d3c3db14cc09d79543f1196835708f03560",
+      "lab4/optimizer/release.py": "55908ababe15f28b7b438f3733aef1171bdb5bdf20da907469bfea98c2ffc3e5",
+      "lab4/optimizer/requirements-embeddings.txt": "c0fe338776a77dc31e0876e0129e83938ffae354c1f82eeff29696faf62dbcf5",
+      "lab4/optimizer/runtime.py": "504bc6d78802580b568e1f35afcfb6285dc37e6c232a689085e52eec2eaa9ffe",
+      "lab4/optimizer/search.py": "5bf23d523d45e12176fd2de672505976f5b80f9e15bb584498918b94e242679f",
+      "lab4/optimizer/validator.py": "38d808e229a505e46e992c11771e3e0a5068a9f8c3fb4701df79b887be9826af"
+    },
+    "qualification_evidence": "lab4/assessment/evidence/qualification-v4.json",
+    "qualification_sha256": "6970e0056b7004386fa84a63071889d289229c0ae0b34b46cec94282595f250c",
+    "server_version": "0.40.13"
+  },
+  "tournament_size": 3
+}

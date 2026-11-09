@@ -1,0 +1,25 @@
+{
+  "service": "Self-hosted official upstream OOPS REST; not public production",
+  "endpoint": "http://127.0.0.1:11438/oops-reference/rest",
+  "upstream_commit": "11572ea6b31cba29dd3f8a443e24311652f059de",
+  "war_sha256": "2fab177a7de24180aee24e278ff5d27e9ed3d222b7ac0394080f43c50b7c251f",
+  "final_sha256": "b94f610553856340c6770c1fb0a061c3aef719ee95aae7262fa919a6ef0780bb",
+  "input_bytes": 70075,
+  "pitfalls": [
+    "P04",
+    "P08",
+    "P10",
+    "P11",
+    "P13",
+    "P22"
+  ],
+  "request_sha256": "7076222a788732d1d1a5d371c4afd7c5850c82453265d5a2e46024e6cf2162de",
+  "attempts": 1,
+  "started_at": 1793608390.475135,
+  "http_status": 200,
+  "content_type": "text/turtle",
+  "response_sha256": "80eff7a6dfa8de9038eecd64862ac4d92b24c6a5d1a457a4505c6c1b76c1aa0f",
+  "rdf_response_verified": true,
+  "ended_at": 1793608392.167304,
+  "seconds": 1.692168951034546
+}

@@ -1,0 +1,52 @@
+{
+  "metadata_sha256": "7fb1e0186b5b86013b63da9a297bead464487d9e043e4c5518ed2e542b875f03",
+  "config_sha256": "3736b07f42560e71474a1900ca0090ed6045038db381a8e4310338c903283956",
+  "sources_before": {
+    "__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+    "analysis.py": "4ee45a3314ca94ca8d1396bafd86260d254f176e30a82d492f8b1a6632137e88",
+    "bridge.py": "279d48623d5046c3664ac2b9517f11c045eff5afb5081459ae3c024611fe1b5e",
+    "journal.py": "e1b4010acf441f00d1e957927366692332607da871561759254e317f1b583629",
+    "metrics.py": "acac13a294202d3fed3b7c73839bdde5af28b8f1d1b84f0806f9e1860856bdfd",
+    "owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+    "owl_bridge/CandidateValidator.java": "1d95bf419eadf2bc72744007e830be974bcfa46805f413090fe67cbeb398bc1e",
+    "owl_bridge/OntologyEvaluator.java": "40d319916cb6d7ed63663b1e2224cd90275cc5952822dcad4f2ecdd9c7e7317b",
+    "owl_bridge/OntologyRelease.java": "67ca6162109f164b6e0dfcec4205641f48fcc4be5df9ab48f9ba5f49ba2e9aa5",
+    "owl_bridge/ProposalSyntax.java": "27d1041212b9a79b0774f072fdb0b3ed6ff99b727592312423b77056cfc311ee",
+    "owl_bridge/StreamWorker.java": "fdc0227be9e2e464ce3332ccebcddb3fb5945928aff449d4e548e1b5c9157503",
+    "paths.py": "a2195fe9e3d2f6f89547ffd55eb1d7be2f6b2ecc137d01b6ad07591e75ae1b70",
+    "prompts/proposal.txt": "83ed6090aa2032f8357cf4423c56ba49e296c94a75216d74d42dff24850c2ccb",
+    "proposals.py": "8592a94a97e86e01ead4a80f99185826c0e37ce4465fe0c2c268b122170f6d93",
+    "release.py": "55908ababe15f28b7b438f3733aef1171bdb5bdf20da907469bfea98c2ffc3e5",
+    "runtime.py": "148002ea34702ec75bebc9e43cc1962fc145b8531cdcf51b187eb9229059e7af",
+    "search.py": "5bf23d523d45e12176fd2de672505976f5b80f9e15bb584498918b94e242679f",
+    "structural.py": "9a4135fd442169f60633c47861f24c457a30ec5171c2ee4bc734a3e3babf43e8",
+    "validator.py": "eef9ce60e347cdc94b4287ea3e7d504d2cbeeea64b555ce46ce9807c6681b0bd"
+  },
+  "sources_after": {
+    "__main__.py": "7d2003102bc45ffd53cf5707b82bb63e142a673e3ef6eb1f3808e77ba74c6d91",
+    "analysis.py": "4ee45a3314ca94ca8d1396bafd86260d254f176e30a82d492f8b1a6632137e88",
+    "bridge.py": "279d48623d5046c3664ac2b9517f11c045eff5afb5081459ae3c024611fe1b5e",
+    "journal.py": "139ae5203cfe9a8d7e6a1e04810e90b4651c70dae7ad3a31081bc6e9697f521a",
+    "metrics.py": "acac13a294202d3fed3b7c73839bdde5af28b8f1d1b84f0806f9e1860856bdfd",
+    "owl_bridge/CandidateQueries.java": "4af40b575ee7359c970a620ed3a62e5ca98de84b2a8e3bd16ad8044ec99a32a1",
+    "owl_bridge/CandidateValidator.java": "1d95bf419eadf2bc72744007e830be974bcfa46805f413090fe67cbeb398bc1e",
+    "owl_bridge/OntologyEvaluator.java": "40d319916cb6d7ed63663b1e2224cd90275cc5952822dcad4f2ecdd9c7e7317b",
+    "owl_bridge/OntologyRelease.java": "67ca6162109f164b6e0dfcec4205641f48fcc4be5df9ab48f9ba5f49ba2e9aa5",
+    "owl_bridge/ProposalSyntax.java": "71274e72407b2a2dfc3fcb3e7a2628e7e4caf5d3149a54d24acc101d360a7a20",
+    "owl_bridge/StreamWorker.java": "fdc0227be9e2e464ce3332ccebcddb3fb5945928aff449d4e548e1b5c9157503",
+    "paths.py": "a2195fe9e3d2f6f89547ffd55eb1d7be2f6b2ecc137d01b6ad07591e75ae1b70",
+    "prompts/proposal.txt": "83ed6090aa2032f8357cf4423c56ba49e296c94a75216d74d42dff24850c2ccb",
+    "proposals.py": "8592a94a97e86e01ead4a80f99185826c0e37ce4465fe0c2c268b122170f6d93",
+    "release.py": "55908ababe15f28b7b438f3733aef1171bdb5bdf20da907469bfea98c2ffc3e5",
+    "runtime.py": "148002ea34702ec75bebc9e43cc1962fc145b8531cdcf51b187eb9229059e7af",
+    "search.py": "5bf23d523d45e12176fd2de672505976f5b80f9e15bb584498918b94e242679f",
+    "structural.py": "9a4135fd442169f60633c47861f24c457a30ec5171c2ee4bc734a3e3babf43e8",
+    "validator.py": "eef9ce60e347cdc94b4287ea3e7d504d2cbeeea64b555ce46ce9807c6681b0bd"
+  },
+  "changed": [
+    "journal.py",
+    "owl_bridge/ProposalSyntax.java"
+  ],
+  "reason": "Parser bug fix: undefined OWL prefix is syntax feedback, not transport failure. Formula, baseline, prompt, RNG, model parameters and budgets are unchanged; delivered responses from the unfinished generation are reused exactly.",
+  "payload_sha256": "7729d1fb36d2051891765e894a6f1f83aa1277c817a15ff7273b84302308b7d1"
+}

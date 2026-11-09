@@ -1,0 +1,13 @@
+{
+  "expected_code": "QUERIES",
+  "reason": "Additional manufacturer changes exact Q1 answers",
+  "candidate": {
+    "add": [
+      "ObjectPropertyAssertion(:producedByManufacturer :U01 :P2)"
+    ],
+    "remove": [
+      "ObjectPropertyAssertion(:producedByManufacturer :U01 :P1)"
+    ]
+  },
+  "duplicate": false
+}

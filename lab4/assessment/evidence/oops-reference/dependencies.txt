@@ -1,0 +1,151 @@
+es.upm.fi.oeg:oops:war:0.3.0-SNAPSHOT
++- org.junit.jupiter:junit-jupiter-api:jar:5.11.4:test
+|  +- org.opentest4j:opentest4j:jar:1.3.0:test
+|  +- org.junit.platform:junit-platform-commons:jar:1.11.4:test
+|  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
++- org.junit.jupiter:junit-jupiter-params:jar:5.11.4:test
++- javax.servlet:javax.servlet-api:jar:4.0.1:provided
++- org.apache.commons:commons-text:jar:1.13.0:compile
+|  \- org.apache.commons:commons-lang3:jar:3.17.0:compile
++- org.slf4j:slf4j-api:jar:2.0.17:compile
++- ch.qos.reload4j:reload4j:jar:1.2.26:runtime
++- org.slf4j:slf4j-reload4j:jar:2.0.17:runtime
++- org.apache.jena:jena-core:jar:5.3.0:compile
+|  +- org.apache.jena:jena-base:jar:5.3.0:compile
+|  |  +- org.apache.commons:commons-csv:jar:1.13.0:compile
+|  |  +- org.apache.commons:commons-compress:jar:1.27.1:compile
+|  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
+|  |  \- com.github.andrewoma.dexx:collection:jar:0.7:compile
+|  +- org.apache.jena:jena-iri3986:jar:5.3.0:compile
+|  +- org.apache.jena:jena-iri:jar:5.3.0:compile
+|  \- org.roaringbitmap:RoaringBitmap:jar:1.3.0:compile
++- org.apache.jena:jena-arq:jar:5.3.0:compile
+|  +- com.google.code.gson:gson:jar:2.11.0:compile
+|  |  \- com.google.errorprone:error_prone_annotations:jar:2.27.0:compile
+|  +- org.slf4j:jcl-over-slf4j:jar:2.0.16:compile
+|  +- com.apicatalog:titanium-json-ld:jar:1.4.1:compile
+|  +- org.glassfish:jakarta.json:jar:2.0.1:compile
+|  +- com.google.protobuf:protobuf-java:jar:4.29.3:compile
+|  \- org.apache.thrift:libthrift:jar:0.21.0:compile
++- org.kohsuke.metainf-services:metainf-services:jar:1.11:compile (optional)
++- net.sourceforge.owlapi:owlapi-api:jar:5.5.1:compile
+|  +- org.tukaani:xz:jar:1.9:compile
+|  +- org.apache.commons:commons-rdf-api:jar:0.5.0:compile
+|  +- javax.inject:javax.inject:jar:1:compile
+|  +- com.github.vsonnier:hppcrt:jar:0.7.5:compile
+|  +- com.github.ben-manes.caffeine:caffeine:jar:3.1.8:compile
+|  |  \- org.checkerframework:checker-qual:jar:3.37.0:compile
+|  +- com.google.guava:guava:jar:33.0.0-jre:compile
+|  |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+|  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+|  |  \- com.google.j2objc:j2objc-annotations:jar:2.8:compile
+|  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+|  \- commons-io:commons-io:jar:2.15.1:compile
++- net.sourceforge.owlapi:owlapi-apibinding:jar:5.5.1:compile
+|  +- net.sourceforge.owlapi:owlapi-impl:jar:5.5.1:compile
+|  +- net.sourceforge.owlapi:owlapi-parsers:jar:5.5.1:compile
+|  +- net.sourceforge.owlapi:owlapi-oboformat:jar:5.5.1:compile
+|  +- net.sourceforge.owlapi:owlapi-tools:jar:5.5.1:compile
+|  \- net.sourceforge.owlapi:owlapi-rio:jar:5.5.1:compile
+|     +- org.eclipse.rdf4j:rdf4j-model:jar:5.0.2:compile
+|     |  +- org.eclipse.rdf4j:rdf4j-common-exception:jar:5.0.2:compile
+|     |  +- org.eclipse.rdf4j:rdf4j-common-text:jar:5.0.2:compile
+|     |  +- org.eclipse.rdf4j:rdf4j-common-io:jar:5.0.2:compile
+|     |  \- org.eclipse.rdf4j:rdf4j-common-iterator:jar:5.0.2:compile
+|     |     \- org.eclipse.rdf4j:rdf4j-common-order:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-model-api:jar:5.0.2:compile
+|     |  \- org.eclipse.rdf4j:rdf4j-common-annotation:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-model-vocabulary:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-api:jar:5.0.2:compile
+|     |  +- org.eclipse.rdf4j:rdf4j-common-xml:jar:5.0.2:compile
+|     |  \- no.hasmac:hasmac-json-ld:jar:0.9.0:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-languages:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-datatypes:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-binary:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-n3:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-nquads:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-ntriples:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-rdfjson:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-rdfxml:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-trix:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-turtle:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-hdt:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-trig:jar:5.0.2:compile
+|     +- org.eclipse.rdf4j:rdf4j-rio-jsonld:jar:5.0.2:compile
+|     |  +- org.apache.httpcomponents:httpclient:jar:4.5.14:compile
+|     |  |  \- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+|     |  \- org.apache.httpcomponents:httpclient-cache:jar:4.5.14:compile
+|     \- com.github.jsonld-java:jsonld-java:jar:0.13.6:compile
+|        +- org.apache.httpcomponents:httpclient-osgi:jar:4.5.13:compile
+|        |  +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+|        |  \- org.apache.httpcomponents:fluent-hc:jar:4.5.13:compile
+|        \- org.apache.httpcomponents:httpcore-osgi:jar:4.4.14:compile
+|           \- org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile
++- org.glassfish.jersey.core:jersey-common:jar:3.1.10:compile
+|  +- jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:compile
+|  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+|  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:compile
+|  \- org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile
++- org.glassfish.jersey.containers:jersey-container-servlet:jar:3.1.10:compile
+|  +- org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.1.10:compile
+|  \- org.glassfish.jersey.core:jersey-server:jar:3.1.10:compile
+|     +- org.glassfish.jersey.core:jersey-client:jar:3.1.10:compile
+|     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
++- org.glassfish.jersey.inject:jersey-hk2:jar:3.1.10:compile
+|  +- org.glassfish.hk2:hk2-locator:jar:3.0.6:compile
+|  |  +- org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.6:compile
+|  |  +- org.glassfish.hk2:hk2-api:jar:3.0.6:compile
+|  |  \- org.glassfish.hk2:hk2-utils:jar:3.0.6:compile
+|  \- org.javassist:javassist:jar:3.30.2-GA:compile
++- org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.10:compile
+|  +- org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.1.10:compile
+|  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.18.0:compile
+|  +- com.fasterxml.jackson.core:jackson-databind:jar:2.18.0:compile
+|  +- com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.18.0:compile
+|  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:compile
++- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:compile
+|  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:compile
+|     +- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+|     +- org.glassfish.jaxb:txw2:jar:4.0.5:compile
+|     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:compile
++- jakarta.platform:jakarta.jakartaee-api:jar:10.0.0:provided
+|  +- jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided
+|  |  +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided
+|  |  +- jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:3.1.0:provided
+|  |  +- jakarta.el:jakarta.el-api:jar:5.0.1:provided
+|  |  +- jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0:provided
+|  |  +- jakarta.faces:jakarta.faces-api:jar:4.0.1:provided
+|  |  +- jakarta.websocket:jakarta.websocket-api:jar:2.1.0:provided
+|  |  +- jakarta.websocket:jakarta.websocket-client-api:jar:2.1.0:provided
+|  |  +- jakarta.json:jakarta.json-api:jar:2.1.0:compile
+|  |  +- jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0:provided
+|  |  +- jakarta.ejb:jakarta.ejb-api:jar:4.0.1:provided
+|  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:provided
+|  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:provided
+|  |  +- jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0:provided
+|  |  +- jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided
+|  |  +- jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.0.1:provided
+|  |  +- jakarta.authentication:jakarta.authentication-api:jar:3.0.0:provided
+|  |  \- jakarta.security.enterprise:jakarta.security.enterprise-api:jar:3.0.0:provided
+|  +- jakarta.jms:jakarta.jms-api:jar:3.1.0:provided
+|  +- jakarta.activation:jakarta.activation-api:jar:2.1.0:compile
+|  +- jakarta.mail:jakarta.mail-api:jar:2.1.0:provided
+|  +- jakarta.resource:jakarta.resource-api:jar:2.1.0:provided
+|  +- jakarta.authorization:jakarta.authorization-api:jar:2.1.0:provided
+|  \- jakarta.batch:jakarta.batch-api:jar:2.1.1:provided
++- net.3scale:3scale-api:jar:3.0.2:compile
+|  \- xom:xom:jar:1.2.5:compile
+|     +- xml-apis:xml-apis:jar:1.3.03:compile
+|     +- xerces:xercesImpl:jar:2.8.0:compile
+|     \- xalan:xalan:jar:2.7.0:compile
++- net.sf.extjwnl:extjwnl:jar:2.0.5:compile
+|  \- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3.2:compile
++- net.sf.extjwnl:extjwnl-data-wn31:jar:1.2:compile
++- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.18.3:compile
+|  +- org.yaml:snakeyaml:jar:2.3:compile
+|  \- com.fasterxml.jackson.core:jackson-core:jar:2.18.3:compile
++- com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.18.3:compile
+|  +- org.codehaus.woodstox:stax2-api:jar:4.2.2:compile
+|  \- com.fasterxml.woodstox:woodstox-core:jar:7.0.0:compile
++- info.picocli:picocli:jar:4.7.6:compile
+\- commons-codec:commons-codec:jar:1.15:compile

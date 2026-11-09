@@ -1,0 +1,83 @@
+{
+  "runs": [
+    {
+      "path": "lab4/runs/debug-100",
+      "mode": "model",
+      "phase": "debug",
+      "seed": 100,
+      "config_sha256": "f201526f8fa5b275283dba71eb06d104426704251520bb3304a37ff273e96b1c",
+      "best_F": 1.0,
+      "best_generation": 2,
+      "best_id": 20,
+      "generations": [
+        {
+          "generation": 0,
+          "best_F": 0.0,
+          "median_F": 0.0,
+          "invalid_fraction": 1.0,
+          "invalid_by_code": {
+            "PROPOSAL": 1.0
+          }
+        },
+        {
+          "generation": 1,
+          "best_F": 0.0,
+          "median_F": 0.0,
+          "invalid_fraction": 1.0,
+          "invalid_by_code": {
+            "PROPOSAL": 1.0
+          }
+        },
+        {
+          "generation": 2,
+          "best_F": 1.0,
+          "median_F": 0.0,
+          "invalid_fraction": 0.625,
+          "invalid_by_code": {
+            "PROPOSAL": 0.625
+          }
+        },
+        {
+          "generation": 3,
+          "best_F": 1.0,
+          "median_F": 0.5,
+          "invalid_fraction": 0.625,
+          "invalid_by_code": {
+            "PROPOSAL": 0.625
+          }
+        }
+      ],
+      "evaluation_seconds": 1766.4782902120041,
+      "wall_clock_seconds": 2461.243476867676,
+      "started_at": 1793557729.947423,
+      "completed_at": 1793560191.1908998,
+      "active_seconds": 2195.49891475,
+      "duration_acceptance": "Run wall-clock span recorded; series span checked separately",
+      "t04": {
+        "model_requests": 28,
+        "first_response_success_count": 0,
+        "first_response_fraction": 0.0,
+        "first_response_evidence_complete": true,
+        "meets_70_percent": false,
+        "valid_ontology_fraction": 0.17647058823529413,
+        "projected_170_evaluation_seconds": 12306.217384338379,
+        "projection_factor": 5.0,
+        "projected_within_eight_hours": true,
+        "projected_850_evaluation_seconds": 61531.086921691895,
+        "projection_series_factor": 25.0,
+        "projected_series_within_eight_hours": false,
+        "steady_projection_series_seconds": 44161.9572553001,
+        "steady_projection_status": "Estimate from committed evaluation durations only; excludes repairs, gaps and discarded audit evaluations; not acceptance",
+        "duration_acceptance": null,
+        "projection_status": "Estimates from debug wall-clock span: 170 evaluations is one run (legacy projected_within_eight_hours); 850 evaluations is a five-run series. The eight-hour requirement applies to the series; neither projection confirms acceptance"
+      },
+      "replay": {
+        "candidate": 20,
+        "axioms_match": true,
+        "F": 1.0,
+        "matches": true
+      }
+    }
+  ],
+  "series": null
+}

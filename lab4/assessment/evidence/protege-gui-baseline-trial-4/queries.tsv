@@ -1,0 +1,23 @@
+Q1 [P1]	VideoCardModel and producedByManufacturer value P1	U01,U02,U05,U08
+Q1 [P2]	VideoCardModel and producedByManufacturer value P2	U03,U04,U06,U07
+Q2 [GPU_G1]	VideoCardModel and usesGPU value GPU_G1	U01,U08
+Q2 [GPU_G2]	VideoCardModel and usesGPU value GPU_G2	U02,U05
+Q2 [GPU_G3]	VideoCardModel and usesGPU value GPU_G3	U03,U06
+Q2 [GPU_G4]	VideoCardModel and usesGPU value GPU_G4	U04
+Q2 [GPU_G5]	VideoCardModel and usesGPU value GPU_G5	U07
+Q3 [defined]	CardWith8GBMemory	U02,U03,U04,U06,U07
+Q3 [raw cross-check]	VideoCardModel and hasMemory some (volumeGiB some xsd:integer[>= 8])	U02,U03,U04,U06,U07
+Q4 [GDDR5]	VideoCardModel and hasMemory some (hasMemoryType value GDDR5)	U01,U08
+Q4 [GDDR6]	VideoCardModel and hasMemory some (hasMemoryType value GDDR6)	U02,U03,U04,U05,U06
+Q4 [GDDR6X]	VideoCardModel and hasMemory some (hasMemoryType value GDDR6X)	U07
+Q5 [defined]	CardWithActiveCooling	U02,U03,U04,U05,U07
+Q5 [raw cross-check]	VideoCardModel and hasCooling some ActiveCooling	U02,U03,U04,U05,U07
+Q6 [DVI]	VideoCardModel and hasVideoOutput value DVI	U05,U06,U08
+Q6 [DisplayPort]	VideoCardModel and hasVideoOutput value DisplayPort	U02,U03,U04,U07
+Q6 [HDMI]	VideoCardModel and hasVideoOutput value HDMI	U01,U02,U03,U04,U05,U06,U07
+Q6 [VGA]	VideoCardModel and hasVideoOutput value VGA	U01,U08
+Q7 [PCIe_3_0_x16]	VideoCardModel and hasInterface value PCIe_3_0_x16	U01,U05,U06,U08
+Q7 [PCIe_4_0_x16]	VideoCardModel and hasInterface value PCIe_4_0_x16	U02,U03,U04
+Q7 [PCIe_5_0_x16]	VideoCardModel and hasInterface value PCIe_5_0_x16	U07
+Q8 [defined]	CardWith8GBMemory and CardWithActiveCooling	U02,U03,U04,U07
+Q8 [raw cross-check]	VideoCardModel and hasMemory some (volumeGiB some xsd:integer[>= 8]) and hasCooling some ActiveCooling	U02,U03,U04,U07

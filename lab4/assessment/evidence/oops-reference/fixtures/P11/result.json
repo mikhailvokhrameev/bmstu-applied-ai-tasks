@@ -1,0 +1,19 @@
+{
+  "case": "P11",
+  "family": "P11",
+  "endpoint": "http://127.0.0.1:11438/oops-reference/rest",
+  "input_sha256": "6476383891549e45155661354955e89d78606c97dfa90ecb41ef40488b9cdb4a",
+  "upstream_expected_sha256": "8b7da252fe747ca60fa34e226a1c3f986d5f80fba572f101ff4519aa903464e6",
+  "http_status": 200,
+  "content_type": "text/turtle",
+  "response_sha256": "49599e7f2558588537960cd45854720950138275d60964bb6ad7f397cc243cb6",
+  "response_present": true,
+  "expected_pitfalls": 1,
+  "actual_pitfalls": 1,
+  "expected_triples": 10,
+  "actual_triples": 10,
+  "unexpected_codes": [],
+  "matches": true,
+  "comparison": "Selected pitfall rooted RDF subgraphs; only generated UUID resources become consistently mapped blank nodes; exact literal/predicate/relationship content retained",
+  "seconds": 0.426
+}

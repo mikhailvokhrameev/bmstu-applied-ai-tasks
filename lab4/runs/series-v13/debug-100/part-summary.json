@@ -1,0 +1,92 @@
+{
+  "part": "debug",
+  "phase": "debug",
+  "evaluations": 34,
+  "generation_count": 3,
+  "best": {
+    "id": 30,
+    "generation": 3,
+    "parents": [
+      17
+    ],
+    "operator": "mutation",
+    "delta": {
+      "add": [
+        "AnnotationAssertion(rdfs:comment :hasCoolingForCard \"Отношение обратное к hasCooling: hasCoolingForCard(v,m) означает hasCooling(m,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :hasPurposeForCard \"Отношение обратное к hasPurpose: hasPurposeForCard(v,p) означает hasPurpose(p,v).\"@ru)",
+        "AnnotationAssertion(rdfs:comment :memoryUsedByCard \"От конфигурации памяти к использующей её модели видеокарты: hasMemory(v,m) означает memoryUsedByCard(m,v).\"@ru)",
+        "AnnotationAssertion(rdfs:label :hasCoolingForCard \"Связывает модель видеокарты с системой охлаждения\"@ru)",
+        "AnnotationAssertion(rdfs:label :hasPurposeForCard \"Связывает модель видеокарты с её назначением\"@ru)",
+        "AnnotationAssertion(rdfs:label :memoryUsedByCard \"Используется моделью видеокарты\"@ru)",
+        "Declaration(ObjectProperty(:hasCoolingForCard))",
+        "Declaration(ObjectProperty(:hasPurposeForCard))",
+        "Declaration(ObjectProperty(:memoryUsedByCard))",
+        "InverseObjectProperties(:hasCooling :hasCoolingForCard)",
+        "InverseObjectProperties(:hasPurpose :hasPurposeForCard)",
+        "InverseObjectProperties(:memoryUsedByCard :hasMemory)",
+        "ObjectPropertyDomain(:hasCoolingForCard :CoolingSystem)",
+        "ObjectPropertyDomain(:hasPurposeForCard :Purpose)",
+        "ObjectPropertyDomain(:memoryUsedByCard :MemoryConfiguration)",
+        "ObjectPropertyRange(:hasCoolingForCard :VideoCardModel)",
+        "ObjectPropertyRange(:hasPurposeForCard :VideoCardModel)",
+        "ObjectPropertyRange(:memoryUsedByCard :VideoCardModel)"
+      ],
+      "remove": []
+    },
+    "status": "valid",
+    "F": 1.1246297491328545,
+    "code": null
+  },
+  "replay": {
+    "candidate": 30,
+    "axioms_match": true,
+    "counts_match": true,
+    "metrics_match": true,
+    "components_match": true,
+    "structure_valid": true,
+    "F": 1.1246297491328545,
+    "B": 1.1246297491328545,
+    "S": 1.0,
+    "matches": true,
+    "validation_status": "valid",
+    "semantic_validation_repeated": false,
+    "tolerance": 0.001
+  },
+  "completed_utc": "2026-11-09T10:07:59.705539+00:00",
+  "timing": {
+    "complete_origin": true,
+    "completed_at": 1794218879.595938,
+    "completed_utc": "2026-11-09T10:07:59.595938+00:00",
+    "schema": 1,
+    "sessions": [
+      {
+        "active_seconds": 264.482767083,
+        "ended_at": 1794218099.875702,
+        "outcome": "interrupted",
+        "started_at": 1794217835.395455,
+        "started_utc": "2026-11-09T09:50:35.395455+00:00"
+      },
+      {
+        "active_seconds": 249.39797012500003,
+        "ended_at": 1794218879.595938,
+        "outcome": "completed",
+        "started_at": 1794218630.1392262,
+        "started_utc": "2026-11-09T10:03:50.139226+00:00"
+      }
+    ],
+    "started_at": 1794217835.352175,
+    "started_utc": "2026-11-09T09:50:35.352175+00:00"
+  },
+  "engine_cache": {
+    "evaluate_hits": 51,
+    "evaluate_misses": 15,
+    "worker_requests": 52,
+    "evaluations": 13
+  },
+  "validation_cache": {
+    "hits": 12,
+    "misses": 12,
+    "validations": 12
+  },
+  "config_sha256": "3736b07f42560e71474a1900ca0090ed6045038db381a8e4310338c903283956"
+}
